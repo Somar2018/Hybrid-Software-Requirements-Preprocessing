@@ -1,0 +1,76 @@
+﻿,projectid,req_id,text,type,source,global_id,subclass
+0,P01,REQ_00001,%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%,FR,PROMISE_exp_test.txt,REQ_00000,Unknown
+1,P01,REQ_00002,% This is a PROMISE Software Engineering Repository data set made publicly,FR,PROMISE_exp_test.txt,REQ_00001,Unknown
+2,P01,REQ_00003,"% available in order to encourage repeatable, verifiable, refutable, and/or",FR,PROMISE_exp_test.txt,REQ_00002,Unknown
+3,P01,REQ_00004,% improvable predictive models of software engineering.,FR,PROMISE_exp_test.txt,REQ_00003,Unknown
+4,P01,REQ_00006,"% If you publish material based on PROMISE data sets then, please",FR,PROMISE_exp_test.txt,REQ_00004,Unknown
+5,P01,REQ_00007,% follow the acknowledgment guidelines posted on the PROMISE repository,FR,PROMISE_exp_test.txt,REQ_00005,Unknown
+6,P01,REQ_00008,% web page http://promisedata.org/repository .,FR,PROMISE_exp_test.txt,REQ_00006,Unknown
+7,P01,REQ_00009,%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%,FR,PROMISE_exp_test.txt,REQ_00007,Unknown
+8,P01,REQ_00011,%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%,FR,PROMISE_exp_test.txt,REQ_00008,Unknown
+9,P01,REQ_00012,% (c) 2007 Jane Cleland-Huang jhuang@cti.depaul.edu,FR,PROMISE_exp_test.txt,REQ_00009,Unknown
+10,P01,REQ_00013,% This data set is distributed under the,FR,PROMISE_exp_test.txt,REQ_00010,Unknown
+11,P01,REQ_00014,% Creative Commons Attribution-Share Alike 3.0 License,FR,PROMISE_exp_test.txt,REQ_00011,Unknown
+12,P01,REQ_00015,% http://creativecommons.org/licenses/by-sa/3.0/,FR,PROMISE_exp_test.txt,REQ_00012,Unknown
+13,P01,REQ_00019,"% * to Share -- copy, distribute and transmit the work",FR,PROMISE_exp_test.txt,REQ_00013,Unknown
+14,P01,REQ_00020,% * to Remix -- to adapt the work,FR,PROMISE_exp_test.txt,REQ_00014,Unknown
+15,P01,REQ_00022,% Under the following conditions:,FR,PROMISE_exp_test.txt,REQ_00015,Unknown
+16,P01,REQ_00024,% Attribution. You must attribute the work in the manner specified by,FR,PROMISE_exp_test.txt,REQ_00016,Unknown
+17,P01,REQ_00025,% the author or licensor (but not in any way that suggests that they endorse,FR,PROMISE_exp_test.txt,REQ_00017,Unknown
+18,P01,REQ_00026,% you or your use of the work).,FR,PROMISE_exp_test.txt,REQ_00018,Unknown
+19,P01,REQ_00028,"% Share Alike. If you alter, transform, or build upon this work, you",FR,PROMISE_exp_test.txt,REQ_00019,Unknown
+20,P01,REQ_00029,"% may distribute the resulting work only under the same, similar or a",FR,PROMISE_exp_test.txt,REQ_00020,Unknown
+21,P01,REQ_00030,% compatible license.,FR,PROMISE_exp_test.txt,REQ_00021,Unknown
+22,P01,REQ_00032,"% * For any reuse or distribution, you must make clear to others the",FR,PROMISE_exp_test.txt,REQ_00022,Unknown
+23,P01,REQ_00033,% license terms of this work.,FR,PROMISE_exp_test.txt,REQ_00023,Unknown
+24,P01,REQ_00034,% * Any of the above conditions can be waived if you get permission from,FR,PROMISE_exp_test.txt,REQ_00024,Unknown
+25,P01,REQ_00035,% the copyright holder.,FR,PROMISE_exp_test.txt,REQ_00025,Unknown
+26,P01,REQ_00036,"% * Apart from the remix rights granted under this license, nothing in",FR,PROMISE_exp_test.txt,REQ_00026,Unknown
+27,P01,REQ_00037,% this license impairs or restricts the author's moral rights.,FR,PROMISE_exp_test.txt,REQ_00027,Unknown
+28,P01,REQ_00041,"@ATTRIBUTE ProjectID {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,45,46,47,48,49}",FR,PROMISE_exp_test.txt,REQ_00028,Unknown
+29,P01,REQ_00042,@ATTRIBUTE RequirementText string,FR,PROMISE_exp_test.txt,REQ_00029,Unknown
+30,P01,REQ_00043,"@ATTRIBUTE _class_ {F,A,L,LF,MN,O,PE,SC,SE,US,FT,PO}%Check and make sure that FT and PO should be there",FR,PROMISE_exp_test.txt,REQ_00030,Unknown
+31,P01,REQ_00046,"1,'The system shall refresh the display every 60 seconds.',PE",FR,PROMISE_exp_test.txt,REQ_00031,Unknown
+32,P01,REQ_00047,"1,'The application shall match the color of the schema set forth by Department of Homeland Security',LF",FR,PROMISE_exp_test.txt,REQ_00032,Unknown
+33,P01,REQ_00048,"1,'If projected the data must be readable. On a 10x10 projection screen 90% of viewers must be able to read Event / Activity data from a viewing distance of 30',US",FR,PROMISE_exp_test.txt,REQ_00033,Unknown
+34,P01,REQ_00049,"1,'The product shall be available during normal business hours. As long as the user has access to the client PC the system will be available 99% of the time during the first six months of operation.',A",FR,PROMISE_exp_test.txt,REQ_00034,Unknown
+35,P01,REQ_00050,"1,'If projected the data must be understandable. On a 10x10 projection screen 90% of viewers must be able to determine that Events or Activities are occuring in current time from a viewing distance of 100',US",FR,PROMISE_exp_test.txt,REQ_00035,Unknown
+36,P01,REQ_00051,"1,'The product shall ensure that it can only be accessed by authorized users. The product will be able to distinguish between authorized and unauthorized users in all access attempts',SE",FR,PROMISE_exp_test.txt,REQ_00036,Unknown
+37,P01,REQ_00052,"1,'The product shall be intuitive and self-explanatory.",FR,PROMISE_exp_test.txt,REQ_00037,Unknown
+38,P01,REQ_00000,"90% of new users shall be able to start the display of Events or Activities within 90 minutes of using the product.',US",FR,PROMISE_exp_test.txt,REQ_00038,Unknown
+39,P01,REQ_00001,"1,'The product shall respond fast to keep up-to-date data in the display.',PE",FR,PROMISE_exp_test.txt,REQ_00039,Unknown
+40,P01,REQ_00002,"1,'The system shall have a MDI form that allows for the viewing of the graph and the data table.',F",FR,PROMISE_exp_test.txt,REQ_00040,Unknown
+41,P01,REQ_00003,"1,'The system shall display Events in a vertical table by time.',F",FR,PROMISE_exp_test.txt,REQ_00041,Unknown
+42,P01,REQ_00004,"1,'The system shall display the Events in a graph by time.',F",FR,PROMISE_exp_test.txt,REQ_00042,Unknown
+43,P01,REQ_00005,"1,'The system shall display Events or Activities.',F",FR,PROMISE_exp_test.txt,REQ_00043,Unknown
+44,P01,REQ_00006,"1,'The display shall have two regions: left 2/3 of the display is graphical right 1/3 of the display is a data table',F",FR,PROMISE_exp_test.txt,REQ_00044,Unknown
+45,P01,REQ_00007,"1,'The data displayed in both the nodes within the graph and the rows in the table are MSEL Summary data',F",FR,PROMISE_exp_test.txt,REQ_00045,Unknown
+46,P01,REQ_00008,"1,'The table side of the display shall be split into 2 regions: sequential and temporal.',F",FR,PROMISE_exp_test.txt,REQ_00046,Unknown
+47,P01,REQ_00009,"1,'The top 1/4 of the table will hold events that are to occur sequentially.',F",FR,PROMISE_exp_test.txt,REQ_00047,Unknown
+48,P01,REQ_00010,"1,'The bottom 3/4 of the table will hold events that occur according to its relevance to current time.',F",FR,PROMISE_exp_test.txt,REQ_00048,Unknown
+49,P01,REQ_00011,"1,'The system shall color code events according to their variance from current time.',F",FR,PROMISE_exp_test.txt,REQ_00049,Unknown
+50,P01,REQ_00012,"1,'The system shall display data from the Sync Matrix 1.0 and Exercise Management Tool 1.0 applications',F",FR,PROMISE_exp_test.txt,REQ_00050,Unknown
+51,P01,REQ_00013,"1,'The system shall link Events back to either the Sync Matrix 1.0 or the Exercise Managment Tool 1.0 applications for modifications.',F",FR,PROMISE_exp_test.txt,REQ_00051,Unknown
+52,P01,REQ_00014,"1,'The system shall allow modification of the display.',F",FR,PROMISE_exp_test.txt,REQ_00052,Unknown
+53,P01,REQ_00015,"1,'The system shall offer a display of all the Events in the exercise.',F",FR,PROMISE_exp_test.txt,REQ_00053,Unknown
+54,P01,REQ_00016,"1,'The system shall filter data by: Venues and Key Events.',F",FR,PROMISE_exp_test.txt,REQ_00054,Unknown
+55,P01,REQ_00017,"1,'The system shall allow a user to define the time segments',F",FR,PROMISE_exp_test.txt,REQ_00055,Unknown
+56,P01,REQ_00018,"1,'The system shall display the local and exercise time in separate clocks',F",FR,PROMISE_exp_test.txt,REQ_00056,Unknown
+57,P01,REQ_00019,"1,'The system shall offer the ability to pause and resume the refresh of data.',F",FR,PROMISE_exp_test.txt,REQ_00057,Unknown
+58,P01,REQ_00020,"1,'The system shall provide charts for the Activity or Event actual versus assumed time.',F",FR,PROMISE_exp_test.txt,REQ_00058,Unknown
+59,P01,REQ_00021,"1,'The system shall provide a history report of changes made to the Activity or Event data',F",FR,PROMISE_exp_test.txt,REQ_00059,Unknown
+60,P01,REQ_00022,"2,'The look and feel of the system shall conform to the user interface standards of the smart device.',LF",FR,PROMISE_exp_test.txt,REQ_00060,Unknown
+61,P01,REQ_00023,"2,'The user interface shall have standard menus buttons for navigation',LF",FR,PROMISE_exp_test.txt,REQ_00061,Unknown
+62,P01,REQ_00024,"2,'The system shall have a professional appearance',LF",FR,PROMISE_exp_test.txt,REQ_00062,Unknown
+63,P01,REQ_00025,"2,'The product shall have a consistent color scheme and fonts.',LF",FR,PROMISE_exp_test.txt,REQ_00063,Unknown
+64,P01,REQ_00026,"2,'The system shall be used by realtors with no training.',US",FR,PROMISE_exp_test.txt,REQ_00064,Unknown
+65,P01,REQ_00027,"2,'The system shall be intuitive and self explanatory.',US",FR,PROMISE_exp_test.txt,REQ_00065,Unknown
+66,P01,REQ_00028,"2,'The product shall be easy for a realtor to learn.',US",FR,PROMISE_exp_test.txt,REQ_00066,Unknown
+67,P01,REQ_00029,"2,'The product shall use symbols and words that are naturally understandable by the realtor community.',US",FR,PROMISE_exp_test.txt,REQ_00067,Unknown
+68,P01,REQ_00030,"2,'The product shall produce search results in an acceptable time',PE",FR,PROMISE_exp_test.txt,REQ_00068,Unknown
+69,P01,REQ_00031,"2,'The search results shall be returned no later 30 seconds after the user has entered the search criteria',PE",FR,PROMISE_exp_test.txt,REQ_00069,Unknown
+70,P01,REQ_00032,"2,'The product shall generate a CMA report in an acceptable time.',PE",FR,PROMISE_exp_test.txt,REQ_00070,Unknown
+71,P01,REQ_00033,"2,'The CMA report shall be returned no later 60 seconds after the user has entered the CMA report criteria.',PE",FR,PROMISE_exp_test.txt,REQ_00071,Unknown
+72,P01,REQ_00034,"2,'The product shall synchronize contacts and appointments in an acceptable time.',PE",FR,PROMISE_exp_test.txt,REQ_00072,Unknown
+73,P01,REQ_00035,"2,'The product shall synchronize with the office system every hour.',PE",FR,PROMISE_exp_test.txt,REQ_00073,Unknown
+74,P01,REQ_00036,"2,'The product shall be available for use 24 hours per day 365 days per year',A",FR,PROMISE_exp_test.txt,REQ_00074,Unknown

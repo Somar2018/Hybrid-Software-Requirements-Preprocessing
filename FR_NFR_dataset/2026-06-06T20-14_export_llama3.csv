@@ -1,0 +1,10 @@
+﻿,Global_ID,Text,Type,Class,Subclass
+0,REQ_00000,The app shall run on a smart phone with Android OS least version 2.3 .,NFR,NFR,Scalability
+1,REQ_00001,"All layout shall be according to the TU/e corporate identity, unless in conflict with the guidelines of requirements UCOR003-UCOR006.",NFR,NFR,Usability
+2,REQ_00002,The icons shall be according to the Android Icon Guidelines.,NFR,FR,Functional
+3,REQ_00003,The user interfaces shall be according to the Android User Interface Guidelines.,NFR,FR,Functional
+4,REQ_00004,"The Twitter ""tweet"" interface shall be according to the Twitter Guidelines.",NFR,FR,Functional
+5,REQ_00005,"The Facebook ""like"" interface shall be according to the Facebook Guidelines.",NFR,FR,Functional
+6,REQ_00006,The campus map shall cover the campus of the TU/e.,NFR,FR,Functional
+7,REQ_00007,The campus map shall cover the central train station of Eindhoven.,NFR,FR,Functional
+8,REQ_00008,A new stylistic map must have the right dimensions.,NFR,NFR,Scalability
