@@ -3,23 +3,73 @@
 # =========================================================
 import os
 import sys
-
-import pandas as pd
 import streamlit as st
-
 import pandas as pd
 import datetime
-
 from collections import Counter
 import random
 
-if "rlhf_cases" not in st.session_state:
-    st.session_state.rlhf_cases = []
+from dotenv import load_dotenv
+from core.cache import load_cache
 
+# =========================================================
+# ✅ LOAD ENV
+# =========================================================
+load_dotenv()
+
+USER = os.getenv("USER", "admin")
+PASS = os.getenv("PASS", "1234")
+
+
+# =========================================================
+# ✅ SESSION STATE (ANTES DO LOGIN ✅)
+# =========================================================
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = False
+
+if "cache" not in st.session_state:
+    st.session_state.cache = load_cache()
+
+if "ext" not in st.session_state:
+    st.session_state.ext = None
+
+if "cla" not in st.session_state:
+    st.session_state.cla = None
+
+if "final" not in st.session_state:
+    st.session_state.final = None
+
+
+# =========================================================
+# ✅ LOGIN FUNCTION
+# =========================================================
+def login():
+    st.title("🔐 Login")
+
+    username = st.text_input("Username")
+    password = st.text_input("Password", type="password")
+
+    if st.button("Entrar"):
+        if username == USER and password == PASS:
+            st.session_state.logged_in = True
+            st.rerun()
+        else:
+            st.error("❌ Credenciais inválidas")
+
+
+# 🔴 BLOQUEIO
+if not st.session_state.logged_in:
+    login()
+    st.stop()
+
+# =========================================================
+# ✅ IMPORTS RESTANTES (depois do login)
+# =========================================================
 try:
     from openai import OpenAI
 except ImportError:
     OpenAI = None
+
 
 # 🔧 PATH FIX
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -29,7 +79,6 @@ if BASE_DIR not in sys.path:
 if "pipeline" in sys.modules:
     del sys.modules["pipeline"]
 
-from core.cache import load_cache
 from pipeline.extract import run_pipeline
 from pipeline.loader import direto as load_raw_documents
 from pipeline.merge import run_pipeline as merge_pipeline
@@ -43,22 +92,11 @@ from myutils.metrics import mostrar_metricas
 st.set_page_config(layout="wide")
 st.title("📋 Hybrid Software Requirements Preprocessing Datasets")
 
-
-# =========================================================
-# ✅ SESSION STATE
-# =========================================================
-if "cache" not in st.session_state:
-    st.session_state.cache = load_cache()
-
-if "ext" not in st.session_state:
-    st.session_state.ext = None
-
-if "cla" not in st.session_state:
-    st.session_state.cla = None
-
-if "final" not in st.session_state:
-    st.session_state.final = None
-
+# ✅ LOGOUT
+st.sidebar.markdown("---")
+if st.sidebar.button("🚪 Logout"):
+    st.session_state.logged_in = False
+    st.rerun()
 
 # =========================================================
 # ✅ DATASET (optional reference)
@@ -363,7 +401,11 @@ else:
         texto = str(row["text"]).lower()
         sub = str(row["subclass"])
         cls = str(row["class"])
-        conf = float(row["confidence",0])
+        
+        try:
+            conf = float(row.get("confidence", 0))
+        except:
+            conf = 0.0
 
         # ✅ CONFIDENCE (ajustado ao teu dataset)
         if conf < 0.49:
