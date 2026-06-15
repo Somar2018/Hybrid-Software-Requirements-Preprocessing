@@ -1,514 +1,406 @@
-import json
-from typing import Dict, List, Any
+import os
+import re
+import tempfile
+from collections import Counter
+from typing import Dict, Any
 
 import pandas as pd
-from core.llm import perguntar_extract
-from myutils.io import read_file_safe
-from myutils.text import limpar, hybrid_classification
 
-from core.config import (
-    build_extract_prompt,
-    build_classification_prompt,
-    VALID_REQUIREMENT_TYPES,
-    VALID_SUBCLASSES,
-    DEFAULT_REQUIREMENT_TYPE,
-    DEFAULT_SUBCLASS,
+from myutils.io import read_file_safe, extract_pdf_unified
+from myutils.text import (
+    reconstruir,
+    extrair_requisitos_brutos,
+    hybrid_classification,
+    normalize_requirement,
 )
 
-def extract_text(path):
-    conteudo = read_file_safe(path)
-    ...
-    return conteudo
 
-# =========================================================
-# 🔹 LLM CALL
-# =========================================================
-def _call_llm(prompt: str, ctx: Dict[str, Any]) -> str:
-    client = ctx.get("client")
-    model = ctx.get("model")
+OUTPUT_COLUMNS = ["text", "type", "subclass"]
 
-    if not client or not model:
-        print("[LLM] client/model não configurados")
-        return ""
+
+MODAL_PATTERN = re.compile(
+    r"\b("
+    r"must|shall|should|"
+    r"is required to|are required to|will be required to|"
+    r"deve|deverá|devem|obrigatório|obrigatória"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+BAD_START_PATTERN = re.compile(
+    r"^("
+    r"this|these|although|due to|for this requirement|"
+    r"one of the|the goal|the priorities|"
+    r"moodle\)|puget sound|"
+    r"system administrators are primarily|"
+    r"a freely available|back-up requirements|"
+    r"relevant, online|"
+    r"the social|"
+    r"the initial production release|"
+    r"this information|"
+    r"this statement provides"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
+NOISE_TERMS = [
+    "confidential",
+    "software requirements specification",
+    "table of contents",
+    "revision history",
+    "copyright",
+    "document version",
+    "moodle version",
+]
+
+
+def empty_result() -> pd.DataFrame:
+    return pd.DataFrame(columns=OUTPUT_COLUMNS)
+
+
+def extract_text_from_pdf_upload(file) -> str:
+    file.seek(0)
+    raw_bytes = file.read()
+
+    tmp_path = None
 
     try:
-        resp = client.chat.complete(
-            model=model,
-            messages=[{"role": "user", "content": prompt}]
-        )
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            tmp.write(raw_bytes)
+            tmp_path = tmp.name
 
-        if hasattr(resp, "choices"):
-            return resp.choices[0].message.content
+        pdf_data = extract_pdf_unified(tmp_path)
 
-        return str(resp)
+        if isinstance(pdf_data, dict):
+            return str(pdf_data.get("text", "") or "")
 
-    except Exception as e:
-        print("[LLM] erro:", e)
+        if isinstance(pdf_data, str):
+            return pdf_data
+
+        if isinstance(pdf_data, pd.DataFrame) and "text" in pdf_data.columns:
+            return "\n".join(pdf_data["text"].astype(str).tolist())
+
+        if isinstance(pdf_data, list):
+            return "\n".join(str(x) for x in pdf_data)
+
         return ""
 
-def extrair_com_llm(text: str, ctx: Dict[str, Any]) -> List[Dict[str, Any]]:
-    if not text.strip():
-        return []
+    finally:
+        if tmp_path and os.path.exists(tmp_path):
+            os.remove(tmp_path)
 
-    # ✅ usar o sistema correto
-    resp = perguntar_extract(text, ctx)
 
-    print("LLM OUTPUT:", resp[:300])
+def clean_pdf_noise(texto: str) -> str:
+    texto = texto.replace("\x00", " ")
+    texto = texto.replace("\uf0a7", " ")
+    texto = texto.replace("�", " ")
+    texto = re.sub(r"[^\S\n]+", " ", texto)
 
-    rows = _parse_pipe(resp)
+    linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+    cleaned = []
 
-    if not rows:
-        rows = [
-            {"global_id": None, "text": l.strip(), "type": "UNK"}
-            for l in resp.split("\n")
-            if len(l.strip()) > 30
-        ]
+    for linha in linhas:
+        low = linha.lower()
 
-    return rows
-
-def split_text(text: str, max_lines: int = 12) -> list:
-    lines = text.split("\n")
-
-    chunks = []
-    current = []
-
-    for line in lines:
-        line = line.strip()
-
-        if not line:
+        if any(term in low for term in NOISE_TERMS):
             continue
 
-        current.append(line)
+        if re.fullmatch(r"page\s+\d+(\s+of\s+\d+)?", low):
+            continue
 
-        if len(current) >= max_lines:
-            chunks.append("\n".join(current))
-            current = []
+        if re.fullmatch(r"\d+", low):
+            continue
 
-    if current:
-        chunks.append("\n".join(current))
+        if re.search(r"\bdate:\s*\d{1,2}/\d{1,2}/\d{2,4}", low):
+            continue
 
-    return chunks
+        if re.search(r"\bversion:\s*\d", low):
+            continue
 
-import re
+        if len(linha) < 8:
+            continue
 
-def split_long_requirement(text: str) -> List[str]:
-    if not text:
-        return []
+        cleaned.append(linha)
 
-    # separadores mais seguros
-    parts = re.split(
-        r"(?:\.\s+(?=[A-Z])|;\s+|\n|\bin addition\b|\band\b)",
-        text
+    return "\n".join(cleaned)
+
+
+def remove_repeated_lines(texto: str, max_repeats: int = 2) -> str:
+    linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+    counts = Counter(linhas)
+
+    return "\n".join(
+        linha for linha in linhas
+        if counts[linha] <= max_repeats
+    )
+
+
+def split_numbered_requirements(texto: str) -> list[str]:
+    texto = re.sub(r"\s+", " ", texto).strip()
+
+    parts = re.split(r"(?=\b\d+\.\d+\.\d+\s+)", texto)
+    results = []
+
+    for part in parts:
+        part = part.strip()
+        if not part:
+            continue
+
+        part = re.sub(r"^\d+\.\d+\.\d+\s+", "", part).strip()
+        results.extend(split_requirement_sentences(part))
+
+    return results
+
+
+def split_requirement_sentences(texto: str) -> list[str]:
+    texto = re.sub(r"\s+", " ", texto).strip()
+
+    sentences = re.split(
+        r"(?<=[.!?])\s+"
+        r"(?=(The|A|An|Actors|Students|Users|System|Course|No|This)\b)",
+        texto,
     )
 
     cleaned = []
 
-    for p in parts:
-        p = p.strip()
+    for item in sentences:
+        item = item.strip()
 
-        if len(p) < 25:
+        if not item:
             continue
 
-        if not ("shall" in p.lower() or "must" in p.lower()):
+        if item in {
+            "The", "A", "An", "Actors", "Students",
+            "Users", "System", "Course", "No", "This"
+        }:
             continue
 
-        cleaned.append(p)
+        cleaned.append(item)
 
-    return cleaned if cleaned else [text]
+    return cleaned
 
-# =========================================================
-# 🔹 PARSER
-# =========================================================
-def _parse_pipe(text: str) -> List[Dict[str, Any]]:
-    rows = []
 
-    for line in text.splitlines():
-        line = line.strip()
-        if not line:
-            continue
+def looks_like_noise(texto: str) -> bool:
+    text = re.sub(r"\s+", " ", str(texto)).strip()
+    low = text.lower()
 
-        parts = [p.strip() for p in line.split("|")]
-
-        if len(parts) >= 2:
-            rows.append({
-                "global_id": parts[0] if parts[0].startswith("REQ") else None,
-                "text": parts[1],
-                "type": parts[2] if len(parts) > 2 else "UNK"
-            })
-        elif len(line) > 25:
-            rows.append({
-                "global_id": None,
-                "text": line,
-                "type": "UNK"
-            })
-
-    return rows
-
-def generate_semantic_id(text: str, idx: int) -> str:
-    t = text.lower()
-
-    if "voice" in t:
-        domain = "VOICE"
-    elif "data" in t:
-        domain = "DATA"
-    elif "call" in t:
-        domain = "CALL"
-    elif "network" in t:
-        domain = "NET"
-    elif "emergency" in t:
-        domain = "EMERG"
-    else:
-        domain = "GEN"
-
-    if "priority" in t:
-        sub = "PRIO"
-    elif "group" in t:
-        sub = "GROUP"
-    elif "broadcast" in t:
-        sub = "BCAST"
-    elif "point-to-point" in t:
-        sub = "P2P"
-    else:
-        sub = "GEN"
-
-    return f"FR_{domain}_{sub}_{idx:04d}"
-
-def quality_filter(rows):
-    good = []
-
-    for r in rows:
-        t = r["text"]
-
-        if len(t) < 20:
-            continue
-
-        if t.count("shall") > 3:
-            continue
-
-        if not t.endswith("."):
-            t += "."
-
-        r["text"] = t
-        good.append(r)
-
-    return good
-
-def deduplicate(rows):
-    seen = set()
-    unique = []
-
-    for r in rows:
-        key = re.sub(r"\W+", "", r["text"].lower())
-
-        if key not in seen:
-            seen.add(key)
-            unique.append(r)
-
-    return unique
-
-# =========================================================
-# 🔹 CLEAN NOISE
-# =========================================================
-def is_noise(text: str) -> bool:
-
-    if not text:
+    if len(text) < 25:
         return True
 
-    t = text.lower().strip()
-
-    if len(t) < 8:
+    if any(term in low for term in NOISE_TERMS):
         return True
 
-    # ✅ só remover casos óbvios
-    if t in ["date", "version"]:
+    if BAD_START_PATTERN.search(text):
+        return True
+
+    if re.fullmatch(r"page\s+\d+(\s+of\s+\d+)?", low):
         return True
 
     return False
 
-def keep_relevant_text(text: str) -> str:
-    lines = text.split("\n")
 
-    filtered = [
-        l for l in lines
-        if any(k in l.lower() for k in [
-            "shall", "must", "create", "manage",
-            "define", "track", "allow", "provide"
-        ])
-        or len(l.strip()) > 60   # ✅ mantém frases longas
+def is_normative_requirement(texto: str) -> bool:
+    text = re.sub(r"\s+", " ", str(texto)).strip()
+
+    if looks_like_noise(text):
+        return False
+
+    if not MODAL_PATTERN.search(text):
+        return False
+
+    useful_subjects = [
+        "system",
+        "user",
+        "users",
+        "actor",
+        "actors",
+        "student",
+        "students",
+        "administrator",
+        "administrators",
+        "course administrator",
+        "application",
+        "software",
+        "documentation",
     ]
 
-    return "\n".join(filtered)
+    low = text.lower()
 
-
-# ✅ COLOCA AQUI (logo abaixo)
-
-def is_real_requirement(text: str) -> bool:
-    if not text:
-        return False
-
-    t = text.lower().strip()
-
-    if len(t) < 30:
-        return False
-
-    # ✅ tem verbo obrigatório
-    if not any(k in t for k in ["shall", "must", "should"]):
-        return False
-
-    # ✅ lixo típico
-    if any(k in t for k in [
-        "table of contents",
-        "document history",
-        "figure",
-        "annex"
-    ]):
+    if not any(subject in low for subject in useful_subjects):
         return False
 
     return True
 
-def normalize_requirement(text: str) -> str:
-    import re
 
-    t = text.strip()
+def extract_candidate_requirements(texto: str) -> list[str]:
+    linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+    linhas = reconstruir(linhas)
 
-    # remover numeração tipo 9.2.3
-    t = re.sub(r"^\d+(\.\d+)*\s*", "", t)
+    candidates = []
 
-    # remover hífens iniciais
-    t = re.sub(r"^[\-\•]\s*", "", t)
+    # 1) Primeiro tenta o extrator existente
+    raw_reqs = extrair_requisitos_brutos("\n".join(linhas))
 
-    # corrigir duplicações
-    t = re.sub(r"(the system shall\s*)+", "The system shall ", t, flags=re.I)
+    for req in raw_reqs:
+        candidates.extend(split_numbered_requirements(req))
 
-    # forçar "shall"
-    if "shall" not in t.lower():
-        t = f"The system shall {t}"
+    # 2) Depois tenta diretamente nas linhas reconstruídas
+    for linha in linhas:
+        candidates.extend(split_numbered_requirements(linha))
 
-    # garantir ponto final
-    if not t.endswith("."):
-        t += "."
+    clean = []
 
-    # capitalizar
-    return t[0].upper() + t[1:]
+    for req in candidates:
+        req = normalize_requirement(req)
+        req = re.sub(r"\s+", " ", req).strip()
 
-# =========================================================
-# 🔹 CLASSIFICAÇÃO
-# =========================================================
-def _classify_rules(rows):
-    for r in rows:
-        t = r["text"].lower()
+        if is_normative_requirement(req):
+            clean.append(req)
 
-        if "shall" in t:
-            r["type"] = "FR"
-        elif any(k in t for k in ["performance", "latency", "%", "time"]):
-            r["type"] = "NFR"
-
-        # subclass
-        if "voice" in t:
-            r["subclass"] = "VOICE"
-        elif "data" in t:
-            r["subclass"] = "DATA"
-        elif "security" in t:
-            r["subclass"] = "SECURITY"
-        elif "performance" in t:
-            r["subclass"] = "PERFORMANCE"
-        else:
-            r["subclass"] = "GEN"
-
-def _classify_with_llm(rows, ctx):
-    # versão simples (opcional)
-    return
-
-def _ensure_ids(rows):
-    for i, r in enumerate(rows, 1):
-        if not r.get("global_id"):
-            r["global_id"] = generate_semantic_id(r["text"], i)
-    for i, r in enumerate(rows, 1):
-        if not r.get("global_id"):
-            r["global_id"] = generate_semantic_id(r["text"], i)
+    return list(dict.fromkeys(clean))
 
 
+def classify_requirement(texto: str):
+    low = texto.lower()
 
-# =========================================================
-# 🔹 PROCESSAMENTO PRINCIPAL
-# =========================================================
-def process_file(file, idx: int, ctx: Dict[str, Any]) -> List[Dict[str, Any]]:
+    nfr_keywords = {
+        "Performance": [
+            "concurrent users",
+            "performance",
+            "load",
+            "response time",
+            "latency",
+            "throughput",
+        ],
+        "Reliability": [
+            "available",
+            "availability",
+            "backup",
+            "backed up",
+            "restore",
+            "offline",
+            "uptime",
+            "up-time",
+        ],
+        "Usability": [
+            "simple",
+            "responsive interface",
+            "easy-to-use",
+            "user interface",
+            "help",
+            "documentation",
+        ],
+        "Security": [
+            "authentication",
+            "authorization",
+            "access",
+            "permission",
+            "login",
+            "password",
+        ],
+        "Maintainability": [
+            "maintainable",
+            "maintenance",
+            "troubleshooting",
+            "configuration",
+        ],
+    }
 
-    print(f"[PROCESS] Arquivo {idx+1}: {getattr(file, 'name', '')}")
+    for subclass, keywords in nfr_keywords.items():
+        if any(k in low for k in keywords):
+            return "NFR", subclass
 
-    content = read_file_safe(file)
+    result = hybrid_classification(texto)
 
-    if content is None:
-        print("⚠️ Conteúdo inválido")
-        return []
+    if result and isinstance(result, tuple) and len(result) == 2:
+        return result
 
-    print("\n=== SAMPLE INPUT ===")
-    print(str(content)[:800])
-    print("====================\n")
+    return "FR", "Functional"
 
-    # ✅ converter DataFrame para texto
-    if isinstance(content, pd.DataFrame):
-        content = "\n".join(
-            content.astype(str).fillna("").agg(" ".join, axis=1)
-        )
 
-    # -------- TEXT ----------
-    if isinstance(content, str):
+def process_file(file, idx: int, ctx: Dict[str, Any]) -> pd.DataFrame:
+    print(f"[PROCESS] Arquivo {idx + 1}: {getattr(file, 'name', '')}")
 
-        # ✅ remover lixo inicial (TOC / capa)
-        #content = content[2000:]
+    filename = getattr(file, "name", "").lower()
 
-        # ✅ manter só conteúdo relevante
-        content = keep_relevant_text(content)
-
-        chunks = split_text(content)
-
-        rows = []
-
-        for i, chunk in enumerate(chunks):
-            print(f"Processing chunk {i+1}/{len(chunks)}")
-
-            chunk_rows = extrair_com_llm(chunk, ctx)
-
-            if chunk_rows:
-                rows.extend(chunk_rows)
-
-        print("LLM rows:", len(rows))
-
-        # ✅ fallback
-        if not rows:
-            rows = [
-                {"global_id": None, "text": l.strip(), "type": "UNK", "subclass": None}
-                for l in content.split("\n")
-                if len(l.strip()) > 30
-            ]
-
-        # ✅ limpar texto
-        for r in rows:
-            r["text"] = limpar(r.get("text", ""))
-
-        # ✅ SPLIT PRIMEIRO (🔥 importante)
-        expanded_rows = []
-
-        for r in rows:
-            text = r["text"]
-
-            # ✅ só dividir se for MUITO longo
-            if len(text) > 200:
-                parts = split_long_requirement(text)
-            else:
-                parts = [text]
-
-            for p in parts:
-                expanded_rows.append({
-                    "global_id": None,
-                    "text": p,
-                    "type": r.get("type", "UNK"),
-                    "subclass": None
-                })
-
-        # ✅ remover lixo
-        rows = [r for r in rows if not is_noise(r["text"])]
-
-        # ✅ filtro semântico
-        filtered = [r for r in rows if is_real_requirement(r["text"])]
-
-        if filtered:
-            rows = filtered
-        
-        print("DEBUG rows final:", len(rows))
-
-        if not rows:
-            return []
-
-        # ✅ normalização
-        for r in rows:
-            r["text"] = normalize_requirement(r["text"])
-
-        # ✅ remover duplicados
-        rows = deduplicate(rows)
-
-        # ✅ FILTRO DE QUALIDADE (✅ AQUI)
-        rows = quality_filter(rows)
-
-        # ✅ IDs semânticos (depois de limpar!)
-        _ensure_ids(rows)
-
-        # ✅ classificação
-        _classify_rules(rows)
-
-    # -------- fallback ----------
-    if isinstance(content, str):
-        ...
-        return rows
-
+    if filename.endswith(".pdf"):
+        source = "pdf"
+        texto = extract_text_from_pdf_upload(file)
     else:
-        print("[PROCESS] Conteúdo não suportado")
-        return []
+        df = read_file_safe(file)
+        source = df.get("source_type", ["unknown"])[0]
 
-# =========================================================
-# 🔹 PIPELINE
-# =========================================================
-def run_pipeline(files, ctx):
+        if "text" in df.columns:
+            texto = " ".join(df["text"].astype(str).tolist()).strip()
+        else:
+            texto = ""
 
+    print("[DEBUG] source:", source)
+    print("[DEBUG] tamanho texto original:", len(texto))
+
+    if len(texto.strip()) < 20:
+        print("[WARN] Texto insuficiente após extração. O PDF pode ser imagem/digitalizado.")
+        return empty_result()
+
+    texto = clean_pdf_noise(texto)
+    texto = remove_repeated_lines(texto)
+
+    print("[DEBUG] tamanho texto limpo:", len(texto))
+
+    reqs = extract_candidate_requirements(texto)
+
+    print("[DEBUG] requisitos finais:", len(reqs))
+    print("[DEBUG] preview requisitos:", reqs[:5])
+
+    rows = []
+
+    for req in reqs:
+        tipo, subclass = classify_requirement(req)
+
+        rows.append({
+            "text": req,
+            "type": tipo,
+            "subclass": subclass,
+        })
+
+    if not rows:
+        return empty_result()
+
+    return pd.DataFrame(rows, columns=OUTPUT_COLUMNS)
+
+
+def run_pipeline(files, ctx) -> pd.DataFrame:
     all_rows = []
 
-    for i, f in enumerate(files):
-        rows = process_file(f, i, ctx)
+    for i, file in enumerate(files):
+        result = process_file(file, i, ctx)
 
-        # ✅ proteção contra None
-        if rows:
-            all_rows.extend(rows)
+        if result is not None and not result.empty:
+            all_rows.append(result)
 
-    # ✅ se vazio
-    if not all_rows:
-        return pd.DataFrame(columns=["global_id", "text", "type", "subclass"])
+    if all_rows:
+        final = pd.concat(all_rows, ignore_index=True)
+    else:
+        final = empty_result()
 
-    # ✅ 1. criar DataFrame PRIMEIRO
-    df = pd.DataFrame(all_rows)
+    for col in OUTPUT_COLUMNS:
+        if col not in final.columns:
+            final[col] = ""
 
-    # ✅ 2. garantir colunas
-    if "global_id" not in df.columns:
-        df["global_id"] = None
+    final["text"] = final["text"].astype(str).str.strip()
+    final = final[final["text"] != ""]
 
-    if "text" not in df.columns:
-        df["text"] = ""
+    final["text_clean_key"] = (
+        final["text"]
+        .astype(str)
+        .str.lower()
+        .str.replace(r"\s+", " ", regex=True)
+        .str.strip()
+    )
 
-    if "type" not in df.columns:
-        df["type"] = "UNK"
+    final = final.drop_duplicates(subset=["text_clean_key"])
+    final = final.drop(columns=["text_clean_key"])
 
-    if "subclass" not in df.columns:
-        df["subclass"] = None
-
-    # ✅ 3. retornar ordenado
-    return df[["global_id", "text", "type", "subclass"]]
-
-def is_valid_requirement(text):
-    if not text:
-        return False
-
-    t = text.strip().lower()
-
-    # ✅ muito longo → lixo
-    if len(t) > 220:
-        return False
-
-    # ✅ precisa de verbo real
-    if not any(k in t for k in ["shall", "must", "should"]):
-        return False
-
-    # ✅ múltiplos pontos = bloco
-    if t.count(".") > 2:
-        return False
-
-    # ✅ lixo típico
-    if any(k in t for k in [
-        "introduction",
-        "this section",
-        "table",
-        "definition",
-        "figure"
-    ]):
-        return False
-
-    return True
+    return final[OUTPUT_COLUMNS]

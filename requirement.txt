@@ -1,0 +1,14 @@
+transformers
+torch
+sentence-transformers
+openai
+
+streamlit
+PyMuPDF
+pandas
+numpy
+scikit-learn
+nltk
+spacy
+tqdm
+python-dotenv

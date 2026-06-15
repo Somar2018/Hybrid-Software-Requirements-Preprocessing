@@ -1,0 +1,9 @@
+﻿subclass,avg_len,min_len,max_len,count
+Compatibility,98,49,123,4
+Functional,107.01440576230492,28,517,833
+Maintainability,89.4,49,128,10
+Performance,134.59375,54,432,32
+Portability,84,64,116,3
+Reliability,114.4,40,249,15
+Security,125.70270270270271,43,546,37
+Usability,128.54285714285714,37,378,35

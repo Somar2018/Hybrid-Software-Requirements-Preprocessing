@@ -1,33 +1,27 @@
+# ============================================================
+# PDF EXTRACTION — FINAL UNIFIED PIPELINE
+# ============================================================
+
 import io
 import re
 import fitz
 import pdfplumber
 import pytesseract
 from PIL import Image
+import pandas as pd
+
+from myutils.text import (
+    limpar,
+    reconstruir,
+    extrair_requisitos_brutos,
+    hybrid_classification,
+)
 
 
-# SAFE IMPORTS (evita crash silencioso)
-try:
-    import fitz
-except Exception as e:
-    print("FITZ ERROR:", e)
-
-try:
-    import pdfplumber
-except Exception as e:
-    print("PDFPLUMBER ERROR:", e)
-
-try:
-    import pytesseract
-except Exception as e:
-    print("TESSERACT ERROR:", e)
-
-from PIL import Image
-
-# =========================================================
-# NOISE DETECTION
-# =========================================================
-def is_noise(line: str) -> bool:
+# ============================================================
+# 1) NOISE FILTER
+# ============================================================
+def _is_noise(line: str) -> bool:
     line = line.strip()
 
     if not line:
@@ -42,161 +36,102 @@ def is_noise(line: str) -> bool:
     if re.match(r"^Page\s+\d+", line, re.IGNORECASE):
         return True
 
-    if re.match(r"^\d+\s+[A-Z]-\d+", line):
-        return True
-
     if re.fullmatch(r"[\d\s\-]+", line):
         return True
 
     return False
 
 
-# =========================================================
-# CLEAN LINES
-# =========================================================
-def clean_lines(text: str):
-    if not text:
-        return []
-
+def _clean_lines(text: str):
     return [
-        line.strip()
-        for line in text.splitlines()
-        if not is_noise(line.strip())
+        l.strip()
+        for l in text.splitlines()
+        if l.strip() and not _is_noise(l)
     ]
 
 
-# =========================================================
-# PARAGRAPH RECONSTRUCTION
-# =========================================================
-def reconstruct_paragraphs(lines):
-    paragraphs = []
-    buffer = ""
-
-    for line in lines:
-
-        is_new_block = (
-            line.endswith(".")
-            or line.endswith(":")
-            or re.match(r"^[A-Z][A-Z\s]{5,}$", line)
-        )
-
-        buffer = (buffer + " " + line).strip()
-
-        if is_new_block:
-            paragraphs.append(buffer)
-            buffer = ""
-
-    if buffer:
-        paragraphs.append(buffer)
-
-    return paragraphs
-
-
-# =========================================================
-# PDFPLUMBER
-# =========================================================
-def extract_pdfplumber(file_input):
+# ============================================================
+# 2) PDFPLUMBER
+# ============================================================
+def _extract_pdfplumber(raw: bytes) -> str:
     try:
-        if isinstance(file_input, (bytes, bytearray)):
-            file_input = io.BytesIO(file_input)
-
-        text_pages = []
-
-        with pdfplumber.open(file_input) as pdf:
-            for page in pdf.pages:
-                txt = page.extract_text()
-                if txt:
-                    text_pages.append(txt)
-
-        return "\n".join(text_pages)
-
-    except Exception:
+        with pdfplumber.open(io.BytesIO(raw)) as pdf:
+            pages = [p.extract_text() or "" for p in pdf.pages]
+        return "\n".join(pages)
+    except:
         return ""
 
 
-# =========================================================
-# FITZ
-# =========================================================
-def extract_fitz(file_input):
+# ============================================================
+# 3) FITZ
+# ============================================================
+def _extract_fitz(raw: bytes) -> str:
     try:
-        if isinstance(file_input, (bytes, bytearray)):
-            doc = fitz.open(stream=file_input, filetype="pdf")
-        else:
-            doc = fitz.open(file_input)
-
-        text = "\n".join(page.get_text() for page in doc)
+        doc = fitz.open(stream=raw, filetype="pdf")
+        pages = [page.get_text("text") for page in doc]
         doc.close()
-
-        return text
-
-    except Exception:
+        return "\n".join(pages)
+    except:
         return ""
 
 
-# =========================================================
-# OCR
-# =========================================================
-def extract_ocr(file_input):
+# ============================================================
+# 4) OCR
+# ============================================================
+def _extract_ocr(raw: bytes) -> str:
     try:
-        if isinstance(file_input, (bytes, bytearray)):
-            doc = fitz.open(stream=file_input, filetype="pdf")
-        else:
-            doc = fitz.open(file_input)
-
-        pages = []
+        doc = fitz.open(stream=raw, filetype="pdf")
+        out = []
 
         for page in doc:
             pix = page.get_pixmap(dpi=300)
             img = Image.open(io.BytesIO(pix.tobytes("png")))
-
-            pages.append(
-                pytesseract.image_to_string(img, lang="eng+por")
-            )
+            out.append(pytesseract.image_to_string(img, lang="eng+por"))
 
         doc.close()
-
-        return "\n".join(pages)
-
-    except Exception:
+        return "\n".join(out)
+    except:
         return ""
 
 
-# =========================================================
-# SMART PIPELINE
-# =========================================================
-def smart_extract_text(file_input):
+# ============================================================
+# 5) UNIFIED PDF EXTRACTOR
+# ============================================================
+def extract_pdf_unified_final(raw: bytes) -> str:
+    text = _extract_pdfplumber(raw)
 
-    text = extract_pdfplumber(file_input)
+    if len(text.strip()) < 80:
+        text = _extract_fitz(raw)
 
-    if len(text) < 80:
-        text = extract_fitz(file_input)
+    if len(text.strip()) < 80:
+        text = _extract_ocr(raw)
 
-    if len(text) < 80:
-        text = extract_ocr(file_input)
+    lines = _clean_lines(text)
+    paragraphs = reconstruir(lines)
 
-    lines = clean_lines(text)
-    paragraphs = reconstruct_paragraphs(lines)
-
-    clean_text = "\n".join(paragraphs)
-
-    requirements = [
-        p.strip()
-        for p in re.split(r"\n\s*\n|\n", clean_text)
-        if len(p.strip()) > 6
-    ]
-
-    return {
-        "text": clean_text,
-        "requirements": requirements,
-        "raw_text": text
-    }
+    return "\n".join(paragraphs)
 
 
-# =========================================================
-# 🔥 COMPATIBILITY LAYER (CRÍTICO)
-# =========================================================
-def extract_pdf_robust(file_input):
-    """
-    Mantém compatibilidade com todo o teu pipeline antigo
-    """
-    return smart_extract_text(file_input)
+# ============================================================
+# 6) REQUIREMENT PIPELINE
+# ============================================================
+def extract_requirements_from_pdf(raw: bytes) -> pd.DataFrame:
+    text = extract_pdf_unified_final(raw)
+
+    # 1) Extrair requisitos brutos
+    reqs = extrair_requisitos_brutos(text)
+
+    # 2) Limpar
+    reqs = [limpar(r) for r in reqs]
+
+    # 3) Classificar
+    rows = []
+    for r in reqs:
+        cls = hybrid_classification(r) or ("FR", "General")
+        rows.append({
+            "text": r,
+            "type": cls[0],
+            "subclass": cls[1],
+        })
+
+    return pd.DataFrame(rows)

@@ -1,0 +1,468 @@
+﻿,id,text,class,subclass,confidence
+8,F0_REQ_00008,A new stylistic map must have the right dimensions.,FR,Functional,0.5
+9,F0_REQ_00009,A new stylistic map must be geographically correct.,FR,Functional,0.5
+10,F0_REQ_00010,News will be restricted to what is available in the feeds on the list of news RSS-feeds.,FR,Functional,0.5
+11,F0_REQ_00011,Agenda will be restricted to what is available in the feeds on the list of agenda RSS-feeds.,FR,Functional,0.5
+12,F0_REQ_00012,Information about a certain person will be restricted to what is available on the employee pages of the TU/e Encyclopedia.,FR,Functional,0.5
+13,F0_REQ_00013,The information and the search methods of the Encyclopedia-app will be restricted to the services provided by the MediaWiki of the TU/e Encyclopedia.,FR,Functional,0.5
+14,F0_REQ_00014,The information and the search methods of the Student Handbook-app will be restricted depending on file format of the handbook-information.,FR,Functional,0.5
+16,F0_REQ_00016,"System dependability ensures users are informed of any issues for trusted system performance , measured during testing and prioritized highly.",NFR,Performance,0.5
+17,F0_REQ_00017,"The application should ideally use less than 10 MB of storage space, with a hard limit of 20 MB.",NFR,Performance,0.5
+18,F0_REQ_00018,"The applications memory usage on the mobile operating system should ideally be below 10 MB, with a strict limit of 20 MB during operation.",NFR,Performance,0.7
+19,F0_REQ_00019,"The system should reliably deliver accurate search results in over 98% of cases, aiming for 99% or even perfect accuracy during operation",NFR,Reliability,0.5
+20,F0_REQ_00020,"The system should be accessible to users more than 98% of the time, ideally aiming for 99% or even continuous uptime.",NFR,Security,0.7
+21,F0_REQ_00021,The application requires an internet connection to function.,FR,Functional,0.5
+22,F0_REQ_00022,The application requires a GPS connection for functionality.,FR,Functional,0.5
+24,F0_REQ_00024,The restaurant owner login system must always prevent unauthorized access by notifying users of failed login attempts with non-existent accounts.,FR,Functional,0.5
+25,F0_REQ_00025,The admin login system must always block unauthorized access and notify admins of failed login attempts with non-existent accounts.,FR,Functional,0.5
+26,F0_REQ_00026,"To prevent unauthorized access, restaurant owner accounts will be locked for 30 minutes after three failed login attempts, disabling login functionality during that period.",FR,Functional,0.5
+27,F0_REQ_00027,"Admin accounts will be secured by a 30-minute lockout following three failed login attempts, preventing access from that IP address during the lockout period.",FR,Functional,0.5
+28,F0_REQ_00028,"The system will enforce unique usernames during user account creation, prompting users to choose a different username if their desired one is already taken.",FR,Functional,0.5
+29,F0_REQ_00029,"Restaurant owner account creation prioritizes security by enforcing unique usernames, requiring them to choose a different option if their desired name is unavailable.",NFR,Security,0.5
+31,F0_REQ_00031,The application will require well-defined test environments to ensure thorough testing of its various functionalities.,FR,Functional,0.5
+34,F0_REQ_00034,"The system will be developed using Waterfall methodology, Object-Oriented Programming in Java, targeting Android devices 2.3 onwards with a mandatory internet connection.",FR,Functional,0.5
+35,F0_REQ_00035,​ The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,FR,Functional,0.5
+36,F0_REQ_00036,The overall accuracy of the Web API’s response will be measured using a developer-made testing set.,FR,Functional,0.5
+39,F0_REQ_00039,The system will be designed in such a way that the algorithms for the four main units will be easily swapped out.,FR,Functional,0.5
+42,F0_REQ_00042,"The connection between the Web API and the programs will use HTTPS, for security.",FR,Functional,0.5
+43,F0_REQ_00043,A new user will make less than 3 mistakes in 5 minutes after 5 minutes of use.,FR,Functional,0.5
+53,F0_REQ_00053,Application prioritizes fast network response as it relies heavily on data retrieval rather than phone processing power.,FR,Functional,0.5
+73,F0_REQ_00073,The development team will follow best practices for clean code and software modularity in order to make the application as maintainable as possible.,FR,Functional,0.5
+74,F0_REQ_00074,Users will be able to access this application on or off campus anytime on their mobile device without the need of an internet connection.,FR,Functional,0.5
+77,F0_REQ_00077,The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,FR,Functional,0.5
+78,F0_REQ_00078,The overall accuracy of the Web API’s response will be measured using a developer-made testing set.,FR,Functional,0.5
+84,F0_REQ_00084,"The connection between the Web API and the programs will use HTTPS, for security.",FR,Functional,0.5
+85,F0_REQ_00085,A new user will make less than 3 mistakes in 5 minutes after 5 minutes of use.,FR,Functional,0.5
+88,F0_REQ_00088,"SplitPay will prioritize user safety by ensuring it doesn't interfere with other apps or data, and in the future, the application will warn users against using it when focus is critical.",FR,Functional,0.5
+90,F0_REQ_00090,"SplitPay's user interface will prioritize usability and clarity, featuring a visually-appealing design and leveraging informative notifications and pop-ups to guide users in the future.",FR,Functional,0.5
+91,F0_REQ_00091,"The system will prioritize error-free expense splitting calculations while offering full app functionality offline, caching financial data until reconnected.",FR,Functional,0.5
+104,F0_REQ_00104,The default language of insErtion will be English.,FR,Functional,0.5
+298,F0_REQ_00298,Users can permanently delete their accounts and access to the system.,FR,Functional,0.5
+308,F0_REQ_00308,"This system will convert an input question about a specific entity and property (e.g., building closing time) into a generic answer sentence (e.g., building closes at specific time).",FR,Functional,0.5
+315,F0_REQ_00315,"If the database has no closing time for Rush Building, the system will inform the user and provide the Drexel University website for further information.",FR,Functional,0.5
+317,F0_REQ_00317,A MySQL database will be used to store all information required to answer questions.,FR,Functional,0.5
+319,F0_REQ_00319,The database will use the generic representations from R4.2.2.1 as table names or column headers for easier retrieval of data.,FR,Functional,0.5
+320,F0_REQ_00320,The database will be updated periodically and the API will be unavailable during the update.,FR,Functional,0.5
+321,F0_REQ_00321,Structural data sources will have their data stored in our database,FR,Functional,0.5
+322,F0_REQ_00322,"For data with enough structuring, web scraping will be used to programmatically extract all the data needed and store it in our database.",FR,Functional,0.5
+323,F0_REQ_00323,"For totally unstructured information, AI libraries will be used to programmatically extract and store any information possible",FR,Functional,0.5
+324,F0_REQ_00324,"Data that is especially hard to extract, for whatever reason, will be manually extracted and added to the database by a developer.",FR,Functional,0.5
+325,F0_REQ_00325,The GUI will have a textbox that will accept inputs from a keyboard.,FR,Functional,0.5
+326,F0_REQ_00326,"Text box will originally contain a suggestive text question, to guide the user to the format of an appropriate question.",FR,Functional,0.5
+327,F0_REQ_00327,The GUI will have a “Send” button which sends text from the textbox to the API when clicked,FR,Functional,0.5
+328,F0_REQ_00328,The GUI will have a chat window displaying questions sent to the system and responses from the API.,FR,Functional,0.5
+329,F0_REQ_00329,"The chat window will contain all questions and answers from the current session, with a scroll bar if all messages can’t fit on the screen.",FR,Functional,0.5
+330,F0_REQ_00330,"If there is a network issue, the chat window will display an error message.",FR,Functional,0.5
+333,F0_REQ_00333,"If a question is not understood by our API, the system will send a text containing an example question after the text with the API response.",FR,Functional,0.5
+339,F0_REQ_00339,After installing the Application from iTunes or the App store the user will be asked to login.,FR,Functional,0.5
+341,F0_REQ_00341,"The user will be able to browse a variety of clothing categories, including outerwear, activewear, and eco-friendly options.",FR,Functional,0.5
+346,F0_REQ_00346,After installing the Application from iTunes or the App store the user will be asked to login.,FR,Functional,0.5
+349,F0_REQ_00349,The search feature will display either search results or a no matches found message depending on the query's success.,FR,Functional,0.5
+360,F0_REQ_00360,"Users are not able to safely operate the device under certain conditions, such as while driving.",FR,Functional,0.5
+373,F0_REQ_00373,"Users can enable email confirmation for username or password changes, requiring a click to finalize the update.",NFR,Security,0.5
+431,F0_REQ_00431,Citizens can file complaints with the police.,FR,Functional,0.5
+432,F0_REQ_00432,The police will then investigate the complaint based on evidence and facts.,FR,Functional,0.5
+433,F0_REQ_00433,"Interfacing with the courts during the prosecution of cases is an integral part of the
+responsibilities of police personnel.",FR,Functional,0.5
+449,F0_REQ_00449,The System must allow the user to limit access to cases to specified users or user groups.,FR,Functional,0.5
+452,F0_REQ_00452,The System must allow only admin-users to set up user profiles and allocate users to groups.,FR,Functional,0.5
+453,F0_REQ_00453,The System must allow a user to stipulate which other users or groups can access cases.,FR,Functional,0.5
+454,F0_REQ_00454,"The System must allow changes to security attributes for groups or users (such as access rights, security level, privileges, password allocation and management) to be made only by super-user.",FR,Functional,0.5
+458,F0_REQ_00458,"All error messages produced by the System must be meaningful, so that they can be appropriately acted upon by the users who are likely to see them.",FR,Functional,0.5
+461,F0_REQ_00461,"The System must be able to display several entities (cases, suspects) simultaneously.",FR,Functional,0.5
+463,F0_REQ_00463,The System must provide End User and Administrator functions which are easy to use and intuitive throughout.,FR,Functional,0.5
+481,F0_REQ_00481,The System must be available to users on all weekdays/xxx days per year.,FR,Functional,0.5
+485,F0_REQ_00485,The System must provide adequate response times for commonly performed functions under both standard and peak conditions,FR,Functional,0.5
+486,F0_REQ_00486,The application must be able to link up with the INTERNAL system in order for users to properly log in and be identified.,FR,Functional,0.5
+499,F0_REQ_00499,The system will do periodic backups through a live internet connection.,FR,Functional,0.5
+510,F0_REQ_00510,The system will employ on demand asynchronous loading for faster execution of pages.,FR,Functional,0.5
+599,F0_REQ_00599,The MultiMahjongServer will have no graphical user interface and will be run using a command prompt.,FR,Functional,0.5
+600,F0_REQ_00600,The MultiMahjongServer will have a graphical user interface with which the administrator of the server can get log information and change game settings.,FR,Functional,0.5
+601,F0_REQ_00601,The MultiMahjongClient will have a graphical user interface that the user will be able to interact with using a mouse and a keyboard.,FR,Functional,0.5
+602,F0_REQ_00602,The MultiMahjongClient will have sound effects associated with the game actions.,FR,Functional,0.5
+604,F0_REQ_00604,All graphics will be in 16 bit colour.,FR,Functional,0.5
+605,F0_REQ_00605,"When a button becomes active, it will use animation to get the user's attention.",FR,Functional,0.5
+606,F0_REQ_00606,"When a player performs a Chow/Pung/Kong/Mahjong, the tiles involved will be animated.",FR,Functional,0.5
+607,F0_REQ_00607,The user may click in the frame that contains the remaining wall and a frame showing the discarded tiles will be shown.,FR,Functional,0.5
+608,F0_REQ_00608,"An administrators manual, explaining how to install and operate the MultiMahjongServer, will be provided.",FR,Functional,0.5
+609,F0_REQ_00609,"A users manual, explaining how to install and operate the MultiMahjongClient, will be provided.",FR,Functional,0.5
+610,F0_REQ_00610,"This documentation will be available in electronic files, and, with the exception of source code, in hard copy format.",FR,Functional,0.5
+611,F0_REQ_00611,The MultiMahjongServer will be designed to reside on a central computer (server) that is connected to a TCP/IP network and has a unique IP address.,FR,Functional,0.5
+612,F0_REQ_00612,The MultiMahjongServer will allow connections from MultiMahjongClients and communicate with them using IP.,FR,Functional,0.5
+615,F0_REQ_00615,The MultiMahjongServer will contain a High Scores list with the names and scores of the top MultiMahjong players.,FR,Functional,0.5
+616,F0_REQ_00616,The MultiMahjongServer will allow players on MultiMahjongClient programs to chat with each other in real time.,FR,Functional,0.5
+617,F0_REQ_00617,The MultiMahjongServer will allow players on MultiMahjongClient programs to modify their own names and icons during gameplay (as opposed to only at the beginning).,FR,Functional,0.5
+618,F0_REQ_00618,The MultiMahjongServer will support an architecture whereby all Computer Opponents (CO) required will reside on it instead of on the MultiMahjongClient programs.,FR,Functional,0.5
+619,F0_REQ_00619,The MultiMahjongServer will have a graphical user interface with which the administrator of the server can get log information and change game settings.,FR,Functional,0.5
+620,F0_REQ_00620,The MultiMahjongServer will be able to save preferences to a file and read from that file at start-up.,FR,Functional,0.5
+621,F0_REQ_00621,The MultiMahjongClient must send this game initialisation information to the MultiMahjongServer so that the MultiMahjongServer can create a new game.,FR,Functional,0.5
+622,F0_REQ_00622,"When a user selects the option to join an existing game, the MultiMahjongClient will retrieve a list of any games that still require players from the MultiMahjongServer.",FR,Functional,0.5
+623,F0_REQ_00623,The MultiMahjongClient must send this join information to the MultiMahjongServer,FR,Functional,0.5
+624,F0_REQ_00624,The MultiMahjongClient will save the user preferences in a file and read them in when the program begins.,FR,Functional,0.5
+625,F0_REQ_00625,Users who create a new game will be able to change the ability level of any CO involved in the game.,FR,Functional,0.5
+626,F0_REQ_00626,Users who create a new game will be able to choose to play different variations of Mahjong rules other than those described in Section 4.3.1.,FR,Functional,0.5
+627,F0_REQ_00627,"Any user who creates or joins a game will be able to upload their own JPEG or GIF image that they wish to have displayed above their name, if they do not wish to use a preset icon.",FR,Functional,0.5
+628,F0_REQ_00628,"The MultiMahjongClient must only allow players to make moves according to the Chinese rules of Mahjong as described in the rulebook, How to Play Mah Jong.",FR,Functional,0.5
+629,F0_REQ_00629,The MultiMahjongClient will inform the user whose turn it is to pick up a tile.,FR,Functional,0.5
+630,F0_REQ_00630,The MultiMahjongClient will inform the user of legal Chow/Pung/Kong/Mahjong options under Chinese rules and send chosen actions to the MultiMahjongServer.,FR,Functional,0.5
+631,F0_REQ_00631,"User's will be able to pick up a tile from the wall if it is their turn. If they choose to pick up, the MultiMahjongClient must send this information to the MultiMahjongServer.",FR,Functional,0.5
+632,F0_REQ_00632,"User's will be able to discard a tile if they have picked one up. When they choose to discard, the MultiMahjongClient must send this information to the MultiMahjongServer",FR,Functional,0.5
+636,F0_REQ_00636,The MultiMahjongClient will keep the user's tiles in order.,FR,Functional,0.5
+637,F0_REQ_00637,The MultiMahjongClient will play sound effects associated with certain game actions.,FR,Functional,0.5
+638,F0_REQ_00638,Users will be able to turn the sound on or off at any stage during the game.,FR,Functional,0.5
+639,F0_REQ_00639,Users will be able to view the High Scores list that is located on the MultiMahjongServer,FR,Functional,0.5
+640,F0_REQ_00640,Users will be able to Undo their last move if playing in single player mode.,FR,Functional,0.5
+641,F0_REQ_00641,The MultiMahjongClient will automate the picking up of a tile from the wall if the user has no other option.,FR,Functional,0.5
+642,F0_REQ_00642,Users will be able to Save their game if playing in single player mode.,FR,Functional,0.5
+643,F0_REQ_00643,User's will be able to chat with each other in real time.,FR,Functional,0.5
+644,F0_REQ_00644,User's will be able to change their icons/pictures and names during the game.,FR,Functional,0.5
+645,F0_REQ_00645,The game will end when all 4 rounds have been played or if the user chooses to end the game.,FR,Functional,0.5
+646,F0_REQ_00646,The user will be able to end the game at any stage of the game.,FR,Functional,0.5
+647,F0_REQ_00647,The MultiMahjongServer will inform all MultiMahjongClients connected to the game that the game has ended,FR,Functional,0.5
+648,F0_REQ_00648,"If a user leaves the game prematurely, a new CO is created on another user's machine to fill their place.",FR,Functional,0.5
+649,F0_REQ_00649,The CO must play moves according to the Chinese rules of Mahjong.,FR,Functional,0.5
+650,F0_REQ_00650,The CO will not have access to the data containing the faces of any tiles in the wall or any concealed tiles in any other players' hands.,FR,Functional,0.5
+651,F0_REQ_00651,"The CO will be able to pick up tiles off the wall, discard tiles, reveal Kongs, and Chow/Pung/Kong/Mahjong.",FR,Functional,0.5
+653,F0_REQ_00653,The CO will be able to read any player's exposed or revealed hands.,FR,Functional,0.5
+654,F0_REQ_00654,"The CO will be able to determine what tiles have not been played according to the tiles that have already been discarded, exposed or revealed.",FR,Functional,0.5
+655,F0_REQ_00655,"The CO will be able to recognise ""almost finished"" sets of tiles (i.e. 2 tiles in a sequence is an almost finished Chow) and will not discard tiles in such sets.",FR,Functional,0.5
+656,F0_REQ_00656,"The CO will be able to play at 3 different ability levels: Beginner, Intermediate and Advanced.",FR,Functional,0.5
+657,F0_REQ_00657,The CO will be able to perform look ahead algorithms to determine its best move in the Intermediate and Advanced levels.,FR,Functional,0.5
+658,F0_REQ_00658,The CO will be able to perform calculations at any stage of the game.,FR,Functional,0.5
+659,F0_REQ_00659,The CO will be able to play any version of the rules that are specified by the user who creates the game.,FR,Functional,0.5
+660,F0_REQ_00660,There will be CO's of different playing styles that the user can choose from.,FR,Functional,0.5
+690,F0_REQ_00690,"The TCS will have the capability to control and monitor an AV, payload, data link, and C4I interfaces during the execution of a mission.",FR,Functional,0.5
+723,F0_REQ_00723,The TCS will have the capability to control and monitor the AV payload(s).,FR,Functional,0.5
+741,F0_REQ_00741,The TCS will interface with external systems to conduct mission coordination and operations.,FR,Functional,0.5
+771,F0_REQ_00771,"Program will have a simple, graphically appealing interface designed for sixth graders.",FR,Functional,0.5
+772,F0_REQ_00772,Software will run on most computers since it only requires Macromedia Flash and HTML.,FR,Functional,0.5
+780,F0_REQ_00780,The user will respond to questions by clicking on the desired answer from a set of choices,FR,Functional,0.5
+786,F0_REQ_00786,The product will be as secure as the web browser that will run the product.,FR,Functional,0.5
+787,F0_REQ_00787,The product will be available over the Internet via the S2S website.,FR,Functional,0.5
+970,F0_REQ_00970,A yellow Caution indicator will be used to signify potential diagnostic issues.,FR,Functional,0.5
+971,F0_REQ_00971,A red Not OK indicator will be active to signify a confirmed diagnostic condition.,FR,Functional,0.5
+995,F0_REQ_00995,There will be no restriction in time or place for the use of the software built from the specifications produced under this contract.,FR,Functional,0.5
+997,F0_REQ_00997,The system will be designed so that background tasks can continue while the user performs foreground tasks.,FR,Functional,0.5
+999,F0_REQ_00999,The client will send a GET request to the Web API with the question as a URL parameter.,FR,Functional,0.5
+1000,F0_REQ_01000,The client will specify the header Content-Type: application/json in their requests as convention.,FR,Functional,0.5
+1002,F0_REQ_01002,The client will be able to parse the JSON and determine if there was an error.,FR,Functional,0.5
+1003,F0_REQ_01003,The server will send all API data in JSON response documents with the header Content-Type: application/json.,FR,Functional,0.5
+1004,F0_REQ_01004,The server will respond with a 200 OK status code if a request has the header Content-Type: application/json and is a valid API query.,FR,Functional,0.5
+1005,F0_REQ_01005,The server will respond with a 400 Bad Request status code if request does not specify the header Content-Type: application/json OR is a malformed API query.,FR,Functional,0.5
+1006,F0_REQ_01006,This unit will receive a text string from the URL parameter.,FR,Functional,0.5
+1007,F0_REQ_01007,"This unit will output the sentence as a string,",FR,Functional,0.5
+1008,F0_REQ_01008,A MySQL database will be used to store all information required to answer questions.,FR,Functional,0.5
+1010,F0_REQ_01010,The database will be updated periodically and the API will be unavailable during the update.,FR,Functional,0.5
+1011,F0_REQ_01011,The GUI will have a textbox that will accept inputs from a keyboard.,FR,Functional,0.5
+1012,F0_REQ_01012,"Text box will originally contain a suggestive text question, to guide the user to the format of an appropriate question.",FR,Functional,0.5
+1013,F0_REQ_01013,The GUI will have a chat window displaying questions sent to the system and responses from the API.,FR,Functional,0.5
+1014,F0_REQ_01014,"The chat window will contain all questions and answers from the current session, with a scroll bar if all messages can't fit on the screen.",FR,Functional,0.5
+1015,F0_REQ_01015,"If there is a network issue, the chat window will display an error message.",FR,Functional,0.5
+1018,F0_REQ_01018,"If a question is not understood by our API, the system will send a text containing an example question after the text with the API response.",FR,Functional,0.5
+1019,F0_REQ_01019,The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,FR,Functional,0.5
+1020,F0_REQ_01020,The overall accuracy of the Web API's response will be measured using a developer-made testing set.,FR,Functional,0.5
+1026,F0_REQ_01026,"The connection between the Web API and the programs will use HTTPS, for security.",FR,Functional,0.5
+1027,F0_REQ_01027,A new user will make less than 3 mistakes in 5 minutes after 5 minutes of use.,FR,Functional,0.5
+1033,F0_REQ_01033,The data displayed in both the nodes of the graph and the rows of the table will be MSEL Summary data.,FR,Functional,0.5
+1035,F0_REQ_01035,The top 1/4 of the table will hold events that are to occur sequentially.,FR,Functional,0.5
+1036,F0_REQ_01036,The bottom 3/4 of the table will hold events that occur according to its relevance to current time.,FR,Functional,0.5
+1165,F0_REQ_01165,The system will use the stored e-mail addresses as a primary means of communicating information to affected parties.,FR,Functional,0.5
+1167,F0_REQ_01167,The system will notify affected parties when changes occur affecting clinicals including but not limited to clinical section capacity changes and clinical section cancellations.,FR,Functional,0.5
+1168,F0_REQ_01168,The system will notify affected parties when changes occur affecting classes including but not limited to class cancellations class section detail changes and changes to class offerings for a given quarter.,FR,Functional,0.5
+1169,F0_REQ_01169,The system will notify affected parties when changes occur affecting cohorts including but not limited to changes to the sequence for a cohort’s program of study and changes to a given week’s schedule.,FR,Functional,0.5
+1170,F0_REQ_01170,The system will notify affected parties when changes occur affecting specific students including but not limited to changing a student’s status from full time to part time and moving a student to a different clinical section.,FR,Functional,0.5
+1185,F0_REQ_01185,"To resolve disputes, the Disputes application will rely solely on transaction details retrieved from the Statement Database.",FR,Functional,0.5
+1222,F0_REQ_01222,The Disputes System must provide viewing capability for existing dispute cases.,FR,Functional,0.5
+1224,F0_REQ_01224,"A list of disputes meeting search criteria must be provided, differentiating by color-coded status.",FR,Functional,0.5
+1228,F0_REQ_01228,"For any systematic action, such as disputes aging process, a case activity will be generated, and the user who initiated the dispute case must be notified upon next logon.",FR,Functional,0.5
+1229,F0_REQ_01229,All letter requests must adhere to formatting guidelines specified by the Print Letter Utility system.,FR,Functional,0.5
+1230,F0_REQ_01230,Any disputes cases closed for over 6 months must be purged from the online disputes database.,FR,Functional,0.5
+1231,F0_REQ_01231,The product must support Internet Explorer 5.5 and above.,FR,Functional,0.5
+1232,F0_REQ_01232,The product must support Mozilla Firefox 1.0 and above.,FR,Functional,0.5
+1238,F0_REQ_01238,Professional appearance of the product is required.,FR,Functional,0.5
+1240,F0_REQ_01240,"The product should enhance the productivity of Collision Estimators, with 80% agreeing their productivity has increased within one month.",FR,Functional,0.5
+1242,F0_REQ_01242,The product must be easily learnable within two days of onsite training for Adjusters and Collision Estimators.,FR,Functional,0.5
+1243,F0_REQ_01243,User help resources should be accessible within 90% of the system.,FR,Functional,0.5
+1245,F0_REQ_01245,The search for the preferred repair facility should be completed within 8 seconds.,NFR,Performance,0.5
+1247,F0_REQ_01247,Preferred repair facility ratings should be saved within 5 seconds.,NFR,Performance,0.5
+1255,F0_REQ_01255,The maintenance of the product will fall within the established corporate maintenance windows.,FR,Functional,0.5
+1258,F0_REQ_01258,Only adjusters can request recycled parts audit reports.,FR,Functional,0.5
+1259,F0_REQ_01259,Only adjusters with a supervisor role can update preferred repair facility ratings.,FR,Functional,0.5
+1265,F0_REQ_01265,The product must comply with Sarbanes-Oxley.,FR,Functional,0.5
+1298,F0_REQ_01298,The system will display a blank set of ratings if there are not ratings yet defined.,FR,Functional,0.5
+1304,F0_REQ_01304,The product must work with most database management systems (DBMS) on the market whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network.,FR,Functional,0.5
+1305,F0_REQ_01305,The product will function alongside server software on any operating system where the Java runtime can be installed.,FR,Functional,0.5
+1306,F0_REQ_01306,The product will require collaboration with a database management system (DBMS). The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,FR,Functional,0.5
+1307,F0_REQ_01307,The product must make use of web/application server technology. Open source examples include Apache web server Tomcat and the JBoss application server.,FR,Functional,0.5
+1308,F0_REQ_01308,A database management system such as Oracle DB2 MySql or HSQL will need to be integrated with the product.,FR,Functional,0.5
+1316,F0_REQ_01316,An employee will be able to successfully use the product within a few minutes.,FR,Functional,0.5
+1324,F0_REQ_01324,The concurrency capacity must be able to handle peak scheduling times such as early morning and late afternoon hours.,FR,Functional,0.5
+1376,F0_REQ_01376,All Users will be able to view the next product by swiping left to right.,FR,Functional,0.5
+1443,F0_REQ_01443,The system shall be able to display a menu at all times to facilitate manual order taking should the need arise.,FR,Functional,0.5
+1450,F0_REQ_01450,Admin must not dismiss an engaged menu unless the customer requests it.,FR,Functional,0.5
+1513,F0_REQ_01513,"User can create profiles with health worker information, attaching usernames for identification, and supporting multiple users on a single device.",FR,Functional,0.5
+1514,F0_REQ_01514,User can register working locations of healthcare workers for use in health survey forms.,FR,Functional,0.5
+1515,F0_REQ_01515,System downloads disease data offline to minimize typing in surveys.,FR,Functional,0.5
+1516,F0_REQ_01516,"System conducts health surveys to identify disease outbreaks, storing data offline if connectivity fails.",FR,Functional,0.5
+1517,F0_REQ_01517,System supports offline surveys for uninterrupted data collection.,FR,Functional,0.5
+1627,F0_REQ_01627,"User data will be encrypted using industry-standard encryption algorithms, including payment information and personal data.",FR,Functional,0.5
+1628,F0_REQ_01628,Only authorized workers will be able to access the administrative panel.,FR,Functional,0.5
+1629,F0_REQ_01629,The system will offer defense against widespread online vulnerabilities like cross-site scripting (XSS) and SQL injection.,FR,Functional,0.5
+1630,F0_REQ_01630,User experience (UX) design best practices will be adhered to by the user interface.,FR,Functional,0.5
+1641,F0_REQ_01641,A player will be able to quit the game at any time.,FR,Functional,0.5
+1642,F0_REQ_01642,Quitting will end the game immediately.,FR,Functional,0.5
+1670,F0_REQ_01670,"The torch will be able to be fired up by touching it, and objects will be able to be dropped by leaving them at their initial place.",FR,Functional,0.5
+1678,F0_REQ_01678,Security concerns are mitigated as Light My Way doesn't create user profiles or access credentials.,NFR,Security,0.5
+1703,F0_REQ_01703,"Performance of making recommendations and updating them in real-time is crucial, requiring seamless processing to ensure users do not notice data processing.",NFR,Performance,0.5
+1705,F0_REQ_01705,"The database must be securely accessed and its data integrity maintained, especially considering the presence of personal user information.",FR,Functional,0.5
+1737,F0_REQ_01737,"Upon user login, the system will display personalized information and automatically add certain details to booking requests.",FR,Functional,0.5
+1738,F0_REQ_01738,The application and its options will be in US English and Unicode format for globalization support.,FR,Functional,0.5
+1739,F0_REQ_01739,"The booking process will be intuitive, with information completion in stages.",FR,Functional,0.5
+1740,F0_REQ_01740,"Both employees and clients will be able to update personal details anytime, with clients also able to update booking details.",FR,Functional,0.5
+1741,F0_REQ_01741,An email confirmation with original and new details will be dispatched upon confirmation of updates.,FR,Functional,0.5
+1742,F0_REQ_01742,Booking will be locked for editing only when an employee is assigned to serve the client.,FR,Functional,0.5
+1743,F0_REQ_01743,The administrator will be able to select and update the weekly roster based on employee availability.,FR,Functional,0.5
+1744,F0_REQ_01744,"The administrator will be able to print reports annually, weekly, and daily based on selected time frames.",FR,Functional,0.5
+1745,F0_REQ_01745,The administrator will be able to check feedback posted by clients and send newsletters regarding promotions.,FR,Functional,0.5
+1746,F0_REQ_01746,"The administrator will be able to manage user portfolio, providing access to new users and deleting inactive employees.",FR,Functional,0.5
+1747,F0_REQ_01747,The administrator will be able to view system statistics and generate reports based on selected criteria.,FR,Functional,0.5
+1861,F0_REQ_01861,The system shall be able to display a menu at all times to facilitate manual order taking should the need arise.,FR,Functional,0.5
+1982,F0_REQ_01982,Normal users will have read-only access to information except for their personal and some other specified information.,FR,Functional,0.5
+1997,F0_REQ_01997,"If a request is approved, the status will be marked as ""Borrow"" with an end date.",FR,Functional,0.5
+2003,F0_REQ_02003,"Users of the system include four categories: Student (Transaction and view), Faculty (Transaction and view), Author (view), Publisher (view).",FR,Functional,0.5
+2034,F0_REQ_02034,"The system shall provide uninterrupted functionality both with and without an internet connection. In offline mode, users should still be able to access certain features. In online mode, the system should operate smoothly.",FR,Functional,0.5
+2104,F0_REQ_02104,"Errors will be minimized, and users will be provided with appropriate error messages to guide them through the issue.",FR,Functional,0.5
+2266,F0_REQ_02266,Resumes will have options for private/public/confidential settings.,FR,Functional,0.5
+2267,F0_REQ_02267,Contact information will be optionally hidden.,FR,Functional,0.5
+2268,F0_REQ_02268,Resumes will be hidden from specific companies.,FR,Functional,0.5
+2269,F0_REQ_02269,Multiple qualifications and experiences will be added and submitted.,FR,Functional,0.5
+2270,F0_REQ_02270,Photos and Cover Letters will be added to profiles and job applications.,FR,Functional,0.5
+2271,F0_REQ_02271,Newsletter subscription and customization options will be provided.,FR,Functional,0.5
+2272,F0_REQ_02272,Jobs will be added to a watchlist for later viewing.,FR,Functional,0.5
+2275,F0_REQ_02275,"Job Search Agents will be added, edited, activated, or deleted.",FR,Functional,0.5
+2278,F0_REQ_02278,Messages will be sent to employers and job seekers for subscription-related matters.,FR,Functional,0.5
+2280,F0_REQ_02280,Admin will set criteria for users and manage static content updates.,FR,Functional,0.5
+2281,F0_REQ_02281,Email notifications to users based on account status will be sent from the admin panel.,FR,Functional,0.5
+2290,F0_REQ_02290,Job seekers and employers will be searched based on various criteria.,FR,Functional,0.5
+2292,F0_REQ_02292,"Invoices can be sent to companies, and featured employer showcases can be managed.",FR,Functional,0.5
+2294,F0_REQ_02294,Full lists of job seekers and employers along with their contact information can be printed.,FR,Functional,0.5
+2295,F0_REQ_02295,Resumes will be imported directly from an existing database.,FR,Functional,0.5
+2322,F0_REQ_02322,"User will be prompted to grant permission to access the camera if they initially deny access, allowing the app to utilize camera functionality.",FR,Functional,0.5
+2323,F0_REQ_02323,"User will be notified if the barcode output is not generated due to an issue, prompting them to retry or seek assistance if needed.",FR,Functional,0.5
+2340,F0_REQ_02340,Crafty kids corner will be compatible with a wide range of web browsers and devices commonly used by kids and their parents/guardians.,FR,Functional,0.5
+2341,F0_REQ_02341,Crafty kids corner will provide cross-platform support to ensure a consistent user experience across different operating systems.,FR,Functional,0.5
+2390,F0_REQ_02390,User will be able to log in to their Quora.com account.,FR,Functional,0.5
+2403,F0_REQ_02403,User will choose between linking a credit or debit card.,FR,Functional,0.5
+2404,F0_REQ_02404,System will allow the user to link their card.,FR,Functional,0.5
+2406,F0_REQ_02406,System will display a message indicating that the bank account has been successfully added.,FR,Functional,0.5
+2407,F0_REQ_02407,"User will choose from options including searching for their issue, chatting with customer support, asking the community, emailing customer support, or calling customer support.",FR,Functional,0.5
+2408,F0_REQ_02408,System will prompt the user to select their issue or write about their problem.,FR,Functional,0.5
+2409,F0_REQ_02409,User will submit their issue or problem.,FR,Functional,0.5
+2410,F0_REQ_02410,System will display a message confirming that the problem or issue has been submitted successfully.,FR,Functional,0.5
+2413,F0_REQ_02413,User will input the verification code received.,FR,Functional,0.5
+2414,F0_REQ_02414,System will confirm the successful submission of the verification code.,FR,Functional,0.5
+2415,F0_REQ_02415,User will input a new password and confirm the password.,FR,Functional,0.5
+2416,F0_REQ_02416,System will display a message confirming that the password has been created successfully.,FR,Functional,0.5
+2419,F0_REQ_02419,System must perform effectively in adverse conditions.,FR,Functional,0.5
+2422,F0_REQ_02422,The PayPal network must be available 24 hours a day.,FR,Functional,0.5
+2423,F0_REQ_02423,Only designated maintainers are allowed to connect new users to the PayPal Payment System network and maintain records of all users and transaction status.,FR,Functional,0.5
+2554,F0_REQ_02554,The software will support simultaneous user acces only if there are multiple terminals.,FR,Functional,0.5
+2555,F0_REQ_02555,Only textual information will be handled by the software.,FR,Functional,0.5
+2605,F0_REQ_02605,The system shall be able to display a menu at all times to facilitate manual  order taking should the need arise.,FR,Functional,0.5
+2608,F0_REQ_02608,Wireless communication throughout the system will be encrypted using SSLv3  at the application layer and WPA2-PSK at the data link layer.,FR,Functional,0.5
+2609,F0_REQ_02609,The WPA2-PSK password used for wireless communication must have a bit-  strength of at least 80 bits.,FR,Functional,0.5
+2610,F0_REQ_02610,The WPA2-PSK password used for wireless communication must be changed  every three months.,FR,Functional,0.5
+2611,F0_REQ_02611,A waiter password used for tablet login must be changed every three months.,FR,Functional,0.5
+2618,F0_REQ_02618,A surface computer must not dismiss an engaged menu unless the customer  requests it.,FR,Functional,0.5
+2631,F0_REQ_02631,User must have a valid login ID to access the site.,FR,Functional,0.5
+2794,F0_REQ_02794,System's reliability depends on continuous backup of the database.,NFR,Reliability,0.5
+2805,F0_REQ_02805,"Alternatively, the user can push the up, down, right, and left keys of the keyboard to move the activity.",FR,Functional,0.5
+2807,F0_REQ_02807,"Alternatively, the user can push the delete key of the keyboard to delete the activity.",FR,Functional,0.5
+2809,F0_REQ_02809,"Alternatively, the user can push the delete key of the keyboard to delete the connection.",FR,Functional,0.5
+2811,F0_REQ_02811,"Alternatively, the user can hold the ""Ctrl"" key and click on desired activities and connections to select them.",FR,Functional,0.5
+2877,F0_REQ_02877,"System must ensure safety by protecting from intruders, ensuring unique IDs for each user, and requiring unique admin ID.",FR,Functional,0.5
+2880,F0_REQ_02880,Website must be connected to a web server to make it available worldwide.,FR,Functional,0.5
+2925,F0_REQ_02925,"These additional non-functional requirements aim to further enhance the performance, security, user experience, reliability, and availability of the system.",NFR,Usability,0.5
+2956,F0_REQ_02956,The overall reliability of the system depends on the reliability of individual components.,FR,Functional,0.5
+2994,F0_REQ_02994,Connections for chats and calls must remain uninterrupted.,FR,Functional,0.5
+2995,F0_REQ_02995,User accessibility and information must be secured through appropriate measures.,FR,Functional,0.5
+2996,F0_REQ_02996,Verification of users signing up as astrologers must be ensured.,FR,Functional,0.5
+2997,F0_REQ_02997,Interaction between users must be secured to maintain privacy.,FR,Functional,0.5
+2998,F0_REQ_02998,The system must be recoverable in case of any failures or problems.,FR,Functional,0.5
+3000,F0_REQ_03000,Performance must meet specified requirements even under high user load.,FR,Functional,0.5
+3001,F0_REQ_03001,The system must comply with specifications and maintain an acceptable level of performance.,FR,Functional,0.5
+3079,F0_REQ_03079,The passport management website must be available 24 hours a day.,FR,Functional,0.5
+3081,F0_REQ_03081,New features can be added to the passport management system.,FR,Functional,0.5
+3082,F0_REQ_03082,Corrective Maintenance: Any unidentified bugs need to be fixed promptly.,FR,Functional,0.5
+3084,F0_REQ_03084,Perfective Maintenance: New features may be added post product delivery.,FR,Functional,0.5
+3097,F0_REQ_03097,System must support concurrent access by up to 1000 users simultaneously.,FR,Functional,0.5
+3099,F0_REQ_03099,The system must conform to Microsoft Accessibility standards for accessibility compliance.,FR,Functional,0.5
+3100,F0_REQ_03100,The user will select the add task option.,FR,Functional,0.5
+3101,F0_REQ_03101,Add task page will be opened consisting of minimum three fields.,FR,Functional,0.5
+3102,F0_REQ_03102,First field will be add task name.,FR,Functional,0.5
+3103,F0_REQ_03103,Second field will be date of task completion.,FR,Functional,0.5
+3104,F0_REQ_03104,Third field will be time of task completion.,FR,Functional,0.5
+3105,F0_REQ_03105,"When the user presses add, system must check if the the name, date and time fields are completed.",FR,Functional,0.5
+3111,F0_REQ_03111,Edit task page will be opened.,FR,Functional,0.5
+3113,F0_REQ_03113,Edited task cannot be saved if the new name of it is empty.,FR,Functional,0.5
+3117,F0_REQ_03117,If user answers positive then this task will be deleted else the deleted command will be cancelled.,FR,Functional,0.5
+3120,F0_REQ_03120,System must show any task that is completed in the task list.,FR,Functional,0.5
+3124,F0_REQ_03124,"If all the tasks are already completed, no task will appear in the view option.",FR,Functional,0.5
+3138,F0_REQ_03138,Developing this product native-first enables cross-platform functionality.,FR,Functional,0.5
+3141,F0_REQ_03141,The software will only be operational when a user is registered.,FR,Functional,0.5
+3155,F0_REQ_03155,Sensitive data will be encrypted before being sent over insecure connections like the internet.,FR,Functional,0.5
+3164,F0_REQ_03164,"In case of a failure, a re-initialization of program will be done.",FR,Functional,0.5
+3167,F0_REQ_03167,"The system shall define what data can be entered, how it should be formatted, and any rules for validating the data.",FR,Functional,0.5
+3178,F0_REQ_03178,All personnel using the system will be trained according to internal SOP AA-101.,FR,Functional,0.5
+3179,F0_REQ_03179,The database will have a functional audit trail.,FR,Functional,0.5
+3180,F0_REQ_03180,The system will limit access to authorized users.,FR,Functional,0.5
+3327,F0_REQ_03327,The system may optionally provide real-time train location information if available.,FR,Functional,0.5
+3410,F0_REQ_03410,Backup power supply must be available for the server to ensure continuous operation in case of power failure.,FR,Functional,0.5
+3446,F0_REQ_03446,The reliability of the e-store depends on the reliability of its separate components.,FR,Functional,0.5
+3482,F0_REQ_03482,User will need a device capable of playing a 144p resolution video.,FR,Functional,0.5
+3483,F0_REQ_03483,User will require a minimum internet connection speed of 500kbps to play videos without buffering.,FR,Functional,0.5
+3484,F0_REQ_03484,"In case of extensive database damage, a backup method will restore a previous copy of the database and switch to backup servers to keep the site operational.",FR,Functional,0.5
+3485,F0_REQ_03485,"All private data uploaded by users will be strictly confidential to other users, and users will be able to report suspicious activity to the security department.",FR,Functional,0.5
+3486,F0_REQ_03486,The site will be available to users 24/7.,FR,Functional,0.5
+3487,F0_REQ_03487,Maintenance and updates of the site will be carried out by developers and a team of software engineers.,FR,Functional,0.5
+3826,F0_REQ_03826,The system may be adaptable to different languages and currencies.,FR,Functional,0.5
+3961,F0_REQ_03961,The system may be adaptable to different languages and currencies.,FR,Functional,0.5
+3962,F0_REQ_03962,The system may be equipped with a pricing plan and billing system.,FR,Functional,0.5
+4116,F0_REQ_04116,"User must accept the cancellation terms with a checkbox, to be accountable.",FR,Functional,0.5
+4513,F0_REQ_04513,The system shall determine when Zoonibot should comment or provide explanations to volunteers.,FR,Functional,0.5
+4549,F0_REQ_04549,Audit trail functionality must be activated without manual intervention.,FR,Functional,0.5
+4550,F0_REQ_04550,System must maintain audit trail for at least the life of associated cases and make it accessible on request.,FR,Functional,0.5
+4551,F0_REQ_04551,Audit trail data must be available for inspection and export for specified cases.,FR,Functional,0.5
+4552,F0_REQ_04552,System must capture and store violations and attempted violations of access control mechanisms.,FR,Functional,0.5
+4553,F0_REQ_04553,"System must provide reports for actions on cases organized by case, user, and in chronological sequence.",FR,Functional,0.5
+4561,F0_REQ_04561,Unauthorized attempts to access cases must be logged in the audit trail.,FR,Functional,0.5
+4562,F0_REQ_04562,All access to cases and related activities must be stored in the audit trail for legal admissibility and data recovery.,FR,Functional,0.5
+4563,F0_REQ_04563,All error messages must be meaningful and accompanied by explanatory text.,FR,Functional,0.5
+4564,F0_REQ_04564,System must employ a consistent user interface look and feel.,FR,Functional,0.5
+4565,F0_REQ_04565,System must display multiple entities simultaneously.,FR,Functional,0.5
+4566,F0_REQ_04566,"Interfaces must be customizable and user-configurable, saving configurations in user profiles.",FR,Functional,0.5
+4567,F0_REQ_04567,System interface must be compatible with specialist software and suitable for users with special needs.,FR,Functional,0.5
+4568,F0_REQ_04568,System must provide easy-to-use End User and Administrator functions.,FR,Functional,0.5
+4569,F0_REQ_04569,"Defaults for data entry must be persistent and include user-definable, previous, and context-derived values.",FR,Functional,0.5
+4570,F0_REQ_04570,Frequently-executed transactions must be completed with minimal interactions.,FR,Functional,0.5
+4571,F0_REQ_04571,"System interfaces must allow customization, including menu contents, screen layout, function keys, colors, and fonts.",FR,Functional,0.5
+4574,F0_REQ_04574,"Customer accounts will include customer profiles, contact info, purchase history, and order confirmation.",FR,Functional,0.5
+4575,F0_REQ_04575,"Customers can register, log in, and log out of their accounts.",FR,Functional,0.5
+4577,F0_REQ_04577,Products will be organized into multi-tiered categories in inventory management.,FR,Functional,0.5
+4578,F0_REQ_04578,"Administrators can update categories, products, and product details.",FR,Functional,0.5
+4580,F0_REQ_04580,Shopping cart will display item count and total cost.,FR,Functional,0.5
+4581,F0_REQ_04581,Customers can add or remove products from the shopping cart before checkout.,FR,Functional,0.5
+4582,F0_REQ_04582,Customers can review and confirm orders before checkout.,FR,Functional,0.5
+4583,F0_REQ_04583,Customers can revise and update orders if incorrect.,FR,Functional,0.5
+4585,F0_REQ_04585,Interface will be presented in a web browser.,FR,Functional,0.5
+4586,F0_REQ_04586,Interface must be consistent and intuitive across different web browsers.,FR,Functional,0.5
+4588,F0_REQ_04588,Interface will be compatible with major web browsers.,FR,Functional,0.5
+4590,F0_REQ_04590,Plug-ins can interact with the system via the plug-in API.,FR,Functional,0.5
+4591,F0_REQ_04591,Plug-in API will be well-documented for plug-in developers.,FR,Functional,0.5
+4643,F0_REQ_04643,"Any administrative level user can delegate actions to another user, acquiring the role of inventory administrator.",FR,Functional,0.5
+4644,F0_REQ_04644,"Output reports include asset reports by location, request reports, and user permission reports.",FR,Functional,0.5
+4713,F0_REQ_04713,"In case of hardware failure or database corruption, a replacement page will be displayed, and backups will be retrieved and saved by the administrator.",FR,Functional,0.5
+4720,F0_REQ_04720,System reliability hinges on continuous backup maintenance and updates to reflect recent changes.,NFR,Reliability,0.5
+4819,F0_REQ_04819,"Customer receives notifications for order accepted, once order is picked up, and delivered.",FR,Functional,0.5
+4855,F0_REQ_04855,The system shall be able to display a menu at all times to facilitate manual order taking should the need arise.,FR,Functional,0.5
+4862,F0_REQ_04862,Admin must not dismiss an engaged menu unless the customer requests it.,FR,Functional,0.5
+4888,F0_REQ_04888,"Running the full VS Code in Windows/Linux containers is not supported. However, using the Dev Containers extension with the VS Code server running in the container and the client on the desktop is supported.",FR,Functional,0.5
+4927,F0_REQ_04927,All numerical requirements stated above are subject to measurable performance monitoring and evaluation.,NFR,Performance,0.5
+4969,F0_REQ_04969,All code must be consistent with respect to style.,FR,Functional,0.5
+4970,F0_REQ_04970,All functionality must be thoroughly tested through comprehensive test cases.,FR,Functional,0.5
+4981,F0_REQ_04981,"Passwords can include digits, hyphens, and underscores.",NFR,Security,0.5
+4996,F0_REQ_04996,User must file a First Information Report (FIR) and present a copy for card blocking in case of lost ATM card.,FR,Functional,0.5
+5027,F0_REQ_05027,The subscription will end if the user does not respond to the subscription package within the allotted time frame.,FR,Functional,0.5
+5033,F0_REQ_05033,Users are advised to change their passwords regularly and not share their user ID and password with anyone.,NFR,Security,0.5
+5036,F0_REQ_05036,Only maintainers are allowed to add new videos to the website.,FR,Functional,0.5
+5074,F0_REQ_05074,The system should be able to handle a growing number of users and scores.,NFR,Performance,0.5
+5119,F0_REQ_05119,The graphics card may improve overall performance and user experience.,NFR,Performance,0.5
+5129,F0_REQ_05129,The system may support a touch-screen-enabled tablet or monitor for a more intuitive and natural drawing experience.,FR,Functional,0.5
+5254,F0_REQ_05254,A sale transaction authorizes and settles the requested amount against the indicated payment method.,FR,Functional,0.5
+5363,F0_REQ_05363,The application must be accessible to all users without any charges.,FR,Functional,0.5
+5431,F0_REQ_05431,System recommends using Google Chrome browser for best experience.,FR,Functional,0.5
+5447,F0_REQ_05447,Users who give up subsidy will be displayed on the Scroll of Honor.,FR,Functional,0.5
+5561,F0_REQ_05561,"The system must perform well in adverse environmental conditions, such as extreme temperatures.",FR,Functional,0.5
+5562,F0_REQ_05562,The system must maintain uninterrupted and reliable connections for transactions.,FR,Functional,0.5
+5563,F0_REQ_05563,The system must support a high data transfer rate for efficient processing.,FR,Functional,0.5
+5564,F0_REQ_05564,The system must be safely housed in a physically secure cabin.,FR,Functional,0.5
+5565,F0_REQ_05565,The system must be bolted to the floor to prevent theft.,FR,Functional,0.5
+5566,F0_REQ_05566,There must be an emergency phone located outside the cabin for safety purposes.,FR,Functional,0.5
+5567,F0_REQ_05567,The cabin door must have an ATM card swipe slot for access control.,FR,Functional,0.5
+5568,F0_REQ_05568,"The cabin door must remain locked, opening only when a user swipes a valid ATM card in the slot.",FR,Functional,0.5
+5569,F0_REQ_05569,User accessibility must be closely monitored and restricted as needed.,FR,Functional,0.5
+5570,F0_REQ_05570,Users must be prompted to change their PIN on first use for security.,FR,Functional,0.5
+5571,F0_REQ_05571,Users must be advised not to share their PIN with anyone.,FR,Functional,0.5
+5572,F0_REQ_05572,The system must lock out users after three incorrect PIN attempts for security.,FR,Functional,0.5
+5573,F0_REQ_05573,The software must adhere to security and performance quality standards.,FR,Functional,0.5
+5574,F0_REQ_05574,The client can register themselves in the system by filling in the required data.,FR,Functional,0.5
+5575,F0_REQ_05575,The admin or user can log in to the system with their unique username and password.,NFR,Security,0.5
+5576,F0_REQ_05576,Authenticated users can add properties to the system.,FR,Functional,0.5
+5577,F0_REQ_05577,"Professionals, including agents who work as residential and commercial real estate brokers, provide property details to the admin, who then adds the property to the website.",FR,Functional,0.5
+5578,F0_REQ_05578,Users can ask questions and receive answers on the platform.,FR,Functional,0.5
+5579,F0_REQ_05579,"Users can view, update, or delete their own profile.",FR,Functional,0.5
+5580,F0_REQ_05580,"Users can manage properties by viewing, editing, or deleting them.",FR,Functional,0.5
+5581,F0_REQ_05581,"Users can search for available properties within their budget based on the area covered, city, location, price range, property type, property subtype, and purpose.",FR,Functional,0.5
+5582,F0_REQ_05582,Users can view full property details.,FR,Functional,0.5
+5583,F0_REQ_05583,"The admin can create, read, update, and delete realtors.",FR,Functional,0.5
+5584,F0_REQ_05584,"The user can register attendance for the day by entering their Staff ID, name, and password and clicking the Register Attendance button.",NFR,Security,0.5
+5585,F0_REQ_05585,The user can view their yearly and monthly attendance records.,FR,Functional,0.5
+5586,F0_REQ_05586,"The user can manipulate and view course details, including department-wise and description.",FR,Functional,0.5
+5587,F0_REQ_05587,"The user can manipulate and view department details, including department and description.",FR,Functional,0.5
+5588,F0_REQ_05588,"The user can manipulate and view designation details, including designation and description.",FR,Functional,0.5
+5589,F0_REQ_05589,"The user can manipulate and view donation details that have been made, such as department-wise, course-wise, and semester-wise donations.",FR,Functional,0.5
+5590,F0_REQ_05590,"The user can manipulate and view exam details, including subject name, date of the exam, total marks, and pass marks.",FR,Functional,0.5
+5591,F0_REQ_05591,"The user can manipulate and view fee details, including tuition fees, exam fees, and donation fees.",FR,Functional,0.5
+5592,F0_REQ_05592,"The user can manipulate and view fee payment details, including fees amount, concession, fees paid, balance amount, and donation fees.",FR,Functional,0.5
+5593,F0_REQ_05593,"When the user logs in, they are directed to the main page, which contains a menu strip with seven menu items: Master, Student, Employee, Transaction, Search, Report, and Exit.",FR,Functional,0.5
+5594,F0_REQ_05594,"The Master menu allows the user to access department, course, designation, subject details, examination details, fees details, donation and tuition, and scholarship information.",FR,Functional,0.5
+5595,F0_REQ_05595,"The Student menu allows the user to access profile entry, other details, and result entry.",FR,Functional,0.5
+5596,F0_REQ_05596,The Employee menu allows the user to access staff entry and attendance details.,FR,Functional,0.5
+5597,F0_REQ_05597,The Transaction menu allows the user to access student and employee transactions.,FR,Functional,0.5
+5598,F0_REQ_05598,The Search menu allows the user to search for student and employee information.,FR,Functional,0.5
+5599,F0_REQ_05599,"The Report menu allows the user to generate student and employee reports, including TC, class-wise report, course-wise report, result report, participation in ECA and inter-college competition, old student list, special achievements, department-wise report, and experience-wise report.",FR,Functional,0.5
+5600,F0_REQ_05600,The Exit menu allows the user to confirm whether they want to continue using the application or exit.,FR,Functional,0.5
+5612,F0_REQ_05612,The system assumes that each user will have only one role assigned at a time.,FR,Functional,0.5
+5618,F0_REQ_05618,The system requires end users to provide their symptoms accurately to avoid false predictions.,FR,Functional,0.5
+5620,F0_REQ_05620,The system ensures the security of personal health data to prevent unauthorized disclosure.,NFR,Security,0.5
+5621,F0_REQ_05621,"The system application will implement a secure ""passcode"" that users must enter each time they log in to prevent unauthorized access.",FR,Functional,0.5
+5628,F0_REQ_05628,The system must be connected to the network for optimal performance and support simultaneous access by multiple users with fast response times.,FR,Functional,0.5
+5630,F0_REQ_05630,"System must authenticate users with the correct username and password before allowing full access, ensuring database safety and secure payments.",FR,Functional,0.5
+5631,F0_REQ_05631,System uses MySQL (Version 5.5.8) for the database with several tables for storing information.,FR,Functional,0.5
+5632,F0_REQ_05632,System provides report generation for delivered goods to facilitate backup and recovery in case of data loss.,FR,Functional,0.5
+5640,F0_REQ_05640,The Online Journal server must have high-speed Internet capability.,FR,Functional,0.5
+5641,F0_REQ_05641,The physical machine for the server will be determined by the Historical Society.,FR,Functional,0.5
+5642,F0_REQ_05642,The software assumes the use of a tool like Tomcat for connecting web pages and the database.,FR,Functional,0.5
+5643,F0_REQ_05643,The speed of the Reader's connection depends on their hardware rather than system characteristics.,FR,Functional,0.5
+5644,F0_REQ_05644,The Article Manager will run on the editor's PC and will utilize an Access database.,FR,Functional,0.5
+5645,F0_REQ_05645,"Access is already installed on the editor's computer, which operates on the Windows operating system.",FR,Functional,0.5
+5690,F0_REQ_05690,The server must have UPS support with at least 8 hours of backup power in case of power failure.,FR,Functional,0.5
+5693,F0_REQ_05693,The developed website must be highly reliable and secure to prevent any leakage of applicant information.,FR,Functional,0.5
+5729,F0_REQ_05729,The PayPal network must be available 24 hours a day to ensure continuous service availability.,FR,Functional,0.5
+5730,F0_REQ_05730,Maintainers are responsible for connecting new users to the PayPal Payment System network and maintaining records of all users and transaction status for maintainability purposes.,FR,Functional,0.5
+5868,F0_REQ_05868,Reliability of the system depends on the reliability of its separate components.,FR,Functional,0.5
+5871,F0_REQ_05871,Maintaining the database will be facilitated by a commercial database and the application server.,FR,Functional,0.5
+5872,F0_REQ_05872,"In case of failure, the program will undergo re-initialization.",FR,Functional,0.5
+5873,F0_REQ_05873,Software design will prioritize modularity for efficient maintainability.,FR,Functional,0.5
+5874,F0_REQ_05874,User interacts with the payment processing feature through HTML and CSS code.,FR,Functional,0.5
+5875,F0_REQ_05875,User inputs their UPI ID into the designated fields.,FR,Functional,0.5
+5876,F0_REQ_05876,"The system handles the click event on the ""Pay Now"" button using JavaScript code.",FR,Functional,0.5
+5877,F0_REQ_05877,"Upon successful payment processing, users are redirected to the payment success page.",FR,Functional,0.5
+5878,F0_REQ_05878,The payment success page structure and content are defined using HTML code.,FR,Functional,0.5
+5879,F0_REQ_05879,JavaScript code includes error handling mechanisms to display error messages if payment processing fails.,FR,Functional,0.5
+5880,F0_REQ_05880,User adds items to the cart using JavaScript code.,FR,Functional,0.5
+5881,F0_REQ_05881,"User views the cart contents, which are managed by JavaScript code.",FR,Functional,0.5
+5882,F0_REQ_05882,HTML and CSS define the structure and styling of the cart interface.,FR,Functional,0.5
+5883,F0_REQ_05883,JavaScript functions process user actions and update the cart display accordingly.,FR,Functional,0.5
+5884,F0_REQ_05884,HTML code generates the cart display based on the current contents of the cart.,FR,Functional,0.5
+5885,F0_REQ_05885,JavaScript code includes error handling functionality to ensure a smooth user experience.,FR,Functional,0.5
+5886,F0_REQ_05886,User updates the cart contents using JavaScript functions.,FR,Functional,0.5
+5887,F0_REQ_05887,JavaScript functions manage updating the cart based on user actions such as quantity adjustments or item removal.,FR,Functional,0.5
+5992,F0_REQ_05992,User may export attendance data in a chosen format.,FR,Functional,0.5
+5994,F0_REQ_05994,System may send alerts for tardiness or absences.,FR,Functional,0.5
+6010,F0_REQ_06010,An antivirus has been installed on the system for safety purposes as it is connected via LAN and MAN.,FR,Functional,0.5
+6012,F0_REQ_06012,Instructors must enter a password to take roll or edit database information.,FR,Functional,0.5
+6014,F0_REQ_06014,An instructor can change his/her password only by supplying the existing password.,NFR,Security,0.5
+6038,F0_REQ_06038,The SQL database must have scalable capacity.,FR,Functional,0.5
+6043,F0_REQ_06043,"The system interfaces will be user-friendly, requiring no training for operation.",FR,Functional,0.5
+6048,F0_REQ_06048,Compatibility with previous Windows versions will require further testing.,FR,Functional,0.5

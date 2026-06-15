@@ -1,4 +1,4 @@
-Type,Requirement
+Type,text
 PE,The system shall refresh the display every 60 seconds.
 LF,The application shall match the color of the schema set forth by Department of Homeland Security
 US, If projected  the data must be readable.  On a 10x10 projection screen  90% of viewers must be able to read Event / Activity data from a viewing distance of 30
@@ -541,7 +541,7 @@ F,The system shall provide charts for the Activity or Event actual versus assume
 A,The RFS system should be available 24/7  especially during the budgeting period. The RFS system shall be available 90% of the time all year  and 98% during the budgeting period. 2% of the time  the system will become available within 1 hour of the time that the situation is reported.
 O,98% of the user workstations shall meet the minimum hardware requirements prior to implementation. Minimum Hard Disk Space
 O,98% of the user workstations shall meet the minimum software requirements prior to implementation
-O,The RFS system should be able to easily interface with the BDW environment  in order to load the data.  	7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process  every year. The data will be as of October month-end. 	Test files (7) shall be loaded up to 5 times throughout the year  from the BDW.
+O,"The RFS system should be able to easily interface with the BDW environment  in order to load the data.  	7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process  every year. The data will be as of October month-end. 	Test files (7) shall be loaded up to 5 times throughout the year  from the BDW."
 MN,Changes to revenue and expense formulae must be applied to the RFS system  every year  prior to the budgeting process start. Revenue and expense formulae will be updated within one week of their receipt  after which 2 weeks will be allotted to testing of the budget calculations  to be conducted jointly by the project development team and PCG Finance.
 MN,New branches/complexes/districts/regions and revenue/expense accounts added to the BDW  must be reflected in the RFS system. 100% of the entities (mentioned above) available as of October month-end  will be loaded into the RFS system  prior to the budget start process.
 SE,Only authorized user shall access the RFS system. ONLY users that exist in the UAS system  with the RFS system assigned to their role(s)  shall access the RFS system and use it.

@@ -1,0 +1,110 @@
+[
+  {
+    "ID": "REQ001",
+    "Text": "The system's data display shall operate in two user-selectable modes: 'Live' and 'Paused'. The default mode upon application start shall be 'Live'. In 'Live' mode, the system shall automatically query for new data and refresh the display every 60 seconds.",
+    "Class": "PE",
+    "Subclass": "PE",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ002",
+    "Text": "The application's user interface, including all components, text, and data visualizations, shall adhere to the color palette defined in the U.S. Customs and Border Protection (CBP) Style Guide, Version X.X, dated YYYY-MM-DD.",
+    "Class": "LF",
+    "Subclass": "LF",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ003",
+    "Text": "When projected onto a 10-foot by 10-foot screen in a room with standard office lighting (300-500 lux), all text representing 'Event / Activity' data shall be legible to 95% of test participants with 20/20 vision (or corrected to 20/20) from a viewing distance of 30 feet. Legibility is defined as the ability to correctly read aloud a randomly selected data entry.",
+    "Class": "US",
+    "Subclass": "US",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ004",
+    "Text": "The system shall be available 99.5% of the time, measured monthly. Availability is calculated as: (((Total\u00a0minutes\u00a0in\u00a0month)\u2212(Minutes\u00a0of\u00a0Unplanned\u00a0Downtime))/(Total\u00a0minutes\u00a0in\u00a0month))\u00d7100. \"Unplanned Downtime\" is defined as any period where users cannot access the system's core functions, excluding scheduled maintenance windows. The hours of coverage are 24x7x365. Scheduled maintenance will be limited to 4 hours per month and announced 48 hours in advance.",
+    "Class": "A",
+    "Subclass": "A",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ005",
+    "Text": "When projected under the conditions defined in REQ-3, 95% of test participants shall be able to correctly identify all events occurring within the 'current time' window (as defined in the project glossary) within 5 seconds of viewing the display. The visual cue for a 'current time' event shall be a green-colored border (DHS Green, HEX #5E9732) around the event's graphical representation. The viewing distance for this test is 30 feet.",
+    "Class": "US",
+    "Subclass": "US",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ006",
+    "Text": "The system shall enforce user authentication via integration with the organization's Active Directory Federation Services (ADFS) using SAML 2.0. Access to system functionalities shall be restricted based on a Role-Based Access Control (RBAC) model. User roles (e.g., 'Viewer', 'Administrator') will be derived from the user's Active Directory group membership. All access attempts, successful and failed, shall be logged.",
+    "Class": "SE",
+    "Subclass": "SE",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ007",
+    "Text": "The system shall achieve a System Usability Scale (SUS) score of 75 or greater. This will be measured via a post-task questionnaire administered to a panel of representative 'new users'. A 'new user' is defined as an individual with experience using standard office software but with no prior training on this application. Additionally, during testing, 90% of these 'new users' must successfully initiate the display of events within 10 minutes, without access to training materials.",
+    "Class": "US",
+    "Subclass": "US",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ008",
+    "Text": "The system shall meet the following response time requirements under a simulated load of 50 concurrent users: 1. Initial application load time: < 10 seconds. 2. Time to render display updates after a data filter is applied: < 2 seconds. 3. Time to execute a pause/resume command: < 1 second. Response time is measured from the completion of the user's input action to the completion of the corresponding display update.",
+    "Class": "PE",
+    "Subclass": "PE",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ009",
+    "Text": "The user interface shall allow the user to view and interact with the graphical display and the tabular data display simultaneously within the main application window. The user shall be able to resize the relative areas allocated to the graphical and tabular displays.",
+    "Class": "F",
+    "Subclass": "F",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ010",
+    "Text": "The system shall display Events in a vertical table. By default, the table shall be sorted by the 'Event Start Time' attribute in ascending chronological order (earliest first).",
+    "Class": "F",
+    "Subclass": "F",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ011",
+    "Text": "The system shall display Events on a horizontal timeline graph. The X-axis of the graph shall represent time, progressing from left (past) to right (future). Each Event shall be represented as a graphical node positioned on the X-axis according to its 'Event Start Time'.",
+    "Class": "F",
+    "Subclass": "F",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  },
+  {
+    "ID": "REQ012",
+    "Text": "The system shall display data entities defined as 'Events' and 'Activities'. The relationship and definitions of these entities are specified in the Project Glossary (Section X.X). An 'Activity' is a sub-component of an 'Event'.",
+    "Class": "F",
+    "Subclass": "F",
+    "Unnamed: 4": NaN,
+    "Unnamed: 5": NaN,
+    "Unnamed: 6": NaN
+  }
+]

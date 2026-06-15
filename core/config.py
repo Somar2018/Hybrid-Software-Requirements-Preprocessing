@@ -4,45 +4,49 @@ from __future__ import annotations
 
 from typing import Final, List
 
-PROMPT_EXTRACT: Final[str] = """
-You are an expert in software requirements engineering.
+PROMPT_EXTRACT = """
+You are an expert in Software Requirements Engineering (ISO/IEC/IEEE 29148).
 
-Extract ONLY VALID and ATOMIC software requirements.
+Your task is to EXTRACT ONLY REAL SOFTWARE REQUIREMENTS from the text below.
 
-STRICT RULES:
-- A requirement MUST describe a SINGLE system behavior or constraint
-- DO NOT include definitions, explanations, or descriptive text
-- DO NOT include introductions, glossaries, or background information
-- DO NOT merge multiple sentences into one requirement
-- SPLIT long paragraphs into separate requirements
-- IGNORE sections like:
-  introduction, definitions, overview, tables, examples
+A REAL REQUIREMENT must satisfy ALL of the following:
 
-VALID REQUIREMENTS MUST:
-- contain an action (shall, must, should, allow, provide)
-- be a COMPLETE sentence
-- describe system behavior, function, or constraint
+1. It describes a system behavior, capability, constraint or function.
+2. It contains a clear ACTION VERB (shall, must, should, allow, enable, provide, support, manage, track, create, define).
+3. It is complete, testable, unambiguous and self‑contained.
+4. It is NOT a title, section header, description, motivation, context, introduction, explanation or background text.
+5. It is NOT truncated, incomplete, or ending with ":" or ",".
+6. It is NOT describing the document itself (e.g., “This specification describes…”).
+7. It is NOT describing the organization, market, problem or context.
+8. It MUST be a requirement that the system must satisfy — not a justification, not a goal, not a description.
 
-REJECT:
-- definitions (e.g., "A system is...")
-- descriptions (e.g., "This section describes...")
-- lists or bullet explanations
+STRICT FILTERING RULES:
+- Reject any sentence that starts with: Software Specification, General Description, Introduction, Overview, Purpose, Scope, This document, This specification.
+- Reject any sentence that contains: is an integrated solution, provides an initial foundation, organizations face, as companies grow, promoting team collaboration.
+- Reject any sentence that does NOT contain an action verb.
+- Reject any sentence that is not testable.
 
-FORMAT (STRICT):
-Global_ID|requirement text|Type
+OUTPUT FORMAT (mandatory):
+One requirement per line, in the format:
 
-IMPORTANT:
-- One requirement per line
-- MAX 200 characters per requirement
-- If Type is unclear → UNK
-- NO explanations
-- NO extra text
+REQ001 | REQUIREMENT_TEXT | FR
 
-EXAMPLES:
-REQ_001|The system shall support group voice calls|UNK
-REQ_002|The system must allow emergency calls|UNK
-REQ_003|The system shall provide call prioritization|UNK
+Where:
+- REQ001 is a sequential placeholder ID
+- REQUIREMENT_TEXT is the cleaned requirement
+- FR is always “FR”
+
+DO NOT invent requirements.
+DO NOT rewrite text.
+DO NOT complete missing information.
+DO NOT include anything that is not a requirement.
+
+Extract requirements ONLY from the following text:
+---
+{{TEXT}}
+---
 """
+
 PROMPT_CLASS: Final[str] = """
 You are a STRICT software requirements classifier aligned with ISO standards.
 
@@ -80,33 +84,26 @@ DECISION RULES (MANDATORY):
 → Type=FR, Subclass=Functional
 
 2) Security (NFR):
-- If it involves: authentication, authorization, privacy, encryption, integrity,
+- authentication, authorization, privacy, encryption, integrity,
   credentials, firewall, access control, replay protection
-→ Type=NFR, Subclass=Security
 
 3) Performance (NFR):
-- ONLY if explicitly about: latency, response time, throughput, bandwidth, QoS, scalability
-→ Type=NFR, Subclass=Performance
+- latency, response time, throughput, bandwidth, QoS, scalability
 
 4) Usability:
 - ease of use, UI, UX, interaction
-→ Type=NFR, Subclass=Usability
 
 5) Reliability:
 - failures, recovery, availability, fault tolerance
-→ Type=NFR, Subclass=Reliability
 
 6) Compatibility:
 - interoperability, cross-platform, different systems/browsers
-→ Type=NFR, Subclass=Compatibility
 
 7) Maintainability:
 - updates, modification, maintainability
-→ Type=NFR, Subclass=Maintainability
 
 8) Portability:
 - deployment across environments/platforms
-→ Type=NFR, Subclass=Portability
 
 ANTI-BIAS:
 - NEVER default to Performance.
@@ -116,26 +113,178 @@ ANTI-BIAS:
 """
 
 VALID_REQUIREMENT_TYPES: Final[List[str]] = ["FR", "NFR", "UNK"]
-VALID_SUBCLASSES: Final[List[str]] = [
+VALID_SUBCLASSES = {
     "Functional",
     "Performance",
+    "Security",
     "Usability",
     "Reliability",
-    "Security",
+    "Availability",
+    "Scalability",
     "Maintainability",
-    "Compatibility",
+    "Portability"
+}
+
+# =========================
+# CONFIG GLOBAL
+# =========================
+
+BATCH_SIZE = 10
+
+# Classes principais
+VALID_CLASSES = {"FR", "NFR"}
+
+# Subclasses detalhadas
+VALID_SUBCLASSES = {
+    "Functional",
+    "Performance",
+    "Security",
+    "Usability",
+    "Reliability",
+    "Availability",
+    "Scalability",
+    "Maintainability",
     "Portability",
-]
+}
 
-DEFAULT_REQUIREMENT_TYPE: Final[str] = "UNK"
-DEFAULT_SUBCLASS: Final[str] = "Functional"
+# Defaults
+DEFAULT_CLASS = "NFR"
+DEFAULT_SUB = "Unknown"
 
+# Output
+OUTPUT_COLUMNS = ["id", "text", "class", "subclass","confidence"]
 
 def build_extract_prompt(text: str) -> str:
-    """Build a complete extraction prompt from raw input text."""
     return f"{PROMPT_EXTRACT}\n\nINPUT:\n{text.strip()}".strip()
 
 
 def build_classification_prompt(requirements: str) -> str:
-    """Build a complete classification prompt for requirement lines."""
     return f"{PROMPT_CLASS}\n\nINPUT:\n{requirements.strip()}".strip()
+
+FREE_DETECT = {
+    # Performance
+    "latency": "Performance",
+    "respond": "Performance",
+    "response": "Performance",
+    "fast": "Performance",
+    "quick": "Performance",
+    "seconds": "Performance",
+    "simultaneous": "Performance",
+    "concurrent": "Performance",
+    "scalab": "Performance",
+    "load": "Performance",
+    "throughput": "Performance",
+
+    # Usability
+    "readable": "Usability",
+    "understandable": "Usability",
+    "intuitive": "Usability",
+    "easy": "Usability",
+    "learn": "Usability",
+    "screen": "Usability",
+    "projection": "Usability",
+    "color": "Usability",
+    "ui": "Usability",
+    "ux": "Usability",
+
+    # Security
+    "auth": "Security",
+    "encrypt": "Security",
+    "access": "Security",
+    "unauthorized": "Security",
+    "malicious": "Security",
+    "attack": "Security",
+    "privacy": "Security",
+    "virus": "Security",
+    "role": "Security",
+    "permission": "Security",
+
+    # Reliability
+    "availability": "Reliability",
+    "uptime": "Reliability",
+    "fail": "Reliability",
+    "recover": "Reliability",
+    "downtime": "Reliability",
+    "99%": "Reliability",
+
+    # Maintainability
+    "update": "Maintainability",
+    "modify": "Maintainability",
+    "maintenance": "Maintainability",
+    "support": "Maintainability",
+    "configuration": "Maintainability",
+
+    # Compatibility
+    "browser": "Compatibility",
+    "interoper": "Compatibility",
+    "integration": "Compatibility",
+    "api": "Compatibility",
+    "ie ": "Compatibility",
+    "firefox": "Compatibility",
+    "chrome": "Compatibility",
+
+    # Portability
+    "platform": "Portability",
+    "environment": "Portability",
+    "install": "Portability",
+    "hardware": "Portability",
+    "operation": "Portability",
+    "linux": "Portability",
+    "windows": "Portability",
+}
+
+ISO_MAP = {
+    "Functional": "Functional",
+    "Performance": "Performance",
+    "Usability": "Usability",
+    "Security": "Security",
+    "Reliability": "Reliability",
+    "Maintainability": "Maintainability",
+    "Compatibility": "Compatibility",
+    "Portability": "Portability",
+}
+
+ISO_25010_MAISO_25010_MAP = {
+
+    "Performance": [
+        "response time", "latency", "throughput",
+        "seconds", "performance", "load",
+        "memory", "storage", "mb", "cpu"
+    ],
+
+    "Reliability": [
+        "reliability", "fault tolerance", "failure",
+        "recover", "backup", "restore"
+    ],
+
+    "Availability": [
+        "availability", "uptime", "% of time", "available"
+    ],
+
+    "Security": [
+        "authentication", "authorization", "access control",
+        "password", "encryption", "privacy"
+    ],
+
+    "Usability": [
+        "user-friendly", "easy to use", "interface",
+        "ux", "ui", "usable"
+    ],
+
+    "Compatibility": [
+        "interoperability", "integration", "api",
+        "browser", "cross-platform"
+    ],
+
+    "Maintainability": [
+        "maintain", "maintenance", "modification",
+        "configuration", "update"
+    ],
+
+    "Portability": [
+        "portability", "platform", "environment",
+        "installation", "deploy", "os"
+    ],
+}
+
+

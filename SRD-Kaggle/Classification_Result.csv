@@ -1,0 +1,998 @@
+﻿,id,text,class,subclass
+0,F0_REQ_00000,The system shall refresh the display every 60 seconds.,FR,Functional
+1,F0_REQ_00001,The application shall match the color of the schema set forth by Department of Homeland Security,NFR,Security
+2,F0_REQ_00002,If projected  the data must be readable.  On a 10x10 projection screen  90% of viewers must be able to read Event / Activity data from a viewing distance of 30,FR,Functional
+3,F0_REQ_00003,The product shall be available during normal business hours. As long as the user has access to the client PC  the system will be available 99% of the time during the first six months of operation.,FR,Functional
+4,F0_REQ_00004,If projected  the data must be understandable. On a 10x10 projection screen  90% of viewers must be able to determine that Events or Activities are occuring in current time from a viewing distance of 100,FR,Functional
+5,F0_REQ_00005,The product shall ensure that it can only be accessed by authorized users.  The product will be able to distinguish between authorized and unauthorized users in all access attempts,FR,Functional
+6,F0_REQ_00006,The product shall be intuitive and self-explanatory.,FR,Functional
+7,F0_REQ_00007,The product shall respond fast to keep up-to-date data in the display.,FR,Functional
+8,F0_REQ_00008,The system shall have a MDI form that allows for the viewing of the graph and the data table.,FR,Functional
+9,F0_REQ_00009,The system shall display Events in a vertical table by time.,FR,Functional
+10,F0_REQ_00010,The system shall display the Events in a graph by time.,FR,Functional
+11,F0_REQ_00011,All business rules specified in the Disputes System shall be in compliance to the guidelines of Regulation E and Regulation Z.,FR,Functional
+12,F0_REQ_00012,The Disputes application must maintain a detailed history of every action that a user takes on a dispute case.  This ensures a complete audit trail if questions arise later on with regard to a particular dispute case.,FR,Functional
+13,F0_REQ_00013,All actions that modify an existing dispute case must be recorded in the case history.,FR,Functional
+14,F0_REQ_00014,The Disputes System must be accessible by both internal and external users.,FR,Functional
+15,F0_REQ_00015,The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base.,FR,Functional
+16,F0_REQ_00016,The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users.,NFR,Usability
+17,F0_REQ_00017,The Disputes System must provide different levels of access with regard to disputes case initiation and follow-up actions.,FR,Functional
+18,F0_REQ_00018,The Disputes System shall provide view access capability for authorized users of the application.,FR,Functional
+19,F0_REQ_00019,The Disputes System shall provide update access capability for authorized users of the application.,FR,Functional
+20,F0_REQ_00020,The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.,NFR,Usability
+21,F0_REQ_00021,The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.,FR,Functional
+22,F0_REQ_00022,The Disputes System will provide the user the ability to create or initiate a ticket retrieval request.   As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request.  The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.,FR,Functional
+23,F0_REQ_00023,The Disputes System must allow the user to create three unique types of ticket retrieval requests.  The three types of ticket retrieval requests are (1) Request for original receipt (2) Request for a copy of the receipt or (3) Request for a portfolio. A portfolio consists of documentation that would provide proof of a purchase such as the documentation that is received from a car rental agency that is more than a sales receipt.,FR,Functional
+24,F0_REQ_00024,The Disputes System must prevent external users from requesting original receipts. Requests for original receipts are restricted to internal users.,FR,Functional
+25,F0_REQ_00025,The Disputes System must provide a confirmation to the user upon the creation of ticket retrieval request that contains the following information; the dispute case number  the type of retrieval requested (copy  original or portfolio)  and the date that the merchant response is due.,FR,Functional
+26,F0_REQ_00026,The Disputes System shall allow the user to create or initiate a chargeback request.  The system must prompt the user to enter the required information to initiate a chargeback request. The chargeback request results in a printed chargeback notification that is sent to merchant indicating that their account will be charged back if no proof is provided that the disputed transaction is valid.,FR,Functional
+27,F0_REQ_00027,The Disputes System must provide a confirmation to the user upon the creation of a chargeback request. The confirmation must contain the following information; the dispute case number  the type of chargeback requested (pending or immediate)  and the date that the merchant response is due.,FR,Functional
+28,F0_REQ_00028,The Disputes System shall prevent the creation of duplicate dispute requests 100% of the time.,FR,Functional
+29,F0_REQ_00029,The Disputes System shall accurately provide a list of possible reason codes for a given transaction.  The list of possible reason codes must be derived based on the type of transaction and the industry that the merchant belongs to  according to the business rules defined for the Disputes System.,FR,Functional
+30,F0_REQ_00030,The Disputes System must provide the ability to view existing dispute cases.,FR,Functional
+31,F0_REQ_00031,The Disputes System must provide Search functionality.  The search method must include the ability to search by (1) the dispute case number  (2) the merchant account number  (3) the cardmember account number and (4) the issuer number.  In addition to the above criteria  the search functionality must further allow the user to limit the results of the search by a date range  the type of dispute (ticket retrieval request or chargeback notification)  the case status (open  closed or all) and the dispute reason code.,FR,Functional
+32,F0_REQ_00032,A list of all disputes cases that meet the entered search criteria must be provided to the user.  The list of cases must differentiate the type and/or status of the case by color -coding the line item in the list.  For example all open cases will be yellow and all closed cases will be gray.,FR,Functional
+33,F0_REQ_00033,The Disputes System shall provide the users the ability to view the history of all activities that have occurred on the dispute case.,FR,Functional
+34,F0_REQ_00034,The Dispute System shall provide the users with the ability to follow up on a dispute case via follow-up actions.  The list of available follow up actions for a given dispute case must be filtered by the status of the case and the access level of the user.,FR,Functional
+35,F0_REQ_00035,The Disputes System shall record the name of the user and the date for any activity that creates or modifies the disputes case in the system.  A detailed history of the actions taken on the case  including the date and the user that performed the action must be maintained for auditing purposes.,FR,Functional
+36,F0_REQ_00036,For any systematic (non-user initiated) action that occurs on a case such as the disputes aging process  a case activity will be generated.  Upon the next logon the user that initiated the dispute case must be notified that a systematic action has occurred on the dispute case.,FR,Functional
+37,F0_REQ_00037,All letter requests must be formatted according to guidelines specified by the Print Letter Utility system.,FR,Functional
+38,F0_REQ_00038,Any disputes cases that have been closed for over 6 months must be purged from the online disputes database.,FR,Functional
+39,F0_REQ_00039,The product must support Internet Explorer 5.5 and above.,FR,Functional
+40,F0_REQ_00040,The product must support Mozilla Firefox 1.0 and above.,FR,Functional
+41,F0_REQ_00041,The product shall interface with the Choice Parts System.  This provides the feed of recycled parts data.,FR,Functional
+42,F0_REQ_00042,The product shall run on the existing hardware for all environments.,FR,Functional
+43,F0_REQ_00043,The product shall adhere to the corporate Architecture guidelines,FR,Functional
+44,F0_REQ_00044,The product shall comply with corporate User Interface Guidelines,NFR,Usability
+45,F0_REQ_00045,The product shall comply with corporate color scheme,FR,Functional
+46,F0_REQ_00046,The appearance of the product shall appear professional,FR,Functional
+47,F0_REQ_00047,The software product is expected to run on Windows or Linux platforms.,NFR,Usability
+48,F0_REQ_00048,The product shall be easy to use by Adjusters and Collision Estimators.  95% of Adjusters and Collision Estimators shall find the product easy to use.,NFR,Usability
+49,F0_REQ_00049,The product shall increase productivity of Collision Estimators. 80% of the Collision Estimators shall agree their productivity has increase within 1 month of using the product.,FR,Functional
+50,F0_REQ_00050,Users shall feel satisfied using the product.  85% of all users will be satisfied with the product.,FR,Functional
+51,F0_REQ_00051,The product shall be easy to learn by Adjusters and Collision Estimators.  The product shall be learned with two days onsite training,FR,Functional
+52,F0_REQ_00052,The user shall easily locate instructions while using the product.  User help can be found within 90% of the system.,FR,Functional
+53,F0_REQ_00053,The search for recycled parts shall take no longer than 15 seconds.  The search results shall be returned in under 15 seconds.,FR,Functional
+54,F0_REQ_00054,The search for the preferred repair facility shall take no longer than 8 seconds.  The preferred repair facility is returned within 8 seconds,FR,Functional
+55,F0_REQ_00055,The recycled parts audit report shall be returned to the user within 10 seconds.  The audit report shall be returned within 10 seconds.,FR,Functional
+56,F0_REQ_00056,The preferred repair facility ratings shall be saved within 5 seconds. The save shall occur within 5 seconds.,FR,Functional
+57,F0_REQ_00057,The product shall adhere to the corporate online availability schedule.  The application is brought down only within 98% of the scheduled outages per the availability schedule.,NFR,Reliability
+58,F0_REQ_00058,The product shall achieve a 98% uptime. The product shall not fail more than 2% of the available online time.,NFR,Reliability
+59,F0_REQ_00059,The product shall be able to handle up to 1500 simultaneous users. The system shall perform with 1500 users as a time.,FR,Functional
+60,F0_REQ_00060,The average number of recycled parts records per day shall be 50 000.,FR,Functional
+61,F0_REQ_00061,The product shall be able to handle 10 000 concurrent users within 2 years of the initial launch.,NFR,Performance
+62,F0_REQ_00062,For estimators  the product shall be able to be operated in a repair facility during dirty and noisy conditions.,FR,Functional
+63,F0_REQ_00063,The product shall interface with the ChoiceParts system once per day at approximately 1,FR,Functional
+64,F0_REQ_00064,The maintenance of the product will fall within the established corporate maintenance windows.,NFR,Maintainability
+65,F0_REQ_00065,The product shall be supported using the corporate support center.,FR,Functional
+66,F0_REQ_00066,Product installations and upgrades shall be handled by the middleware technology team within established launch time frames.,FR,Functional
+67,F0_REQ_00067,Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.,FR,Functional
+68,F0_REQ_00068,Only adjusters with a supervisor role can update preferred repair facility ratings. Users without the supervisor role cannot access the repair facility ratings.,NFR,Security
+69,F0_REQ_00069,Only collision estimators shall search for recycled parts.  Users without the collision estimator role shall not have access to the search for recycled parts.,FR,Functional
+70,F0_REQ_00070,Only valid data shall be entered into the system.  No invalid data shall be entered into the system.,FR,Functional
+71,F0_REQ_00071,One insurance company shall not be able to view another insurance companys claim data.,FR,Functional
+72,F0_REQ_00072,The product shall free of computer viruses.,FR,Functional
+73,F0_REQ_00073,The system shall prevent malicious attacks including denial of service.,FR,Functional
+74,F0_REQ_00074,The product must comply with Sarbanes-Oxley.,FR,Functional
+75,F0_REQ_00075,The product shall comply with the estimatics laws relating to recycled parts usage.,FR,Functional
+76,F0_REQ_00076,The product shall comply with insurance regulations regarding claims processing.,FR,Functional
+77,F0_REQ_00077,The user shall search for the preferred repair facility using vehicle  vehicle location  and radius in miles,FR,Functional
+78,F0_REQ_00078,The vehicle data shall include vehicle year  make  and model,FR,Functional
+79,F0_REQ_00079,The vehicle location shall include street address  city  state  and zipcode,FR,Functional
+80,F0_REQ_00080,The system shall resolve the zipcode for the street address  city  and state if zipcode is unknown.,FR,Functional
+81,F0_REQ_00081,The search radius shall be between 1 and 30 miles,FR,Functional
+82,F0_REQ_00082,The system shall locate the preferred repair facility with the highest ratings for the input criteria,FR,Functional
+83,F0_REQ_00083,The adjuster shall enter the preferred repair facility on the estimate assignment.,FR,Functional
+84,F0_REQ_00084,The adjuster shall be able to override the preferred repair facitlity on the estimate assignment.,FR,Functional
+85,F0_REQ_00085,The preferred repair facility shall be returned to the user.,FR,Functional
+86,F0_REQ_00086,The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.,FR,Functional
+87,F0_REQ_00087,The estimator shall search for available recycled parts using damaged vehicle parts information.,FR,Functional
+88,F0_REQ_00088,The estimator shall search for available recycled parts using a list of preferred parts suppliers.,FR,Functional
+89,F0_REQ_00089,The system shall search for available recycled parts for the supplied vehicle parts and suppliers.,FR,Functional
+90,F0_REQ_00090,The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers,FR,Functional
+91,F0_REQ_00091,The system shall retain the available recycled parts and suppliers returned from the search.,FR,Functional
+92,F0_REQ_00092,The available recycled parts information and their suppliers shall be returned to the user.,FR,Functional
+93,F0_REQ_00093,The estimator shall apply selected recycled parts to the collision estimate.,FR,Functional
+94,F0_REQ_00094,The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.,FR,Functional
+95,F0_REQ_00095,The adjuster shall review the collision estimate.,FR,Functional
+96,F0_REQ_00096,The adjuster shall request a recycled parts audit of the collision estimate.,FR,Functional
+97,F0_REQ_00097,The recycled parts search results provided to the estimator shall be retrieved by the system.,FR,Functional
+98,F0_REQ_00098,The system shall generate an audit report based on the available recycled parts and the collision estimate.,FR,Functional
+99,F0_REQ_00099,The audit report shall include the total number of recycled parts used in the estimate.,FR,Functional
+100,F0_REQ_00100,The audit report shall include the number of available recycled parts from the original search results.,FR,Functional
+101,F0_REQ_00101,The audit report shall include the percentage of available recycled parts used in the estimate,FR,Functional
+102,F0_REQ_00102,The audit report shall include the total score of the audit which sums the indivual line items.,FR,Functional
+103,F0_REQ_00103,The audit report shall be displayed to the user.,FR,Functional
+104,F0_REQ_00104,The audit report shall be available to other adjusters at later points in time.,FR,Functional
+105,F0_REQ_00105,The user shall select to view the preferred repair facility ratings.,FR,Functional
+106,F0_REQ_00106,The current repair facility ratings shall be displayed to the user.,FR,Functional
+107,F0_REQ_00107,The system will display a blank set of ratings if there are not ratings yet defined.,NFR,Functional
+108,F0_REQ_00108,The user shall enter new ratings based on the audit report,FR,Functional
+109,F0_REQ_00109,The ratings shall be from a scale of 1-10,NFR,Functional
+110,F0_REQ_00110,The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts,FR,Functional
+111,F0_REQ_00111,The user shall select to save the preferred repair facility ratings.,FR,Functional
+112,F0_REQ_00112,The preferred repair facility ratings shall be saved by the system.,FR,Functional
+113,F0_REQ_00113,The product must work with most database management systems (DBMS) on the market  whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network.,FR,Functional
+114,F0_REQ_00114,The product will function alongside server software on any operating system where the Java runtime can be installed.,NFR,Portability
+115,F0_REQ_00115,The product will require collaboration with a database management system (DBMS).  The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,NFR,Usability
+116,F0_REQ_00116,The product must make use of web/application server technology.  Open source examples include Apache web server  Tomcat  and the JBoss application server.,FR,Functional
+117,F0_REQ_00117,A database management system such as Oracle  DB2  MySql or HSQL will need to be integrated with the product.,NFR,Functional
+118,F0_REQ_00118,The product s Look and Feel shall be able to incorporate aspects of the customer s organization such as logo  branding  and identity,FR,Functional
+119,F0_REQ_00119,The product shall have a conservative and professional appearance.,FR,Functional
+120,F0_REQ_00120,The product shall make the users want to use it. 80% of the users surveyed report they are regularly using the product after the first 2 weeks post-launch.,FR,Functional
+121,F0_REQ_00121,The product shall be easy to use. 90% of users will be able to successfully reserve a conference room within 5 minutes of product use.,NFR,Usability
+122,F0_REQ_00122,The product shall give users feedback when necessary. 80% of the users surveyed report that the product accurately confirms their actions.,FR,Functional
+123,F0_REQ_00123,The product shall allow the user to select a chosen language from one of the target market countries.,FR,Functional
+124,F0_REQ_00124,The product shall allow for customization of start page and views preferences.,FR,Functional
+125,F0_REQ_00125,An employee will be able to successfully use the product within a few minutes.  After informally navigating the product for less than 15 minutes  users shall be able to successfully setup meetings and reserve conference rooms.,FR,Functional
+126,F0_REQ_00126,The product shall use a standard navigation menu familiar to most web users.,FR,Functional
+127,F0_REQ_00127,The product shall allow for intuitive searching of available conference rooms.,FR,Functional
+128,F0_REQ_00128,The product shall conform to the Americans with Disabilities Act.,FR,Functional
+129,F0_REQ_00129,The response shall be fast enough to avoid interrupting the user s flow of thought.  90% of tasks shall complete within 5 seconds.  98% of tasks shall complete within 8 seconds.,FR,Functional
+130,F0_REQ_00130,Aside from server failure  the software product shall achieve 99.99% up time.,NFR,Reliability
+131,F0_REQ_00131,The product shall create an exception log of problems encountered within the product for transmission to our company for analysis and resolution.,FR,Functional
+132,F0_REQ_00132,The product shall be capable of handling up to 1 000 concurrent requests.  This number will increase to 2 000 by Release 2.  The concurrency capacity must be able to handle peak scheduling times such as early morning and late afternoon hours.,FR,Functional
+133,F0_REQ_00133,The product shall be able to process 10 000 transactions per hour within two years of its launch.  This number will increase to 20 000 by Release 2.,FR,Functional
+134,F0_REQ_00134,The product shall be expected to operate for at least 5 years for each customer installation.,FR,Functional
+135,F0_REQ_00135,The product shall be used in office environments.,FR,Functional
+136,F0_REQ_00136,The product must be able to interface with any HTML browser.  The product shall transmit data between the user and the product without problems. The product shall display HTML properly in 80% of all HTML browsers tested (minimum is to test 8 browsers).,FR,Functional
+137,F0_REQ_00137,The product must be able to interface with various database management systems. The product shall communicate successfully with the database management system on 100% of all transactions.,FR,Functional
+138,F0_REQ_00138,The product must be able to interface with various email servers. The product shall be able to send email.,FR,Functional
+139,F0_REQ_00139,The product shall be available for distribution via the Internet as a binary or ZIP file.,FR,Functional
+140,F0_REQ_00140,The product shall be available for distribution as a packaged CD.,FR,Functional
+141,F0_REQ_00141,The product will be available for licensing as a one-server  two-five servers  or five-or-more servers license.,NFR,Functional
+142,F0_REQ_00142,A new user must be able to be added to the system within 10 minutes.  90% of new users are able to log into the system within 10 minutes.,FR,Functional
+143,F0_REQ_00143,The product must be designed using Design Patterns and coding best practices.  90% of maintenance software developers are able to integrate new functionality into the product with 2 working days.,FR,Functional
+144,F0_REQ_00144,The product must be highly configurable for use with various database management systems for the end users.  80% of end users are able to integrate new database management systems with the product without changing the product s software code.,FR,Functional
+145,F0_REQ_00145,Maintenance releases will be offered to customers once a year.  The releases shall take no longer than 5 minutes for 80% of the customer base to install.,FR,Functional
+146,F0_REQ_00146,Every registered user will have access to the product s support site via the Internet.  70% of registered users shall find a solution to their problem within 5 minutes of using the support site.,FR,Functional
+147,F0_REQ_00147,The customer shall be able to easily integrate new building maps with the product throughout the product s lifecycle.  Integration of new maps with the product shall be possible with little to no support from product support staff.,FR,Functional
+148,F0_REQ_00148,The product shall be translated into foreign languages other than the target market countries  languages in future releases.  For each emerging target market  it shall take no more than 5 days to configure the product for that market s language.,FR,Functional
+149,F0_REQ_00149,The product is expected to integrate with multiple database management systems.  The product will operate with Oracle  SQL Server  DB2  MySQL  HSQL  and MS Access.,NFR,Security
+150,F0_REQ_00150,The product shall be able to be installed in any operating environment within 2 days.,FR,Functional
+151,F0_REQ_00151,The product shall ensure that only company employees or external users with company-approved user IDs may have product access.  100% of all logons shall be by either company employees or external users with company-approved user IDs.,FR,Functional
+152,F0_REQ_00152,Only managers are able to perform search queries for reservations by user.  100% of all search queries for reservations by user shall be from logons of only management logons.,FR,Functional
+153,F0_REQ_00153,The product shall ensure that the database s data corresponds to the data entered by the user.  Each conference room reservation in the system will contain the same information as was entered by the user.,FR,Functional
+154,F0_REQ_00154,The product shall prevent the input of malicious data.  The product and/or adjacent hardware/software systems  data shall remain 100% uncorrupted each time malicious data is input into the product.,FR,Functional
+155,F0_REQ_00155,The product and/or dependent databases/filesystems shall remain operational as a result of the input of malicious data.  The product and/or dependent databases/filesystems shall not crash 100% of the time that malicious data is input into the product.,FR,Functional
+156,F0_REQ_00156,The product shall have the ability to receive automatic software updates as new threats emerge.  100% of customers will be able to receive automatic software updates transmitted to the installed product.,FR,Functional
+157,F0_REQ_00157,The language of the product shall accommodate all of the target market countries. 90% of survey respondents from each target market country will find that the language of the product is acceptable.,FR,Functional
+158,F0_REQ_00158,The product shall be able to display calendar dates and times according to the user s locale.  90% of survey respondents from each target market country will find that the date and time formatting of the product is correct.,FR,Functional
+159,F0_REQ_00159,The product must be developed with the J2SE/J2EE programming language libraries,FR,Functional
+160,F0_REQ_00160,The product shall record meeting entries.,FR,Functional
+161,F0_REQ_00161,The product will notify employees of meeting invitations.,NFR,Functional
+162,F0_REQ_00162,The product shall have the ability to send meeting reminders to employees.,FR,Functional
+163,F0_REQ_00163,The product shall assign the organizers contact information to each meeting they create.,FR,Functional
+164,F0_REQ_00164,The product will record meeting acknowledgements.,NFR,Functional
+165,F0_REQ_00165,The product shall store new conference rooms.,FR,Functional
+166,F0_REQ_00166,The product shall update existing conference rooms.,FR,Functional
+167,F0_REQ_00167,The product will be able to delete conference rooms.,NFR,Functional
+168,F0_REQ_00168,The product shall be able to store new room equipment.,FR,Functional
+169,F0_REQ_00169,The product will update existing room equipment.,NFR,Usability
+170,F0_REQ_00170,The product shall be able to delete room equipment.,FR,Functional
+171,F0_REQ_00171,The product shall allow an organizer to invite other employees to meetings.,FR,Functional
+172,F0_REQ_00172,Each time a conference room is reserved  the conference room schedule shall be updated to reflect the time and date of the reservation.,FR,Functional
+173,F0_REQ_00173,The product shall record the transportation status of equipment reserved.,FR,Functional
+174,F0_REQ_00174,The product shall display a map of the company building showing conference room locations.,FR,Functional
+175,F0_REQ_00175,The product shall record updated meeting agendas.,FR,Functional
+176,F0_REQ_00176,The product shall send a meeting confirmation to the meeting organizer.,FR,Functional
+177,F0_REQ_00177,The product shall display room equipment according to search parameters.,FR,Functional
+178,F0_REQ_00178,The product shall display conference rooms according to search parameters.,FR,Functional
+179,F0_REQ_00179,The product shall record different meeting types.,FR,Functional
+180,F0_REQ_00180,The product shall record all the equipment that has been reserved.,FR,Functional
+181,F0_REQ_00181,The product shall notify building personnel of equipment transport requests.,FR,Functional
+182,F0_REQ_00182,The product will allow priviledged users to view meeting schedules in multiple reporting views.,FR,Functional
+183,F0_REQ_00183,The product shall be able to send meeting notifications via different kinds of end-user specified methods.,FR,Functional
+184,F0_REQ_00184,The product shall have a customizable Look and Feel.,FR,Functional
+185,F0_REQ_00185,The product shall have an intuitive user interface.,NFR,Usability
+186,F0_REQ_00186,The product will display an available status for unreserved conference rooms.,NFR,Functional
+187,F0_REQ_00187,Recreation of Inventory Quantity Adjustment for the period of previous 30 days shall take no more than 30min.,FR,Functional
+188,F0_REQ_00188,The System shall allow for a minimum of  6 users to work at the same time.,FR,Functional
+189,F0_REQ_00189,The System shall utilize currently owned computer equipment.,FR,Functional
+190,F0_REQ_00190,The System shall be able to automatically backup business data and restore them on demand.,NFR,Reliability
+191,F0_REQ_00191,The System shall maintain consistent security.  Any changes in user passwords and/or permissions should take affect in all parts of the System.,NFR,Security
+192,F0_REQ_00192,The System shall granularly control access rights to all major subsystems.  It should be possible to assign access rights to all subsystems independently.,FR,Functional
+193,F0_REQ_00193,The System shall meet all applicable accounting standards.  The final version of the System must successfully pass independent audit performed by a certified auditor.,FR,Functional
+194,F0_REQ_00194,The System shall not require additional third party licenses resulting in royalty fees.,FR,Functional
+195,F0_REQ_00195,The System shall allow generation of Inventory Quantity Adjustment documents on demand.,FR,Functional
+196,F0_REQ_00196,The System shall allow on demand generation of all Inventory Quantity Adjustment documents since certain point of time.,FR,Functional
+197,F0_REQ_00197,The IQA subsystem shall take into account current inventory status and adjust inventory of substitutionary ingredients accordingly.,FR,Functional
+198,F0_REQ_00198,The System shall allow entering  storing and modifying product formulas.,FR,Functional
+199,F0_REQ_00199,Product formulas shall allow use of semi-products  which have own formulas.,FR,Functional
+200,F0_REQ_00200,Product formula ingredients shall allow defining substitutionary ingredients.,FR,Functional
+201,F0_REQ_00201,Product formula substitutionary ingredients shall be entered automatically by the PFE subsystem.,FR,Functional
+202,F0_REQ_00202,Formula substitutionary ingredients shall be kept in persisted order,FR,Functional
+203,F0_REQ_00203,Product shall allow entering  storing and modifying product menus used by POS terminals.,FR,Functional
+204,F0_REQ_00204,PME Subsystem shall allow building product menus based on the list of products kept in the accounting system.,FR,Functional
+205,F0_REQ_00205,PME Subsystem shall allow keeping submenus within menus and products within submenus in a managed and persisted order.,FR,Functional
+206,F0_REQ_00206,PME Subsystem shall allow for a product to exist in more than one submenu,FR,Functional
+207,F0_REQ_00207,The RMS System shall have Windows XP look and feel and use GUI futures making its use intuitive.,FR,Functional
+208,F0_REQ_00208,The System shall generate Inventory Quantity Adjustment document based on product daily sales data and product formulas.,FR,Functional
+209,F0_REQ_00209,The System shall generate Inventory Quantity Adjustment document automatically when daily Product Sales data is available.,FR,Functional
+210,F0_REQ_00210,Administrator shall be able to activate a pre-paid card via the Administration section in under 5 seconds.,FR,Functional
+211,F0_REQ_00211,Customer shall be able to check the status of their prepaid card  by entering in the PIN number  in under 5 seconds.,FR,Functional
+212,F0_REQ_00212,System shall let customers register on the website as a  pay as you go  user in under 5 minutes.,FR,Functional
+213,F0_REQ_00213,System shall let customers register on the website as a  unlimited movie subscriber  user in under 10 minutes.,FR,Functional
+214,F0_REQ_00214,System shall let existing customers log into the website with their email address and password in under 5 seconds.,FR,Functional
+215,F0_REQ_00215,System shall let customers cancel their account  process shall take no longer than 2 minutes.  Database will mark the account as inactive  and user will not be able to log into the website.,FR,Functional
+216,F0_REQ_00216,System shall let administrator de-activate a customer account in under 1 minute. Customer will no longer be able to access the website.,FR,Functional
+217,F0_REQ_00217,System shall let administrator add/remove movies on the website in under 5 minutes.  Entered movie information will be stored in the database and will now be available on the website.,FR,Functional
+218,F0_REQ_00218,System shall let the administrator add/remove categories on the website in under 5 minutes.,FR,Functional
+219,F0_REQ_00219,System shall let Izogn Manager access sales and usage statistics in under 2 minutes.,FR,Functional
+220,F0_REQ_00220,System shall let administrators generate unique pre-paid pins in under 2 minutes and generate an Excel file with the generated PINs.,FR,Functional
+221,F0_REQ_00221,The website shall be attractive to all audiences.  The website shall appear to be fun and the colors should be bright and vibrant.,FR,Functional
+222,F0_REQ_00222,The website should have an African feel  but should not alienate non-Africans.  The website should use animation on pages which are describing the services  to grab the users attention and encourage them to sign up.,NFR,Functional
+223,F0_REQ_00223,The website design should be modern  clean  and concise.,NFR,Functional
+224,F0_REQ_00224,The product should be able to be used by 90% of novice users on the Internet.,NFR,Functional
+225,F0_REQ_00225,Users should only have to navigate through a maximum of 4 pages  to create an account with the website.,NFR,Functional
+226,F0_REQ_00226,Users should be able to access their streaming movies in under 2 clicks after logging into the website.,NFR,Security
+227,F0_REQ_00227,An anonymous survey will show that 70% of customers are comfortable purchasing streaming movies after 2 weeks using the website.,NFR,Functional
+228,F0_REQ_00228,An anonymous survey will show that 95% of customers are comfortable using and purchasing pre-paid cards after a month of using the system.,NFR,Functional
+229,F0_REQ_00229,The product shall retain the customer s buying preferences and information.,FR,Functional
+230,F0_REQ_00230,The product shall be easy for customers with novice skills on the  Internet to purchase and watch streaming movies.  Customers should be able to purchase and watch a pre-determined movie in under 3 minutes.,FR,Functional
+231,F0_REQ_00231,The product shall use symbols and words that are naturally understandable by users familiar with websites,FR,Functional
+232,F0_REQ_00232,The website will use standard Internet conventions when interacting with the user.,NFR,Functional
+233,F0_REQ_00233,Any interface between a user and the automated system shall have a maximum response time of 5 seconds  unless noted by an exception below.,NFR,Performance
+234,F0_REQ_00234,When purchasing a streaming movie or pre-paid card via credit card  the processing time should have a maximum response time of 15 seconds.,NFR,Performance
+235,F0_REQ_00235,When streaming a movie  the buffering time should take no longer than 10 seconds (plus any latency on the user s connection.),NFR,Performance
+236,F0_REQ_00236,While streaming a movie  buffering should only occur if there is latency in the user s connection.,NFR,Performance
+237,F0_REQ_00237,All credit card information will be secured on the server  and only accessible by authorized Izogn administrators.  Information will be encrypted in the database.,NFR,Security
+238,F0_REQ_00238,The website shall be available for use 24 hours per day  365 days per year.,NFR,Functional
+239,F0_REQ_00239,The website shall achieve 99.5% up time.,FR,Functional
+240,F0_REQ_00240,All movies shall be streamed on demand  at any time of the day.,FR,Functional
+241,F0_REQ_00241,The website shall continue to operate if the streaming server goes down.,FR,Functional
+242,F0_REQ_00242,The website shall continue to operate if the payment gateway goes down.,FR,Functional
+243,F0_REQ_00243,The streaming server will support 50 simultaneous streaming connections.,NFR,Performance
+244,F0_REQ_00244,The streaming server will support a maximum of 700 movies; new servers can be added to support more movies.,NFR,Maintainability
+245,F0_REQ_00245,The server will support a maximum of 1 000 simultaneous users.,NFR,Performance
+246,F0_REQ_00246,The website shall be capable of supporting 100 000 customers.,FR,Functional
+247,F0_REQ_00247,The product shall be expected to operate within the maximum maintenance budget for a minimum of 2 years.,FR,Functional
+248,F0_REQ_00248,All aspects of the website shall be accessed by a web browser over the Internet.,FR,Functional
+249,F0_REQ_00249,The same hardware supporting the current website will be used to support the new system.,NFR,Maintainability
+250,F0_REQ_00250,We must be able to interface with the following browsers,FR,Functional
+251,F0_REQ_00251,Website must interface with the CyberSource API to process credit card transactions.,FR,Functional
+252,F0_REQ_00252,Website must be fully operational with MSN TV2.,FR,Functional
+253,F0_REQ_00253,Movies shall be encoded and streamed via Windows Media Player 9.0.,FR,Functional
+254,F0_REQ_00254,Movies shall be encoded for 56k and 256k streams.,FR,Functional
+255,F0_REQ_00255,Promotional updates to the website should take a day to update.,NFR,Maintainability
+256,F0_REQ_00256,Izogn Administrator must be able to update the category listings on the website within 2 minutes.,FR,Functional
+257,F0_REQ_00257,Izogn Administrator must be able to add new products to the website within 2 minutes.,FR,Functional
+258,F0_REQ_00258,The system will provide a 24 hour 800 toll free number for support to its customers.,FR,Functional
+259,F0_REQ_00259,The website will provide a help section with answers and solutions to common problems.,FR,Functional
+260,F0_REQ_00260,Velkat staff will be available for phone support between 7am-7pm  M-F to provide technical support to the Izogn administrators.,FR,Functional
+261,F0_REQ_00261,The product shall be able to be installed in the specified environment within 1 working day.,FR,Functional
+262,F0_REQ_00262,Only registered customers can purchase streaming movies.,NFR,Functional
+263,F0_REQ_00263,A customer can only stream a movie if they purchased it  and are within the 2 day viewing period.,NFR,Compatibility
+264,F0_REQ_00264,Only authorized personnel can access customer records in the database.,NFR,Security
+265,F0_REQ_00265,Only administrators can activate a pre-paid card.,NFR,Functional
+266,F0_REQ_00266,Only authorized personnel can access sales information.,NFR,Security
+267,F0_REQ_00267,The website shall prevent its data from being corrupted when incorrect data is entered in.,FR,Functional
+268,F0_REQ_00268,The website shall protect itself from intentional abuse  and notify the administrator at all occurrences.,FR,Functional
+269,F0_REQ_00269,Data integrity scripts will be run on a weekly basis to verify the integrity of the database.,NFR,Functional
+270,F0_REQ_00270,The website shall make its user aware of its information practices before collection data from them via a Privacy Policy  accessible on all pages of the website.,NFR,Security
+271,F0_REQ_00271,The system shall notify customers of changes to its information policy.,FR,Functional
+272,F0_REQ_00272,The system shall reveal private information only in compliance with the organization s information policy.,FR,Functional
+273,F0_REQ_00273,All customer information will be stored on a secure database  accessible only to authorized personnel.,NFR,Security
+274,F0_REQ_00274,All credit card information will be encrypted in the database.,NFR,Security
+275,F0_REQ_00275,The streaming server will have anti-virus software to prevent infection of malicious viruses.,NFR,Security
+276,F0_REQ_00276,The website should cater to all tribes in Nigeria.,NFR,Functional
+277,F0_REQ_00277,The website shall not be offensive to religious or ethnic groups.,FR,Functional
+278,F0_REQ_00278,The website should appeal to all Africans  not only Nigerians.,NFR,Functional
+279,F0_REQ_00279,The website should use Flash to provide animation on the home page.,FR,Functional
+280,F0_REQ_00280,IzognMovies shall meet the licensing requirements set forth by the appropriate organizations in order to stream African movies.,FR,Functional
+281,F0_REQ_00281,The website will comply with W3C standards.,NFR,Functional
+282,F0_REQ_00282,The PHP code will comply with PEAR standards.,NFR,Functional
+283,F0_REQ_00283,The website will allow customers to search for movies by title  actor  or director.,FR,Functional
+284,F0_REQ_00284,viewing a movie details  the website will display the movies description  actor  and director entered in by the administrator.,NFR,Compatibility
+285,F0_REQ_00285,Website shall request  and authorize credit card payment before allowing a user to stream a movie.,FR,Functional
+286,F0_REQ_00286,shall be able to stream purchased movie via Windows Media Player  for up to 2 days aftere purchase date.,FR,Functional
+287,F0_REQ_00287,Website shall allow customers to browse movies by categories entered in by izogn administrator.,FR,Functional
+288,F0_REQ_00288,Website shall allow customers to view reviews of selected movies by other customers.,FR,Functional
+289,F0_REQ_00289,Website shall allow customers to add their own movie review for a selected movie.,FR,Functional
+290,F0_REQ_00290,Website shall allow the Izogn administrator to approve a review posted by a customer.,FR,Functional
+291,F0_REQ_00291,System will allow customers to pay for a streaming movie with a pre-paid card.,FR,Functional
+292,F0_REQ_00292,Website shall allow customers to purchase pre-paid cards of $5  $10  or $20 value either by credit card or mail-in payment option.,FR,Functional
+293,F0_REQ_00293,System shall automatically update the main page of the website every Friday  and show the 4 latest movies that have been added to the website.,FR,Functional
+294,F0_REQ_00294,System shall allow users to update their billing and contact information via the  My Account  section of the website.,FR,Functional
+295,F0_REQ_00295,Pre-paid cards shall be distributed via email  or via a printed paper card.,FR,Functional
+296,F0_REQ_00296,Only registered customers can purchase streaming movies.,NFR,Functional
+297,F0_REQ_00297,Movies can only be streamed if the customer has purchased a movie  and is within the 2-day time period to stream the movie.,NFR,Compatibility
+298,F0_REQ_00298,Website must be able to support free trial periods with various parameters set by the Izogn Manager.,FR,Functional
+299,F0_REQ_00299,All streaming movie sales will be logged in the database  and accessible by the administrator.,NFR,Security
+300,F0_REQ_00300,All registered customer information shall be stored and maintained in the database  even after the customer cancels their account.,FR,Functional
+301,F0_REQ_00301,Daily usage statistics should be logged  and accessible by the administrator.,NFR,Security
+302,F0_REQ_00302,The owner shall have free access to all of the streaming movies.,FR,Functional
+303,F0_REQ_00303,Total lead cycle time must be completed in 5 minutes for 90% of lead volume between the business hours of 8AM CST to 8PM CST; then 3 minutes for 99% of lead volume during off business hours.,FR,Functional
+304,F0_REQ_00304,No lead evaluation will complete in a time period longer than 25 seconds for 97% of all leads processed.,NFR,Performance
+305,F0_REQ_00305,For leads that process longer than 25 seconds the system will record the event and duration,NFR,Performance
+306,F0_REQ_00306,The process must fit within the processing time conditions set forth by the Auto Rep Assignment process in which a lead is assigned within 3 minutes of the total life cycle.,FR,Functional
+307,F0_REQ_00307,The lead washing process will operate within the established physical web service structure.,NFR,Functional
+308,F0_REQ_00308,The washing process must use a non binding  neutral data format  such as xml  when receiving and processing lead data.,FR,Functional
+309,F0_REQ_00309,Defect reports will be available to technical units on a 24x7 basis.,NFR,Functional
+310,F0_REQ_00310,Washing parameters will be updated during scheduled maintenance hours.,NFR,Maintainability
+311,F0_REQ_00311,The vendor will verify the invalid lead.,NFR,Functional
+312,F0_REQ_00312,Vendor will submit a credit validation record to be applied to the enterprise billing system.,NFR,Functional
+313,F0_REQ_00313,If a lead is scored to the high range the system will supply the lead data and score to the enterprise system.,NFR,Functional
+314,F0_REQ_00314,The leads washing functionality will validate all leads received by the web service for valid data,NFR,Functional
+315,F0_REQ_00315,The leads washing functionality will insert all leads captured by the web service.,NFR,Functional
+316,F0_REQ_00316,If the leads score falls within the high average score then it will be process by the ARA functionality.,NFR,Functional
+317,F0_REQ_00317,If the leads score falls within the medium average then it will be set for manual verification by an Enrollment Coordinator through the eleads system.,NFR,Functional
+318,F0_REQ_00318,If the leads score falls within the low average then it will be returned to the supplying vendor,NFR,Functional
+319,F0_REQ_00319,The leads washing functionality will compile both contact and academic scoring information for a total score.,NFR,Functional
+320,F0_REQ_00320,The leads washing functionality will use the parameters supplied by corporate and schools to score part of the lead.,NFR,Functional
+321,F0_REQ_00321,The leads washing functionality will return the lead data supplied to the vendor along with the reason of rejection.,NFR,Functional
+322,F0_REQ_00322,The leads washing functionality will have an interface in which lead data parameters can be maintained.,NFR,Functional
+323,F0_REQ_00323,The leads washing functionality will verify the users authentication and rights to make parameter updates.,NFR,Security
+324,F0_REQ_00324,The leads washing functionality will store any potential lead duplicates returned by the enterprise system.,NFR,Functional
+325,F0_REQ_00325,Prior to submitting the lead to the enterprise system the leads washing functionality will assign the lead to an admissions rep.,NFR,Functional
+326,F0_REQ_00326,The leads washing functionality shall receive a period list of available reps from the enterprise system.,FR,Functional
+327,F0_REQ_00327,The product shall simulate the look of ships at sea.,FR,Functional
+328,F0_REQ_00328,The product shall display the grids within a circle as a view from a periscope.,FR,Functional
+329,F0_REQ_00329,The product shall display each type of ship in a grid using an image of the specific type of ship.,FR,Functional
+330,F0_REQ_00330,When the offensive player takes a shot  the product shall simulate the sound of a ship at sea.,FR,Functional
+331,F0_REQ_00331,When a shot is marked as a miss  the product shall simulate the sound of a shot missing its target.,FR,Functional
+332,F0_REQ_00332,When a shot is marked as a hit  the product shall simulate the sound of a shot hitting its target.,FR,Functional
+333,F0_REQ_00333,When a ship is sunk  the product shall simulate the sound of a sinking ship.,FR,Functional
+334,F0_REQ_00334,The product shall be available 24 hours per day  seven days per week.,NFR,Functional
+335,F0_REQ_00335,The product shall able to handle a large number of games simultaneously.,FR,Functional
+336,F0_REQ_00336,The response time shall be fast enough to maintain the flow of the game.  The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses.,NFR,Performance
+337,F0_REQ_00337,The product shall protect the identity of the players. The product shall provide players no access to information that might reveal the identity of another player.,FR,Functional
+338,F0_REQ_00338,The product shall be intuitive and self-explanatory.  Nine out ten users shall be able to successfully complete a game with no training.,FR,Functional
+339,F0_REQ_00339,The product shall be available to players who understand English  Spanish and French.  The product shall allow the user to select the language upon accessing the product.,FR,Functional
+340,F0_REQ_00340,The product shall provide players no access to information that might reveal the identity of another player,FR,Functional
+341,F0_REQ_00341,The response time shall be fast enough to maintain the flow of the game. The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses.,NFR,Performance
+342,F0_REQ_00342,The product shall maintain a list of players.,FR,Functional
+343,F0_REQ_00343,The product shall allow a user to identify himself or herself as a player.,FR,Functional
+344,F0_REQ_00344,Once a game has been initiated  the product shall make the players assigned to the game unavailable for selection from the list of players.,FR,Functional
+345,F0_REQ_00345,The product shall allow a user to remove himself or herself from the list of players at any time.,FR,Functional
+346,F0_REQ_00346,The product shall make inactive players unavailable for selection from the list of players.,FR,Functional
+347,F0_REQ_00347,The product shall remove players who have been inactive for 24 hours from the list of players.,NFR,Functional
+348,F0_REQ_00348,The product shall allow a player to initiate a game by selecting another available player from the list of players.,FR,Functional
+349,F0_REQ_00349,Once a game is initiated  the product shall display a defensive grid to each player,FR,Functional
+350,F0_REQ_00350,Once a game is initiated  the product shall display an offensive grid to each player.,FR,Functional
+351,F0_REQ_00351,The product shall prevent a player from viewing the offensive or defensive grids of the other player.,FR,Functional
+352,F0_REQ_00352,Once a game is initiated  the product shall allow each player to position their 5 ships on their respective defensive grids.,FR,Functional
+353,F0_REQ_00353,The product shall allow a player to position ships horizontally on their grid.,FR,Functional
+354,F0_REQ_00354,The product shall allow the player to position ships vertically on their grid.,FR,Functional
+355,F0_REQ_00355,The product shall allow the player to position ships diagonally on their grid,FR,Functional
+356,F0_REQ_00356,The product shall prevent the player from overlapping ships on their grid.,FR,Functional
+357,F0_REQ_00357,When both players have positioned their 5 ships on their defensive grids  the product shall define the status of each player for the first turn.,FR,Functional
+358,F0_REQ_00358,For each turn  the product shall identify one player as offensive status and one player as defensive status.,FR,Functional
+359,F0_REQ_00359,The product shall maintain the status of each player for a turn  either offensive or defensive.,FR,Functional
+360,F0_REQ_00360,At the start of each turn  the product shall notify each player of his or her status.,FR,Functional
+361,F0_REQ_00361,For each turn  the product shall allow the offensive player to define a shot.,FR,Functional
+362,F0_REQ_00362,For each shot  the product shall examine the defensive grid of the defensive player to determine whether the shot was a hit or miss.,FR,Functional
+363,F0_REQ_00363,For each shot  the product shall notify the players whether the shot was a hit or miss.,FR,Functional
+364,F0_REQ_00364,For each shot  the product shall mark the shot as a hit or miss on the defensive grid of the defensive player.,FR,Functional
+365,F0_REQ_00365,For each shot  the product shall mark the shot as a hit or miss on the offensive grid of the offensive player.,FR,Functional
+366,F0_REQ_00366,When the hit results in sinking a ship  the product shall notify the players that the ship was sunk.,FR,Functional
+367,F0_REQ_00367,When the hit results in sinking a ship  the product shall mark the ship as sunk on the defensive grid of the defensive player.,FR,Functional
+368,F0_REQ_00368,When the hit results in sinking a ship  the product shall indicate the type of ship sunk on the defensive grid of the defensive player.,FR,Functional
+369,F0_REQ_00369,When the hit results in sinking a ship  the product shall mark the ship as sunk on the offensive grid of the offensive player.,FR,Functional
+370,F0_REQ_00370,If the shot was marked as a hit  the product shall allow the offensive player to define a shot.,FR,Functional
+371,F0_REQ_00371,If the shot was marked as a miss  the product shall change the status of the offensive player to defensive,FR,Functional
+372,F0_REQ_00372,If the shot was marked as a miss  the product shall change the status of the defensive player to offensive,FR,Functional
+373,F0_REQ_00373,The product shall continue to assign turns until the game is ended.,FR,Functional
+374,F0_REQ_00374,The product shall end a game when a hit by the offensive player results in sinking the last of the defensive player s ships  which had not been previously marked as sunk.,FR,Functional
+375,F0_REQ_00375,The product shall allow a player to end a game at any time during the game.,FR,Functional
+376,F0_REQ_00376,When a game is ended  the product shall notify the players that the game is ended.,FR,Functional
+377,F0_REQ_00377,The notification of the game ending will include the reason the game is ended (i.e.  a player has won the game or a player has ended the game).,NFR,Functional
+378,F0_REQ_00378,When a game is ended  the product shall allow each player to identify himself or herself as an available player in the list of players.,FR,Functional
+379,F0_REQ_00379,When a game is ended  the product shall allow each player to remove himself or herself from the list of players.,FR,Functional
+380,F0_REQ_00380,The system shall be easy to use by callers and supervisors. Callers and supervisors must be able to accomplish any system task within 2 minutes.,NFR,Usability
+381,F0_REQ_00381,The system shall be easy to learn by callers and supervisors. Callers and supervisors shall learn how to use the system within 10 minutes.,FR,Functional
+382,F0_REQ_00382,The system shall be responsive. At the DePaul TeleServices Center  when a supervisor uses the system to view a callers schedule  the system response time must be no more than 2 seconds 90% of the time and no more than 5 seconds the rest of the time.,NFR,Performance
+383,F0_REQ_00383,On a 56k connection  the system response time for all operations must be no more than 6 seconds 90% of the time.,NFR,Performance
+384,F0_REQ_00384,On a 112k connection or faster  the system response time for all operations must be no more than 3 seconds 90% of the time.,NFR,Performance
+385,F0_REQ_00385,The system shall have high availability every day of the year.The system must be available for use between 12,NFR,Reliability
+386,F0_REQ_00386,The system must be available for use between 7,FR,Functional
+387,F0_REQ_00387,The product shall be internet browser independent.The product must run using Internet Explorer and Netscape Navigator.,FR,Functional
+388,F0_REQ_00388,The product shall ensure that only supervisors can advertise empty time slots.The product must ensure that supervisors are allowed to access advertise empty time slots.,FR,Functional
+389,F0_REQ_00389,The product shall ensure that only supervisors can enter a caller s schedule.The product must ensure that supervisors are allowed to access advertise empty time slots.,FR,Functional
+390,F0_REQ_00390,The product shall ensure that only supervisors can view schedule of all callers.The product must ensure that supervisors are allowed to access advertise empty time slots.,FR,Functional
+391,F0_REQ_00391,The interface shall have a simple look. In the interface and usability survey  90% of beta testers must report that the interface is adequately simple.,FR,Functional
+392,F0_REQ_00392,The interface shall be appealing to callers and supervisors. In the interface and usability survey  80% of beta testers must report that the interface is appealing.,FR,Functional
+393,F0_REQ_00393,The product shall provide GUI based Monitoring Services.System Administrators shall monitor message exchanges will predict and determine problems and will also provide internal and external support.,FR,Functional
+394,F0_REQ_00394,The product shall comply with City of Chicago Application Development Guide Framework.Application Development Framework will provide structured Graphical User Interface.,NFR,Usability
+395,F0_REQ_00395,The product shall provide Monitoring Services.The product shall be easy for System Administrators and DBAs to use after two weeks of usage.,FR,Functional
+396,F0_REQ_00396,The product shall provide Error Tracking Services.The product shall help the System Administrators and DBAs to resolve transaction errors 99% of the time.,FR,Functional
+397,F0_REQ_00397,The product shall provide Portals.The product shall help System Administrators to analyze the transactions with ad-hoc reporting and KPIs (Key Performance Indicators),NFR,Performance
+398,F0_REQ_00398,The product shall provide Asynchronous Messaging.The product shall provide asynchronous messaging to enable parallel processing and reduce the overhead in communications,FR,Functional
+399,F0_REQ_00399,The product shall provide Multi-threading and Load Balancing.The product shall provide multi-threading technology as well as load balancing to overcome data load spikes and traffic.,FR,Functional
+400,F0_REQ_00400,The product shall process messages within 2 seconds.The product shall have a maximum message processing time of 2 seconds,FR,Functional
+401,F0_REQ_00401,The product shall poll the system for messages every second.The product shall poll the system for new messages at a maximum of every 1 second.,FR,Functional
+402,F0_REQ_00402,The product shall provide Dynamic Change Support and Transparent resource addition.The product shall support Transparent Resource addition and Dynamic Change support to provide scalability and avoid service interruptions of more than 1 day.,FR,Functional
+403,F0_REQ_00403,The product shall be available 99% of the time. Rationale,FR,Functional
+404,F0_REQ_00404,The product shall be robust.The product shall have fault avoidance based on standards adoption.,FR,Functional
+405,F0_REQ_00405,The product shall be robust with fault tolerance.The product shall have fault tolerance by using recovery technique compensatory transaction and routing around failures.,NFR,Reliability
+406,F0_REQ_00406,The product shall be able to process all transactions.The product shall process minimum of 1 million transactions per year.,FR,Functional
+407,F0_REQ_00407,The product shall be platform independent.The product shall enable access to any type of development environment and platform.,FR,Functional
+408,F0_REQ_00408,The product shall interface CSR and Datastream.The product shall exchange messages between CSR and EAM on a real time basis without any direct interfaces between two systems.,FR,Functional
+409,F0_REQ_00409,The product shall continue to operate during upgrade  change or new resource addition.The product shall be able to continue to operate with no interruption in service due to new resource additions.,FR,Functional
+410,F0_REQ_00410,The product shall be updated on a regular basis.The product will have a new major feature introduced every six months and quarterly maintenance releases every six months.,FR,Functional
+411,F0_REQ_00411,The product shall operate with every platform.The product shall accommodate any new technology without any change in its architecture.,FR,Functional
+412,F0_REQ_00412,The product shall have security.The product shall provide authentication  and authorization.,NFR,Security
+413,F0_REQ_00413,The product shall information Security. The product shall enable privacy by encryption WS-Security and Integrity Checking.,NFR,Security
+414,F0_REQ_00414,The product shall have audit capabilities.The product shall store messages for a minimum of one year for audit and transaction tracking purposes.,FR,Functional
+415,F0_REQ_00415,The system shall use IBM and CCR branding standards. The interface must have one IBM logo and one CCR logo.,FR,Functional
+416,F0_REQ_00416,The system shall be displayable on any work computer a CCR user may have. The system interface shall be formatted to display at 800 by 600 pixel resolution.,FR,Functional
+417,F0_REQ_00417,The system interface will use CCR nomenclature. The system must use the same nomenclature used in the existing WCS system and reports,FR,Functional
+418,F0_REQ_00418,The interface must summarize the data in a fashion that s appealing to CCR management. Every report type must have at least one high level summary shown in the results dashboard/interface,FR,Functional
+419,F0_REQ_00419,The system must use a point and click interface. 100% of all selection and navigation functionality must be able to be activated/selected by either a mouse or a keyboard,FR,Functional
+420,F0_REQ_00420,The interface shall be easy to use. 90% of users should be able to successfully use the system to generate a report on their first use. The interface should adhere to IBM usability standards.,NFR,Usability
+421,F0_REQ_00421,Rreports must be easy to generate. eports must be generated within one button click and exported within one button click (after selecting the report),FR,Functional
+422,F0_REQ_00422,A user shall be able to use the system without instruction after a short amount of time. After one use a user should understand and remember 90% of the system usage and navigation.,FR,Functional
+423,F0_REQ_00423,All CCR users shall receive training before the WCS system is deployed. One training session will be held for 100% of CCR users before system deployment (based on a CCR user being available),FR,Functional
+424,F0_REQ_00424,The WCS system shall use appropriate nomenclature and terminology as defined by the Corporate Community Grants organization. All interfaces and reports will undergo usability tests by CCR users.,FR,Functional
+425,F0_REQ_00425,The WCS system shall be available at all times as long as IBM s internal intranet W3 is accessible. The WCS system will be available 95% of the time IBM s internal intranet W3 is available.,FR,Functional
+426,F0_REQ_00426,The WCS system shall have the ability to connect other designated WCS databases currently not included in the system.,FR,Functional
+427,F0_REQ_00427,The WCS system shall have the ability to include data for regions outside the United States and be accessed by users outside of the United States if approved by CCR management.,FR,Functional
+428,F0_REQ_00428,The WCS system shall be run in a Windows environment. The WCS shall be accessed by users through the Internet on an IBM computer running a Windows 2000 or above operating system.,FR,Functional
+429,F0_REQ_00429,The Brio portion of the WCS system must be able to export files in spreadsheet form (Microsoft Excel and Lotus 1-2-3 formats).  Brio will provide buttons in the user interface that produce/export reports in .xls or .123 file formats.,NFR,Usability
+430,F0_REQ_00430,The WCS system must run queries to the WCS databases once again (on a specified day) to update the available data available to CCR users. Queries must be made to external databases for data refresh once a week.,FR,Functional
+431,F0_REQ_00431,All changes  updates  and additions to the WCS system shall be updated in the WCS Developer and WCS User Guides. Every change must be reflected in WCS system documentation,FR,Functional
+432,F0_REQ_00432,The system shall only be accessed by authorized Corporate Community Grants (CCR) employees. Users must be authenticated using their IBM intranet user name and password.,FR,Functional
+433,F0_REQ_00433,The WCS system shall not allow automatic logins by any user. Cookies containing WCS login information about a user will not be stored on a user s computer.,FR,Functional
+434,F0_REQ_00434,Each team owner will need to use a username and password in order to be authenticated to reach the team owner s page,NFR,Security
+435,F0_REQ_00435,The Commissioner will be the only authorized user per league to adjust league settings.,NFR,Security
+436,F0_REQ_00436,Each page shall contain a navigation menu which shows the index into which the current page is contained.,FR,Functional
+437,F0_REQ_00437,Each page shall contain a similar format with action items in one location and navigation buttons in a different location.,FR,Functional
+438,F0_REQ_00438,The message board shall contain the 5 most recently posted messages on the league page. The messages will contain up to the first 150 characters of the message.,FR,Functional
+439,F0_REQ_00439,A new user shall be able to navigate through the league and team pages within 30 seconds of reaching the start-up page.,FR,Functional
+440,F0_REQ_00440,Users shall be able to reach the  add    drop   and  trade player  pages with one click from the team owner s page.,FR,Functional
+441,F0_REQ_00441,Users shall be able to view at least 25 NFL player statistics and points on each page.,FR,Functional
+442,F0_REQ_00442,The application shall ask the user to confirm dropping a player or trading a player before performing the action.,FR,Functional
+443,F0_REQ_00443,The application shall be able to complete every user transaction within one fourth of a second of receiving the request over the network.,FR,Functional
+444,F0_REQ_00444,The application shall have a downtime of at most 10 minutes per year.,FR,Functional
+445,F0_REQ_00445,The application shall run on a web application server.,FR,Functional
+446,F0_REQ_00446,The maximum wait time for a user navigating from one screen to another within the Disputes application shall be no more than 5 seconds.,FR,Functional
+447,F0_REQ_00447,The Disputes application shall support 350 concurrent users without any degradation of performance in the application.,NFR,Performance
+448,F0_REQ_00448,The Disputes application shall be available 24x7x365  with the exception of the following scheduled maintenance windows.  Monday   Saturday 3,FR,Functional
+449,F0_REQ_00449,The Disputes application shall interface with the Statement Database. The Statement Database provides the transaction details to the Disputes System. All transaction details must be obtained from the Statement Database,FR,Functional
+450,F0_REQ_00450,A primary database will be used to store cached data for active users.,NFR,Functional
+451,F0_REQ_00451,The system shall achieve 95% up time.,FR,Functional
+452,F0_REQ_00452,The system shall have a professional appearance,FR,Functional
+453,F0_REQ_00453,The product shall have a consistent color scheme and fonts.,FR,Functional
+454,F0_REQ_00454,The system shall be used by realtors with no training.,FR,Functional
+455,F0_REQ_00455,The system shall be intuitive and self explanatory.,FR,Functional
+456,F0_REQ_00456,The product shall be easy for a realtor to learn.,FR,Functional
+457,F0_REQ_00457,The product shall use symbols and words that are naturally understandable by the realtor community.,FR,Functional
+458,F0_REQ_00458,The product shall produce search results in an acceptable time,FR,Functional
+459,F0_REQ_00459,The search results shall be returned no later 30      seconds  after the user has entered the search criteria,FR,Functional
+460,F0_REQ_00460,The product shall generate a CMA report in an acceptable time.,FR,Functional
+461,F0_REQ_00461,The CMA report shall be returned no later 60 seconds after the user has entered the CMA report criteria.,FR,Functional
+462,F0_REQ_00462,The product shall synchronize contacts and appointments in an acceptable time.,FR,Functional
+463,F0_REQ_00463,The product shall synchronize with the office system every hour.,FR,Functional
+464,F0_REQ_00464,The product shall be available for use 24 hours per day  365 days  per year,NFR,Functional
+465,F0_REQ_00465,Out of 1000 accesses to the system  the system is available 999 times.,NFR,Security
+466,F0_REQ_00466,The product shall operate in offline mode whenever internet connection is unavailable.,FR,Functional
+467,F0_REQ_00467,The product shall allow the user to view previously downloaded search results  CMA reports  and appointments.,FR,Functional
+468,F0_REQ_00468,The product shall retain user preferences in the event of a failure.,NFR,Reliability
+469,F0_REQ_00469,100% of saved user preferences shall be restored when system comes back online.,NFR,Reliability
+470,F0_REQ_00470,The product shall be able to support multiple remote users,FR,Functional
+471,F0_REQ_00471,The product shall be able support 1000 simultaneous users.,FR,Functional
+472,F0_REQ_00472,The product shall be capable of handling the existing 1000 users. This number is expected to grow 5 times within the next year.,NFR,Performance
+473,F0_REQ_00473,The product shall be installed by an untrained realtor   without recourse to separately-printed instructions.,FR,Functional
+474,F0_REQ_00474,90% of untrained realtors shall be able to install the product on their device without printed instructions,FR,Functional
+475,F0_REQ_00475,The product is expected to run on Windows CE and Palm operating systems.,NFR,Portability
+476,F0_REQ_00476,Only registered realtors shall be able to access the system.,FR,Functional
+477,F0_REQ_00477,Every user of the system shall be authenticated and authorized.,FR,Functional
+478,F0_REQ_00478,The product shall prevent its data from incorrect data being introduced.,FR,Functional
+479,F0_REQ_00479,The system shall allow a real estate agent to query MLS information,FR,Functional
+480,F0_REQ_00480,The user shall be able to get driving directions to a selected property,FR,Functional
+481,F0_REQ_00481,The user shall be able to download appointments and contact information for clients,FR,Functional
+482,F0_REQ_00482,The system shall display clear property images in the search results,FR,Functional
+483,F0_REQ_00483,system shall be able to handle all of the user requests/usage during business hours.,FR,Functional
+484,F0_REQ_00484,The system shall cater to 10 simultaneous users from 9am to 5pm.,FR,Functional
+485,F0_REQ_00485,The system shall be capable of processing 100% of nursing students and their classes for the next 10 years.,FR,Functional
+486,F0_REQ_00486,The system shall be expected to manage the nursing program curriculum and class/clinical scheduling for a minimum of 5 years.,FR,Functional
+487,F0_REQ_00487,The system shall able to operate within a business office environment typical of the Nursing Department at DePaul University.,FR,Functional
+488,F0_REQ_00488,The system shall be used within the specifications defined by the computers used by the Program Administrators/Nursing Staff Members.,FR,Functional
+489,F0_REQ_00489,A secondary database will be used to store historical statistics and data.,NFR,Functional
+490,F0_REQ_00490,The system shall be able to call the seller or buyer to schedule an appointment,FR,Functional
+491,F0_REQ_00491,The realtor shall be notified of new client appointments after automatic synchronization with office system,FR,Functional
+492,F0_REQ_00492,The realtor shall be able to retrieve a map showing property locations for a specified area,FR,Functional
+493,F0_REQ_00493,The system shall notify the realtor when a seller or buyer responds to an appointment request,FR,Functional
+494,F0_REQ_00494,The product shall allow the user to save the property search results.,FR,Functional
+495,F0_REQ_00495,The system shall be easy to use by the Program Administrators/Nursing Staff Members.,NFR,Usability
+496,F0_REQ_00496,All of the users shall be able to use the system after one day of training.,FR,Functional
+497,F0_REQ_00497,The system shall help the user avoid making mistakes while scheduling classes and clinicals for the nursing students.,FR,Functional
+498,F0_REQ_00498,The number of mistakes noted by the students shall be decreased by 50% in the first year.,FR,Functional
+499,F0_REQ_00499,The system shall be intuitive to the Program Administrators/Nursing Staff Members.,FR,Functional
+500,F0_REQ_00500,2 out of 3 Program Administrators/Nursing Staff Members shall successfully be able to use the system to manage the scheduling of classes and clinicals.,FR,Functional
+501,F0_REQ_00501,The system shall use symbols and words that are naturally understandable by the user community.,FR,Functional
+502,F0_REQ_00502,The verbiage used within the system shall be consistent with Standard English and the terminology of the national Nursing Community.,FR,Functional
+503,F0_REQ_00503,Staff members shall be able to complete a set of tasks in a timely manner.,FR,Functional
+504,F0_REQ_00504,The response time of general student management tasks shall take no longer than 5 seconds and the response time of schedule generation shall take no longer than 30 seconds.,NFR,Performance
+505,F0_REQ_00505,The system shall be available for use between the hours of 8am and 6pm.,FR,Functional
+506,F0_REQ_00506,The system shall operate within the Windows XP Professional operating system.,FR,Functional
+507,F0_REQ_00507,The system shall interface with CampusConnect s central server,FR,Functional
+508,F0_REQ_00508,The system shall interface with the faculty central server.,FR,Functional
+509,F0_REQ_00509,The system shall interface with the student master server.,FR,Functional
+510,F0_REQ_00510,We must be able to interface with any HTML browser.,FR,Functional
+511,F0_REQ_00511,Only authorized users shall have access to clinical site information.,FR,Functional
+512,F0_REQ_00512,Program Administrators/Nursing Staff Members are the only people who shall have access to clinical site details.,FR,Functional
+513,F0_REQ_00513,Only authorized users shall have access to students  personal information.,FR,Functional
+514,F0_REQ_00514,Dr Susan Poslusny and Dr Julie Donalek are the only people who shall have access to students  personal information.,FR,Functional
+515,F0_REQ_00515,Only authorized users shall have access to the portion of the system that interfaces with CampusConnect.,FR,Functional
+516,F0_REQ_00516,Fit Criterion,NFR,Functional
+517,F0_REQ_00517,The system shall have basic data integrity checking to reduce the possibility of incorrect or invalid data being introduced.,FR,Functional
+518,F0_REQ_00518,The system shall protect private information in accordance with the organization s information policy.,FR,Functional
+519,F0_REQ_00519,The system shall be built such that it is as secure as possible from malicious interference.,FR,Functional
+520,F0_REQ_00520,The system shall use the organization s standard virus protection software to help monitor threats to itself.,FR,Functional
+521,F0_REQ_00521,A cohort shall be associated to one Program of Study offered by the department.,FR,Functional
+522,F0_REQ_00522,Program Administrators and Nursing Staff Members shall be able to add a listing of students to a cohort.,FR,Functional
+523,F0_REQ_00523,Program Administrators and Nursing Staff Members shall be able to add a single student to a cohort,FR,Functional
+524,F0_REQ_00524,Students added to a cohort shall be eligible for the cohort s Program of Study.,FR,Functional
+525,F0_REQ_00525,Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort.,FR,Functional
+526,F0_REQ_00526,For each class within a sequence for a cohort  Program Administrators and Nursing Staff Members shall be able to specify which quarter that class will be offered.,FR,Functional
+527,F0_REQ_00527,Program Administrators and Nursing Staff Members shall be able to add new classes to a sequence of classes,FR,Functional
+528,F0_REQ_00528,Application updates shall occur between 3AM and 6 AM CST on Wednesday morning during the middle of the NFL season.,FR,Functional
+529,F0_REQ_00529,New System version releases shall be released at the beginning of each NFL season.,FR,Functional
+530,F0_REQ_00530,The system shall display data from the Sync Matrix 1.0 and Exercise Management Tool 1.0 applications,FR,Functional
+531,F0_REQ_00531,The system shall link Events back to either the Sync Matrix 1.0 or the Exercise Managment Tool 1.0 applications for modifications.,FR,Functional
+532,F0_REQ_00532,The system shall allow modification of the display.,FR,Functional
+533,F0_REQ_00533,The system shall offer a display of all the Events in the exercise.,FR,Functional
+534,F0_REQ_00534,The system shall filter data by,FR,Functional
+535,F0_REQ_00535,The system shall allow a user to define the time segments,FR,Functional
+536,F0_REQ_00536,The system shall display the local and exercise time in separate clocks,FR,Functional
+537,F0_REQ_00537,The system shall offer the ability to pause and resume the refresh of data.,FR,Functional
+538,F0_REQ_00538,The system shall provide charts for the Activity or Event actual versus assumed time.,FR,Functional
+539,F0_REQ_00539,The RFS system should be available 24/7  especially during the budgeting period. The RFS system shall be available 90% of the time all year  and 98% during the budgeting period. 2% of the time  the system will become available within 1 hour of the time that the situation is reported.,NFR,Functional
+540,F0_REQ_00540,98% of the user workstations shall meet the minimum hardware requirements prior to implementation. Minimum Hard Disk Space,FR,Functional
+541,F0_REQ_00541,98% of the user workstations shall meet the minimum software requirements prior to implementation,FR,Functional
+542,F0_REQ_00542,"The RFS system should be able to easily interface with the BDW environment  in order to load the data.  	7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process  every year. The data will be as of October month-end. 	Test files (7) shall be loaded up to 5 times throughout the year  from the BDW.",FR,Functional
+543,F0_REQ_00543,Changes to revenue and expense formulae must be applied to the RFS system  every year  prior to the budgeting process start. Revenue and expense formulae will be updated within one week of their receipt  after which 2 weeks will be allotted to testing of the budget calculations  to be conducted jointly by the project development team and PCG Finance.,FR,Functional
+544,F0_REQ_00544,New branches/complexes/districts/regions and revenue/expense accounts added to the BDW  must be reflected in the RFS system. 100% of the entities (mentioned above) available as of October month-end  will be loaded into the RFS system  prior to the budget start process.,FR,Functional
+545,F0_REQ_00545,Only authorized user shall access the RFS system. ONLY users that exist in the UAS system  with the RFS system assigned to their role(s)  shall access the RFS system and use it.,FR,Functional
+546,F0_REQ_00546,User access should be limited to the permissions granted to their role(s) Each level in the PCG hierarchy will be assigned a role and users will be assigned to these roles. Access to functionality within RFS system is dependent on the privileges/permission assigned to the role..,NFR,Security
+547,F0_REQ_00547,The product must comply with the intranet page standards and requirements of ENET Securities. 95% of the product look & feel will be approved by the Architecture group  prior to implementation. The remaining 5% will be corrected and approved within one month of product release.,FR,Functional
+548,F0_REQ_00548,The intranet pages should display appropriately in all resolutions  from 800x600 and higher. The display of all the pages will be correct in 95% of the resolutions  prior to implementation. The remaining 5% will be corrected within a week of notification of the incorrect display.,NFR,Functional
+549,F0_REQ_00549,The users should be able to easily use the system to successfully complete their budgets  within the stipulated time for completion. With a week of training prior to product implementation  98% of the users shall complete their budgets within the stipulated time.,FR,Functional
+550,F0_REQ_00550,The product interface should be fast. The response time of the product interface should not exceed 2 seconds 90% of the time. For 10% of the time  the response time should not be more than 10 seconds.not be more than 10 seconds.,NFR,Performance
+551,F0_REQ_00551,The system will use the stored e-mail addresses as a primary means of communicating information to affected parties.,NFR,Functional
+552,F0_REQ_00552,The system will notify affected parties for routine communication purposes  including but not limited to informing students of upcoming offered classes (timeline) and what their schedule will be/shall be.,FR,Functional
+553,F0_REQ_00553,The system will notify affected parties when changes occur affecting clinicals  including but not limited to clinical section capacity changes  and clinical section cancellations.,NFR,Functional
+554,F0_REQ_00554,The system will notify affected parties when changes occur affecting classes  including but not limited to class cancellations  class section detail changes  and changes to class offerings for a given quarter.,NFR,Functional
+555,F0_REQ_00555,The feature of the application shall provide the optimized route for the given addresses,FR,Functional
+556,F0_REQ_00556,This feature provides the user to select an optimized route for the addresses given and fixing any path between the desired locations.,FR,Functional
+557,F0_REQ_00557,"Fast internet connection is not mandatory, but it would increase the performance of the application",NFR,Performance
+558,F0_REQ_00558,"after every user request, new maps are needed to be loaded",NFR,Performance
+559,F0_REQ_00559,"As Google Maps API is being used for this application, it is mandatory that we abide by the terms of use specified by Google",NFR,Compatibility
+560,F0_REQ_00560,After installing the Application from iTunes or the App store the user will be asked to login.,NFR,Portability
+561,F0_REQ_00561,"Upon successful login, the user can select from the following catalogue options:  Spring 2013 ,Winter 2013",NFR,Functional
+562,F0_REQ_00562,"Based on the selection the product categories will be listed: Outerwear,Soft Shell,Fleece,Knits,Wovens,Active Wear,	Safety,Accessories,Team Wear,	e.c.o. Collection",NFR,Security
+563,F0_REQ_00563,Once a category is selected the product thumbnail images will appear for selection.,NFR,Functional
+564,F0_REQ_00564,A user can then select the product and view the details.,NFR,Functional
+565,F0_REQ_00565,The detail page will contain all the same features and information as the website.,NFR,Functional
+566,F0_REQ_00566,From the here the user can either proceed to call a rep for an order or proceed to the online checkout process.,NFR,Functional
+567,F0_REQ_00567,"Upon successful login, the user can select from the following catalogue options or use the search function indicated by the search icon in the top right hand corner of the application.",NFR,Functional
+568,F0_REQ_00568,Once the icon is selected two open text field will be available to the user to search for the product name - by product ID/SKU or by keyword.,NFR,Functional
+569,F0_REQ_00569,Following a successful query the search feature will query the application database to display the search results. Following an unsuccessful query the search feature will display an error message that no matches were found,NFR,Functional
+570,F0_REQ_00570,A user can select the desired product from the results and proceed to the product details.,NFR,Functional
+571,F0_REQ_00571,From the here the user can either proceed to call a rep for an order or proceed to the online checkout process,NFR,Functional
+572,F0_REQ_00572,"Upon successful login, the user can select from the following catalogue options, search or           use the sub navigation to find the following items: Catalogue ,Videos,Contact Us",NFR,Functional
+573,F0_REQ_00573,Should a user select to download the catalogue PDF it will be viewed on their mobile device.,NFR,Performance
+574,F0_REQ_00574,"Should a user select videos, the 360 video list will display. Upon selecting a video it will play on their device.",NFR,Functional
+575,F0_REQ_00575,All users shall be able to zoom into images using the standard gestures on mobile devices.,FR,Functional
+576,F0_REQ_00576,All Users will be able to view the next product by swiping left to right .,NFR,Functional
+577,F0_REQ_00577,All users should be able to go back to the product category page via the back button in the top corner.,NFR,Functional
+578,F0_REQ_00578,All users should be able to search by keyword or product ID.,NFR,Functional
+579,F0_REQ_00579,"All users should be able to navigate using the sub navigation icons to access the Catalogue PDF, 360 videos, and to contact a rep representative",NFR,Security
+580,F0_REQ_00580,The application itself will only have minimal logic and so there should be little to no issues with the computation required by the phone itself.,NFR,Usability
+581,F0_REQ_00581,"The only hazard is a user using the device when they should not be, such as while driving.",NFR,Functional
+582,F0_REQ_00582,The application must be able to link up with the INTERNAL system in order for users to properly log in and be identified.,FR,Functional
+583,F0_REQ_00583,This information must be kept secure.,FR,Functional
+584,F0_REQ_00584,The data entry should not be that much more difficult than if they were at an actual computer.,NFR,Functional
+585,F0_REQ_00585,"Because this application will be on a phone, portability is also important.  We don’t want it to take up so much space or be too slow causing the user’s to not be able to fit it on the device.",NFR,Functional
+586,F0_REQ_00586,"When the user fills all necessary fields, an activation mail will be sent to
+users mail address",NFR,Functional
+587,F0_REQ_00587,"User will be able to log in and start using the system just after activating
+his/her account.",NFR,Functional
+588,F0_REQ_00588,"user enters his/her username or email and his/her password and logs in the
+system",NFR,Functional
+589,F0_REQ_00589,"user touches log out button, and logs out of the system. The user will not use
+the system until he/she logs in again.",NFR,Functional
+590,F0_REQ_00590,"user is able to search items. User can search items according to their price,
+their location, their category.",NFR,Functional
+591,F0_REQ_00591,"user is able to browse the profiles other users. User can see the other users’
+user names, profile photos, and the users’ items.",NFR,Functional
+592,F0_REQ_00592,"user is able to browse categories according to his/her wishes. User can also see
+how many items each category has.",NFR,Functional
+593,F0_REQ_00593,"user is able browse items. User can see the items’ pictures, prices, and other
+features.",NFR,Functional
+594,F0_REQ_00594,"If the user changes his/her username or password, a notification mail will be sent to the
+user’s email address.",NFR,Functional
+595,F0_REQ_00595,The changes will apply if the user clicks on the link in the email.,NFR,Functional
+596,F0_REQ_00596,"user can buy credits from the system. He/she can use credit card or his/her
+PayPal account.",NFR,Functional
+597,F0_REQ_00597,"user can add the items he/she likes to his cart by touching “Add to the cart”
+button.",NFR,Functional
+598,F0_REQ_00598,"if the item the user wants is available for exchange, the user can request the
+exchange of items that he/she has with the item he/she wants.",NFR,Functional
+599,F0_REQ_00599,"the user can approve the exchange that is offered by another user by clicking
+“Approve” button.",NFR,Functional
+600,F0_REQ_00600,"the user can decline the exchange that is offered by another user by clicking
+“Decline” button.",NFR,Functional
+601,F0_REQ_00601,the user notifies other user that the shipment of the item has started.,NFR,Functional
+602,F0_REQ_00602,the user can add as many as items he/she wants.,NFR,Functional
+603,F0_REQ_00603,"The user can also set the price,
+set the amount, upload pictures of the item and add details of the item.",NFR,Performance
+604,F0_REQ_00604,"the user can edit the items that he/she has already put on the system. The user
+can add/remove pictures, change the price and details of the item.",NFR,Functional
+605,F0_REQ_00605,"if the user no longer wishes to sell/exchange the item, he/she can remove the
+item from the system by touching “Remove the item” button.",NFR,Functional
+606,F0_REQ_00606,"if the user no longer wishes to use the system, he/she can click “Delete Profile”
+button. After deleting the profile, the user will no longer be able to use the system with the
+account details that he entered before.",NFR,Functional
+607,F0_REQ_00607,"the user can mark an item as a favorite so that he will be notified if any change
+is made to the item",NFR,Functional
+608,F0_REQ_00608,the user can rate and comment about the users whom he traded with.,NFR,Functional
+609,F0_REQ_00609,10000 users should be able to use the system at the same time.,NFR,Functional
+610,F0_REQ_00610,The response time of the system should be 2 seconds at most.,NFR,Performance
+611,F0_REQ_00611,Search form should be  added to home page,NFR,Functional
+612,F0_REQ_00612,Sites should be added correctly to the search engine,NFR,Functional
+613,F0_REQ_00613,Build the search engine based on the search form and sites available,NFR,Usability
+614,F0_REQ_00614,"User should be able to search by site name, description",NFR,Functional
+615,F0_REQ_00615,System should be self capable with feature of Auto Suggest,NFR,Functional
+616,F0_REQ_00616,System should be able to return the search results in desending order in the form of list of links to the sites,NFR,Functional
+617,F0_REQ_00617,"System should be able to  display "" No results found "" in case no  search results found",NFR,Functional
+618,F0_REQ_00618,System should have a link back to home in case no results found,NFR,Functional
+619,F0_REQ_00619,geo-location feature to be able to find a user,NFR,Functional
+620,F0_REQ_00620,Use Geolocation scripts to locate user,NFR,Functional
+621,F0_REQ_00621,check if user is within 1 mile of the campus,NFR,Functional
+622,F0_REQ_00622,"If user within 1 mile of the campus , update location",NFR,Maintainability
+623,F0_REQ_00623,User for permission to use the location service .,NFR,Security
+624,F0_REQ_00624,"If the user denies to user the location service , prompt the user to home screen",NFR,Usability
+625,F0_REQ_00625,"If user allows location service , create the user",FR,Functional
+626,F0_REQ_00626,"if the system unable to update the location , Show failure msg and return the user to home page.",NFR,Reliability
+627,F0_REQ_00627,Update Page with link to sites nearby,NFR,Maintainability
+628,F0_REQ_00628,Build Ajax Response to update home page with a link to nearby site based on user location,NFR,Performance
+629,F0_REQ_00629,"Application should respond with a list of links to the 3 nearest sites by A-Z, sorted by name",NFR,Performance
+630,F0_REQ_00630,"Application should  respond with the sites placed on a map with markers that includes name, description and link to site page.",NFR,Performance
+631,F0_REQ_00631,Application should do the  distance calculations and geolocation information for user/site and nearby sites.,NFR,Functional
+632,F0_REQ_00632,"when user clicks on links to browse sites from home page, the system should respond with a list of links to all the sites by A-Z, sorted on site name",NFR,Performance
+633,F0_REQ_00633,Application should collect list of all sites sorted by name,NFR,Functional
+634,F0_REQ_00634,Application should Build URL to each site’s page,NFR,Usability
+635,F0_REQ_00635,"when user clicks on link to map sites from the home page, application should respond with a campus map with all the historical sites placed on it",NFR,Performance
+636,F0_REQ_00636,"Each historical site should have  a marker for each site placed on map that include the name, shorten description, and link to the site page.",NFR,Functional
+637,F0_REQ_00637,The site’s page should contain link to walking directions on tour,NFR,Functional
+638,F0_REQ_00638,"Application should respond with a list of thumbnail images for the site, listed from oldest to newest by year.",NFR,Performance
+639,F0_REQ_00639,"In case no image available , application should return ""no image"" flag.",NFR,Functional
+640,F0_REQ_00640,"when user clicks on a thumbnail image from the site’s page, the application should replace the site’s image with the medium sized clicked on image",NFR,Functional
+641,F0_REQ_00641,Application should replace the site’s description with the clicked on image description,NFR,Functional
+642,F0_REQ_00642,"when the user clicks on the main image on the site’s page, application should return with a an enlarged version of the image",NFR,Functional
+643,F0_REQ_00643,"when User clicks on link to Walking Tour, application should respond with walking tour page",NFR,Performance
+644,F0_REQ_00644,"when User clicks on link to About, application should respond with About  page",NFR,Performance
+645,F0_REQ_00645,No personal data about a user is stored.,NFR,Functional
+646,F0_REQ_00646,User location information should be  deleted nightly via a cron job.,NFR,Functional
+647,F0_REQ_00647,Project admins will need to be authorized before they can use the admin interface to manage the sites in the project.,NFR,Security
+648,F0_REQ_00648,Standard web security measure should be implemented.,NFR,Security
+649,F0_REQ_00649,"This application should be easily extendable, maintainable and able to be released as an open-source application",NFR,Functional
+650,F0_REQ_00650,The app runs on a smart phone with operating system Android version 2.3.,NFR,Functional
+651,F0_REQ_00651,"All layout shall be according to the TU/e corporate identity, unless in conflict with the guidelines of requirements UCOR003-UCOR006.",FR,Functional
+652,F0_REQ_00652,Icons are according to the Android Icon Guidelines.,NFR,Usability
+653,F0_REQ_00653,The user interfaces should be according to the Android User Interface Guidelines.,NFR,Usability
+654,F0_REQ_00654,The Twitter â€tweetâ€ interface should be according to the Twitter Guidelines.,NFR,Usability
+655,F0_REQ_00655,The Facebook â€likeâ€ interface should be according to the Facebook Guidelines.,NFR,Usability
+656,F0_REQ_00656,The campus map covers the campus of the TU/e.,NFR,Functional
+657,F0_REQ_00657,The campus map covers the central train station of Eindhoven.,NFR,Functional
+658,F0_REQ_00658,A new stylistic map has the right dimensions.,NFR,Functional
+659,F0_REQ_00659,A new stylistic map is geographically correct.,NFR,Functional
+660,F0_REQ_00660,News is restricted to what is available in the feeds on the list of news RSS-feeds.,NFR,Functional
+661,F0_REQ_00661,Agenda is restricted to what is available in the feeds on the list of agenda RSS-feeds.,NFR,Functional
+662,F0_REQ_00662,Information about a certain person is restricted to what is available on the employee pages of the TU/e,NFR,Functional
+663,F0_REQ_00663,The information and the search methods of the Encyclopedia-app are restricted to the services provided by the MediaWiki of the TU/e Encyclopedia.,FR,Functional
+664,F0_REQ_00664,The information and the search methods of the Studenthandbook-app are restricted depending on file format of the handbook-information.,NFR,Functional
+665,F0_REQ_00665,Response Time GIST: The fastness of the search SCALE: The response time of a search METER: Measurements obtained from 1000 searches during testing. MUST: No more than 2 seconds 100% of the time. WISH: No more than 1 second 100% of the time.,NFR,Performance
+666,F0_REQ_00666,"System Dependability GIST: The fault tolerance of the system. SCALE: If the system loses the connection to the Internet or to the GPS device or the system gets some strange input, the user should be informed. METER: Measurements obtained from 1000 hours of usage during testing. MUST: 100% of the time.",NFR,Functional
+667,F0_REQ_00667,Hard Drive Space GIST: Hard drive space. SCALE: The applicationâ€™s need of hard drive space. METER: MB. MUST: No more than 20 MB. PLAN: No more than 15 MB. WISH: No more than 10 MB. MB: DEFINED: Megabyte,NFR,Functional
+668,F0_REQ_00668,Application Memory Usage GIST: The amount of Operate System memory occupied by the application. SCALE: MB. METER: Observations done from the performance log during testing MUST: No more than 20 MB. PLAN: No more than 16 MB WISH: No more than 10 MB Operate System: DEFINED: The mobile Operate System which the application is running on. MB: DEFINED: Megabyte.,NFR,Performance
+669,F0_REQ_00669,System Reliability GIST: The reliability of the system. SCALE: The reliability that the system gives the right result on a search. METER: Measurements obtained from 1000 searches during testing. MUST: More than 98% of the searches. PLAN: More than 99% of the searches. WISH: 100% of the searches.,NFR,Reliability
+670,F0_REQ_00670,System Availability GIST: The availability of the system when it is used. SCALE: The average system availability (not considering network failing). METER: Measurements obtained from 1000 hours of usage during testing. MUST: More than 98% of the time. PLAN: More than 99% of the time. WISH: 100% of the time.,NFR,Reliability
+671,F0_REQ_00671,Internet Connection DESC: The application should be connected to the Internet.,NFR,Functional
+672,F0_REQ_00672,GPS Connection DESC: The application should be connected to the GPS device.,NFR,Functional
+673,F0_REQ_00673,"Communication Security GIST: Security of the communication between the system and server. SCALE: The messages should be encrypted for log-in communications, so others cannot get user-name and password from those messages. METER: Attempts to get user-name and password through obtained messages on 1000 log-in session during testing. MUST: 100% of the Communication Messages in the communication of a log-in session should be encrypted. Communication Messages: Defined: Every exchanged of information between client and server.",NFR,Security
+674,F0_REQ_00674,Restaurant Owner Login Account Security GIST: Security of accounts. SCALE: If a restaurant owner tries to log in to the web portal with a non-existing account then the restaurant owner should not be logged in. The restaurant owner should be notified about log-in failure. METER: 1000 attempts to log-in with a non-existing user account during testing. MUST: 100% of the time.,NFR,Reliability
+675,F0_REQ_00675,Admin Login Account Security GIST: Security of accounts. SCALE: If an admin tries to log in to the web portal with a non-existing account then the admin should not be logged in. The admin should be notified about log-in failure. METER: 1000 attempts to log-in with a non-existing user account during testing. MUST: 100% of the time.,NFR,Reliability
+676,F0_REQ_00676,"Restaurant Owner Account Security GIST: Security of restaurant owners accounts. SCALE: A restaurant owner and IP address should not be able to log-in for a certain time period after three times of failed log-in attempts. METER: 1000 attempts to log-in during the lock period after user account has been locked because of failed log-in attempts of three times. MUST: The locking period should be half an hour, and during that period the log-in function is disabled.",NFR,Security
+677,F0_REQ_00677,"Admin Account Security GIST: Security of admin accounts. SCALE: An admin and IP address should not be able to log-in to the web portal for a certain time period after three times of failed log-in attempts. METER: 1000 attempts to log-in during the lock period after user account has been locked because of failed log-in attempts of three times. MUST: The locking period should be half an hour, and during that period the log-in function is disabled.",NFR,Security
+678,F0_REQ_00678,"User Create Account Security GIST: The security of creating account for users of the system. SCALE: If a user wants to create an account and the desired user name is occupied, the user should be asked to choose a different user name. METER: Measurements obtained on 1000 hours of usage during testing. MUST: 100% of the time.",NFR,Security
+679,F0_REQ_00679,"Restaurant Owner Create Account Security GIST: The security of creating account for restaurant owners of the system. SCALE: If a restaurant owner wants to create an account and the desired user name is occupied, the restaurant owner should be asked to choose a different user name. METER: Measurements obtained on 1000 hours of usage during testing. MUST: 100% of the time.",NFR,Security
+680,F0_REQ_00680,Application extendibility DESC: The application should be easy to extend. The code should be written in a way that it favors implementation of new functions.,NFR,Usability
+681,F0_REQ_00681,Application testability DESC: Test environments should be built for the application to allow testing of the applications different functions.,FR,Functional
+682,F0_REQ_00682,Application portability DESC: The application should be portable with iOS and Android.,NFR,Functional
+683,F0_REQ_00683,Performance Requirements 10000 users should be able to use the system at the same time. The response time of the system should be 2 seconds at most.,NFR,Performance
+684,F0_REQ_00684,Design Constraints We will use â€œwaterfall methodâ€ and Object â€“ Oriented Programming paradigm. We will use Java as programming language. The Android version of the device should be 2.3 or higher. The system requires Internet connection all the time.,NFR,Usability
+685,F0_REQ_00685,â€‹ The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,NFR,Functional
+686,F0_REQ_00686,The overall accuracy of the Web APIâ€™s response will be measured using a developer-made testing set.,NFR,Performance
+687,F0_REQ_00687,The overall accuracy is calculated by dividing total number of correct answers by the number of questions asked.,NFR,Functional
+688,F0_REQ_00688,The accuracy of the Generic Question Constructionâ€‹ part will be close to 80%,NFR,Functional
+689,F0_REQ_00689,Modularity  The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,NFR,Functional
+690,F0_REQ_00690,"The overall accuracy of the Web APIâ€™s response will be measured using a developer-made testing set. The overall accuracy is calculated by dividing total number of correct answers by the number of questions asked. The accuracy of the Generic Question Constructionâ€‹ part will be close to 80%. The accuracy of the Generic Answer Constructionâ€‹ unit will be close to 70% The accuracy of the Generic Answer Populationâ€‹ unit will be close to 70% Drexel facilitiesâ€™ locations and schedules will have accuracy greater than 70%  â€‹ Drexel staffâ€™s office locations, contact information, and positions will have accuracy greater than 70%. â€‹ Drexel policies including academics, admissions, information technology etc. will have accuracy greater than 70%.â€‹ â€‹ On-campus dining locations, hours, food types, etc. will have accuracy greater than 50%. â€‹ Food trucksâ€™ general locations, hours, and food types on Drexel Campus will have accuracy greater than 40%.",NFR,Performance
+691,F0_REQ_00691,"Fast Response The average time for the server to respond, over the question testing set, will be less than or equal to 2 seconds",NFR,Performance
+692,F0_REQ_00692,"Security The connection between the Web API and the programs will use HTTPS, for security.",NFR,Security
+693,F0_REQ_00693,Ease of Useâ€‹ A new user will make less than 3 mistakes in 5 minutes after 5 minutes of use.,NFR,Functional
+694,F0_REQ_00694,The search feature should be prominent and easy to find for the user.,NFR,Usability
+695,F0_REQ_00695,"The different search options should be evident, simple and easy to understand.",NFR,Usability
+696,F0_REQ_00696,The results displayed in the list view should be user friendly and easy to understand. Selecting an element in the result list should only take one click.,NFR,Usability
+697,F0_REQ_00697,The results displayed in the map view should be user friendly and easy to understand. Selecting a pin on the map should only take one click.,NFR,Usability
+698,F0_REQ_00698,The information link should be prominent and it should be evident that it is a usable link. Selecting the information link should only take one click.,NFR,Usability
+699,F0_REQ_00699,The user interface must be GUI based.,NFR,Usability
+700,F0_REQ_00700,The users are required to input the data from cell phone keypad,NFR,Usability
+701,F0_REQ_00701,User has the options to change the settings locally and remotely.,NFR,Functional
+702,F0_REQ_00702,Reduce the typing option by giving support for select menus.,NFR,Maintainability
+703,F0_REQ_00703,The primary performance requirement is speed of the network.  The application itself will only have minimal logic and so there should be little to no issues with the computation required by the phone itself.,NFR,Performance
+704,F0_REQ_00704,"There are no safety requirements with this application, other than any normal hazards of a mobile device.  The only hazard is a user using the device when they should not be, such as while driving.",NFR,Usability
+705,F0_REQ_00705,The application must be able to link up with the INTERNAL system in order for users to properly log in and be identified.  This information must be kept secure.,FR,Functional
+706,F0_REQ_00706,"The primary attribute of this application will be usability given the large amounts of data and information that will be presented on such a small screen, as well as the userâ€™s ability to input data into the device in a reasonable manner that should not be that much more difficult than if they were at an actual computer.",NFR,Usability
+707,F0_REQ_00707,"With regards to the intended number of users in the Amsterdam pilot, and the projected load scenarios, the intention is for the system to be able to serve 20.000 queries / day (in large part during the 4 peak traffic hours).",NFR,Performance
+708,F0_REQ_00708,"In order to create a viable offering for the user we will have to build a simple, transparent system that can be understood and trusted by the people that are using it.",NFR,Usability
+709,F0_REQ_00709,"Anonimization & aggregation, so that route information may be shared safely without disclosing personal information.",NFR,Functional
+710,F0_REQ_00710,"Encryption, for all data that is privacy sensitive, but must be persisted on the server in order for basic functionality.",NFR,Security
+711,F0_REQ_00711,Permit the use of unverified (anonymous) avatars / aliases.,NFR,Functional
+712,F0_REQ_00712,Give control to end-users over private data (at least a delete private repository option),NFR,Functional
+713,F0_REQ_00713,"The system should be language agnostic, since portability is a prime goal of the overall project. English, turkish, Finnish, and Italian should be at least be supported because these are the replication partners.",NFR,Maintainability
+714,F0_REQ_00714,All text elements in the user interfaces are presented in the selected language English and Dutch.,NFR,Usability
+715,F0_REQ_00715,Sub-apps and their launchers can be added to the main app by a qualified programmer.,NFR,Functional
+716,F0_REQ_00716,Sub-apps and their launchers in the main app can be deleted by a qualified programmer.,NFR,Functional
+717,F0_REQ_00717,"The application maintainer should also be able to change the (lists of) information sources of the sub-applications: agenda, news, Facebook and Twitter",NFR,Functional
+718,F0_REQ_00718,"Application maintainers should be able to maintain the application, without having knowledge about Java Android programming. They should be able to modify the approximate appearance of the application. This means the colors, and GUI figures in the applications, but not the addition/deletion of GUI elements.",NFR,Usability
+719,F0_REQ_00719,"Application will be extendable. This means that a skilled Java Android programmer should be able to easily add a new sub-application to insApption, and add a launcher to it in the main-application.",NFR,Functional
+720,F0_REQ_00720,Users must be a Radford University student in order to access the automatic class schedule and assignment sharing features of this application Users can authenticate by logging in using their RU username and password.,FR,Functional
+721,F0_REQ_00721,Most functionality will not require network connectivity.  System components that require authentication through Radford University and network connectivity will function as long as the systems maintained by the University are available.,NFR,Security
+722,F0_REQ_00722,The development team will follow best practices for clean code and software modularity in order to make the application as maintainable as possible.,NFR,Functional
+723,F0_REQ_00723,Users will be able to access this application on or off campus anytime on their mobile device without the need of an internet connection.,NFR,Security
+724,F0_REQ_00724,"The application will be highly extensible in terms of adding course and calendar details or views.  However, the application in general has low extensibility.",NFR,Functional
+725,F0_REQ_00725,An application instance shall be able to be reusable every semester for a returning student.The user will be able to update their class schedule by having the application check for a registered schedule set for the next semester and if the current school semester is over.Application components will be able to be integrated into the larger RU Mobile application developed and maintained by Radford University.,NFR,Usability
+726,F0_REQ_00726,The system will be designed in such a way that the algorithms for the four main units will be able to be easily swapped out.,NFR,Functional
+727,F0_REQ_00727,The accuracy of the Generic Question Constructionâ€‹ part will be close to 80%.,NFR,Functional
+728,F0_REQ_00728,The accuracy of the Generic Answer Constructionâ€‹ unit will be close to 70%.,NFR,Functional
+729,F0_REQ_00729,The accuracy of the Generic Answer Populationâ€‹ unit will be close to 70%.,NFR,Functional
+730,F0_REQ_00730,"The average time for the server to respond, over the question testing set, will be less than or equal to 2 seconds.",NFR,Performance
+731,F0_REQ_00731,"The connection between the Web API and the programs will use HTTPS, for security.",NFR,Security
+732,F0_REQ_00732,A new user will make less than 3 mistakes in 5 minutes after 5 minutes of use.,NFR,Functional
+733,F0_REQ_00733,"FAU class contains requirements for recording the occurrence of security relevant events that take place under TSF control. This family identifies the level of auditing, enumerates the types of events that shall be auditable by the TSF, and identifies the minimum set of audit related information that should be provided within various audit record types. The following extended requirement for the FAU class has been included in this ST because the operational environment is capable of providing security audit generation for TSF functions.",NFR,Security
+734,F0_REQ_00734,"Performance should not be an issue because all of our server queries involve small pieces of data. Changing screens will require very little computation and thus will occur very quickly. Server updates should only take a few seconds as long as the phone can maintain a steady signal. The cost-division algorithms used by in application will be highly efficient, taking only a fraction of a second to compute.",NFR,Performance
+735,F0_REQ_00735,SplitPay will not affect data stored outside of its servers nor will it affect any other applications installed on the userâ€™s phone. It cannot cause any damage to the phone or its internal components. The only potential safety concern associated with this application applies to virtually all handset apps: SplitPay should not be used while operating a vehicle or in any other situation where the userâ€™s attention must be focused elsewhere.,FR,Functional
+736,F0_REQ_00736,"This application assumes that only the user or whoever he/she allows will have access to his/her Android handset. With that being said, only a Google email address is required to verify the identity of the user upon opening the app. Since it is not password protected, there is no method to authenticate the userâ€™s identity. This could only pose a thread if a user has set up PayPal functionality, however any transaction involving real currency must be authorized and confirmed before becoming final. The PayPal API provides all of the security checks needed to ensure that no fraudulent transactions occur.",NFR,Security
+737,F0_REQ_00737,The graphical user interface of SplitPay is to be designed with usability as the first priority. The app will be presented and organized in a manner that is both visually appealing and easy for the user to navigate. There will be feedbacks and visual cues such as notifications to inform users of updates and pop-ups to provide users with instructions.,NFR,Usability
+738,F0_REQ_00738,"To ensure reliability and correctness, there will be zero tolerance for errors in the algorithm that computes and splits expenses between group members. To maintain flexibility and adaptability, the app will take into account situations in which a user loses internet connection or for whatever reason cannot establish a connection with the server. These users will still be able to use the application, but any Bills, transactions, etc. posted while disconnected will be cached until the connection is restored.",NFR,Reliability
+739,F0_REQ_00739,All text elements in the user interfaces are presented in the selected language (for language selection see requirement UCAR101. The available languages are mentioned in UCAR002 and UCAR003),NFR,Usability
+740,F0_REQ_00740,English is an available language.,NFR,Functional
+741,F0_REQ_00741,Dutch is an available language.,NFR,Functional
+742,F0_REQ_00742,The administrator can change the colors used in the user interfaces of the sub-apps and main-app (this does not include the external resources).,NFR,Usability
+743,F0_REQ_00743,The administrator can change the fonts used in the user interfaces of the sub-apps and main-app (this does not include the external resources).,NFR,Usability
+744,F0_REQ_00744,The administrator can change icons used in the user interfaces of the sub-apps and main-app (this does not include the external resources).,NFR,Usability
+745,F0_REQ_00745,The administrator can change buttons used in the user interfaces of the sub-apps and main-app (this does not include the external resources).,NFR,Usability
+746,F0_REQ_00746,The administrator can change the background used in the user interfaces of the sub- apps and main-app (this does not include the external resources).,NFR,Usability
+747,F0_REQ_00747,The administrator can change text elements used in the user interfaces of the sub-apps and main-app (this does not include the external resources).,NFR,Usability
+748,F0_REQ_00748,The language can only be selected in the main app.,NFR,Functional
+749,F0_REQ_00749,The default language of insApption is English,NFR,Functional
+750,F0_REQ_00750,The main menu contains a launcher to the Map-app.3.1.3,NFR,Functional
+751,F0_REQ_00751,The main menu contains a launcher to the News-app.3.1.4,NFR,Functional
+752,F0_REQ_00752,The main menu contains a launcher to the Agenda-app.3.1.5,NFR,Functional
+753,F0_REQ_00753,The main menu contains a launcher to the Facebook-app.3.1.9,NFR,Functional
+754,F0_REQ_00754,The main menu contains a launcher to the Twitter-app.3.1.10,NFR,Functional
+755,F0_REQ_00755,The main menu contains a launcher to the Employee-finder-app.3.1.6,NFR,Functional
+756,F0_REQ_00756,"The main menu contains a launcher to the Encyclopedia-app, only if the Dutch language is selected.3.1.7",NFR,Functional
+757,F0_REQ_00757,"The main menu contains a launcher to the Student handbook-app, only if the Dutch language is selected.3.1.8",NFR,Functional
+758,F0_REQ_00758,It is possible to â€œlikeâ€ insApption from within the main menu.,NFR,Functional
+759,F0_REQ_00759,It is possible to â€œtweetâ€ insApption from within the main menu.,NFR,Functional
+760,F0_REQ_00760,There is a link to a Twitter settings menu.,NFR,Functional
+761,F0_REQ_00761,There is a link to a Facebook settings menu.,NFR,Functional
+762,F0_REQ_00762,"In the settings menu for Twitter the user can save username in combination with password, regarding Twitter.",NFR,Functional
+763,F0_REQ_00763,"In the settings menu for Facebook the user can save username in combination with password, regarding Facebook.",NFR,Functional
+764,F0_REQ_00764,"In the settings menu for Twitter there is an option to delete the saved username in combination with the password, regarding Twitter.",NFR,Functional
+765,F0_REQ_00765,"In the settings menu for Facebook there is an option to delete the saved username in combination with the password, regarding Facebook.",NFR,Functional
+766,F0_REQ_00766,The application maintainer can modify the appearance of the separate launchers.,NFR,Maintainability
+767,F0_REQ_00767,It is possible to search for a certain building on the campus of the TU/e by name.,NFR,Usability
+768,F0_REQ_00768,It is possible to search for a certain building on the campus of the TU/e by address.,NFR,Usability
+769,F0_REQ_00769,It is possible to search for a certain POI on the campus of the TU/e by name.,NFR,Functional
+770,F0_REQ_00770,A search described in requirements UCAR201 and UCAR202 results in a displayed set of buildings that match the search input.,NFR,Usability
+771,F0_REQ_00771,A search described in requirements UCAR203 results in a displayed set of POIâ€™s that match the search input.,NFR,Usability
+772,F0_REQ_00772,"It is possible to view an element from the search result described in UCAR201, UCAR202 and UCAR203 in the map view.",NFR,Functional
+773,F0_REQ_00773,It is possible to navigate from a building on the campus to another building on the campus.,NFR,Usability
+774,F0_REQ_00774,It is possible to navigate from a building on the campus to a POI on the campus.,NFR,Usability
+775,F0_REQ_00775,It is possible to navigate from a POI on the campus to a building on the campus.,NFR,Usability
+776,F0_REQ_00776,It is possible to navigate from a POI on the campus to a POI on the campus.,NFR,Functional
+777,F0_REQ_00777,It is possible to navigate from an POI on the campus to another location on the campus.,NFR,Functional
+778,F0_REQ_00778,It is possible to navigate from a street on the campus to another location on the campus.,NFR,Functional
+779,F0_REQ_00779,It is possible to switch between different means of transportation in the navigator.,NFR,Functional
+780,F0_REQ_00780,The from-location can be searched by the name of a building.,NFR,Usability
+781,F0_REQ_00781,The from-location can be searched by the address of a building.,NFR,Usability
+782,F0_REQ_00782,The from-location can be searched by the name of a POI.,NFR,Functional
+783,F0_REQ_00783,The from-location is selected from the search result described in UCAR211 and UCAR212.,NFR,Functional
+784,F0_REQ_00784,The from-location can be selected on the map.,NFR,Functional
+785,F0_REQ_00785,The to-location can be searched by the name of a building.,NFR,Usability
+786,F0_REQ_00786,The to-location can be searched by the address of a building.,NFR,Usability
+787,F0_REQ_00787,The to-location can be searched by the name of a POI.,NFR,Functional
+788,F0_REQ_00788,The to-location is selected from the search result described in UCAR215 and UCAR216.,NFR,Functional
+789,F0_REQ_00789,The to-location can be selected on the map.,NFR,Functional
+790,F0_REQ_00790,The route planned by the navigator is shown in the map view.,NFR,Functional
+791,F0_REQ_00791,The application has a map view in stylistic style.,NFR,Functional
+792,F0_REQ_00792,The application has a map view in satellite style.,NFR,Functional
+793,F0_REQ_00793,It is possible to switch between stylistic map view and satellite map view.,NFR,Functional
+794,F0_REQ_00794,It is possible to zoom when in the map view.,NFR,Functional
+795,F0_REQ_00795,It is possible to pan when in the map view.,NFR,Functional
+796,F0_REQ_00796,Current location is shown in the map view.,NFR,Functional
+797,F0_REQ_00797,POIâ€™s of a building are indicated.,NFR,Usability
+798,F0_REQ_00798,It is possible to â€œtweetâ€ the userâ€™s current location.,NFR,Functional
+799,F0_REQ_00799,It is possible to change the status on Facebook. The new status will indicate the userâ€™s current location.,NFR,Functional
+800,F0_REQ_00800,The administrator can change the stylistic map.,NFR,Functional
+801,F0_REQ_00801,The administrator can add buildings.,NFR,Usability
+802,F0_REQ_00802,The administrator can remove buildings.,NFR,Usability
+803,F0_REQ_00803,The administrator can add vertices of a path which is used in the route planner.,NFR,Functional
+804,F0_REQ_00804,The administrator can remove vertices of a path which is used in the route planner.,NFR,Functional
+805,F0_REQ_00805,The administrator can remove edges of a path which is used in the route planner.,NFR,Functional
+806,F0_REQ_00806,The administrator can add edges of a path which is used in the route planner.,NFR,Functional
+807,F0_REQ_00807,"The administrator can add POIâ€™s. A POI should belong to a certain building, floor and room number.",NFR,Usability
+808,F0_REQ_00808,"The administrator can remove POIâ€™s. A POI should belong to a certain building, floor and room number.",NFR,Usability
+809,F0_REQ_00809,"The administrator can link a POI to a certain building, floor and room.",NFR,Usability
+810,F0_REQ_00810,"The administrator can unlink a POI from a certain building, floor and room.",NFR,Usability
+811,F0_REQ_00811,Titles of all news items available through the news RSS-feeds are shown on the title screen.,NFR,Usability
+812,F0_REQ_00812,"From the first titles of the news articles, the first lines are shown.",NFR,Functional
+813,F0_REQ_00813,Full news report is shown after choosing the corresponding news title.,NFR,Performance
+814,F0_REQ_00814,It is possible to â€œlikeâ€ a certain news item.,NFR,Functional
+815,F0_REQ_00815,It is possible to â€œtweetâ€ a certain news item.,NFR,Functional
+816,F0_REQ_00816,The administrator can modify the list of news RSS-feeds that are available in English.,NFR,Maintainability
+817,F0_REQ_00817,The administrator can modify the list of news RSS-feeds that are available in Dutch.,NFR,Maintainability
+818,F0_REQ_00818,"When the agenda-app is started, upcoming events are shown on the title screen.",NFR,Usability
+819,F0_REQ_00819,There is a calender view.,NFR,Functional
+820,F0_REQ_00820,It is possible to open calendar view.,NFR,Functional
+821,F0_REQ_00821,It is possible to close calendar view.,NFR,Functional
+822,F0_REQ_00822,The user can change the calender to a different month.,NFR,Functional
+823,F0_REQ_00823,The user is able to see on which days events take place in calendar view.,NFR,Functional
+824,F0_REQ_00824,The current day is indicated on the calendar.,NFR,Functional
+825,F0_REQ_00825,By selecting a certain day in the calendar the events for that day are shown.,NFR,Functional
+826,F0_REQ_00826,It is possible to search for events by date.,NFR,Functional
+827,F0_REQ_00827,It is possible to search for events by subject.,NFR,Functional
+828,F0_REQ_00828,A search described in requirements UCAR406 and UCAR407 results in a displayed set of events that match the search input.,NFR,Usability
+829,F0_REQ_00829,It is possible to â€œlikeâ€ a certain event.,NFR,Functional
+830,F0_REQ_00830,It is possible to â€œtweetâ€ a certain event.,NFR,Functional
+831,F0_REQ_00831,The only events that are available in the agenda-app are extracted from the agenda RSS-feeds in the selected language.,NFR,Functional
+832,F0_REQ_00832,The administrator can modify the list of agenda RSS-feeds that are available in English.,NFR,Maintainability
+833,F0_REQ_00833,The administrator can modify the list of agenda RSS-feeds that are available in Dutch.,NFR,Maintainability
+834,F0_REQ_00834,It is possible to search a person by name.,NFR,Functional
+835,F0_REQ_00835,It is possible to search a person by department.,NFR,Functional
+836,F0_REQ_00836,A search described in requirements UCAR501 and UCAR502 results in a displayed set of employees that match the search input.,NFR,Usability
+837,F0_REQ_00837,It is possible to view all personal info available through the employee pages of a person in the search result set of requirement UCAR503.,NFR,Usability
+838,F0_REQ_00838,It is possible to show the location of the employeeâ€™s office in the map view (see 3.1.3).,NFR,Functional
+839,F0_REQ_00839,It is possible to plan a route to the location of the employeeâ€™s office (see 3.1.3).,NFR,Functional
+840,F0_REQ_00840,When the Encyclopedia-app is started the most searched items are shown on the title screen.,NFR,Usability
+841,F0_REQ_00841,When the Encyclopedia-app is started the most recent items are shown on the title screen.,NFR,Usability
+842,F0_REQ_00842,It is possible to search the book by a certain word or phrase.,NFR,Functional
+843,F0_REQ_00843,A search described in requirement UCAR602 results in a displayed set of topics.,NFR,Usability
+844,F0_REQ_00844,The user can select a topic from the search result list.,NFR,Functional
+845,F0_REQ_00845,By clicking on a topic the full text regarding that topic is shown.,NFR,Functional
+846,F0_REQ_00846,It is possible to â€œlikeâ€ a certain topic.,NFR,Functional
+847,F0_REQ_00847,It is possible to â€œtweetâ€ a certain topic.,NFR,Functional
+848,F0_REQ_00848,When the student handbook-app is started the most searched items are shown on the title screen.,NFR,Usability
+849,F0_REQ_00849,A search described in requirement UCAR702 results in a displayed set of topics.,NFR,Usability
+850,F0_REQ_00850,The user can select a topic from the search result described in requirement UCAR703.,NFR,Usability
+851,F0_REQ_00851,When the Facebook-app is started the page of TU/e on Facebook is shown on the title screen.,NFR,Usability
+852,F0_REQ_00852,Other TU/e related Facebook-sites can be selected from a list (see for contents of list requirement UCAR803).,NFR,Usability
+853,F0_REQ_00853,The administrator can modify the list of TU/e related Facebook-sites.,NFR,Maintainability
+854,F0_REQ_00854,When the Twitter-app is started the page of TU/e on Twitter is shown on the title screen.,NFR,Usability
+855,F0_REQ_00855,Other TU/e related Twitter-sites can be selected from a list (see for contents of list requirement UCAR903).,NFR,Usability
+856,F0_REQ_00856,The administrator can modify the list of TU/e related Twitter-sites.,NFR,Maintainability
+857,F0_REQ_00857,Download mobile application DESC: A user should be able to download the mobile application through either an application store or similar service on the mobile phone. The application should be free to download.,NFR,Performance
+858,F0_REQ_00858,"Download and notify users of new releases DESC: When a new/updated version or release of the software is released, the user should check for these manually. The download of the new release should be done through the mobile phone in the same way as downloading the mobile application.",NFR,Performance
+859,F0_REQ_00859,"User registration - Mobile application DESC: Given that a user has downloaded the mobile application, then the user should be able to register through the mobile application. The user must provide user-name, password and e-mail address. The user can choose to provide a regularly used phone number.",FR,Functional
+860,F0_REQ_00860,"User log-in - Mobile application DESC: Given that a user has registered, then the user should be able to log in to the mobile application. The log-in information will be stored on the phone and in the future the user should be logged in automatically.",NFR,Functional
+861,F0_REQ_00861,"Retrieve password DESC: Given that a user has registered, then the user should be able to retrieve his/her password by e-mail.",NFR,Functional
+862,F0_REQ_00862,"Mobile application - Search DESC: Given that a user is logged in to the mobile application, then the first page that is shown should be the search page. The user should be able to search for a restaurant, according to several search options. The search options are Price, Destination, Restaurant type and Specific dish. There should also be a free text search option. A user should be able to select multiple search options in one search.",NFR,Functional
+863,F0_REQ_00863,"Mobile application - Search result in a map view DESC: Search results can be viewed on a map. On the map, the relevant and closest restaurants according to the userâ€™s position are shown. A specific pin will represent a specific restaurant location. On each pin there should be an information link. There should be maximally 100 results displayed. The map view should have a default zoom. The map view should include a button that, when selected, should display different filtering options in a filtering menu.",NFR,Functional
+864,F0_REQ_00864,"Mobile application - Search result in a list view Search results can be viewed in a list. Each element in the list represents a specific restaurant. Each element should include the restaurant name, telephone number, type of food, distance according to the userâ€™s position, average price, a short two-line description, a link to the restaurantâ€™s web-page and an information link. There should be maximally 100 results displayed. If the result contains more restaurants than what can be displayed on the screen at one time, the user should be able to scroll through them. When searching by price the restaurants should be sorted according to the following order: 1. average price 2. distance 3. restaurant type 4. specific dish When searching by a search option, other than price, the restaurants should be sorted according to the following order: 1. distance 2. average price 3. restaurant type 4. specific dish The list view should include a header with different selectable sorting options. The list view should include a button that, when selected, should display different filtering options in a filtering menu.",NFR,Usability
+865,F0_REQ_00865,"Mobile application - Navigation to restaurant DESC: A user should be able to select a pin on a map or an element on a list. When a selection is made, the location of the restaurant should be sent to the mobile phoneâ€™s GPS-navigation program. The user should then be navigated to the destination. When the destination is reached, a user should be able to go back to the search page on the mobile application.",NFR,Functional
+866,F0_REQ_00866,Mobile application - Switch result view DESC: A user should be able to switch between a map view and a list view for all search options.,NFR,Functional
+867,F0_REQ_00867,"Mobile application - Selecting the information link DESC: A user should be able to select the information link, which is included on all result items. The link will direct the user to an information page, which includes a picture of the restaurant, the restaurant name, address, phone number, e-mail address, type of food, average price, restaurant description and a menu with name, description and price of the different dishes.",NFR,Functional
+868,F0_REQ_00868,Mobile application - Search by price DESC: A user should be able to input a maximum and a minimum price range. The result is displayed in a list view by default.,NFR,Functional
+869,F0_REQ_00869,"Mobile application - Search by destination DESC: A user should be able to input a maximum and a minimum distance, according to his/her position. By default the minimum distance is set to 0 km and the maximum to 10 km. The user should be able to input a higher or lower maximum distance and a higher minimum distance than set by default. The result is displayed in a map view by default.",NFR,Functional
+870,F0_REQ_00870,Accepted input for price and destination search DESC: Integers should be accepted as input when a user searches by price or destination. If the system receives an invalid input the user should be informed and prompted to insert an accepted input.,NFR,Functional
+871,F0_REQ_00871,Mobile application - Search by restaurant type DESC: A user should be able to select a restaurant type in a given list as input. The result is displayed in a map view by default.,NFR,Functional
+872,F0_REQ_00872,Mobile application - Search by specific dish DESC: A user should be able to select a specific dish in a given list as input. The result is displayed in a map view by default.,NFR,Functional
+873,F0_REQ_00873,"Mobile application - Free-text search DESC: A user should be able to conduct a search by providing either restaurant name, restaurant description, restaurant address, restaurant type or restaurant menu in the free-text search field. The result is displayed in a map view by default.",NFR,Functional
+874,F0_REQ_00874,Mobile application - No match found DESC: If no match is found the user should be informed but kept on the search page in order to get the possibility to conduct a new search right away.,NFR,Functional
+875,F0_REQ_00875,"Mobile application - Sorting results DESC: When viewing the results in a list, a user should be able to sort the results according to price, distance, restaurant type, specific dish or restaurant name. When sorting by restaurant name, specific dish or restaurant type the results should be ordered alphabetically. When sorting by price the results should be ordered from cheapest to most expensive. When sorting by distance the results should be ordered from closets to furthest distance according to the userâ€™s position. When the sort button for a specific search option is clicked, then the order should be reversed and ordered in a descending matter. If the sort button is clicked again the order of the results should be reversed.",NFR,Functional
+876,F0_REQ_00876,"Mobile application - Filtering results DESC: When viewing the results in a list or a map, a user should be able to filter the results in a filtering menu. The filtering options include: increasing or decreasing the maximum distance increasing or decreasing the maximum price choosing a restaurant type choosing a specific dish",NFR,Functional
+877,F0_REQ_00877,"Mobile application - Profile page DESC: On the mobile application, a user should have a profile page. On the profile page a user can edit his/her information, which includes the password, e-mail address and phone number. A user should also be able to choose what language the mobile application should be set to. The different language choices are Swedish, English, Spanish and French.",NFR,Functional
+878,F0_REQ_00878,Required information for registration Given the restaurant owner wants to create an account And the restaurant owner does not have an account When the restaurant owner registers on the web-portal by providing user-name And password And address And e-mail address And phone number Then the restaurant owner should be able to apply for verification,NFR,Usability
+879,F0_REQ_00879,Full information for registration Given the restaurant owner wants to create an account And the restaurant owner does not have an account When the restaurant owner registers on the web-portal by providing user name And password And address And e-mail address And phone number And mobile number Then the restaurant owner should be able to apply for verification,NFR,Functional
+880,F0_REQ_00880,Confirmed registration Given the restaurant owner has applied for verification And has not received a confirmation e-mail after registration When the restaurant owner receives a confirmation e-mail Then the restaurant owner should be able to log in,NFR,Functional
+881,F0_REQ_00881,Successful log-in Given the restaurant owner wants to log in When the restaurant owner logs in with his/her account Then the restaurant owner should be logged in as a restaurant owner,NFR,Functional
+882,F0_REQ_00882,Retrieve password Given the restaurant owner wants to log in And has lost the password When the restaurant owner enters his/her email address in the â€œRetrieve passwordâ€ form And submits the form Then the restaurant owner should receive an email containing the password,NFR,Functional
+883,F0_REQ_00883,Show fields for managing information Given the restaurant owner is logged in When the restaurant owner wants to manage information Then the restaurant owner should be able to manage information in a form,NFR,Functional
+884,F0_REQ_00884,Filling in mandatory fields Given the restaurant owner wants to fill in the mandatory fields of the form When the restaurant owner provides average price And address And e-mail address And phone number And restaurant name Then the restaurant owner has filled the mandatory fields of the form,FR,Functional
+885,F0_REQ_00885,Filling in optional fields Given the restaurant owner of a restaurant wants to fill in optional fields in the form When the restaurant owner provides restaurant description And menu And type of restaurant And picture of restaurant And mobile phone Then the restaurant owner has filled in optional fields in the form,FR,Functional
+886,F0_REQ_00886,Filling in menu field Given the restaurant owner wants to fill in the menu field in the form When the restaurant owner provides dish name And dish description And dish price Then the restaurant owner has filled in the menu field in the form,FR,Functional
+887,F0_REQ_00887,Adding information with mandatory fields Given the restaurant owner has filled in the mandatory fields of the form When the restaurant owner submits the form Then the information about the restaurant should be added,NFR,Functional
+888,F0_REQ_00888,Adding information with mandatory and optional fields Given the restaurant owner has filled in the mandatory fields of the form And filled in one or more optional fields of the form When the restaurant owner submits the form Then the information about the restaurant should be added,NFR,Functional
+889,F0_REQ_00889,Deleting information Given the restaurant owner is logged in And information exists When the restaurant owner deletes information Then the information should be deleted,NFR,Functional
+890,F0_REQ_00890,Editing information Given the restaurant owner is logged in And information exists When the restaurant owner edits information Then the information should be edited,NFR,Functional
+891,F0_REQ_00891,Select English as preferred language Given the restaurant owner wants to select a preferred language When the restaurant owner selects English as a new language Then the web-portal will show all text in English,NFR,Functional
+892,F0_REQ_00892,Select Swedish as preferred language Given the restaurant owner wants to select a preferred language When the restaurant owner selects Swedish as a new language Then the web-portal will show all text in Swedish,NFR,Functional
+893,F0_REQ_00893,Select French as preferred language Given the restaurant owner wants to select a preferred language When the restaurant owner selects French as a new language Then the web-portal will show all text in French,NFR,Functional
+894,F0_REQ_00894,Select Spanish as preferred language Given the restaurant owner wants to select a preferred language When the restaurant owner selects Spanish as a new language Then the web-portal will show all text in Spanish,NFR,Functional
+895,F0_REQ_00895,Successful log-in Given the administrator wants to log in When the administrator logs in with an administrator account Then the administrator should be logged in as an administrator,NFR,Functional
+896,F0_REQ_00896,Verify a restaurant owner Given the administrator is logged in When the administrator verifies a restaurant owner Then the restaurant owner should be able to log in And the restaurant owner should be notified by a confirmation email,NFR,Functional
+897,F0_REQ_00897,Reject a restaurant owner Given the administrator is logged in When the administrator rejects a restaurant owner Then the restaurant owner should not be able to log in And the restaurant owner should be notified by a rejection email,NFR,Functional
+898,F0_REQ_00898,Add a new restaurant type Given the administrator is logged in When the administrator creates a new restaurant type Then the new restaurant type should be added to the list of restaurant types,NFR,Functional
+899,F0_REQ_00899,Editing an existing restaurant type Given the administrator is logged in When the administrator edits an existing restaurant type Then the restaurant type should be updated in the list of restaurant types,NFR,Maintainability
+900,F0_REQ_00900,Delete a restaurant type Given the administrator is logged in When the administrator deletes a restaurant type Then the deleted restaurant type should be removed from the list of restaurant types,NFR,Functional
+901,F0_REQ_00901,Add a new dish Given the administrator is logged in When the administrator creates a new dish Then the new dish should be added to the list of dishes,NFR,Functional
+902,F0_REQ_00902,Editing an existing dish Given the administrator is logged in When the administrator edits an existing dish Then the dish should be updated in the list of dishes,NFR,Maintainability
+903,F0_REQ_00903,Delete a dish Given the administrator is logged in When the administrator deletes a dish Then the deleted dish should be removed from the list of dishes,NFR,Functional
+904,F0_REQ_00904,Add restaurant information Given the administrator is logged in When the administrator adds restaurant information Then the information should be added to the restaurant,NFR,Functional
+905,F0_REQ_00905,Delete restaurant information Given the administrator is logged in And information about a restaurant exists When the administrator deletes the information Then the information about the restaurant should be deleted,NFR,Functional
+906,F0_REQ_00906,Edit restaurant information Given the administrator is logged in And information about a restaurant exists When the administrator edits the information Then the information about the restaurant should be edited,NFR,Functional
+907,F0_REQ_00907,Edit an existing userâ€™s information Given the administrator is logged in When the administrator edits an existing user Then the user information should be updated,NFR,Maintainability
+908,F0_REQ_00908,Delete/Inactivate an existing user Given the administrator is logged in When the administrator deletes an existing user Then the user should be deleted,NFR,Functional
+909,F0_REQ_00909,Add a new restaurant owner Given the administrator is logged in When the administrator creates a new restaurant owner Then the new restaurant owner should be added,NFR,Functional
+910,F0_REQ_00910,Edit an existing restaurant owner Given the administrator is logged in When the administrator edits an existing restaurant owner Then the restaurant owner information should be updated,NFR,Maintainability
+911,F0_REQ_00911,Delete an existing restaurant owner Given the administrator is logged in When the administrator deletes an existing restaurant owner Then the restaurant owner should be deleted And the restaurant information should be deleted,NFR,Functional
+912,F0_REQ_00912,Select English as preferred language Given the administrator wants to select a preferred language When the administrator selects English as a new language Then the web-portal will show all text in English,NFR,Functional
+913,F0_REQ_00913,Select Swedish as preferred language Given the administrator wants to select a preferred language When the administrator selects Swedish as a new language Then the web-portal will show all text in Swedish,NFR,Functional
+914,F0_REQ_00914,Select French as preferred language Given the administrator wants to select a preferred language When the administrator selects French as a new language Then the web-portal will show all text in French,NFR,Functional
+915,F0_REQ_00915,Select Spanish as preferred language Given the administrator wants to select a preferred language When the administrator selects Spanish as a new language Then the web-portal will show all text in Spanish,NFR,Functional
+916,F0_REQ_00916,Prominent search feature DESC: The search feature should be prominent and easy to find for the user.,NFR,Usability
+917,F0_REQ_00917,"Usage of the search feature DESC: The different search options should be evident, simple and easy to understand.",NFR,Usability
+918,F0_REQ_00918,Usage of the result in the list view DESC: The results displayed in the list view should be user friendly and easy to understand. Selecting an element in the result list should only take one click.,NFR,Usability
+919,F0_REQ_00919,Usage of the result in the map view DESC: The results displayed in the map view should be user friendly and easy to understand. Selecting a pin on the map should only take one click.,NFR,Usability
+920,F0_REQ_00920,Usage of the information link DESC: The information link should be prominent and it should be evident that it is a usable link. Selecting the information link should only take one click.,NFR,Usability
+921,F0_REQ_00921,"In this case, user enters his/her username, name, surname, password, mail address sets a profile photo. When the user fills all necessary fields, an activation mail will be sent to users mail address. User will be able to log in and start using the system just after activating his/her account.",NFR,Functional
+922,F0_REQ_00922,"In this case, user enters his/her username or email and his/her password and logs in the system.",NFR,Functional
+923,F0_REQ_00923,"In this case, user touches log out button, and logs out of the system. The user will not use the system until he/she logs in again.",NFR,Functional
+924,F0_REQ_00924,"In this case, user is able to search items. User can search items according to their price, their location, their category.",NFR,Functional
+925,F0_REQ_00925,"In this case, user is able to browse the profiles other users. User can see the other users user names, profile photos, and the usersâ€™ items.",NFR,Functional
+926,F0_REQ_00926,"In this case, user is able to browse categories according to his/her wishes. User can also see how many items each category has.",NFR,Functional
+927,F0_REQ_00927,"In this case, user is able browse items. User can see the itemsâ€™ pictures, prices, and other features.",NFR,Functional
+928,F0_REQ_00928,"In this case, user can change his/her username, email address, profile picture and password. If the user changes his/her username or password, a notification mail will be sent to the userâ€™s email address. The changes will apply if the user clicks on the link in the email.",NFR,Functional
+929,F0_REQ_00929,"In this case, user can buy credits from the system. He/she can use credit card or his/her PayPal account.",NFR,Functional
+930,F0_REQ_00930,"In this case, user can add the items he/she likes to his cart by touching â€œAdd to the cartâ€ button.",NFR,Functional
+931,F0_REQ_00931,"In this case, the user can buy items he/she has added to cart with credits, if the items are available for buying with credits.",NFR,Functional
+932,F0_REQ_00932,"In this case, if the item the user wants is available for exchange, the user can request the exchange of items that he/she has with the item he/she wants.",NFR,Functional
+933,F0_REQ_00933,"In this case, the user can approve the exchange that is offered by another user by clicking â€œApproveâ€ button.",NFR,Functional
+934,F0_REQ_00934,"In this case, the user can decline the exchange that is offered by another user by clicking â€œDeclineâ€ button.",NFR,Functional
+935,F0_REQ_00935,"In this case, the user notifies other user that the shipment of the item has started.",NFR,Functional
+936,F0_REQ_00936,"In this case, the user can add as many as items he/she wants. The user can also set the price, set the amount, upload pictures of the item and add details of the item.",NFR,Performance
+937,F0_REQ_00937,"In this case, the user can edit the items that he/she has already put on the system. The user can add/remove pictures, change the price and details of the item.",NFR,Functional
+938,F0_REQ_00938,"In this case, if the user no longer wishes to sell/exchange the item, he/she can remove the item from the system by touching â€œRemove the itemâ€ button.",NFR,Functional
+939,F0_REQ_00939,"In this case, if the user no longer wishes to use the system, he/she can click â€œDelete Profileâ€ button. After deleting the profile, the user will no longer be able to use the system with the account details that he entered before.",NFR,Functional
+940,F0_REQ_00940,"In this case, the user can mark an item as a favorite so that he will be notified if any change is made to the item",NFR,Functional
+941,F0_REQ_00941,"In this case, the user can rate and comment about the users whom he traded with.",NFR,Functional
+942,F0_REQ_00942,The client will send a GET request to the Web API with the question as a URL parameter The client will specify the header Content-Type: application/json in their requests as convention. A valid API query is a single URL parameter containing one sentence that is a question in standard English.,NFR,Compatibility
+943,F0_REQ_00943,"The server will reply with either data or an error, see R4.1.3.5. The client will be able to parse the JSON and determine if there was an error. The server will send all API data in JSON response documents with the header Content-Type: application/json. The server will respond with a 200 OK status code if a request has the header Content-Type: application/json and is a valid API query. The server will respond with a 400 Bad Request status code if a request does not specify the header Content-Type: application/json OR is a malformed API query.",NFR,Performance
+944,F0_REQ_00944,"API responses are defined in JSON, specified by [RFC 7159]. A JSON object will be the root of every API response. The response document will contain at least one of the following top-level members: Data: the documentâ€™s â€œprimary data,â€ in this case, the response to the clientâ€™s query. Errors: an array of error objects stating what went wrong with the clientâ€™s request, should any issues arise. The top-level members specified in R4.1.3.3 will not coexist in the same JSON document. If data is present, errors will be absent and vice versa.",NFR,Performance
+945,F0_REQ_00945,"This unit will receive a text string from the URL parameter.â€‹ This unit will identify important words in the sentence and replace them with generic representations preceded by an escape character. (example: â€œPISBâ€ becomes â€œ$buildingâ€) â€‹This unit will output the sentence as a string, as described in R4. â€‹This unit will output a map of generic representations to the words they replaced.",NFR,Usability
+946,F0_REQ_00946,"This unit will have a list of generic words related specifically to potential queries (examples: building, professor)",NFR,Usability
+947,F0_REQ_00947,"An error during this process means there was a problem parsing the sentence and creating the generic question. In this case, return a message such as â€œSorry, I didnâ€™t understand that.â€",NFR,Functional
+948,F0_REQ_00948,This unit will receive the output sentence from the Generic Question Construction unit as input (R4.2.1.3).,NFR,Functional
+949,F0_REQ_00949,This unit will generate a generic answer sentence using the input. (example: â€œWhat time does $building close?â€ becomes â€œ$building closes at $closetime.â€). This unit will output the generic answer sentence described,NFR,Usability
+950,F0_REQ_00950,"If there was an error here, then the unit failed to create a generic answer given a generic sentence. In this case, simply fallback to the error handling described in R4.4.2.1",NFR,Reliability
+951,F0_REQ_00951,This unit will receive as input a mapping from the Generic Question Construction unit,NFR,Functional
+952,F0_REQ_00952,This unit will receive as input a generic answer from the Generic Answer Construction unit,NFR,Functional
+953,F0_REQ_00953,This unit will query the database for data about the elements in the mapping,NFR,Functional
+954,F0_REQ_00954,This unit will replace the representations in the generic answer with data.,NFR,Functional
+955,F0_REQ_00955,"This unit will output the answer to the original question, as described in R4.4.1.3.",NFR,Functional
+956,F0_REQ_00956,"If querying the database did not provide an answer, the system will say that it does not have an answer and provide appropriate website link where the user could find the answer. Example message, â€œI donâ€™t know when Rush Building closes, but here is the website of the building.",FR,Functional
+957,F0_REQ_00957,"If the system could not find appropriate website associated with the question, the system will return a generic error message such as â€œSorry, I couldnâ€™t find an answer to that.â€",NFR,Functional
+958,F0_REQ_00958,A MySQL database will be used to store all information required to answer questions.,NFR,Usability
+959,F0_REQ_00959,"The database is populated by the information extraction unit before the rest of the system is available, so that all information is readilyaccessible.",NFR,Security
+960,F0_REQ_00960,The database will use the generic representations from R4.2.2.1 as table names or column headers for easier retrieval of data.,NFR,Functional
+961,F0_REQ_00961,The database will be updated periodically and the API will be unavailable during the update.,NFR,Maintainability
+962,F0_REQ_00962,Structural data sources will have their data stored in our database,NFR,Functional
+963,F0_REQ_00963,"For data with enough structuring, web scraping will be used to programmatically extract all the data needed and store it in our database.",NFR,Compatibility
+964,F0_REQ_00964,"For totally unstructured information, AI libraries will be used to programmatically extract and store any information possible",NFR,Functional
+965,F0_REQ_00965,"Data that is especially hard to extract, for whatever reason, will be manually extracted and added to the database by a developer.",NFR,Functional
+966,F0_REQ_00966,The GUI will have a textbox that will accept inputs from a keyboard.,NFR,Usability
+967,F0_REQ_00967,"Text box will originally contain a suggestive text question, to guide the user to the format of an appropriate question.",NFR,Usability
+968,F0_REQ_00968,The GUI will have a â€œSendâ€ button which sends text from the textbox to the API when clicked,NFR,Usability
+969,F0_REQ_00969,The GUI will have a chat window displaying questions sent to the system and responses from the API.,NFR,Performance
+970,F0_REQ_00970,"The chat window will contain all questions and answers from the current session, with a scroll bar if all messages canâ€™t fit on the screen.",NFR,Usability
+971,F0_REQ_00971,"If there is a network issue, the chat window will display an error message.",NFR,Functional
+972,F0_REQ_00972,There will be a designated phone number that users can send texts to. â€‹,NFR,Functional
+973,F0_REQ_00973,"Texts sent to that number will be sent to the API, then the system will reply to the user with the answer as another text message.",NFR,Compatibility
+974,F0_REQ_00974,"If a question is not understood by our API, the system will send a text containing an example question after the text with the API response.",NFR,Performance
+975,F0_REQ_00975,Upon the USB being plugged in the system shall be able to be deployed and operational in less than 1 minute,FR,Functional
+976,F0_REQ_00976,The system shall be able to handle 1000 customers logged in concurrently at the same time.,FR,Functional

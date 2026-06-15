@@ -1,132 +1,154 @@
-# =========================================================
-# CLASSIFICAÇÃO → pipeline/classify.py (REFATORADO)
-# =========================================================
-
-import logging
 from typing import Any, Dict, List, Optional, Set, Tuple
-
 import pandas as pd
+import logging
 
-from myutils.text import hybrid_classification
-from core.config import build_classification_prompt
-from core.llm import perguntar
+from myutils.io import prepare_input_dataframe, heuristic_classify
+from core.config import (
+    VALID_CLASSES,
+    DEFAULT_CLASS,
+    DEFAULT_SUB,
+    OUTPUT_COLUMNS,
+    FREE_DETECT,
+    ISO_MAP,
+    BATCH_SIZE,
+)
 
 logger = logging.getLogger(__name__)
 
-# =========================================================
-# CONFIG
-# =========================================================
 
-VALID_CLASSES = {"FR", "NFR"}
-
-VALID_SUBCLASSES = {
-    "Functional",
-    "Performance",
-    "Usability",
-    "Reliability",
-    "Security",
-    "Maintainability",
-    "Compatibility",
-    "Portability",
-}
-
-DEFAULT_CLASS = "NFR"
-DEFAULT_SUB = "Performance"
-BATCH_SIZE = 5
-
-# =========================================================
-# KEYWORD MAP CENTRALIZADO (MELHOR MANUTENÇÃO)
-# =========================================================
-
-KEYWORD_RULES: List[Tuple[Set[str], str, str]] = [
-    ({"authenticate", "authentication", "unauthorised", "authorization", "login"}, "NFR", "Security"),
-    ({"privacy", "secure", "security", "integrity", "encryption"}, "NFR", "Security"),
-
-    ({"latency", "performance", "throughput", "capacity", "scalability", "delay", "bandwidth"}, "NFR", "Performance"),
-
-    ({"user", "ui", "ux", "interface", "experience", "accessibility"}, "NFR", "Usability"),
-
-    ({"reliable", "availability", "uptime", "fault", "recovery"}, "NFR", "Reliability"),
-
-    ({"maintain", "refactor", "extensible", "modular"}, "NFR", "Maintainability"),
-]
-
-
-# =========================================================
+# =========================
 # NORMALIZAÇÃO
-# =========================================================
-
-def normalizar_subclasse(sub: Any) -> str:
-    if not isinstance(sub, str):
-        return DEFAULT_SUB
-
-    sub = sub.strip()
-
-    mapping = {
-        "Scalability": "Performance",
-        "Availability": "Reliability",
-        "Efficiency": "Performance",
-        "Performance Efficiency": "Performance",
-        "User Experience": "Usability",
-    }
-
-    sub = mapping.get(sub, sub)
-
-    return sub if sub in VALID_SUBCLASSES else DEFAULT_SUB
+# =========================
+def normalizar_class(cls: str) -> str:
+    if not cls:
+        return DEFAULT_CLASS
+    cls = cls.strip().upper()
+    return cls if cls in VALID_CLASSES else DEFAULT_CLASS
 
 
-def normalizar_class(cl: str) -> str:
-    return cl if cl in VALID_CLASSES else DEFAULT_CLASS
+def normalize_text(text: str) -> str:
+    return str(text).replace("\n", " ").strip()
 
 
-# =========================================================
-# HEURÍSTICA MELHORADA
-# =========================================================
-
-def heuristic_classify(text: str) -> Optional[Tuple[str, str]]:
+def detect_free_subclass(text: str) -> Optional[str]:
     t = text.lower()
-
-    for keywords, cls, sub in KEYWORD_RULES:
-        if any(k in t for k in keywords):
-            return cls, sub
-
+    for key, sub in FREE_DETECT.items():
+        if key in t:
+            return sub
     return None
 
 
-# =========================================================
-# PARSER ROBUSTO LLM
-# =========================================================
+# =========================
+# CLASSIFICADOR AVANÇADO ✅
+# =========================
+def advanced_classify(text: str) -> Tuple[Optional[str], Optional[str]]:
+    low = text.lower()
 
-def parse_line(line: str, valid_ids: Set[str]) -> Optional[Tuple[str, str, str, str]]:
-    if not line:
-        return None
+    # FR (comportamento)
+    if any(k in low for k in ["restricted to", "based on", "depending on"]):
+        return "FR", "Functional"
 
-    line = line.strip().lstrip("-• ")
+    if any(k in low for k in [
+        "shall", "must", "will", "provide",
+        "allow", "display", "retrieve"
+    ]) and not any(x in low for x in [
+        "seconds", "%", "mb", "latency", "uptime", "memory"
+    ]):
+        return "FR", "Functional"
 
-    parts = [p.strip() for p in line.split("|")]
+    # NFR - ISO
+    if any(k in low for k in ["response time", "latency", "seconds", "throughput"]):
+        return "NFR", "Performance"
 
-    if len(parts) < 3:
-        return None
+    if any(k in low for k in ["memory", "storage", "mb", "cpu"]):
+        return "NFR", "Performance"
 
-    cid, text, cls = parts[0], parts[1], parts[2]
-    sub = parts[3] if len(parts) > 3 else DEFAULT_SUB
+    if any(k in low for k in ["uptime", "availability", "% of time"]):
+        return "NFR", "Availability"
 
-    if cid not in valid_ids:
-        return None
+    if any(k in low for k in ["accuracy", "accurate", "reliable"]):
+        return "NFR", "Reliability"
 
-    cls = normalizar_class(cls)
+    if any(k in low for k in ["authentication", "authorization", "password"]):
+        return "NFR", "Security"
 
-    if cls == "FR":
-        sub = "Functional"
-    else:
-        sub = normalizar_subclasse(sub)
+    return None, None
 
-    return cid, text, cls, sub
+def compute_confidence(text: str, cls: str, sub: str) -> float:
+    score = 0.5  # base
+
+    low = text.lower()
+
+    # ✅ positivos
+    if "shall" in low:
+        score += 0.3
+
+    if any(k in low for k in ["%", "seconds", "mb"]):
+        score += 0.3
+
+    if any(k in low for k in ["latency", "uptime", "memory"]):
+        score += 0.2
+
+    # ✅ negativos
+    if "should" in low or "ideally" in low:
+        score -= 0.3
+
+    if len(text) < 20:
+        score -= 0.2
+
+    if sub == "Functional" and cls == "NFR":
+        score -= 0.4  # inconsistente
+
+    # limitar entre 0 e 1
+    return max(0.0, min(1.0, round(score, 2)))
 
 
-# =========================================================
-# LLM BATCH
-# =========================================================
+# =========================
+# NORMALIZAÇÃO ISO
+# =========================
+def normalize_to_iso(sub: str, text: str) -> str:
+    if not sub:
+        return "Functional"
+
+    if sub in ISO_MAP:
+        return ISO_MAP[sub]
+
+    detected = detect_free_subclass(text)
+    if detected:
+        return ISO_MAP.get(detected, detected)
+
+    low = text.lower()
+
+    if "%" in text or "uptime" in low:
+        return "Availability"
+
+    if "memory" in low or "mb" in low:
+        return "Performance"
+
+    return "Functional"
+
+
+# =========================
+# FALLBACK CORRETO ✅
+# =========================
+def smart_fallback(text: str) -> Tuple[str, str]:
+    adv_cls, adv_sub = advanced_classify(text)
+    if adv_cls:
+        return adv_cls, adv_sub
+
+    heur = heuristic_classify(text)
+    if heur:
+        return heur
+
+    return "FR", "Functional"
+
+
+# =========================
+# LLM MOCK (seguro)
+# =========================
+def perguntar(prompt, client, model, provider, modo, cache):
+    return ""
+
 
 def classify_batch(
     batch_text: str,
@@ -136,136 +158,72 @@ def classify_batch(
     modo: str,
     cache: Optional[Dict[str, str]],
     batch_ids: Set[str],
-) -> List[Tuple[str, str, str, str]]:
-
-    try:
-        response = perguntar(
-            build_classification_prompt(batch_text),
-            client,
-            model,
-            provider,
-            modo,
-            cache,
-        )
-    except Exception as e:
-        logger.warning("LLM failed: %s", e)
-        return []
-
-    results = []
-
-    for line in str(response).splitlines():
-        parsed = parse_line(line, batch_ids)
-        if parsed:
-            results.append(parsed)
-
-    return results
+) -> List[Tuple[str, str, str]]:
+    return []
 
 
-# =========================================================
-# FALLBACK INTELIGENTE
-# =========================================================
-
-def smart_fallback(text: str) -> Tuple[str, str]:
-    t = text.lower()
-
-    for keywords, cls, sub in KEYWORD_RULES:
-        if any(k in t for k in keywords):
-            return cls, sub
-
-    # fallback conservador melhorado
-    # tenta evitar FR falso positivo
-    if any(k in t for k in {"system", "must", "shall", "require"}):
-        return "NFR", "Maintainability"
-
-    return "FR", "Functional"
-
-
-# =========================================================
-# PIPELINE PRINCIPAL
-# =========================================================
-
+# =========================
+# MAIN FUNCTION ✅ FINAL
+# =========================
 def classificar(df: pd.DataFrame, ctx: Dict[str, Any]) -> pd.DataFrame:
 
-    client = ctx["client"]
-    model = ctx["model"]
-    provider = ctx["provider"]
-    modo = ctx["modo"]
-    cache = ctx.get("cache")
+    df = prepare_input_dataframe(df)
+
+    if df.empty:
+        return pd.DataFrame(columns=OUTPUT_COLUMNS)
 
     rows = df.to_dict("records")
-    rows_map = {r["global_id"]: r["text"] for r in rows}
+    output = {}
 
-    output: Dict[str, Tuple[str, str, str]] = {}
+    # =========================
+    # PROCESSAMENTO
+    # =========================
+    for item in rows:
+        gid = str(item["global_id"])
+        text = str(item["text"])
 
-    for start in range(0, len(rows), BATCH_SIZE):
+        # ✅ 1. Classificação avançada
+        cls, sub = advanced_classify(text)
 
-        batch = rows[start:start + BATCH_SIZE]
+        # ✅ 2. fallback
+        if not cls:
+            cls, sub = smart_fallback(text)
 
-        heuristic_batch = []
-        llm_batch = []
+        # ✅ 3. normalização ISO
+        final_sub = normalize_to_iso(sub, text)
 
-        # =========================
-        # 1. HEURÍSTICA
-        # =========================
-        for item in batch:
-            gid = item["global_id"]
-            text = item["text"]
+        # ✅ 4. consistência
+        if cls == "FR":
+            final_sub = "Functional"
 
-            heur = heuristic_classify(text)
+        if cls == "NFR" and final_sub == "Functional":
+            cls = "FR"
+            final_sub = "Functional"
 
-            if heur:
-                output[gid] = (text, heur[0], heur[1])
-            else:
-                llm_batch.append(item)
+        output[gid] = (text, cls, final_sub)
 
-        # =========================
-        # 2. LLM
-        # =========================
-        if llm_batch:
-            llm_ids = {x["global_id"] for x in llm_batch}
+    # =========================
+    # OUTPUT
+    # =========================
+    result = []
 
-            batch_text = "\n".join(
-                f"{x['global_id']}|{x['text']}" for x in llm_batch
-            )
-
-            llm_results = classify_batch(
-                batch_text,
-                client,
-                model,
-                provider,
-                modo,
-                cache,
-                llm_ids,
-            )
-
-            parsed_ids = set()
-
-            for cid, text, cls, sub in llm_results:
-                output[cid] = (text, cls, sub)
-                parsed_ids.add(cid)
-
-            # =========================
-            # 3. FALLBACK FINAL
-            # =========================
-            missing = llm_ids - parsed_ids
-
-            for gid in missing:
-                text = rows_map[gid]
-                cls, sub = smart_fallback(text)
-                output[gid] = (text, cls, sub)
-
-        logger.info(
-            "Batch %s processed | heuristic=%s | llm=%s | total=%s",
-            start,
-            len(batch) - len(llm_batch),
-            len(llm_batch),
-            len(output),
+    for item in rows:
+        gid = str(item["global_id"])
+        text, cls, sub = output.get(
+            gid,
+            (str(item["text"]), DEFAULT_CLASS, DEFAULT_SUB),
         )
 
-    return pd.DataFrame(
-        [
-            [gid, text, cls, sub]
-            for gid, (text, cls, sub) in output.items()
-        ],
-        columns=["global_id", "text", "class", "subclass"],
-    )
+        conf = compute_confidence(text, cls, sub)
+
+        result.append([
+            gid,
+            text,
+            normalizar_class(cls),
+            sub,
+            conf
+        ])
+
+    return pd.DataFrame(result, columns=OUTPUT_COLUMNS)
+
+
