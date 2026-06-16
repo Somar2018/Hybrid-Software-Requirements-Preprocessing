@@ -1,0 +1,110 @@
+import json
+import os
+from datetime import datetime
+
+class StudentMemory:
+    def __init__(self, student_id, base_path="students"):
+        self.student_id = student_id
+        self.base_path = base_path
+        self.file_path = os.path.join(base_path, f"{student_id}.json")
+
+        # Criar pasta se não existir
+        os.makedirs(base_path, exist_ok=True)
+
+        # Carregar ou criar memória
+        if os.path.exists(self.file_path):
+            self.data = self._load()
+        else:
+            self.data = self._create_default()
+            self._save()
+
+    # -------------------------
+    #   MÉTODOS INTERNOS
+    # -------------------------
+
+    def _create_default(self):
+        return {
+            "id": self.student_id,
+            "nome": None,
+            "ano": None,
+            "lingua_preferida": "tetum",
+            "last_topics": [],
+            "common_errors": [],
+            "mastered_topics": [],
+            "history": [],
+            "created_at": datetime.now().isoformat()
+        }
+
+    def _load(self):
+        with open(self.file_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+
+    def _save(self):
+        with open(self.file_path, "w", encoding="utf-8") as f:
+            json.dump(self.data, f, indent=4, ensure_ascii=False)
+
+    # -------------------------
+    #   PERFIL DO ALUNO
+    # -------------------------
+
+    def update_profile(self, nome=None, ano=None, lingua=None):
+        if nome:
+            self.data["nome"] = nome
+        if ano:
+            self.data["ano"] = ano
+        if lingua:
+            self.data["lingua_preferida"] = lingua
+        self._save()
+
+    # -------------------------
+    #   MEMÓRIA DE APRENDIZAGEM
+    # -------------------------
+
+    def add_topic(self, topic):
+        if topic not in self.data["last_topics"]:
+            self.data["last_topics"].append(topic)
+        self._save()
+
+    def add_error(self, error):
+        if error not in self.data["common_errors"]:
+            self.data["common_errors"].append(error)
+        self._save()
+
+    def add_mastered(self, topic):
+        if topic not in self.data["mastered_topics"]:
+            self.data["mastered_topics"].append(topic)
+        self._save()
+
+    # -------------------------
+    #   HISTÓRICO
+    # -------------------------
+
+    def add_interaction(self, question, answer, topic=None):
+        entry = {
+            "timestamp": datetime.now().isoformat(),
+            "question": question,
+            "answer": answer,
+            "topic": topic
+        }
+        self.data["history"].append(entry)
+
+        # Atualizar tópicos recentes
+        if topic:
+            self.add_topic(topic)
+
+        self._save()
+
+    # -------------------------
+    #   EXPORTAÇÃO PARA LLM
+    # -------------------------
+
+    def get_profile_context(self):
+        """Retorna texto pronto para enviar ao LLM."""
+        return (
+            f"Nome: {self.data['nome']}\n"
+            f"Ano escolar: {self.data['ano']}\n"
+            f"Língua preferida: {self.data['lingua_preferida']}\n"
+            f"Tópicos recentes: {', '.join(self.data['last_topics'])}\n"
+            f"Erros comuns: {', '.join(self.data['common_errors'])}\n"
+            f"Tópicos dominados: {', '.join(self.data['mastered_topics'])}\n"
+        )
