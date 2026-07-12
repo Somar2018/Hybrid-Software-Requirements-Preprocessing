@@ -158,7 +158,7 @@ def direto(files: Iterable[FileLike]) -> pd.DataFrame:
             logger.warning("No valid text rows after cleaning: %s", name)
             continue
 
-        df["global_id"] = [f"F{idx}_REQ_{i:05d}" for i in range(len(df))]
+        df["id"] = [f"F0_REQ_{i:05d}" for i, _ in enumerate(df["text"], start=1)]
         df["source"] = name
         dfs.append(df)
 

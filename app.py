@@ -384,71 +384,21 @@ elif menu == "Merge":
 # ✅ RLHF - HUMAN REVIEW (CORRETO)
 # =========================================================
 
-st.subheader("🔁 Human Review Requirements (RLHF)")
+def needs_human_review(row):
+    reasons = []
 
-if st.session_state.final is None:
-    st.info("⚠️ Run Extraction/Classify first.")
-else:
+    try:
+        conf = float(row.get("confidence", 0))
+    except Exception:
+        conf = 0.0
 
-    df = st.session_state.final.copy()
+    # RLHF baseado apenas na confiança
+    if conf < 0.70:
+        reasons.append("low_confidence")
 
-    #st.write("📊 Confidence Distribution")
-    #st.write(df["confidence"].describe())
+    flagged = len(reasons) > 0
 
-    def needs_human_review(row):
-        reasons = []
-
-        texto = str(row["text"]).lower()
-        sub = str(row["subclass"])
-        cls = str(row["class"])
-        
-        try:
-            conf = float(row.get("confidence", 0))
-        except:
-            conf = 0.0
-
-        # ✅ CONFIDENCE (ajustado ao teu dataset)
-        if conf < 0.49:
-            reasons.append("low_confidence")
-
-        # ✅ regras adicionais
-        if len(texto) > 300:
-            reasons.append("too_long")
-
-        if len(texto) < 20:
-            reasons.append("too_short")
-
-        flagged = len(reasons) > 0
-        return flagged, ", ".join(reasons)
-
-    rlhf_cases = []
-
-    for _, row in df.iterrows():
-        flagged, reasons = needs_human_review(row)
-
-        if flagged:
-            rlhf_cases.append({
-                "id": row["id"],
-                "text": row["text"],
-                "class": row["class"],
-                "subclass": row["subclass"],
-                "confidence": row["confidence"],
-                "reasons_rlhf": reasons,
-                "correct_class": "",
-                "correct_subclass": "",
-                "comment": ""
-            })
-
-    df_rlhf = pd.DataFrame(rlhf_cases)
-
-    st.write(f"📌 Total for review: {len(df_rlhf)}")
-
-    if not df_rlhf.empty:
-        df_rlhf = df_rlhf.sort_values("confidence")
-        st.dataframe(df_rlhf, width="stretch")
-    else:
-        st.success("✅ No cases require review (confidence too high)")
-
+    return flagged, ", ".join(reasons)
 # =========================
 # 4. GERAR RLHF LIST
 # =========================

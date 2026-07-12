@@ -353,28 +353,23 @@ def heuristic_classify(text: str) -> Optional[Tuple[str, str]]:
 
     return None
 
-def detect_misclassification(req, predicted_class, dominant_classes, confidence=None):
-    reasons = []
-    flagged = False
-    req_lower = req.lower()
+def detect_misclassification(
+    req,
+    predicted_class,
+    dominant_classes,
+    confidence=None
+):
+    """
+    RLHF baseado exclusivamente na confiança.
+    """
 
-    # ✅ força entrada de Unknown
-    if predicted_class in ["Unknown", "UNK"]:
-        flagged = True
-        reasons.append("unknown_force")
+    if confidence is None:
+        return False, []
 
-    # ✅ classe dominante
-    if predicted_class in dominant_classes:
-        flagged = True
-        reasons.append("dominant_force")
+    if confidence < 0.40:
+        return True, ["very_low_confidence"]
 
-    # ✅ comprimento
-    if len(req) < 20:
-        flagged = True
-        reasons.append("too_short")
+    if confidence < 0.70:
+        return True, ["low_confidence"]
 
-    if len(req) > 300:
-        flagged = True
-        reasons.append("too_long")
-
-    return flagged, reasons
+    return False, []

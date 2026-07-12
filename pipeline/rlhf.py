@@ -30,32 +30,22 @@ print("✅ Dados carregados:", len(df))
 # ============================================================
 
 def needs_human_review(row):
+    """
+    RLHF baseado apenas na confiança da classificação.
+    """
 
-    reasons = []
+    try:
+        conf = float(row["confidence"])
+    except Exception:
+        conf = 0.0
 
-    texto = str(row["text"]).lower()
-    sub = str(row["subclass"])
-    cls = str(row["class"])
-    conf = float(row["confidence"])
+    if conf < 0.40:
+        return True, "very_low_confidence"
 
-    # ✅ CONFIDENCE (ajustado ao teu dataset real)
-    if conf < 0.49:
-        reasons.append("low_confidence")
+    if conf < 0.70:
+        return True, "low_confidence"
 
-    # ✅ tamanho
-    if len(texto) > 300:
-        reasons.append("too_long")
-
-    if len(texto) < 20:
-        reasons.append("too_short")
-
-    # ✅ não parece requisito
-    if not any(k in texto for k in ["shall", "must", "will"]):
-        reasons.append("not_clear_requirement")
-
-    flagged = len(reasons) > 0
-    return flagged, ", ".join(reasons)
-
+    return False, ""
 # ============================================================
 # 3. APLICAR RLHF
 # ============================================================

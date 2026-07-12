@@ -82,7 +82,7 @@ def unify_files(dfs: Iterable[pd.DataFrame]) -> pd.DataFrame:
         if df.empty:
             continue
 
-        df["global_id"] = [f"F{idx}_REQ_{i:05d}" for i in range(len(df))]
+        df["id"] = [f"F0_REQ_{i:05d}" for i, _ in enumerate(df["text"], start=1)]
         df["source"] = f"file_{idx}"
         clean_dfs.append(df)
 
