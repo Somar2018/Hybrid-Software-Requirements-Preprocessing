@@ -1,0 +1,120 @@
+# Hybrid Requirements Preprocessing Datasets
+
+This project is a Streamlit application for preprocessing, extracting, classifying and merging software requirements from different file formats.
+
+## Objective
+
+The system helps transform raw documents (TXT, PDF, CSV, XLSX, images) into a structured dataset of requirements, ready for analysis, classification and validation.
+
+## Main features
+
+1. Requirement extraction
+   - Reads TXT, PDF, CSV, XLSX, XLS and image files
+   - Removes noise and metadata from documents
+   - Extracts sentences that look like requirements
+
+2. Requirement classification (ISO/IEC/IEEE 25010)
+   - Classifies requirements as FR and NFR
+   - Can use subclasses such as Performance, Usability, Reliability, Security, Maintainability, Compatibility and Portability
+
+3. Dataset merging
+   - Combines multiple files into a single dataset
+   - Normalises columns and text
+   - Exports the result as CSV
+
+4. Hybrid LLM support
+   - Cloud mode: OpenAI, Anthropic, Gemini
+   - Local mode: LM Studio, Ollama
+
+---
+
+## Project structure
+
+- `app.py` — main Streamlit interface
+- `pipeline/extract.py` — requirement extraction pipeline
+- `pipeline/classify.py` — requirement classification pipeline
+- `pipeline/merge.py` — dataset merging pipeline
+- `pipeline/loader.py` — file loading and normalisation utilities
+- `core/llm.py` — LLM provider abstraction
+- `core/cache.py` — LLM response caching
+- `core/config.py` — prompts and system constants
+- `myutils/text.py` — text cleaning and parsing helpers
+- `myutils/io.py` — safe file reading
+
+---
+
+## How to run
+
+### 1. Create a virtual environment
+
+```powershell
+cd G:\preprocessing
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+### 2. Install dependencies
+
+```powershell
+pip install streamlit pandas openai google-genai pytesseract pdf2image pillow fitz
+```
+
+### 3. Run the application
+
+```powershell
+.\.venv\Scripts\python.exe -m streamlit run app.py
+```
+
+The application will be available at:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Interface modes
+
+- `Auto` — runs extraction and classification in sequence
+- `Extraction` — generates only the extracted requirement list
+- `Classification` — classifies extracted requirements or directly uses uploaded files
+- `Merge` — merges files or uses already classified results
+
+---
+
+## Supported formats
+
+- `.txt`
+- `.pdf`
+- `.csv`
+- `.xlsx`, `.xls`
+- `.png`, `.jpg`, `.jpeg`, `.tiff`, `.tif`
+
+---
+
+## Important notes
+
+- Extraction depends on text cleaning and heuristics to identify real requirements.
+- Classification uses LLMs and may vary depending on the chosen model.
+- The project is still under refinement and can be improved with automated tests, schema validation and more robust caching.
+
+---
+
+## Suggested improvements
+
+- add `requirements.txt` for reproducible installation
+- create unit tests for the pipeline
+- improve LLM output validation
+- improve handling of large files
+- add metrics and execution logging
+
+## License
+
+Specify the project licence, for example:
+
+```text
+MIT
+```
+
+## Author
+
+Antonio Soares Martins

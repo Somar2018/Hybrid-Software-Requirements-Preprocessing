@@ -1,0 +1,211 @@
+﻿,id,text,class,subclass,confidence
+0,F0_REQ_00001,"Internally to the CPN, a CNG transmitting private or other critical information (i.e. to a CND) shall protect the data from unauthorised disclosure.",FR,Functional,0.8
+1,F0_REQ_00002,"Internally to the CPN, a CNG receiving private or other critical information (i.e. from a CND) should verify that the data was protected from unauthorised disclosure.",FR,Functional,0.2
+2,F0_REQ_00003,The CNG shall detect the end of the life of the key used for cryptographic protection of the wireless communication between the CND and the CNG.,FR,Functional,0.8
+3,F0_REQ_00004,A CPN-user attempting to invoke a CNG-mediated service shall be identified and authenticated by the CNG before being granted access to the service.,FR,Functional,0.8
+4,F0_REQ_00005,The CNG shall implement an authentication failure handling policy.,FR,Functional,0.8
+5,F0_REQ_00006,"The CNG shall take action according to local authentication failure handling policy (which may include silently discarding the authentication and explicit failure notification, or in the case of a replay of credentials may include notification of the true owner of the credentials) upon detection of failure during identification, authentication and authorization.",FR,Functional,0.8
+6,F0_REQ_00007,The CNG should detect replayed user and/or device credentials.,FR,Functional,0.2
+7,F0_REQ_00008,"When the CNG detects replayed user and/or device credentials, the CNG shall stop the relevant processes.",FR,Functional,0.8
+8,F0_REQ_00009,The CNG shall implement a privacy protection policy specifying as a minimum private and critical information.,FR,Functional,0.8
+9,F0_REQ_00010,"When the CNG detects violation of the privacy protection policy the CNG shall discard all signalling, including signalling from the NGN.",FR,Functional,0.8
+10,F0_REQ_00011,The CNG shall implement an authorization management handling policy.,FR,Functional,0.8
+11,F0_REQ_00012,On reception at the CNG of a message to access configuration information for update and detection of authorization failure the CNG shall reject the request and manage the failure in accordance with the CPN authorization management handling policy.,FR,Functional,0.8
+12,F0_REQ_00013,"Where a CND invokes a session at the CNG the CNG shall record the association of session-id, invoking device identity and invoking user-id.",FR,Functional,0.8
+13,F0_REQ_00014,On transmission of management information from the CNG to a CND the CNG shall append a timestamp or sequence number to the outgoing message.,NFR,Performance,1
+14,F0_REQ_00015,On reception at the CNG of a message containing management information the CNG shall extract the timestamp or sequence number and verify that the message has not been replayed.,NFR,Performance,1
+15,F0_REQ_00016,On reception at the CNG of a message to access or update configuration information the CNG shall allow access only if the sender is an administrator.,FR,Functional,0.8
+16,F0_REQ_00017,On detection of a message integrity error at the CNG the CNG shall discard the message.,FR,Functional,0.8
+17,F0_REQ_00018,On indication received at the CNG of a resource allocation expiry the CNG shall delete all residual data associated with the invocation of the resource.,FR,Functional,0.8
+18,F0_REQ_00019,On receipt of a valid (i.e. authorized) request for data stored in the CNG the CNG shall return the requested data to the requesting user.,FR,Functional,0.8
+19,F0_REQ_00020,On receipt of a valid (i.e. authorized) request for access to a CNG hosted service or application the CNG shall provide the requested service or application to the requesting user.,FR,Functional,0.8
+20,F0_REQ_00021,On detection of any system failure or discontinuity not specifically handled by other mechanisms the CNG shall revert to a known safe state.,FR,Functional,0.8
+21,F0_REQ_00022,The CNG shall support mechanisms to authenticate itself to the NGN for connectivity purposes.,FR,Functional,0.8
+22,F0_REQ_00023,The CNG shall support mechanisms to authenticate itself to the NGN for service usage purposes.,FR,Functional,0.8
+23,F0_REQ_00024,The CNG shall support mechanisms to authenticate CNDs to the NGN for service usage purposes if they are not able to fully support the related procedures in an autonomous way.,FR,Functional,0.8
+24,F0_REQ_00025,The CNG shall support mechanisms for authentication of wireless CNDs for local connectivity. Similar mechanisms may be also implemented for non-wireless devices.,FR,Functional,0.8
+25,F0_REQ_00026,The CNG and CPN shall support mechanisms that prevent access to the network by unauthorized users.,FR,Functional,0.8
+26,F0_REQ_00027,"The capacity of the authorized entities should depend on the security policies defined by the service providers, managing the CNG.",FR,Functional,0.2
+27,F0_REQ_00028,The CNG and the CPN shall implement mechanisms to limit the visibility of the WAN side network and resources to authorized entities.,FR,Functional,0.8
+28,F0_REQ_00029,The diagnostic operations on the CPN by an operator shall be performed in accordance with rules protecting the users' privacy.,FR,Functional,0.8
+29,F0_REQ_00030,"CPN environment shall be protected with a stateful firewall function, that may be implemented in the CNG.",FR,Functional,0.8
+30,F0_REQ_00031,The CNG and the CPN shall be able to support parental control related functionalities limiting the use of the broadband connection on a user or time basis. Limitations on a content basis may be shared with devoted network servers.,FR,Functional,0.8
+31,F0_REQ_00032,"The CNG shall be equipped with a WAN interface towards the NGN, implementing layer 1 and 2 functionalities (one-box solution).",FR,Functional,0.8
+32,F0_REQ_00033,"LAN interfaces. The CNG shall be equipped with at least one Ethernet (minimum 100 Mbit/s) is interface. Optional interfaces could be present, e.g.: wireless LAN Wi-Fi Alliance certified, Powerlines, Plastic Optical Fiber, USB device and/or host, one or more FXS for analog telephony, DECT Cat-iq.",NFR,Performance,1
+33,F0_REQ_00034,The CNG shall support both routed and bridged modes of operation.,FR,Functional,0.8
+34,F0_REQ_00035,The CNG shall support direct intra-LAN connectivity between any appropriate pair of devices on the Customer Premises Network.,FR,Functional,0.8
+35,F0_REQ_00036,"The CNG shall support different IP address schemes and subnets on the same physical LAN port, and on different LAN ports, irrespective of routed or bridged mode of operation, allowing the direct addressability of CNDs from the NGN side in relation to data plane, control plane and management plane flows.",FR,Functional,0.8
+36,F0_REQ_00037,"The CNG and devices shall support mechanisms to identify and share information about the customer network devices (e.g. type of device and basic capabilities, services supported etc.) within the customer environment. Some of this information can be used locally, while a subset of it can be forwarded to the NGN.",FR,Functional,0.8
+37,F0_REQ_00038,The CNG shall support use of one user identity on several terminals as well as to share one terminal with several identities.,FR,Functional,0.8
+38,F0_REQ_00039,"The CNG and the Customer Network shall support the NGN services usage (e.g. voice communications, video communications, IPTV, entertainment, …) allowing the connection to the right service control platforms.",FR,Functional,0.8
+39,F0_REQ_00040,"The CNG should support redirection of IP Multimedia sessions, as defined by TS 181 005 [1], independently from the type of device used (NGN terminal or other CND).",FR,Functional,0.2
+40,F0_REQ_00041,"The CNG and the Customer Network shall assure the confidentiality, the integrity of signalling/control/media and management flows.",FR,Functional,0.8
+41,F0_REQ_00042,"The CNG and the Customer Network shall provide the opportunity for a customer network administrator to perform service and network-related configuration. According to the service/network provider choices, the CNG and Customer Network may prevent - user initiated modification of network and service related parameters.",FR,Functional,0.8
+42,F0_REQ_00043,"The CNG should negotiate session parameters (bandwidth, screen resolution, codecs…) with the NGN transparently to the user.",FR,Functional,0.2
+43,F0_REQ_00044,"The CPN shall support remote access, based on NGN network functions.",FR,Functional,0.8
+44,F0_REQ_00045,"The CNG shall allow the customer remote access to a CND in the Customer Network, for example a surveillance video camera.",FR,Functional,0.8
+45,F0_REQ_00046,"Standard NGN authentication, routing and connectivity should be used to establish remote access connectivity.",NFR,Security,0.2
+46,F0_REQ_00047,The CNG may use multiple tunnel connections for providing e.g. adequate QoS for the remote access user.,FR,Functional,0.5
+47,F0_REQ_00048,The CNG may allow secure dynamic firewall opening for remote access devices based on NGN authentication functions.,FR,Functional,0.5
+48,F0_REQ_00049,The CNG may provide Home to Home (H2H) communication service connecting CNDs in different CPNs.,FR,Functional,0.5
+49,F0_REQ_00050,"If Home to Home (H2H) communication service is provided, then each CNG must limit access to local CNDs and/or media classes based on the access rights of the remote H2H user identity.",FR,Functional,0.5
+50,F0_REQ_00051,"If Home to Home (H2H) communication service is provided, then each CNG must ensure that emergency service sessions originating in its CPN are associated with the appropriate location information and/or calling identity.",FR,Functional,0.5
+51,F0_REQ_00052,"The CPN may support encrypted communication with remote access devices, and the encrypted communication can be terminated either at the CNG or CND.",FR,Functional,0.5
+52,F0_REQ_00053,The CNG may act as a proxy for handling messages (requests and responses) related to the remote access scenarios to and from the home.,FR,Functional,0.5
+53,F0_REQ_00054,The CNG may support mechanisms supporting nomadism of the users and their subscribed services from one physical customer environment to another.,FR,Functional,0.5
+54,F0_REQ_00055,"The CNG should be able to assist in establishing Rich Communication Suite sessions between CNDs, including joining/splitting voice & media streams.",FR,Functional,0.2
+55,F0_REQ_00056,It should be possible for more than one identity to be associated with a single CPN subscription.,FR,Functional,0.2
+56,F0_REQ_00057,It should be possible for a service profile to be associated with each identity within a CPN subscription.,FR,Functional,0.2
+57,F0_REQ_00058,It shall be possible for a single public identity to be associated with multiple CNDs where each association is allocated a unique private identity.,FR,Functional,0.8
+58,F0_REQ_00059,Multiple public identities on the same terminal shall be supported.,FR,Functional,0.8
+59,F0_REQ_00060,The CNG shall support a mechanism allowing the support of call forking towards customer non-IMS capable devices.,FR,Functional,0.8
+60,F0_REQ_00061,The CNG shall able to store information related to private identities of non-IMS capable CNDs.,FR,Functional,0.8
+61,F0_REQ_00062,The CNG shall support a mechanism allowing the support of call forwarding toward non-IMS capable CNDs.,FR,Functional,0.8
+62,F0_REQ_00063,The CNG shall support intra-CPN communication between IMS and non-IMS capable CNDs.,FR,Functional,0.8
+63,F0_REQ_00064,The customer environment (CNG and/or CNDs) should support a mechanism to allow service roaming,FR,Functional,0.2
+64,F0_REQ_00065,The NGN network should be provided with a CND location information.,FR,Functional,0.2
+65,F0_REQ_00066,Codec requirements and capabilities for the User Equipment (including the CNG) are already defined in TS 181 005 [1] which describes service requirements and capabilities for the TISPAN NGN.,FR,Functional,0.5
+66,F0_REQ_00067,The CNG shall support mechanisms for managing IPTV flows provided both in unicast and multicast mode.,FR,Functional,0.8
+67,F0_REQ_00068,In case of multicast flows the CNG shall keep a record of which devices are subscribed to which multicast group.,FR,Functional,0.8
+68,F0_REQ_00069,An IPTV media flow shall be terminated by a STB or by a specific device called media gateway (or application gateway). The CNG shall not terminate any IPTV flow by itself.,FR,Functional,0.8
+69,F0_REQ_00070,The CNG shall support the connection to a STB (or media gateway) both in a bridged or in a routed mode of operation.,FR,Functional,0.8
+70,F0_REQ_00071,Depending on the operation mode chosen (bridged or touted) and on the type of flow treated (unicast or multicast) the CNG shall forward packets only to the physical interfaces which are connected to devices interested to the IPTV flow.,FR,Functional,0.8
+71,F0_REQ_00072,In case of multicast streams the CNG should support proxy functionalities to optimize the management of information related to signalling.,FR,Functional,0.2
+72,F0_REQ_00073,"CNG shall perform a link layer multicast to unicast translation if the STB or media gateway are connected using customer network technologies not supporting multicast flows (e.g. powerlines, wireless).",FR,Functional,0.8
+73,F0_REQ_00074,STB or media gateways should be equipped with a programmable open API allowing the implementation of specific service logics.,FR,Functional,0.2
+74,F0_REQ_00075,Functionalities related to Electronic Programming Guide and DRM management shall be implemented in STB or media gateway and not in CNG.,FR,Functional,0.8
+75,F0_REQ_00076,Media flows (data plane) transcoding shall be performed by STB or media gateway and not by the CNG.,FR,Functional,0.8
+76,F0_REQ_00077,Protocols adaptation for control plane or management plane may be performed by CNG.,FR,Functional,0.5
+77,F0_REQ_00078,"Presence related information shall be sent to the NGN by the STB or the CNG (depending on the specific architectural choices, CNG could manage the presence related information on behalf of the specific device used) to enable specific services tailored on the specific user's profile.",FR,Functional,0.8
+78,F0_REQ_00079,CPN should support user generated content (UGC) using an NGN service.,FR,Functional,0.2
+79,F0_REQ_00080,CPN should support storage of UGC within the CPN.,NFR,Performance,0.2
+80,F0_REQ_00081,"Subject to applicable regulation, UGC media streams may be sent directly from one CPN to one or multiple other CPN.",FR,Functional,0.5
+81,F0_REQ_00082,"CPN should support bookmarks (e.g. hyperlinks) to stored and streaming user-generated content in order to store and exchange references to uploaded and streaming UGC,.",FR,Functional,0.2
+82,F0_REQ_00083,The user should be able to personalize bookmarks to UGC.,FR,Functional,0.2
+83,F0_REQ_00084,"CPN should support inter-destination content synchronisation of streaming multimedia content. This should achieve that all or a specific group of users consuming specific content get the content presented simultaneously, i.e. without user-noticeable delay difference.",FR,Functional,0.2
+84,F0_REQ_00085,"The CNG and the CPN shall support adequate Quality of Service mechanisms (e.g. prioritize the traffic in the event that there is not sufficient bandwidth in the customer network in order to ensure the correct network performances to each traffic flow). To achieve this objective a number of functionalities shall be supported by CNG and/or CNDs, as defined in the following bullets. Most of the following set of requirements is defined adopting as a reference the Home Gateway Initiative (HGI) Release 1 Specification mentioned in clause 2 [6].",NFR,Performance,1
+85,F0_REQ_00086,The NGN network QoS functions shall be possible to use to enhance the end-user experience.,FR,Functional,0.8
+86,F0_REQ_00087,The CNG may interact with the Resource and Admission Control Subsystem (RACS) as defined in ES 282 001 [9] to support remote real-time QoS control,FR,Functional,0.5
+87,F0_REQ_00088,The CNG may interact with network elements inside the CPN to support QoS control inside the CPN.,FR,Functional,0.5
+88,F0_REQ_00089,The CNG shall classify packets entering the CPN through its WAN interface (downstream direction) according to a number of predefined priorities. Classification can be done on the basis of different layer 2 and/or layer 3 parameters.,NFR,Performance,1
+89,F0_REQ_00090,"The number of possible values defining the packet priority and, by consequence, the number of queues managed in the downstream direction shall be coherent with the number of concurrent services (data, communication, entertainment) to be treated and supported.",NFR,Performance,1
+90,F0_REQ_00091,"When forwarding packets from the WAN interface to the customer network, the CNG shall perform one of the following three actions, depending on the classification results: manage a number of queues corresponding to the different priorities detected in the classification phase for each packet processed, send the packets to some internal buffers or simply drop the packet.",FR,Functional,1
+91,F0_REQ_00092,The CNG shall classify packets coming from the CPN through its LAN interfaces (upstream direction) according to a number of predefined priorities. Classification can be done on the basis of different layer 2 and/or layer 3 parameters.,NFR,Performance,1
+92,F0_REQ_00093,"The number of possible values defining the packet priority and, by consequence, the number of queues managed in the upstream direction shall be coherent with the number of concurrent services (data, communication, entertainment) to be treated and supported.",NFR,Performance,1
+93,F0_REQ_00094,"When forwarding packets from the customer network to the WAN interface, the CNG shall manage a number of queues corresponding to the different priorities detected in the classification phase for each packet processed.",NFR,Performance,1
+94,F0_REQ_00095,The CNG shall be able to classify intra-LAN traffic that is simply bridged by the CNG itself within the CPN.,FR,Functional,0.8
+95,F0_REQ_00096,"Traffic marking: depending on what are the parameters used to perform classification, CNDs or CNG itself on behalf of the CNDs shall be able to modify the packets' priority.",FR,Functional,0.8
+96,F0_REQ_00097,"In case of huge amount of traffic in upstream or downstream directions, a congestion management mechanism shall be implemented in the CNG to minimize the impact from the user experience point of view.",FR,Functional,0.8
+97,F0_REQ_00098,"In case of managed services, QoS rules applied by CNG shall be configurable by a remote management system.",FR,Functional,0.8
+98,F0_REQ_00099,"In case of unmanaged services, user shall be able to access a QoS configuration function implemented in the CNG.",FR,Functional,0.8
+99,F0_REQ_00100,"CNG shall be equipped with an application client to be remotely manageable by the service providers for configuration, monitoring, firmware upgrade purposes. In case of multiple service providers multiple clients configuring different sets of parameters (for example referring to different services) may be present. A single parameter can be modified by a single client only.",FR,Functional,0.8
+100,F0_REQ_00101,"It shall be possible to configure the CNG (e.g. firmware downloading) according to the subscribed services. This operation may be performed when the CNG is connected to the network for the first time, for each new service subscription/modification, or for any technical management (e.g. security, patches, etc.).",FR,Functional,0.8
+101,F0_REQ_00102,CNG shall support mechanisms for secure authentication and communication with the remote management system.,FR,Functional,0.8
+102,F0_REQ_00103,The CNG shall be associated with a unique Hardware ID to be used for identification NGN side.,FR,Functional,0.8
+103,F0_REQ_00104,A suitably authorized CPN user (e.g. the system administrator) shall be able to install and activate NGN managed services without the intervention of the subscribing CPN user.,FR,Functional,0.8
+104,F0_REQ_00105,"A suitably authorized CPN user (e.g. the system administrator) shall be able to manage and configure the provisioning, capabilities and use of NGN managed services from an NGN access point outside the CPN.",FR,Functional,0.8
+105,F0_REQ_00106,A CPN user shall be able to configure any unmanaged service provided to the user.,FR,Functional,0.8
+106,F0_REQ_00107,"The CNG Remote Management requires to manage a specific set of parameters. At least the following list of parameters shall be available: Customer Identification, Physical Line Identification, list of subscribed services, CNG IP address.",FR,Functional,0.8
+107,F0_REQ_00108,"For the CNG management it is recommended to use a single protocol, so as to minimize the complexity and the cost of the service.",FR,Functional,0.5
+108,F0_REQ_00109,CNDs connected to the CPN and devoted to specific NGN managed services shall be remotely manageable.,FR,Functional,0.8
+109,F0_REQ_00110,CNG shall support mechanisms allowing the CNDs remote management when applicable.,FR,Functional,0.8
+110,F0_REQ_00111,Protection mechanisms shall be implemented to avoid that a management client could access and modify parameters that is not allow to configure.,FR,Functional,0.8
+111,F0_REQ_00112,"The CPN (trough CNDs and/or CNG) shall support manual configuration to insert information to access IMS network (e.g. IMPU, IMPI, Shared keys, Home Network Domain or P-CSCF IP Address, etc.).",FR,Functional,0.8
+112,F0_REQ_00113,The CND directly or through the CNG must be able to access to Network Configuration Service Function without involving any user interaction.,FR,Functional,0.5
+113,F0_REQ_00114,The Network Configuration Server should be able to upload different parameter sets related to service subscription.,FR,Functional,0.2
+114,F0_REQ_00115,The CND should be able to support bootstrap capabilities in order to retrieve network configuration data to connect the NGN.,FR,Functional,0.2
+115,F0_REQ_00116,The CND/CNG shall support a mechanism allowing the user to manually modify the association between a public identity (e.g. phone number) and a specific private identity corresponding to a single customer device not provided with a UICC and corresponding also to legal service level agreements between the user and the service provider.,NFR,Performance,1
+116,F0_REQ_00117,The CPN (CND and/or CNG) shall support a method to access a Self Configuration Server.,FR,Functional,0.8
+117,F0_REQ_00118,The CPN should support a capability to ensure QoS and call prioritization for sessions originating or terminating in the H(e)NB.,FR,Functional,0.2
+118,F0_REQ_00119,"A CND, as defined in clause 3, may use the CNG to access NGN services.",FR,Functional,0.5
+119,F0_REQ_00120,Authorized users shall be able to access NGN-based services using any NGN supported home device.,FR,Functional,0.8
+120,F0_REQ_00121,Both IMS capable devices with or without UICC and non-IMS capable devices without UICC shall be supported.,FR,Functional,0.8
+121,F0_REQ_00122,"If the CND contains an ISIM/UICC, it shall support the AKA authentication method (TS 187 001 [8])",FR,Functional,0.8
+122,F0_REQ_00123,"If the CND does not contain an ISIM/UICC, it shall support the HTTP Digest authentication or the NBA",FR,Functional,0.8
+123,F0_REQ_00124,"The CND shall provide its registration identity, when it requires the registration to the network.",FR,Functional,0.8
+124,F0_REQ_00125,"In order to support the NGN services and intra-CPN communications, all the CNDs in the CPN shall be addressable directly or by the mean of the CNG using L2/L3 mechanisms.",FR,Functional,0.8
+125,F0_REQ_00126,The CND should support protocols for remote access management.,FR,Functional,0.2
+126,F0_REQ_00127,The CND should support protocol for local authentication in CPN/CNG.,NFR,Security,0.2
+127,F0_REQ_00128,"The CND shall support the NGN services usage (e.g. voice communications, video communications, IPTV, entertainment, etc.) allowing the connection to the right service control platforms to process the media.",FR,Functional,0.8
+128,F0_REQ_00129,The CND shall support protocol to access the NGN service layer platforms.,FR,Functional,0.8
+129,F0_REQ_00130,The CND shall support protocols to access Self Configuration application (as defined in clause 4.1).,FR,Functional,0.8
+130,F0_REQ_00131,The CND shall be able to download and install client application services.,FR,Functional,0.8
+131,F0_REQ_00132,The CND should be able to communicate its services related capabilities to the CNG.,FR,Functional,0.2
+132,F0_REQ_00133,The CND should be able to support one or more codecs for communication services (as defined by TS 181 005 [1]).,FR,Functional,0.2
+133,F0_REQ_00134,The CNG shall support mechanisms to authenticate itself to the NGN for connectivity purposes.,FR,Functional,0.8
+134,F0_REQ_00135,The CNG shall support mechanisms to authenticate itself to the NGN for service usage purposes.,FR,Functional,0.8
+135,F0_REQ_00136,The CNG shall support mechanisms to authenticate CNDs to the NGN for service usage purposes if they are not able to fully support the related procedures in an autonomous way.,FR,Functional,0.8
+136,F0_REQ_00137,The CNG shall support mechanisms for authentication of wireless CNDs for local connectivity. Similar mechanisms may be also implemented for non-wireless devices.,FR,Functional,0.8
+137,F0_REQ_00138,The CNG and CPN shall support mechanisms that prevent access to the network by unauthorized users.,FR,Functional,0.8
+138,F0_REQ_00139,"The capacity of the authorized entities should depend on the security policies defined by the service providers, managing the CNG.",FR,Functional,0.2
+139,F0_REQ_00140,The CNG and the CPN shall implement mechanisms to limit the visibility of the WAN side network and resources to authorized entities.,FR,Functional,0.8
+140,F0_REQ_00141,The diagnostic operations on the CPN by an operator shall be performed in accordance with rules protecting the users' privacy.,FR,Functional,0.8
+141,F0_REQ_00142,"CPN environment shall be protected with a stateful firewall function, that may be implemented in the CNG.",FR,Functional,0.8
+142,F0_REQ_00143,The CNG and the CPN shall be able to support parental control related functionalities limiting the use of the broadband connection on a user or time basis. Limitations on a content basis may be shared with devoted network servers.,FR,Functional,0.8
+143,F0_REQ_00144,"The CNG shall be equipped with a WAN interface towards the NGN, implementing layer 1 and 2 functionalities (one-box solution).",FR,Functional,0.8
+144,F0_REQ_00145,"LAN interfaces. The CNG shall be equipped with at least one Ethernet (minimum 100 Mbit/s) is interface. Optional interfaces could be present, e.g.: wireless LAN Wi-Fi Alliance certified, Powerlines, Plastic Optical Fiber, USB device and/or host, one or more FXS for analog telephony, DECT Cat-iq.",NFR,Performance,1
+145,F0_REQ_00146,The CNG shall support both routed and bridged modes of operation.,FR,Functional,0.8
+146,F0_REQ_00147,The CNG shall support direct intra-LAN connectivity between any appropriate pair of devices on the Customer Premises Network.,FR,Functional,0.8
+147,F0_REQ_00148,"The CNG shall support different IP address schemes and subnets on the same physical LAN port, and on different LAN ports, irrespective of routed or bridged mode of operation, allowing the direct addressability of CNDs from the NGN side in relation to data plane, control plane and management plane flows.",FR,Functional,0.8
+148,F0_REQ_00149,"The CNG and devices shall support mechanisms to identify and share information about the customer network devices (e.g. type of device and basic capabilities, services supported etc.) within the customer environment. Some of this information can be used locally, while a subset of it can be forwarded to the NGN.",FR,Functional,0.8
+149,F0_REQ_00150,The CNG shall support use of one user identity on several terminals as well as to share one terminal with several identities.,FR,Functional,0.8
+150,F0_REQ_00151,"The CNG and the Customer Network shall support the NGN services usage (e.g. voice communications, video communications, IPTV, entertainment, …) allowing the connection to the right service control platforms.",FR,Functional,0.8
+151,F0_REQ_00152,"The CNG should support or not prevent redirection of IP Multimedia sessions, as defined by TS 181 005 [1], independently from the type of device used (NGN terminal or other CND).",FR,Functional,0.2
+152,F0_REQ_00153,"The CNG and the Customer Network shall assure the confidentiality, the integrity of signalling/control/media and management flows.",FR,Functional,0.8
+153,F0_REQ_00154,"The CNG and the Customer Network shall provide the opportunity for a customer network administrator to perform service and network-related configuration. According to the service/network provider choices, the CNG and Customer Network may prevent - user initiated modification of network and service related parameters.",FR,Functional,0.8
+154,F0_REQ_00155,"The CNG should negotiate session parameters (bandwidth, screen resolution, codecs…) with the NGN transparently to the user.",FR,Functional,0.2
+155,F0_REQ_00156,"The CPN shall support secure remote access control, based on NGN network functions.",FR,Functional,0.8
+156,F0_REQ_00157,"The CNG shall allow the customer remote access to a CND in the Customer Network, for example a surveillance video camera.",FR,Functional,0.8
+157,F0_REQ_00158,"Standard NGN authentication, routing and connectivity should be used to establish remote access connectivity.",NFR,Security,0.2
+158,F0_REQ_00159,The CNG may allow secure dynamic firewall opening for remote access devices based on NGN authentication functions.,FR,Functional,0.5
+159,F0_REQ_00160,"The CPN may support encrypted communication with remote access devices, and the encrypted communication can be terminated either at the CNG or CND.",FR,Functional,0.5
+160,F0_REQ_00161,The CNG may act as a proxy for handling messages (requests and responses) related to the remote access scenarios to and from the home.,FR,Functional,0.5
+161,F0_REQ_00162,The CNG may support mechanisms supporting nomadism of the users and their subscribed services from one physical customer environment to another.,FR,Functional,0.5
+162,F0_REQ_00163,"Multiple identities should be supported within the same subscription. Personal service profiles per each identity within the same subscription should be supported. A shared public identity on several terminals, with different private identities, shall be supported (shared IMPU).",FR,Functional,0.5
+163,F0_REQ_00164,Multiple public identities on the same terminal shall be supported.,FR,Functional,0.8
+164,F0_REQ_00165,The CNG shall support a mechanism allowing the support of call forking towards customer non-IMS capable devices and shall able to store information related to private identities of non-IMS capable CNDs.,FR,Functional,0.8
+165,F0_REQ_00166,The CNG shall support a mechanism allowing the support of call forwarding toward non-IMS capable CNDs.,FR,Functional,0.8
+166,F0_REQ_00167,The CNG shall support intra-CPN communication between IMS and non-IMS capable CNDs.,FR,Functional,0.8
+167,F0_REQ_00168,The customer environment (CNG and/or CNDs) should support a mechanism to allow service roaming,FR,Functional,0.2
+168,F0_REQ_00169,(i.e. using the same CND in two different CPNs declaring the same public identity). Supporting this scenario for non IMS capable CNDs is still to be discussed.,FR,Functional,0.5
+169,F0_REQ_00170,The NGN network should be provided with a CND location information.,FR,Functional,0.2
+170,F0_REQ_00171,Codec requirements and capabilities for the User Equipment (including the CNG) are already defined in TS 181 005 [1] which describes service requirements and capabilities for the TISPAN NGN.,FR,Functional,0.5
+171,F0_REQ_00172,The CNG shall support mechanisms for managing IPTV flows provided both in unicast and multicast mode.,FR,Functional,0.8
+172,F0_REQ_00173,In case of multicast flows the CNG shall keep a record of which devices are subscribed to which multicast group.,FR,Functional,0.8
+173,F0_REQ_00174,An IPTV media flow shall be terminated by a STB or by a specific device called media gateway (or application gateway). The CNG shall not terminate any IPTV flow by itself.,FR,Functional,0.8
+174,F0_REQ_00175,The CNG shall support the connection to a STB (or media gateway) both in a bridged or in a routed mode of operation.,FR,Functional,0.8
+175,F0_REQ_00176,Depending on the operation mode chosen (bridged or touted) and on the type of flow treated (unicast or multicast) the CNG shall forward packets only to the physical interfaces which are connected to devices interested to the IPTV flow.,FR,Functional,0.8
+176,F0_REQ_00177,In case of multicast streams the CNG should support proxy functionalities to optimize the management of information related to signalling.,FR,Functional,0.2
+177,F0_REQ_00178,"CNG shall perform a link layer multicast to unicast translation if the STB or media gateway are connected using customer network technologies not supporting multicast flows (e.g. powerlines, wireless).",FR,Functional,0.8
+178,F0_REQ_00179,STB or media gateways should be equipped with a programmable open API allowing the implementation of specific service logics.,FR,Functional,0.2
+179,F0_REQ_00180,Functionalities related to Electronic Programming Guide and DRM management shall be implemented in STB or media gateway and not in CNG.,FR,Functional,0.8
+180,F0_REQ_00181,Media flows (data plane) transcoding shall be performed by STB or media gateway and not by the CNG.,FR,Functional,0.8
+181,F0_REQ_00182,Protocols adaptation for control plane or management plane may be performed by CNG.,FR,Functional,0.5
+182,F0_REQ_00183,"Presence related information shall be sent to the NGN by the STB or the CNG (depending on the specific architectural choices, CNG could manage the presence related information on behalf of the specific device used) to enable specific services tailored on the specific user's profile.",FR,Functional,0.8
+183,F0_REQ_00184,The CNG shall classify packets entering the CPN through its WAN interface (downstream direction) according to a number of predefined priorities. Classification can be done on the basis of different layer 2 and/or layer 3 parameters.,NFR,Performance,1
+184,F0_REQ_00185,"The number of possible values defining the packet priority and, by consequence, the number of queues managed in the downstream direction shall be coherent with the number of concurrent services (data, communication, entertainment) to be treated and supported.",NFR,Performance,1
+185,F0_REQ_00186,"When forwarding packets from the WAN interface to the customer network, the CNG shall perform one of the following three actions, depending on the classification results: manage a number of queues corresponding to the different priorities detected in the classification phase for each packet processed, send the packets to some internal buffers or simply drop the packet.",FR,Functional,1
+186,F0_REQ_00187,The CNG shall classify packets coming from the CPN through its LAN interfaces (upstream direction) according to a number of predefined priorities. Classification can be done on the basis of different layer 2 and/or layer 3 parameters.,NFR,Performance,1
+187,F0_REQ_00188,"The number of possible values defining the packet priority and, by consequence, the number of queues managed in the upstream direction shall be coherent with the number of concurrent services (data, communication, entertainment) to be treated and supported.",NFR,Performance,1
+188,F0_REQ_00189,"When forwarding packets from the customer network to the WAN interface, the CNG shall manage a number of queues corresponding to the different priorities detected in the classification phase for each packet processed.",NFR,Performance,1
+189,F0_REQ_00190,CNG shall be able to classify intra-LAN traffic that is simply bridged by the CNG itself within the CPN.,FR,Functional,0.8
+190,F0_REQ_00191,"Traffic marking: depending on what are the parameters used to perform classification, CNDs or CNG itself on behalf of the CNDs shall be able to modify the packets' priority.",FR,Functional,0.8
+191,F0_REQ_00192,"In case of huge amount of traffic in upstream or downstream directions, a congestion management mechanism shall be implemented in the CNG to minimize the impact from the user experience point of view.",FR,Functional,0.8
+192,F0_REQ_00193,"In case of managed services, QoS rules applied by CNG shall be configurable by a remote management system",FR,Functional,0.8
+193,F0_REQ_00194,"In case of unmanaged services, user shall be able to access a QoS configuration function implemented in the CNG.",FR,Functional,0.8
+194,F0_REQ_00195,"The CNG shall be equipped with an application client to be remotely manageable by the service providers for configuration, monitoring, firmware upgrade purposes. In case of multiple service providers multiple clients configuring different sets of parameters (for example referring to different services) may be present. A single parameter can be modified by a single client only.",FR,Functional,0.8
+195,F0_REQ_00196,"It shall be possible to configure the CNG (e.g. firmware downloading) according to the subscribed services. This operation may be performed when the CNG is connected to the network for the first time, for each new service subscription/modification, or for any technical management (e.g. security, patches, etc.).",FR,Functional,0.8
+196,F0_REQ_00197,The CNG shall support mechanisms for secure authentication and communication with the remote management system.,FR,Functional,0.8
+197,F0_REQ_00198,The CNG shall be associated with a unique Hardware ID to be used for identification NGN side.,FR,Functional,0.8
+198,F0_REQ_00199,"In case of managed services, the CNG shall support zero-touch provisioning to activate new services, starting from Internet access to voice and video services and shall be remotely manageable. In case of unmanaged services the user shall be able to configure the CNG by himself.",FR,Functional,0.8
+199,F0_REQ_00200,"The CNG Remote Management requires to manage a specific set of parameters. At least the following list of parameters shall be available: Customer Identification, Physical Line Identification, list of subscribed services, CNG IP address.",FR,Functional,0.8
+200,F0_REQ_00201,"For the CNG management it is recommended to use a single protocol, so as to minimize the complexity and the cost of the service.",FR,Functional,0.5
+201,F0_REQ_00202,CNDs connected to the CPN and devoted to specific managed services shall be remotely manageable,FR,Functional,0.8
+202,F0_REQ_00203,"(e.g. VoIP phones, Video phones, STBs, etc).",FR,Functional,0.5
+203,F0_REQ_00204,CNG shall support mechanisms allowing the CNDs remote management when applicable.,FR,Functional,0.8
+204,F0_REQ_00205,Protection mechanisms shall be implemented to avoid that a management client could access and modify parameters that is not allow to configure.,FR,Functional,0.8
+205,F0_REQ_00206,"The CPN (trough CNDs and/or CNG) shall support manual configuration to insert information to access IMS network (e.g. IMPU, IMPI, Shared keys, Home Network Domain or P-CSCF IP Address, etc.).",FR,Functional,0.8
+206,F0_REQ_00207,The CND directly or through the CNG must be able to access to Network Configuration Service Function avoiding any user interaction. (and so the Network Configuration Server should be able to upload different parameter related to service subscription).,FR,Functional,0.2
+207,F0_REQ_00208,The CND should be able to support bootstrap capabilities in order to retrieve network configuration data to connect the NGN.,FR,Functional,0.2
+208,F0_REQ_00209,The CND/CNG shall support a mechanism allowing the user to manually modify the association between a public identity (e.g. phone number) and a specific private identity corresponding to a single customer device not provided with a UICC.,NFR,Performance,1
+209,F0_REQ_00210,The CPN (CND and/or CNG) shall support a method to access a Self Configuration Server.,FR,Functional,0.8

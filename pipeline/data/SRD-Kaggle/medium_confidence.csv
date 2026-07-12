@@ -1,0 +1,116 @@
+﻿,id,text,class,subclass,confidence
+12,F0_REQ_00013,"L:The Disputes application must maintain a detailed history of every action that a user takes on a dispute case. This ensures a complete audit trail if questions arise later on with regard to a particular dispute case.,",FR,Functional,0.5
+13,F0_REQ_00014,"L:All actions that modify an existing dispute case must be recorded in the case history.,",FR,Functional,0.5
+14,F0_REQ_00015,"F:The Disputes System must be accessible by both internal and external users.,",FR,Functional,0.5
+15,F0_REQ_00016,"F:The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base.,",FR,Functional,0.5
+16,F0_REQ_00017,"F:The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users.,",FR,Functional,0.5
+17,F0_REQ_00018,"F:The Disputes System must provide different levels of access with regard to disputes case initiation and follow-up actions.,",FR,Functional,0.5
+20,F0_REQ_00021,"F:The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.,",FR,Functional,0.5
+21,F0_REQ_00022,"F:The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.,",FR,Functional,0.5
+22,F0_REQ_00023,"F:The Disputes System will provide the user the ability to create or initiate a ticket retrieval request. As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request. The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.,",FR,Functional,0.5
+23,F0_REQ_00024,"F:The Disputes System must allow the user to create three unique types of ticket retrieval requests. The three types of ticket retrieval requests are (1) Request for original receipt (2) Request for a copy of the receipt or (3) Request for a portfolio. A portfolio consists of documentation that would provide proof of a purchase such as the documentation that is received from a car rental agency that is more than a sales receipt.,",FR,Functional,0.5
+24,F0_REQ_00025,"F:The Disputes System must prevent external users from requesting original receipts. Requests for original receipts are restricted to internal users.,",FR,Functional,0.5
+28,F0_REQ_00029,"F:The Disputes System must provide the ability to view existing dispute cases.,",FR,Functional,0.5
+30,F0_REQ_00031,"F:A list of all disputes cases that meet the entered search criteria must be provided to the user. The list of cases must differentiate the type and/or status of the case by color -coding the line item in the list. For example all open cases will be yellow and all closed cases will be gray.,",FR,Functional,0.5
+34,F0_REQ_00035,"F: For any systematic (non-user initiated) action that occurs on a case such as the disputes aging process a case activity will be generated. Upon the next logon the user that initiated the dispute case must be notified that a systematic action has occurred on the dispute case.,",FR,Functional,0.5
+35,F0_REQ_00036,"F:All letter requests must be formatted according to guidelines specified by the Print Letter Utility system.,",FR,Functional,0.5
+36,F0_REQ_00037,"F:Any disputes cases that have been closed for over 6 months must be purged from the online disputes database.,",FR,Functional,0.5
+37,F0_REQ_00038,"O:The product must support Internet Explorer 5.5 and above.,",FR,Functional,0.5
+38,F0_REQ_00039,"O:The product must support Mozilla Firefox 1.0 and above.,",FR,Functional,0.5
+45,F0_REQ_00046,"PO:The software product is expected to run on Windows or Linux platforms.,",FR,Functional,0.5
+62,F0_REQ_00063,"O:The maintenance of the product will fall within the established corporate maintenance windows.,",FR,Functional,0.5
+66,F0_REQ_00067,"SE:Only adjusters with a supervisor role can update preferred repair facility ratings. Users without the supervisor role cannot access the repair facility ratings.,",FR,Functional,0.5
+72,F0_REQ_00073,"L:The product must comply with Sarbanes-Oxley.,",FR,Functional,0.5
+105,F0_REQ_00106,"F:The system will display a blank set of ratings if there are not ratings yet defined.,",FR,Functional,0.5
+111,F0_REQ_00112,"O: The product must work with most database management systems (DBMS) on the market whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network.,",FR,Functional,0.5
+112,F0_REQ_00113,"O:The product will function alongside server software on any operating system where the Java runtime can be installed.,",FR,Functional,0.5
+113,F0_REQ_00114,"O:The product will require collaboration with a database management system (DBMS). The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,",FR,Functional,0.5
+114,F0_REQ_00115,"O: The product must make use of web/application server technology. Open source examples include Apache web server Tomcat and the JBoss application server.,",FR,Functional,0.5
+115,F0_REQ_00116,"O: A database management system such as Oracle DB2 MySql or HSQL will need to be integrated with the product.,",FR,Functional,0.5
+139,F0_REQ_00140,"O: The product will be available for licensing as a one-server two-five servers or five-or-more servers license.,",FR,Functional,0.5
+147,F0_REQ_00148,"O: The product is expected to integrate with multiple database management systems. The product will operate with Oracle SQL Server DB2 MySQL HSQL and MS Access.,",FR,Functional,0.5
+157,F0_REQ_00158,"O:The product must be developed with the J2SE/J2EE programming language libraries,",FR,Functional,0.5
+159,F0_REQ_00160,"F:The product will notify employees of meeting invitations.,",FR,Functional,0.5
+162,F0_REQ_00163,"F:The product will record meeting acknowledgements.,",FR,Functional,0.5
+165,F0_REQ_00166,"F:The product will be able to delete conference rooms.,",FR,Functional,0.5
+167,F0_REQ_00168,"F:The product will update existing room equipment.,",FR,Functional,0.5
+180,F0_REQ_00181,"F:The product will allow priviledged users to view meeting schedules in multiple reporting views.,",FR,Functional,0.5
+184,F0_REQ_00185,"F:The product will display an available status for unreserved conference rooms.,",FR,Functional,0.5
+189,F0_REQ_00190,"SE:The System shall maintain consistent security. Any changes in user passwords and/or permissions should take affect in all parts of the System.,",FR,Functional,0.5
+190,F0_REQ_00191,"SE:The System shall granularly control access rights to all major subsystems. It should be possible to assign access rights to all subsystems independently.,",FR,Functional,0.5
+219,F0_REQ_00220,"LF:The website shall be attractive to all audiences. The website shall appear to be fun and the colors should be bright and vibrant.,",FR,Functional,0.5
+222,F0_REQ_00223,"US:The product should be able to be used by 90% of novice users on the Internet.,",FR,Functional,0.5
+228,F0_REQ_00229,"US:The product shall be easy for customers with novice skills on the Internet to purchase and watch streaming movies. Customers should be able to purchase and watch a pre-determined movie in under 3 minutes.,",FR,Functional,0.5
+230,F0_REQ_00231,"US:The website will use standard Internet conventions when interacting with the user.,",FR,Functional,0.5
+232,F0_REQ_00233,"PE: When purchasing a streaming movie or pre-paid card via credit card the processing time should have a maximum response time of 15 seconds.,",NFR,Performance,0.5
+233,F0_REQ_00234,"PE: When streaming a movie the buffering time should take no longer than 10 seconds (plus any latency on the user s connection.),",NFR,Performance,0.7
+235,F0_REQ_00236,"SE: All credit card information will be secured on the server and only accessible by authorized Izogn administrators. Information will be encrypted in the database.,",FR,Functional,0.5
+241,F0_REQ_00242,"SC:The streaming server will support 50 simultaneous streaming connections.,",FR,Functional,0.5
+242,F0_REQ_00243,"SC: The server will support a maximum of 1 000 simultaneous users.,",FR,Functional,0.5
+246,F0_REQ_00247,"O:The same hardware supporting the current website will be used to support the new system.,",FR,Functional,0.5
+247,F0_REQ_00248,"O: We must be able to interface with the following browsers: IE 5.X 6.0 Netscape 6.x 7.x 8.x and Firefox 1.0.,",FR,Functional,0.5
+248,F0_REQ_00249,"O:Website must interface with the CyberSource API to process credit card transactions.,",FR,Functional,0.5
+249,F0_REQ_00250,"O:Website must be fully operational with MSN TV2.,",FR,Functional,0.5
+253,F0_REQ_00254,"PE:Izogn Administrator must be able to update the category listings on the website within 2 minutes.,",FR,Functional,0.5
+254,F0_REQ_00255,"PE:Izogn Administrator must be able to add new products to the website within 2 minutes.,",FR,Functional,0.5
+256,F0_REQ_00257,"US:The website will provide a help section with answers and solutions to common problems.,",FR,Functional,0.5
+257,F0_REQ_00258,"A: Velkat staff will be available for phone support between 7am-7pm M-F to provide technical support to the Izogn administrators.,",FR,Functional,0.5
+259,F0_REQ_00260,"SE:Only registered customers can purchase streaming movies.,",FR,Functional,0.5
+260,F0_REQ_00261,"SE: A customer can only stream a movie if they purchased it and are within the 2 day viewing period.,",FR,Functional,0.5
+261,F0_REQ_00262,"SE:Only authorized personnel can access customer records in the database.,",FR,Functional,0.5
+262,F0_REQ_00263,"SE:Only administrators can activate a pre-paid card.,",FR,Functional,0.5
+263,F0_REQ_00264,"SE:Only authorized personnel can access sales information.,",FR,Functional,0.5
+266,F0_REQ_00267,"SE:Data integrity scripts will be run on a weekly basis to verify the integrity of the database.,",FR,Functional,0.5
+270,F0_REQ_00271,"SE: All customer information will be stored on a secure database accessible only to authorized personnel.,",FR,Functional,0.5
+271,F0_REQ_00272,"SE:All credit card information will be encrypted in the database.,",FR,Functional,0.5
+272,F0_REQ_00273,"SE:The streaming server will have anti-virus software to prevent infection of malicious viruses.,",FR,Functional,0.5
+278,F0_REQ_00279,"L:The website will comply with W3C standards.,",FR,Functional,0.5
+279,F0_REQ_00280,"L:The PHP code will comply with PEAR standards.,",FR,Functional,0.5
+280,F0_REQ_00281,"F: The website will allow customers to search for movies by title actor or director.,",FR,Functional,0.5
+281,F0_REQ_00282,"F: viewing a movie details the website will display the movies description actor and director entered in by the administrator.,",FR,Functional,0.5
+288,F0_REQ_00289,"F:System will allow customers to pay for a streaming movie with a pre-paid card.,",FR,Functional,0.5
+293,F0_REQ_00294,"F:Only registered customers can purchase streaming movies.,",FR,Functional,0.5
+294,F0_REQ_00295,"F: Movies can only be streamed if the customer has purchased a movie and is within the 2-day time period to stream the movie.,",FR,Functional,0.5
+295,F0_REQ_00296,"F:Website must be able to support free trial periods with various parameters set by the Izogn Manager.,",FR,Functional,0.5
+296,F0_REQ_00297,"F: All streaming movie sales will be logged in the database and accessible by the administrator.,",FR,Functional,0.5
+302,F0_REQ_00303,"PE:The process must fit within the processing time conditions set forth by the Auto Rep Assignment process in which a lead is assigned within 3 minutes of the total life cycle.,",FR,Functional,0.5
+303,F0_REQ_00304,"O:The lead washing process will operate within the established physical web service structure.,",FR,Functional,0.5
+304,F0_REQ_00305,"O: The washing process must use a non binding neutral data format such as xml when receiving and processing lead data.,",FR,Functional,0.5
+305,F0_REQ_00306,"A:Defect reports will be available to technical units on a 24x7 basis.,",FR,Functional,0.5
+306,F0_REQ_00307,"MN:Washing parameters will be updated during scheduled maintenance hours.,",FR,Functional,0.5
+307,F0_REQ_00308,"F:The vendor will verify the invalid lead.,",FR,Functional,0.5
+308,F0_REQ_00309,"F:Vendor will submit a credit validation record to be applied to the enterprise billing system.,",FR,Functional,0.5
+309,F0_REQ_00310,"F:If a lead is scored to the high range the system will supply the lead data and score to the enterprise system.,",FR,Functional,0.5
+310,F0_REQ_00311,"F:The leads washing functionality will validate all leads received by the web service for valid data,",FR,Functional,0.5
+311,F0_REQ_00312,"F:The leads washing functionality will insert all leads captured by the web service.,",FR,Functional,0.5
+312,F0_REQ_00313,"F:If the leads score falls within the high average score then it will be process by the ARA functionality.,",FR,Functional,0.5
+313,F0_REQ_00314,"F:If the leads score falls within the medium average then it will be set for manual verification by an Enrollment Coordinator through the eleads system.,",FR,Functional,0.5
+314,F0_REQ_00315,"F:If the leads score falls within the low average then it will be returned to the supplying vendor,",FR,Functional,0.5
+315,F0_REQ_00316,"F:The leads washing functionality will compile both contact and academic scoring information for a total score.,",FR,Functional,0.5
+316,F0_REQ_00317,"F:The leads washing functionality will use the parameters supplied by corporate and schools to score part of the lead.,",FR,Functional,0.5
+317,F0_REQ_00318,"F:The leads washing functionality will return the lead data supplied to the vendor along with the reason of rejection.,",FR,Functional,0.5
+318,F0_REQ_00319,"F:The leads washing functionality will have an interface in which lead data parameters can be maintained.,",FR,Functional,0.5
+319,F0_REQ_00320,"F:The leads washing functionality will verify the users authentication and rights to make parameter updates.,",FR,Functional,0.5
+320,F0_REQ_00321,"F:The leads washing functionality will store any potential lead duplicates returned by the enterprise system.,",FR,Functional,0.5
+321,F0_REQ_00322,"F:Prior to submitting the lead to the enterprise system the leads washing functionality will assign the lead to an admissions rep.,",FR,Functional,0.5
+373,F0_REQ_00374,"F:The notification of the game ending will include the reason the game is ended (i.e. a player has won the game or a player has ended the game).,",FR,Functional,0.5
+382,F0_REQ_00383,"A:The system must be available for use between 7:00AM and 11:59PM all days of the year.,",FR,Functional,0.5
+413,F0_REQ_00414,"LF:The system interface will use CCR nomenclature. The system must use the same nomenclature used in the existing WCS system and reports,",FR,Functional,0.5
+414,F0_REQ_00415,"LF:The interface must summarize the data in a fashion that s appealing to CCR management. Every report type must have at least one high level summary shown in the results dashboard/interface,",FR,Functional,0.5
+417,F0_REQ_00418,"US:Rreports must be easy to generate. eports must be generated within one button click and exported within one button click (after selecting the report),",FR,Functional,0.5
+425,F0_REQ_00426,"O:The Brio portion of the WCS system must be able to export files in spreadsheet form (Microsoft Excel and Lotus 1-2-3 formats). Brio will provide buttons in the user interface that produce/export reports in .xls or .123 file formats.,",FR,Functional,0.5
+426,F0_REQ_00427,"MN:The WCS system must run queries to the WCS databases once again (on a specified day) to update the available data available to CCR users. Queries must be made to external databases for data refresh once a week.,",FR,Functional,0.5
+430,F0_REQ_00431,"SE:Each team owner will need to use a username and password in order to be authenticated to reach the team owner s page,",FR,Functional,0.5
+431,F0_REQ_00432,"SE:The Commissioner will be the only authorized user per league to adjust league settings.,",FR,Functional,0.5
+446,F0_REQ_00447,"O:A primary database will be used to store cached data for active users.,",FR,Functional,0.5
+461,F0_REQ_00462,"A: Out of 1000 accesses to the system the system is available 999 times.,",FR,Functional,0.5
+471,F0_REQ_00472,"PO:The product is expected to run on Windows CE and Palm operating systems.,",FR,Functional,0.5
+485,F0_REQ_00486,"O:A secondary database will be used to store historical statistics and data.,",FR,Functional,0.5
+506,F0_REQ_00507,"O:We must be able to interface with any HTML browser.,",FR,Functional,0.5
+539,F0_REQ_00540,"O:The RFS system should be able to easily interface with the BDW environment in order to load the data. ,7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process every year. The data will be as of October month-end. ,Test files (7) shall be loaded up to 5 times throughout the year from the BDW.",FR,Functional,0.5
+540,F0_REQ_00541,"MN:Changes to revenue and expense formulae must be applied to the RFS system every year prior to the budgeting process start. Revenue and expense formulae will be updated within one week of their receipt after which 2 weeks will be allotted to testing of the budget calculations to be conducted jointly by the project development team and PCG Finance.,",FR,Functional,0.5
+545,F0_REQ_00546,"LF:The intranet pages should display appropriately in all resolutions from 800x600 and higher. The display of all the pages will be correct in 95% of the resolutions prior to implementation. The remaining 5% will be corrected within a week of notification of the incorrect display.,",FR,Functional,0.5
+547,F0_REQ_00548,"PE:The product interface should be fast. The response time of the product interface should not exceed 2 seconds 90% of the time. For 10% of the time the response time should not be more than 10 seconds.not be more than 10 seconds.,",NFR,Performance,0.5
+548,F0_REQ_00549,"F:The system will use the stored e-mail addresses as a primary means of communicating information to affected parties.,",FR,Functional,0.5
+550,F0_REQ_00551,"F: The system will notify affected parties when changes occur affecting clinicals including but not limited to clinical section capacity changes and clinical section cancellations.,",FR,Functional,0.5
+551,F0_REQ_00552,"F: The system will notify affected parties when changes occur affecting classes including but not limited to class cancellations class section detail changes and changes to class offerings for a given quarter.,",FR,Functional,0.5

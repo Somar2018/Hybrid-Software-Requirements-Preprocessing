@@ -1,0 +1,7 @@
+{
+  "requirement": "default",
+  "the system shall be able to manage multiple user accounts.": "default",
+  "the system shall have a comprehensive search function for all library materials.": "default",
+  "the system shall allow users to reserve and renew items.": "default",
+  "the system shall provide real-time availability of items on the shelves.": "default"
+}

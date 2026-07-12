@@ -1,0 +1,12 @@
+﻿,id,text,class,subclass,confidence,reasons_rlhf,correct_class,correct_subclass,comment
+0,F0_REQ_00221,"LF: The website should have an African feel but should not alienate non-Africans. The website should use animation on pages which are describing the services to grab the users attention and encourage them to sign up.,",FR,Functional,0.2,low_confidence,,,
+1,F0_REQ_00222,"LF: The website design should be modern clean and concise.,",FR,Functional,0.2,low_confidence,,,
+2,F0_REQ_00224,"US: Users should only have to navigate through a maximum of 4 pages to create an account with the website.,",FR,Functional,0.2,low_confidence,,,
+3,F0_REQ_00225,"US:Users should be able to access their streaming movies in under 2 clicks after logging into the website.,",FR,Functional,0.2,low_confidence,,,
+5,F0_REQ_00253,"MN:Promotional updates to the website should take a day to update.,",FR,Functional,0.2,low_confidence,,,
+6,F0_REQ_00274,"LF:The website should cater to all tribes in Nigeria.,",FR,Functional,0.2,low_confidence,,,
+7,F0_REQ_00276,"LF: The website should appeal to all Africans not only Nigerians.,",FR,Functional,0.2,low_confidence,,,
+8,F0_REQ_00277,"O:The website should use Flash to provide animation on the home page.,",FR,Functional,0.2,low_confidence,,,
+10,F0_REQ_00544,"SE:User access should be limited to the permissions granted to their role(s) Each level in the PCG hierarchy will be assigned a role and users will be assigned to these roles. Access to functionality within RFS system is dependent on the privileges/permission assigned to the role..,",FR,Functional,0.2,low_confidence,,,
+9,F0_REQ_00299,"F: Daily usage statistics should be logged and accessible by the administrator.,",FR,Functional,0.2,low_confidence,,,
+4,F0_REQ_00235,"PE: While streaming a movie buffering should only occur if there is latency in the user s connection.,",NFR,Performance,0.4,low_confidence,,,

@@ -1,0 +1,202 @@
+﻿,id,text,class,subclass,confidence
+0,F0_REQ_00001,The system must allow for multiple file upload to be configured on a per-page basis.,FR,Functional,0.5
+1,F0_REQ_00002,The system must allow actors to organize their voice clips into a portfolio.,FR,Functional,0.5
+2,F0_REQ_00003,The system must allow actors to download their voice clips in a flexible format.,FR,Functional,0.5
+3,F0_REQ_00004,The system must store audio clips in a format conducive to speech.,FR,Functional,0.5
+4,F0_REQ_00005,The system must allow actors to delete recorded clips.,FR,Functional,0.5
+5,F0_REQ_00006,The system must allow web feeds to be turned on or off on a per-page basis.,FR,Functional,0.5
+6,F0_REQ_00007,An actor must be able to search through pages in a course.,FR,Functional,0.5
+7,F0_REQ_00008,The system must display a search box on every page after an actor has logged in.,FR,Functional,0.5
+8,F0_REQ_00009,A course administrator must be able to grade an assignment.,FR,Functional,0.5
+11,F0_REQ_00012,The system must provide a wiki where actors can collaboratively create networks of documents.,FR,Functional,0.5
+12,F0_REQ_00013,The system must provide a blog engine.,FR,Functional,0.5
+13,F0_REQ_00014,The system must provide both e-mail and SMS notifications for pages.,FR,Functional,0.5
+15,F0_REQ_00016,The system must be backed up on a configurable schedule.,FR,Functional,0.5
+16,F0_REQ_00017,The system must have the ability and capacity to restore back-up data within six hours so that the system is never offline for an inordinate period of time.,FR,Functional,0.5
+18,F0_REQ_00019,99% up-time should be considered sufficient to meet this requirement.,FR,Functional,0.5
+20,F0_REQ_00021,The system must be maintainable without substantial modification.,FR,Functional,0.5
+22,F0_REQ_00023,Users must have easy access to help while interacting with the system.,FR,Functional,0.5
+23,F0_REQ_00024,Adequate user documentation should be provided to minimize the number of calls to the Help Desk about problems with the system.,NFR,Performance,0.5
+26,F0_REQ_00027,"System administrators must have access to comprehensive, searchable documentation.",FR,Functional,0.5
+29,F0_REQ_00030,"This documentation must cover all procedures necessary for regular maintenance with links to additional information, all common errors, and links or documentation for advanced troubleshooting.",FR,Functional,0.5
+117,F0_REQ_00118,The level of coverage should be at least 95% of the time over 95% of the designated coverage area for a radio installed in a vehicle with an external antenna.,FR,Functional,0.5
+192,F0_REQ_00193,A driver may be provided with a handheld portable to allow communications whilst the driver is outside the train.,FR,Functional,0.5
+205,F0_REQ_00206,"The functional identity displayed should include the coach number of the leading cab, if neither a train number nor an engine number is available.",NFR,Performance,0.5
+207,F0_REQ_00208,"When the call is connected to the controller, an audible and visual indication is to be provided to the driver.",FR,Functional,0.5
+242,F0_REQ_00243,"If the controller calls the lead driver (in a controller-lead cab call), the controller is automatically added into the multi-driver call.",FR,Functional,0.5
+249,F0_REQ_00250,The call from the Cab radio may be initiated by selection from a pre-defined list (up to 99 entries).,FR,Functional,0.5
+287,F0_REQ_00288,Powering up the Cab radio will initiate automatic self-testing.,FR,Functional,0.5
+288,F0_REQ_00289,Powering up the Cab radio will initiate automatic selection of the pre-set loudspeaker volume.,FR,Functional,0.5
+289,F0_REQ_00290,"Powering up the Cab radio will initiate registration with other on-train systems, such as ERTMS/ETCS.",FR,Functional,0.5
+346,F0_REQ_00347,It should be possible for the driver to store and overwrite numbers and their details in the Cab radio.,NFR,Performance,0.5
+347,F0_REQ_00348,General MMI functions are required to support forwarding call to the driver handportable.,FR,Functional,0.5
+348,F0_REQ_00349,General MMI functions are required to support putting a call on hold.,FR,Functional,0.5
+349,F0_REQ_00350,General MMI functions are required to support displaying incoming call details whilst in an on-going call.,FR,Functional,0.5
+350,F0_REQ_00351,General MMI functions are required to support temporarily exiting an existing call to answer another incoming call.,FR,Functional,0.5
+351,F0_REQ_00352,General MMI functions are required to support multi-driver call service.,FR,Functional,0.5
+360,F0_REQ_00361,"Where pre-emption occurs, an advisory indication may be provided to the pre-empted parties.",FR,Functional,0.5
+367,F0_REQ_00368,"Cab radios should be able to continue to operate for a period of at least 1 hour in the event of failure of the train's power supply, based on 20% point-to-point calls, 5% group calls, and 75% standby.",FR,Functional,0.5
+382,F0_REQ_00383,"Some Cab radios may need to be operated by staff wearing gloves and controls may need to be suitable for use in a wide range of conditions, e.g. splash proof and suitable for viewing in direct sunlight and in darkness.",FR,Functional,0.5
+383,F0_REQ_00384,"Where there is a risk that stored numbers or other set-up details may be accidentally changed, facilities should be provided on the Cab radio in order to prevent this happening.",NFR,Performance,0.5
+393,F0_REQ_00394,Additional information (for DSD alarm) may also be provided if available from external systems.,FR,Functional,0.5
+401,F0_REQ_00402,Other interfaces may be provided in the Cab radio system.,FR,Functional,0.5
+411,F0_REQ_00412,"If the call is a group call, the user has to request permission to speak during the call by using the Push-To-Talk (PTT) function (General purpose radio).",FR,Functional,0.5
+414,F0_REQ_00415,The user may then talk whilst the PTT function is used (General purpose radio).,FR,Functional,0.5
+444,F0_REQ_00445,"General purpose radios should be equipped with rechargeable batteries capable of providing a minimum of eight hours operation from a single charge based on 20% point-to-point calls, 5% group calls, and 75% standby.",FR,Functional,0.5
+455,F0_REQ_00456,The Push-To-Talk function does not need to be a dedicated button (General purpose radio).,FR,Functional,0.5
+456,F0_REQ_00457,Four buttons should be provided for designated stored numbers (General purpose radio).,NFR,Performance,0.5
+457,F0_REQ_00458,Stored numbers and other set-up details should be protected against accidental alteration (General purpose radio).,NFR,Performance,0.5
+486,F0_REQ_00487,"If the call is a group call, the user has to request permission to speak during the call by using the Push-To-Talk (PTT) function (Operational radio).",FR,Functional,0.5
+489,F0_REQ_00490,The user may then talk whilst the PTT function is used (Operational radio).,FR,Functional,0.5
+544,F0_REQ_00545,Four buttons should be provided for designated stored numbers (Operational radio).,NFR,Performance,0.5
+594,F0_REQ_00595,Various types of call restriction may be employed by the railways as an additional security measure.,NFR,Security,0.5
+603,F0_REQ_00604,Cab radios should be members of the trackside worker standard group.,NFR,Performance,0.5
+607,F0_REQ_00608,The access matrix defines which subscribers are able to contact which other subscribers within the EIRENE network.,FR,Functional,0.5
+638,F0_REQ_00639,"If required, a railway may make additional restrictions to the access matrix.",FR,Functional,0.5
+658,F0_REQ_00659,It should be possible for the system to prevent certain types of users from registering train numbers that they are not authorised to use.,NFR,Performance,0.5
+659,F0_REQ_00660,It should be possible for the system to prevent certain types of users from registering driver of train functional numbers that they are not authorised to use.,NFR,Performance,0.5
+660,F0_REQ_00661,It should be possible for the system to prevent certain types of users from registering shunting team leader functional numbers that they are not authorised to use.,NFR,Performance,0.5
+686,F0_REQ_00687,"Where greater accuracy for location dependent addressing is required, additional location information may be provided by ground-based signalling systems external to EIRENE.",FR,Functional,0.5
+687,F0_REQ_00688,"Where greater accuracy for location dependent addressing is required, additional location information may be provided by on-train systems (e.g. ERTMS/ETCS equipment, balise readers, GPS etc) external to EIRENE.",FR,Functional,0.5
+689,F0_REQ_00690,"In order to ensure interoperability, the text message service is mandatory for the Cab radio.",FR,Functional,0.5
+690,F0_REQ_00691,"In order to ensure interoperability, the text message service is optional for the ground.",FR,Functional,0.5
+692,F0_REQ_00693,A message can include several segments.,FR,Functional,0.5
+693,F0_REQ_00694,The transfer time for each message segment should be less than 30 seconds for 95% of messages.,NFR,Performance,0.5
+710,F0_REQ_00711,Different indications at the originating and receiving terminal may be provided (for emergency activation).,FR,Functional,0.5
+717,F0_REQ_00718,A Railway emergency call may only be terminated by the originator of the call.,FR,Functional,0.5
+718,F0_REQ_00719,A Railway emergency call may only be terminated by a controller participating in the call.,FR,Functional,0.5
+719,F0_REQ_00720,A Railway emergency call may only be terminated by the network following a (nationally determined) period of no speech.,FR,Functional,0.5
+722,F0_REQ_00723,"For Railway emergency calls initiated by a mobile, the controller's display will indicate location.",FR,Functional,0.5
+747,F0_REQ_00748,The link assurance signal should be used to reassure the driver of the integrity of the member at the head of the shunting movement.,NFR,Performance,0.5
+754,F0_REQ_00755,"For the driver, the link assurance signal indicates that the radio link is operational.",FR,Functional,0.5
+765,F0_REQ_00766,The shunting driver may remain fixed (i.e. in a shunting area) or may change one or more times during a working period (i.e. passenger or freight stations).,FR,Functional,0.5
+771,F0_REQ_00772,The shunting leader can then choose the moment when he takes or rejects the external call.,FR,Functional,0.5
+788,F0_REQ_00789,"Where the direct mode facility is provided, it is sufficient that the user may talk or listen only, but not both.",FR,Functional,0.5
+790,F0_REQ_00791,"Where the direct mode facility is provided, a minimum of one channel is to be available for use of direct mode facilities.",FR,Functional,0.5
+791,F0_REQ_00792,"Where the direct mode facility is provided, if more than one channel is provided, there must be a function allowing the user to manually select the channel.",FR,Functional,0.5
+793,F0_REQ_00794,"Where the direct mode facility is provided, the user may only select direct mode when the normal mobile telephony services are not available.",FR,Functional,0.5
+801,F0_REQ_00802,A plataforma será responsiva.,FR,Functional,0.5
+802,F0_REQ_00803,O sistema será acessível através de navegadores modernos.,FR,Functional,0.5
+803,F0_REQ_00804,O sistema será acessível através de dispositivos móveis.,FR,Functional,0.5
+804,F0_REQ_00805,"O sistema deve fornecer um ponto de acesso único para criar, planejar e controlar projetos organizacionais.",FR,Functional,0.5
+805,F0_REQ_00806,"O sistema deve monitorar a alocação de recursos humanos, financeiros e materiais de forma eficiente.",FR,Functional,0.5
+806,F0_REQ_00807,O sistema deve oferecer painéis e relatórios dinâmicos.,FR,Functional,0.5
+807,F0_REQ_00808,"O sistema deve permitir criar, editar e excluir projetos.",FR,Functional,0.5
+808,F0_REQ_00809,"O sistema deve permitir definir metas, entregáveis e cronogramas para cada projeto.",FR,Functional,0.5
+809,F0_REQ_00810,O sistema deve permitir rastrear o progresso com base em marcos e tarefas concluídas.,FR,Functional,0.5
+811,F0_REQ_00812,O sistema deve permitir atribuir funções e permissões com base na hierarquia organizacional.,FR,Functional,0.5
+812,F0_REQ_00813,O sistema deve permitir gerenciar a alocação de recursos humanos com base na disponibilidade e habilidades.,FR,Functional,0.5
+813,F0_REQ_00814,O sistema deve monitorar os recursos materiais e financeiros alocados aos projetos.,FR,Functional,0.5
+814,F0_REQ_00815,O sistema deve automatizar alertas para recursos próximos aos limites de disponibilidade.,FR,Functional,0.5
+815,F0_REQ_00816,O sistema deve registrar os custos associados a cada atividade.,FR,Functional,0.5
+816,F0_REQ_00817,O sistema deve permitir a criação de canais de comunicação por projeto.,FR,Functional,0.5
+817,F0_REQ_00818,"O sistema deve integrar-se com ferramentas de comunicação (por exemplo, Microsoft Teams, Slack).",FR,Functional,0.5
+818,F0_REQ_00819,O sistema deve permitir compartilhar documentos e arquivos diretamente através da plataforma.,FR,Functional,0.5
+819,F0_REQ_00820,O sistema deve fornecer painéis com indicadores-chave de desempenho (KPIs).,FR,Functional,0.5
+820,F0_REQ_00821,"O sistema deve gerar relatórios detalhados por projeto, equipe ou recurso.",FR,Functional,0.5
+821,F0_REQ_00822,O sistema deve permitir visualizar o status da atividade em tempo real.,FR,Functional,0.5
+822,F0_REQ_00823,O sistema deve configurar fluxos de trabalho para aprovações automáticas.,FR,Functional,0.5
+824,F0_REQ_00825,O sistema deve realizar backups automáticos periódicos de dados.,NFR,Reliability,0.5
+825,F0_REQ_00826,"O sistema deve conectar-se com sistemas ERP (SAP, Oracle).",FR,Functional,0.5
+826,F0_REQ_00827,O sistema deve sincronizar calendários com o Google Calendar e o Microsoft Outlook.,FR,Functional,0.5
+827,F0_REQ_00828,O sistema deve integrar-se com CRMs para rastrear atividades relacionadas ao cliente.,FR,Functional,0.5
+828,F0_REQ_00829,O sistema deve implementar autenticação multifator (MFA).,FR,Functional,0.5
+829,F0_REQ_00830,O sistema deve rastrear logs de atividades do usuário.,FR,Functional,0.5
+830,F0_REQ_00831,"O sistema deve garantir a conformidade com regulamentações (por exemplo, GDPR, LGPD).",FR,Functional,0.5
+831,F0_REQ_00832,"System Administration support the needs of a large, multiple-branch library system. Specifically, the system must support a library system with 50 locations, 20 million circulations, purchasing and processing over 500,000 items per year. It is highly desirable that searches and reports can be processed during open hours without disrupting other system functions.",FR,Functional,0.5
+839,F0_REQ_00840,"User rights and privileges will be controlled through security groups and/or “roles” that allow access control for individuals, workgroups, and arbitrary staff groups.",FR,Functional,0.5
+843,F0_REQ_00844,"System runs on a fully relational, SQL-based database system. Ability to run SQL queries against any table in the database. Ability to access database as an ODBC source. All data tables and data storage are fully accessible.",NFR,Performance,0.5
+844,F0_REQ_00845,The system provides real-time processing. For example: pull lists are up to date at time of viewing or printing; system supports live shelf reading and weeding.,FR,Functional,0.5
+846,F0_REQ_00847,"For any patron record or item record, staff can identify where it is in use (location, user, date and time placed).",FR,Functional,0.5
+847,F0_REQ_00848,Support for individual and shared staff login accounts; access to modules is granted by use of roles or privileges that allow each account to access as many (or as few) modules as needed. Individual logins allow user-level preferences and audit trail.,FR,Functional,0.5
+848,F0_REQ_00849,"System documentation is library-specific and follows standard formats for technical documentation. Documentation is specific to the particular version of the software in use at library. Documentation is web-based, indexed, organized by function, and easily searchable.",FR,Functional,0.5
+849,F0_REQ_00850,"System upgrades and updates include written guidelines for updating servers and clients. Includes list of new, changed, and removed features.",FR,Functional,0.5
+850,F0_REQ_00851,System provides access to all configuration files.,FR,Functional,0.5
+851,F0_REQ_00852,"System provides full access to all log files. Log files can be reviewed without stopping system. Logs can be enabled, disabled, and set to a specific retention threshold.",FR,Functional,0.5
+852,F0_REQ_00853,System provides access to root shell.,FR,Functional,0.5
+853,F0_REQ_00854,"System supports creation of custom dashboards that display current and historical data about system performance, record creation and modification, circulation transactions, etc. Administrators can create dashboards and give access to selected users and groups.",FR,Functional,0.5
+855,F0_REQ_00856,"Ability to set thresholds on the length of time records are locked and provide, for all record types, a list of records in sustained use/locked condition. Ability from the same console to unlock one or more records.",FR,Functional,0.5
+856,F0_REQ_00857,"System provides dashboard of performance monitoring and management tools. Identification of processes with process ID, owner username, IP address (if applicable), CPU utilization, memory utilization, run time. Runaway processes are identified. System status is represented by visual indicators (e.g. green and red lights).",NFR,Performance,0.7
+857,F0_REQ_00858,"System provides a server management console including: software shutdown utility, software startup utility, server shutdown utility, server restart utility.",FR,Functional,0.5
+858,F0_REQ_00859,"System provides an administrative dashboard displaying: last full and incremental backup; last planned and unplanned system reboot; last software upgrade; current software version; transactions waiting to be processed; size of log-files; current count of records by record type (item, bibliographic, patron etc), database utilization (size, processes running).",FR,Functional,0.5
+859,F0_REQ_00860,System provides a management console displaying workstations running client software; workstation name and IP address; and utilities for managing and killing client sessions.,FR,Functional,0.5
+860,F0_REQ_00861,"System provides a circulation dashboard showing key performace indicators such as check-outs per hour, check-ins per hour, holds placed per hour, holds paged per day, etc. Indicators can be limited to a single branch or set to systemwide.",FR,Functional,0.5
+861,F0_REQ_00862,System provides a single console with access to all configuration files. Read and write permission to individual configuration files can be assigned to users and groups.,FR,Functional,0.5
+862,F0_REQ_00863,System provides a dashboard for locating and viewing log files.,FR,Functional,0.5
+863,F0_REQ_00864,"System provides a single interface for reviewing and controlling scheduled tasks, including staff-scheduled tasks, automated reports, scheduled imports and exports, software updates, etc.",FR,Functional,0.5
+864,F0_REQ_00865,"Ability to access and edit email configuration, including a quick menu of common settings (such as masquerading, log retention, bounce management).",FR,Functional,0.5
+865,F0_REQ_00866,System supports SMTP for email transport.,FR,Functional,0.5
+866,F0_REQ_00867,"System supports restrictions based on business rules, e.g. restrictions on deleting item records that are in checked-out status, or restrictions on deleting bibliographic records with existing holds.",FR,Functional,0.5
+867,F0_REQ_00868,"System provides customizable 'Rules of Suppression' that specify whether patrons and staff can view authority, bibliographic, order, and item records in staff and public (OPAC) interfaces. Records may be visible to specific workgroups only; to all staff and patrons at specific locations; or to all staff and all patrons. (See REQ-5057 for related requirements on loan rules, and REQ-5190 for related requirements on holdability.)",FR,Functional,0.5
+870,F0_REQ_00871,"Ability to specify default value, data validation, automatic formatting, and required status for any field.",FR,Functional,0.5
+871,F0_REQ_00872,System provides capability to perform live incremental and full backups of data and transaction logs. System supports use of third-party backup software such as EMC NetWorker.,FR,Functional,0.5
+873,F0_REQ_00874,Ability to cluster servers for failover capability.,NFR,Reliability,0.5
+874,F0_REQ_00875,Patron data is secure in all transfers to and from the system.,FR,Functional,0.5
+875,F0_REQ_00876,System administrative staff has full visibility and control of user privileges.,FR,Functional,0.5
+876,F0_REQ_00877,"System supports secure protocols, including SFTP, SSL, and SSH. SFTP is supported in both active and passive modes, configurable per vendor.",FR,Functional,0.5
+877,F0_REQ_00878,"MARC bibliographic and authority records can be imported and exported, singly and in batch, all fields or selected fields, to and from vendors including OCLC. Imported records can overlay existing short or full bibliographic records. Imported batches can be maintained and manipulated as selection lists (see REQ-3004).",FR,Functional,0.5
+879,F0_REQ_00880,"System provides a dedicated interface for creating new staff accounts. New staff account creation process provides configurable templates for account administrator use; provides granular privileges for account creation, modification, and deletion.",FR,Functional,0.5
+880,F0_REQ_00881,System provides a dedicated interface for creating new patron accounts. Patron account creation process provides configurable templates for staff use; supports field validation and required fields; provides configurable defaults.,FR,Functional,0.5
+881,F0_REQ_00882,"System supports scheduling of maintenance tasks, reports, and data exports. Jobs can be scheduled in sequence (start job B when job A finishes) and can be modified or cancelled at any time prior to starting.",FR,Functional,0.5
+882,F0_REQ_00883,"Staff can be given permission to schedule tasks, reports, and data exports. System administration staff can view and manage jobs scheduled by other staff.",FR,Functional,0.5
+883,F0_REQ_00884,"System supports administrator-programmable and user-programmable macros and/or keyboard shortcuts. Shortcut keys may be assigned to macros (e.g. 'Insert Field') or to text strings. Macros are centrally managed on server, can be imported from and exported to individual users, and can be restricted for use and/or editting through centrally-managed permissions.",FR,Functional,0.5
+885,F0_REQ_00886,"Client software installation and updates must be centrally managed, using standard or proprietary network management tools, allowing streaming updates from server. Ability to specify specific clients to be updated. Client software can be managed with VNC and Remote Desktop.",FR,Functional,0.5
+886,F0_REQ_00887,All client configuration files are server based; configurations can be exported and imported between clients.,FR,Functional,0.5
+887,F0_REQ_00888,"Ability to fully customize layout and appearance of reports. Ability to display, print, email, or save report to standard formats including CSV and Excel, as well as to customizable formats.",FR,Functional,0.5
+888,F0_REQ_00889,"System provides a user-friendly interface for designing queries against all record types. Staff can select fields to query; select values from picklist of possible values; select regular expressions from drop-down menu, and use a full range of Boolean operators. Administrators control staff access to tables and fields.",FR,Functional,0.5
+889,F0_REQ_00890,"System administrators can create report templates that are available to front-line staff, and can be run as is or modified to the staff person's particular needs.",FR,Functional,0.5
+890,F0_REQ_00891,"System provides fine-grained permissions to allow or disallow staff to run specific reports, and/or to run ad hoc reports on specific sets of data.",FR,Functional,0.5
+892,F0_REQ_00893,"Ability to define and select four types of printers: receipt printer, standard printer, label printer, and forms printer. All Windows printers are supported.",FR,Functional,0.5
+893,F0_REQ_00894,"Ability to print to a file on the server, ftp, email, or printer from any part of the application. When applicable, the ability to select record fields and control order of fields when printing.",FR,Functional,0.5
+894,F0_REQ_00895,O sistema deve ser confiável.,FR,Functional,0.5
+895,F0_REQ_00896,O sistema deve ter baixa manutenção.,FR,Functional,0.5
+896,F0_REQ_00897,O sistema deve atender aos requisitos de segurança ditados pelas normas regulatórias HIPAA e FDA.,FR,Functional,0.5
+897,F0_REQ_00898,O sistema deve atender aos requisitos de confidencialidade ditados pelas normas regulatórias HIPAA e FDA.,FR,Functional,0.5
+898,F0_REQ_00899,O sistema deve exibir os hiperlinks e descrições para o usuário realizar as funções desejadas conforme especificado no UIS relacionado.,FR,Functional,0.5
+899,F0_REQ_00900,O Usuário deve ser capaz de visualizar os hiperlinks e descrições listados.,FR,Functional,0.5
+900,F0_REQ_00901,O Usuário deve ser capaz de escolher uma função clicando no hiperlink.,FR,Functional,0.5
+901,F0_REQ_00902,O sistema deve exibir a página operacional desejada para o usuário após clicar no hiperlink.,FR,Functional,0.5
+902,F0_REQ_00903,Um usuário com privilégios de administrador deve ser capaz de Adicionar/Criar um novo usuário e associar o usuário com a(s) função(ões) especificada(s) no sistema.,FR,Functional,0.5
+903,F0_REQ_00904,O sistema deve exibir uma mensagem de erro se o novo usuário for encontrado no sistema [system name].,FR,Functional,0.5
+904,F0_REQ_00905,O sistema deve exibir uma mensagem de erro se o novo usuário não estiver ativo no Active Directory.,FR,Functional,0.5
+905,F0_REQ_00906,O sistema deve exibir a aba xxx como a aba padrão.,FR,Functional,0.5
+906,F0_REQ_00907,O usuário deve ser capaz de criar/adicionar um novo usuário manualmente ou a partir de um modelo.,FR,Functional,0.5
+907,F0_REQ_00908,O registro do usuário deve herdar todas as configurações de função especificadas no modelo quando o registro do usuário for criado a partir do modelo de usuário.,FR,Functional,0.5
+908,F0_REQ_00909,O usuário deve ser capaz de adicionar funções adicionais manualmente ao criar/adicionar um novo usuário a partir de um modelo de usuário.,FR,Functional,0.5
+909,F0_REQ_00910,O sistema deve salvar as informações do usuário no banco de dados com funções especificadas associadas a divisões para o usuário recém-criado/adicionado.,FR,Functional,0.5
+910,F0_REQ_00911,O sistema deve realizar uma busca nas colunas de nome de exibição do usuário e nome de usuário do sistema [system name] nas tabelas de usuário para encontrar o usuário e verificar a existência do usuário.,FR,Functional,0.5
+911,F0_REQ_00912,O sistema deve realizar uma busca no Active Directory para verificar o status do usuário Ativo/Inativo dentro da empresa quando o usuário tenta criar/adicionar um novo usuário no sistema [system name].,FR,Functional,0.5
+912,F0_REQ_00913,O sistema deve gerar uma mensagem de confirmação padrão após salvar os dados e mensagens de aviso/cautela após o botão cancelar ou fechar ser clicado.,FR,Functional,0.5
+914,F0_REQ_00915,"Todos os campos obrigatórios, conforme especificado no UIS, devem ser marcados com um asterisco vermelho alertando o usuário para preencher os campos obrigatórios.",FR,Functional,0.5
+915,F0_REQ_00916,O usuário deve ser capaz de salvar dados após criar/adicionar um novo usuário ou cancelar dados para abortar o processo.,FR,Functional,0.5
+916,F0_REQ_00917,O sistema deve limpar os dados se o usuário escolher clicar no botão Cancelar no meio da criação/adição de um novo usuário.,FR,Functional,0.5
+917,F0_REQ_00918,O sistema deve direcionar o usuário para a página xxx se o usuário escolher clicar no botão fechar sem inserir nenhum dado.,FR,Functional,0.5
+918,F0_REQ_00919,"O usuário deve associar pelo menos uma função, divisão, código de designador e local do laboratório no momento da criação/adição de um novo usuário.",FR,Functional,0.5
+919,F0_REQ_00920,O usuário deve preencher os campos obrigatórios — Nome de Usuário e Nome de Exibição — na seção Informações do Usuário no momento da criação/adição de um novo usuário.,FR,Functional,0.5
+920,F0_REQ_00921,O sistema deve gerar uma mensagem de erro/aviso padrão após o usuário tentar salvar dados sem associar um de cada um dos seguintes critérios — xxx — e/ou sem preencher os campos obrigatórios na seção Informações do Usuário.,FR,Functional,0.5
+921,F0_REQ_00922,A Equipe do Projeto deve demonstrar protótipos de mudanças na UI para as partes interessadas do projeto no início do processo de desenvolvimento.,FR,Functional,0.5
+922,F0_REQ_00923,A Equipe do Projeto deve permitir ajustes razoáveis nas interfaces de usuário de novas funcionalidades pelas partes interessadas do projeto quando o cronograma do projeto permitir tais ajustes.,FR,Functional,0.5
+926,F0_REQ_00927,A Equipe de Desenvolvimento deve definir padrões de codificação para o aplicativo e seguir esses padrões consistentemente.,FR,Functional,0.5
+927,F0_REQ_00928,A Equipe de Desenvolvimento deve ser obrigada a ajustar o código-fonte existente para seguir os padrões de codificação aceitos somente se esse código-fonte precisar ser modificado.,FR,Functional,0.5
+928,F0_REQ_00929,"O sistema deve registrar erros, avisos e mensagens informativas em um arquivo de log externo no servidor de aplicativos.",FR,Functional,0.5
+929,F0_REQ_00930,A Equipe de Desenvolvimento deve ser obrigada a ajustar o código-fonte existente para usar o arquivo de log externo somente se esse código-fonte precisar ser modificado para implementar outro requisito.,FR,Functional,0.5
+930,F0_REQ_00931,O sistema deve registrar uma mensagem de erro no arquivo de dados externo quando o usuário for direcionado para a página de erro [SYSTEM NAME].,FR,Functional,0.5
+931,F0_REQ_00932,O sistema deve enviar um e-mail de notificação para uma lista de distribuição de e-mail dos Serviços ao Cliente se o usuário for direcionado para a página de erro xxx.,FR,Functional,0.5
+932,F0_REQ_00933,A Equipe de Desenvolvimento deve desenvolver funcionalidades usando a linguagem xx e na Plataforma .NET 3.5 suportada.,FR,Functional,0.5
+933,F0_REQ_00934,A Equipe de Desenvolvimento deve utilizar estruturas de código aberto estabelecidas em vez de componentes proprietários personalizados sempre que apropriado.,FR,Functional,0.5
+934,F0_REQ_00935,O sistema deve continuar a depender e usar um único banco de dados SQL Server 2008.,FR,Functional,0.5
+937,F0_REQ_00938,A Equipe de Desenvolvimento deve rotular cada compilação programada do [SYSTEM NAME] no sistema de controle de código-fonte.,FR,Functional,0.5
+938,F0_REQ_00939,A Equipe de Desenvolvimento deve realizar compilações programadas do [SYSTEM NAME] usando o código retirado do controle de código-fonte usando o rótulo conforme definido e especificado.,FR,Functional,0.5
+940,F0_REQ_00941,O Líder Técnico deve realizar revisões de código de cada mudança no sistema antes que essas mudanças possam ser submetidas ao controle de código-fonte.,FR,Functional,0.5
+941,F0_REQ_00942,A Equipe de QA/QC deve realizar testes de regressão contra todas as compilações programadas.,FR,Functional,0.5
+942,F0_REQ_00943,"A ferramenta RoboHelp, versão 8, será usada para criar os links de hipertexto da Ajuda online do sistema [system name]. O sistema [system name] exibirá um link de hipertexto rotulado Ajuda no canto superior direito de cada uma das telas de usuário para fornecer assistência ao usuário. Cada uma das janelas pop-up de tópicos de Ajuda conterá o mesmo conteúdo que está disponível nos manuais do usuário do sistema [system name].",FR,Functional,0.5
+943,F0_REQ_00944,"O sistema deve fornecer a capacidade de abrir uma janela pop-up exibindo informações sobre a página específica, juntamente com links para tópicos de ajuda de suporte ao selecionar cada link de Ajuda.",FR,Functional,0.5
+944,F0_REQ_00945,"O sistema deve exibir a página Visão Geral do [system name], localizada na seção Introdução da Ajuda, como página de tópico de ajuda padrão que será carregada ao selecionar o link de hipertexto da Ajuda.",FR,Functional,0.5
+945,F0_REQ_00946,O sistema deve permitir que os usuários naveguem facilmente por cada um dos tópicos de ajuda selecionando um link de hipertexto correspondente fornecido no quadro esquerdo da janela pop-up da Ajuda.,FR,Functional,0.5
+946,F0_REQ_00947,O sistema deve exibir o logotipo da [company name] no lado superior direito da tela em cada uma das páginas de ajuda.,FR,Functional,0.5
+947,F0_REQ_00948,O sistema deve exibir cada uma das páginas de ajuda usando o mesmo esquema de cores e plano de fundo conforme especificado.,FR,Functional,0.5
+948,F0_REQ_00949,O sistema deve fornecer capacidade de pesquisa aos usuários para encontrar rapidamente material de tópico específico através da ferramenta de ajuda online.,FR,Functional,0.5
+949,F0_REQ_00950,O sistema deve fornecer um índice aos usuários para uma busca mais aprofundada de conteúdos de tópicos através da ferramenta de ajuda online.,FR,Functional,0.5
+950,F0_REQ_00951,O sistema deve fornecer um Glossário para termos relacionados à indústria associados à [company name] e ao sistema [system name] aos usuários através da ferramenta de ajuda online.,FR,Functional,0.5
+951,F0_REQ_00952,O sistema deve reter as capacidades existentes de conformidade com HIPAA.,FR,Functional,0.5
+952,F0_REQ_00953,O sistema deve seguir as capacidades de conformidade com HIPAA em novas funcionalidades introduzidas no sistema.,FR,Functional,0.5

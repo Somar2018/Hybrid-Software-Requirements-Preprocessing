@@ -1,0 +1,136 @@
+﻿,id,text,class,subclass,confidence
+9,F0_REQ_00010,The system should display grade information to the appropriate actor.,FR,Functional,0.2
+10,F0_REQ_00011,The system should maintain a grade history.,FR,Functional,0.2
+14,F0_REQ_00015,"As far as possible, the system should provide a simple, responsive interface.",FR,Functional,0.2
+17,F0_REQ_00018,"The system should be available 24 hours a day, 7 days a week.",FR,Functional,0.2
+19,F0_REQ_00020,The system should support at least 1000 concurrent users.,NFR,Performance,0.2
+21,F0_REQ_00022,"Relevant, online documentation for users should be available on each page.",FR,Functional,0.2
+24,F0_REQ_00025,Modifications should be reported via the main page to inform actors of unexpected changes.,FR,Functional,0.2
+25,F0_REQ_00026,This electronic documentation should be supplemented with phone and on-site support provided by the Office of Information Services.,FR,Functional,0.2
+27,F0_REQ_00028,A comprehensive database of maintenance tasks and help files should be compiled to make the courseware system easier to maintain from an IT staff point-of-view.,FR,Functional,0.2
+28,F0_REQ_00029,Search results should be displayed based on relevance.,FR,Functional,0.2
+71,F0_REQ_00072,The EIRENE network should support text messages.,FR,Functional,0.2
+72,F0_REQ_00073,The network should support the receipt of mobile-originated text messages by the ground.,FR,Functional,0.2
+76,F0_REQ_00077,The network should support fax transmissions between the ground and mobile users.,FR,Functional,0.2
+80,F0_REQ_00081,The EIRENE network should support restriction of display of called/calling user.,FR,Functional,0.2
+86,F0_REQ_00087,The EIRENE network should support charging information.,FR,Functional,0.2
+90,F0_REQ_00091,"It should be possible for the network to prevent the identity of certain users from being displayed on the mobile, either when being called, calling or both.",FR,Functional,0.2
+100,F0_REQ_00101,The network should support automatically forwarding the incoming call if there is no reply from the intended recipient (no reply).,FR,Functional,0.2
+101,F0_REQ_00102,The network should support automatically forwarding the incoming call if the intended recipient cannot be contacted via the network (not reachable).,FR,Functional,0.2
+105,F0_REQ_00106,"Where network services are chargeable, it should be possible for the network to provide information about call rates and on-going call charges.",FR,Functional,0.2
+122,F0_REQ_00123,All operational mobile-to-fixed calls not covered by the above call set-up time should be <5s.,FR,Functional,0.2
+123,F0_REQ_00124,All operational fixed-to-mobile calls not covered by the above call set-up time should be <7s.,FR,Functional,0.2
+124,F0_REQ_00125,All operational mobile-to-mobile calls not covered by the above call set-up time should be <10s.,FR,Functional,0.2
+125,F0_REQ_00126,All low priority calls call set-up time should be <10s.,FR,Functional,0.2
+131,F0_REQ_00132,The definition of each broadcast or group call area should take into account factors such as the speed of trains on the line (stopping distance) and the operational control areas.,FR,Functional,0.2
+137,F0_REQ_00138,General purpose radio should support multi-party voice calls.,FR,Functional,0.2
+138,F0_REQ_00139,Operational radio should support multi-party voice calls.,FR,Functional,0.2
+140,F0_REQ_00141,General purpose radio should support general data applications.,FR,Functional,0.2
+141,F0_REQ_00142,Operational radio should support general data applications.,FR,Functional,0.2
+142,F0_REQ_00143,Cab radio should support automatic fax.,FR,Functional,0.2
+143,F0_REQ_00144,General purpose radio should support automatic fax.,FR,Functional,0.2
+144,F0_REQ_00145,Operational radio should support automatic fax.,FR,Functional,0.2
+145,F0_REQ_00146,Cab radio should support train control applications.,FR,Functional,0.2
+146,F0_REQ_00147,General purpose radio should support train control applications.,FR,Functional,0.2
+147,F0_REQ_00148,Operational radio should support train control applications.,FR,Functional,0.2
+149,F0_REQ_00150,General purpose radio should support EIRENE closed user group.,FR,Functional,0.2
+152,F0_REQ_00153,General purpose radio should support unconditional call forwarding.,FR,Functional,0.2
+153,F0_REQ_00154,Operational radio should support unconditional call forwarding.,FR,Functional,0.2
+154,F0_REQ_00155,Cab radio should support if user busy call forwarding.,FR,Functional,0.2
+155,F0_REQ_00156,General purpose radio should support if user busy call forwarding.,FR,Functional,0.2
+156,F0_REQ_00157,Operational radio should support if user busy call forwarding.,FR,Functional,0.2
+157,F0_REQ_00158,Cab radio should support if no reply call forwarding.,FR,Functional,0.2
+158,F0_REQ_00159,General purpose radio should support if no reply call forwarding.,FR,Functional,0.2
+159,F0_REQ_00160,Operational radio should support if no reply call forwarding.,FR,Functional,0.2
+160,F0_REQ_00161,Cab radio should support if not reachable call forwarding.,FR,Functional,0.2
+161,F0_REQ_00162,General purpose radio should support if not reachable call forwarding.,FR,Functional,0.2
+162,F0_REQ_00163,Operational radio should support if not reachable call forwarding.,FR,Functional,0.2
+164,F0_REQ_00165,General purpose radio should support call hold.,FR,Functional,0.2
+165,F0_REQ_00166,Operational radio should support call hold.,FR,Functional,0.2
+166,F0_REQ_00167,Cab radio should support display of call charging information.,FR,Functional,0.2
+167,F0_REQ_00168,General purpose radio should support display of call charging information.,FR,Functional,0.2
+168,F0_REQ_00169,Operational radio should support display of call charging information.,FR,Functional,0.2
+170,F0_REQ_00171,General purpose radio should support call barring.,FR,Functional,0.2
+173,F0_REQ_00174,General purpose radio should support auto answer service.,FR,Functional,0.2
+176,F0_REQ_00177,General purpose radio should support call supervisory information.,FR,Functional,0.2
+177,F0_REQ_00178,Operational radio should support call supervisory information.,FR,Functional,0.2
+179,F0_REQ_00180,General purpose radio should support location dependent addressing (section 11).,FR,Functional,0.2
+180,F0_REQ_00181,Operational radio should support location dependent addressing (section 11).,FR,Functional,0.2
+181,F0_REQ_00182,Cab radio should support direct mode (section 15).,FR,Functional,0.2
+182,F0_REQ_00183,Operational radio should support direct mode (section 15).,FR,Functional,0.2
+184,F0_REQ_00185,Operational radio should support shunting mode (section 14).,FR,Functional,0.2
+275,F0_REQ_00276,"It should be possible for the Cab radio to be used without the network service (if it should fail or if there is no authorised network coverage), such that local open channel communications are still possible (direct mode).",FR,Functional,0.2
+290,F0_REQ_00291,All failures of self-tests should be recorded in the train-borne recorder.,NFR,Reliability,0.2
+301,F0_REQ_00302,"The time 't' should be able to be varied between 0 and 240 minutes, as a maintenance function, allowing the radio to power up in a consistent state following minor operational procedures or power interruptions.",FR,Functional,0.2
+306,F0_REQ_00307,"As far as possible, the soft switch off procedure should also apply on power failure.",NFR,Reliability,0.2
+321,F0_REQ_00322,The Cab radio should be capable of selecting the mobile radio network as directed by input from an external device (e.g. a balise).,FR,Functional,0.2
+324,F0_REQ_00325,The Cab radio should be capable of selecting the mobile radio network automatically from a list of suitable networks (see section 10.5).,FR,Functional,0.2
+362,F0_REQ_00363,"Upon the request of the driver, the Cab radio should be able to perform a suite of run-time diagnostic tests on all physical interfaces.",FR,Functional,0.2
+364,F0_REQ_00365,"If run-time diagnostics are implemented, all failures should be available to be recorded in a train-borne recorder.",NFR,Reliability,0.2
+386,F0_REQ_00387,A driver safety device (DSD) interface should be provided in traction units that are equipped with a DSD in order to support the transmission of a DSD alarm.,FR,Functional,0.2
+391,F0_REQ_00392,The DSD alarm call/message should provide location information.,FR,Functional,0.2
+397,F0_REQ_00398,The Cab radio should be able to provide details of radio faults to a train-borne recorder or other equipment via a standardised interface.,FR,Functional,0.2
+441,F0_REQ_00442,A standard data interface should be provided to allow a computer to be connected to the General purpose radio.,FR,Functional,0.2
+442,F0_REQ_00443,It should be possible for a General purpose user to change the battery without the use of tools.,FR,Functional,0.2
+443,F0_REQ_00444,The weight of the General purpose radio including battery should not exceed 250g.,FR,Functional,0.2
+445,F0_REQ_00446,Changing the battery should not result in losing data stored in the General purpose radio.,FR,Functional,0.2
+446,F0_REQ_00447,The General purpose radio should be suitable for use with a car adapter kit.,FR,Functional,0.2
+447,F0_REQ_00448,The General purpose radio MMI should comprise a display.,FR,Functional,0.2
+448,F0_REQ_00449,The General purpose radio MMI should comprise a control panel.,FR,Functional,0.2
+449,F0_REQ_00450,The General purpose radio MMI should comprise a loudspeaker.,FR,Functional,0.2
+450,F0_REQ_00451,The General purpose radio MMI should comprise a microphone.,FR,Functional,0.2
+451,F0_REQ_00452,The General purpose radio MMI should be suitable for use both by day and night.,FR,Functional,0.2
+452,F0_REQ_00453,The on/off control should be designed to prevent accidental activation/deactivation (General purpose radio).,FR,Functional,0.2
+453,F0_REQ_00454,Facilities should be provided to adjust the loudspeaker volume (General purpose radio).,FR,Functional,0.2
+462,F0_REQ_00463,An audible indication should be provided to the user if the network service is no longer available (General purpose radio).,FR,Functional,0.2
+478,F0_REQ_00479,"It should be possible, as a maintenance function, to enable/disable the emergency call function (Operational radio).",FR,Functional,0.2
+493,F0_REQ_00494,The Operational radio should provide facilities to support shunting mode as described in section 14.,FR,Functional,0.2
+497,F0_REQ_00498,A means to enter/leave the direct mode of operation should be provided (Operational radio).,FR,Functional,0.2
+521,F0_REQ_00522,A standard data interface should be provided to allow a computer to be connected to the Operational radio.,FR,Functional,0.2
+522,F0_REQ_00523,The Operational radio should be capable of withstanding exposure to salt mist spray.,FR,Functional,0.2
+523,F0_REQ_00524,The Operational radio should be capable of withstanding exposure to torrential rain at up to 2mm/min.,FR,Functional,0.2
+524,F0_REQ_00525,The Operational radio should be capable of withstanding exposure to heavy hail.,FR,Functional,0.2
+525,F0_REQ_00526,The Operational radio should be capable of withstanding exposure to snow and sand storms.,FR,Functional,0.2
+526,F0_REQ_00527,The Operational radio should be capable of withstanding exposure to accretion of ice.,FR,Functional,0.2
+527,F0_REQ_00528,"The Operational radio should be capable of withstanding exposure to corrosive atmospheres (including sulphur dioxide, hydrogen sulphide, nitrogen oxides, ozone, organic hydrocarbons).",FR,Functional,0.2
+529,F0_REQ_00530,The Operational radio should have a carry feature that allows the operator to instantly have both hands free without dropping the radio.,FR,Functional,0.2
+530,F0_REQ_00531,It should be possible to release the carry feature instantly in the event that the radio is caught on a projecting part of a moving vehicle.,FR,Functional,0.2
+533,F0_REQ_00534,It should be possible for an Operational radio user to change the battery without the use of tools.,FR,Functional,0.2
+534,F0_REQ_00535,The weight of the Operational radio including battery should not exceed 800g.,FR,Functional,0.2
+537,F0_REQ_00538,The Operational radio should be suitable for use with a car adapter kit.,FR,Functional,0.2
+550,F0_REQ_00551,An audible indication should be provided to the user if the network service is no longer available (Operational radio).,FR,Functional,0.2
+551,F0_REQ_00552,The primary controller's MMI should queue all incoming calls or call requests.,FR,Functional,0.2
+552,F0_REQ_00553,"The primary controller's MMI should display the queue to the controller, showing the functional identity and priority of callers.",FR,Functional,0.2
+553,F0_REQ_00554,High priority calls should be identified and presented at the top of the queue on the primary controller's MMI.,FR,Functional,0.2
+554,F0_REQ_00555,The primary controller's MMI should allow the controller to select any of the incoming calls currently queued by the system.,FR,Functional,0.2
+555,F0_REQ_00556,"The primary controller's MMI should allow the controller to establish a call of Railway emergency, public emergency or railway operation priority to any mobile by selection from the display.",FR,Functional,0.2
+556,F0_REQ_00557,"The primary controller's MMI should allow the controller to establish, close, enter and leave group calls (at Railway emergency, public emergency or railway operation priority).",FR,Functional,0.2
+557,F0_REQ_00558,The primary controller's MMI should allow sending and receiving of text messages.,FR,Functional,0.2
+558,F0_REQ_00559,"For post incident analysis, the controller equipment should provide the possibility to record all operational speech and data calls.",FR,Functional,0.2
+559,F0_REQ_00560,It should be possible for calls to be answered automatically according to incoming call priority as defined in section 10.2.,FR,Functional,0.2
+590,F0_REQ_00591,Automatic answering for Railway operation (e.g. calls from or for drivers and controllers) and Control-command information calls should be optional for other user equipment.,FR,Functional,0.2
+609,F0_REQ_00610,The network should allow a call from a Primary Controller to an Other Driver.,FR,Functional,0.2
+610,F0_REQ_00611,The network should allow a call from a Primary Controller to a Chief Conductor.,FR,Functional,0.2
+611,F0_REQ_00612,The network should allow a call from a Primary Controller to Public Address.,FR,Functional,0.2
+613,F0_REQ_00614,The network should allow a call from a Secondary Controller to an Other Driver.,FR,Functional,0.2
+614,F0_REQ_00615,The network should allow a call from a Secondary Controller to a Chief Conductor.,FR,Functional,0.2
+615,F0_REQ_00616,The network should allow a call from a Secondary Controller to Public Address.,FR,Functional,0.2
+617,F0_REQ_00618,The network should allow a call from a Power Controller to an Other Driver.,FR,Functional,0.2
+618,F0_REQ_00619,The network should allow a call from a Power Controller to a Chief Conductor.,FR,Functional,0.2
+619,F0_REQ_00620,The network should allow a call from a Power Controller to Public Address.,FR,Functional,0.2
+632,F0_REQ_00633,The network should allow a call from a Chief Conductor to a Primary Controller.,FR,Functional,0.2
+633,F0_REQ_00634,The network should allow a call from a Chief Conductor to a Secondary Controller.,FR,Functional,0.2
+634,F0_REQ_00635,The network should allow a call from a Chief Conductor to a Power Controller.,FR,Functional,0.2
+646,F0_REQ_00647,The functional addressing scheme should permit calls to be routed from a controller to an international train within the control area without reference to any EIRENE system other than that providing service to the international train.,FR,Functional,0.2
+688,F0_REQ_00689,It should be possible to transfer text messages between ground and mobile(s) through the EIRENE system.,FR,Functional,0.2
+701,F0_REQ_00702,The appropriate ERTMS/ETCS RBC should be informed when a Train emergency call is initiated.,FR,Functional,0.2
+714,F0_REQ_00715,Speech should be possible to allow a controller receiving the warning tone to give information.,FR,Functional,0.2
+715,F0_REQ_00716,"Additionally, speech should be possible to allow other mobile users receiving the warning tone to give information.",FR,Functional,0.2
+758,F0_REQ_00759,It should be possible for the system to record shunting group composition at a given instant.,FR,Functional,0.2
+759,F0_REQ_00760,It should be possible for the system to record the source and time a shunting emergency call was transmitted.,FR,Functional,0.2
+760,F0_REQ_00761,It should be possible for the system to record the recipients of a shunting emergency call.,FR,Functional,0.2
+768,F0_REQ_00769,A shunting manager or other person capable of taking part in a shunting communication should be able to be temporarily associated with the shunting group.,FR,Functional,0.2
+770,F0_REQ_00771,"If an external user initiates a call to the shunting leader, the shunting leader should be informed by a visual and audible indication to avoid disturbing a shunting movement.",FR,Functional,0.2
+775,F0_REQ_00776,It should be possible to provide an alternative means of link assurance indication.,FR,Functional,0.2
+872,F0_REQ_00873,"System logs data changes (such as record deletions) and provides undo functionality. Ideally, system provides revision control.",FR,Functional,0.2
+884,F0_REQ_00885,Staff and group accounts are independent from workstations; client install should not be tied to a specific location.,FR,Functional,0.2

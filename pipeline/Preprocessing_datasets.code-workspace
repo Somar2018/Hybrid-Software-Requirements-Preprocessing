@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Preprocessing",
+			"path": "."
+		},
+		{
+			"name": "Preprocessing Datasets",
+			"path": "../Preprocessing Datasets"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,553 @@
+﻿,id,text,class,subclass,confidence
+0,F0_REQ_00001,"PE:The system shall refresh the display every 60 seconds.,",NFR,Performance,1
+1,F0_REQ_00002,"LF:The application shall match the color of the schema set forth by Department of Homeland Security,",FR,Functional,0.8
+2,F0_REQ_00003,"US: If projected the data must be readable. On a 10x10 projection screen 90% of viewers must be able to read Event / Activity data from a viewing distance of 30,",FR,Functional,0.8
+3,F0_REQ_00004,"A: The product shall be available during normal business hours. As long as the user has access to the client PC the system will be available 99% of the time during the first six months of operation.,",FR,Functional,1
+4,F0_REQ_00005,"US: If projected the data must be understandable. On a 10x10 projection screen 90% of viewers must be able to determine that Events or Activities are occuring in current time from a viewing distance of 100,",FR,Functional,0.8
+5,F0_REQ_00006,"SE:The product shall ensure that it can only be accessed by authorized users. The product will be able to distinguish between authorized and unauthorized users in all access attempts,",FR,Functional,0.8
+6,F0_REQ_00007,"US:The product shall be intuitive and self-explanatory. : 90% of new users shall be able to start the display of Events or Activities within 90 minutes of using the product.,",FR,Functional,1
+7,F0_REQ_00008,"PE:The product shall respond fast to keep up-to-date data in the display.,",FR,Functional,0.8
+8,F0_REQ_00009,"F:The system shall have a MDI form that allows for the viewing of the graph and the data table.,",FR,Functional,0.8
+9,F0_REQ_00010,"F:The system shall display Events in a vertical table by time.,",FR,Functional,0.8
+10,F0_REQ_00011,"F:The system shall display the Events in a graph by time.,",FR,Functional,0.8
+11,F0_REQ_00012,"L:All business rules specified in the Disputes System shall be in compliance to the guidelines of Regulation E and Regulation Z.,",FR,Functional,0.8
+12,F0_REQ_00013,"L:The Disputes application must maintain a detailed history of every action that a user takes on a dispute case. This ensures a complete audit trail if questions arise later on with regard to a particular dispute case.,",FR,Functional,0.5
+13,F0_REQ_00014,"L:All actions that modify an existing dispute case must be recorded in the case history.,",FR,Functional,0.5
+14,F0_REQ_00015,"F:The Disputes System must be accessible by both internal and external users.,",FR,Functional,0.5
+15,F0_REQ_00016,"F:The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base.,",FR,Functional,0.5
+16,F0_REQ_00017,"F:The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users.,",FR,Functional,0.5
+17,F0_REQ_00018,"F:The Disputes System must provide different levels of access with regard to disputes case initiation and follow-up actions.,",FR,Functional,0.5
+18,F0_REQ_00019,"F:The Disputes System shall provide view access capability for authorized users of the application.,",FR,Functional,0.8
+19,F0_REQ_00020,"F:The Disputes System shall provide update access capability for authorized users of the application.,",FR,Functional,0.8
+20,F0_REQ_00021,"F:The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.,",FR,Functional,0.5
+21,F0_REQ_00022,"F:The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.,",FR,Functional,0.5
+22,F0_REQ_00023,"F:The Disputes System will provide the user the ability to create or initiate a ticket retrieval request. As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request. The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.,",FR,Functional,0.5
+23,F0_REQ_00024,"F:The Disputes System must allow the user to create three unique types of ticket retrieval requests. The three types of ticket retrieval requests are (1) Request for original receipt (2) Request for a copy of the receipt or (3) Request for a portfolio. A portfolio consists of documentation that would provide proof of a purchase such as the documentation that is received from a car rental agency that is more than a sales receipt.,",FR,Functional,0.5
+24,F0_REQ_00025,"F:The Disputes System must prevent external users from requesting original receipts. Requests for original receipts are restricted to internal users.,",FR,Functional,0.5
+25,F0_REQ_00026,"F:The Disputes System shall allow the user to create or initiate a chargeback request. The system must prompt the user to enter the required information to initiate a chargeback request. The chargeback request results in a printed chargeback notification that is sent to merchant indicating that their account will be charged back if no proof is provided that the disputed transaction is valid.,",FR,Functional,0.8
+26,F0_REQ_00027,"F:The Disputes System shall prevent the creation of duplicate dispute requests 100% of the time.,",FR,Functional,1
+27,F0_REQ_00028,"F: The Disputes System shall accurately provide a list of possible reason codes for a given transaction. The list of possible reason codes must be derived based on the type of transaction and the industry that the merchant belongs to according to the business rules defined for the Disputes System.,",FR,Functional,0.8
+28,F0_REQ_00029,"F:The Disputes System must provide the ability to view existing dispute cases.,",FR,Functional,0.5
+29,F0_REQ_00030,"F: The Disputes System must provide Search functionality. The search method must include the ability to search by (1) the dispute case number (2) the merchant account number (3) the cardmember account number and (4) the issuer number. In addition to the above criteria the search functionality must further allow the user to limit the results of the search by a date range the type of dispute (ticket retrieval request or chargeback notification) the case status (open closed or all) and the dispute reason code.,",NFR,Performance,0.8
+30,F0_REQ_00031,"F:A list of all disputes cases that meet the entered search criteria must be provided to the user. The list of cases must differentiate the type and/or status of the case by color -coding the line item in the list. For example all open cases will be yellow and all closed cases will be gray.,",FR,Functional,0.5
+31,F0_REQ_00032,"F:The Disputes System shall provide the users the ability to view the history of all activities that have occurred on the dispute case.,",FR,Functional,0.8
+32,F0_REQ_00033,"F:The Dispute System shall provide the users with the ability to follow up on a dispute case via follow-up actions. The list of available follow up actions for a given dispute case must be filtered by the status of the case and the access level of the user.,",FR,Functional,0.8
+33,F0_REQ_00034,"F: The Disputes System shall record the name of the user and the date for any activity that creates or modifies the disputes case in the system. A detailed history of the actions taken on the case including the date and the user that performed the action must be maintained for auditing purposes.,",FR,Functional,0.8
+34,F0_REQ_00035,"F: For any systematic (non-user initiated) action that occurs on a case such as the disputes aging process a case activity will be generated. Upon the next logon the user that initiated the dispute case must be notified that a systematic action has occurred on the dispute case.,",FR,Functional,0.5
+35,F0_REQ_00036,"F:All letter requests must be formatted according to guidelines specified by the Print Letter Utility system.,",FR,Functional,0.5
+36,F0_REQ_00037,"F:Any disputes cases that have been closed for over 6 months must be purged from the online disputes database.,",FR,Functional,0.5
+37,F0_REQ_00038,"O:The product must support Internet Explorer 5.5 and above.,",FR,Functional,0.5
+38,F0_REQ_00039,"O:The product must support Mozilla Firefox 1.0 and above.,",FR,Functional,0.5
+39,F0_REQ_00040,"O:The product shall interface with the Choice Parts System. This provides the feed of recycled parts data.,",FR,Functional,0.8
+40,F0_REQ_00041,"O:The product shall run on the existing hardware for all environments.,",FR,Functional,0.8
+41,F0_REQ_00042,"O:The product shall adhere to the corporate Architecture guidelines,",FR,Functional,0.8
+42,F0_REQ_00043,"LF:The product shall comply with corporate User Interface Guidelines,",FR,Functional,0.8
+43,F0_REQ_00044,"LF:The product shall comply with corporate color scheme,",FR,Functional,0.8
+44,F0_REQ_00045,"LF:The appearance of the product shall appear professional,",FR,Functional,0.8
+45,F0_REQ_00046,"PO:The software product is expected to run on Windows or Linux platforms.,",FR,Functional,0.5
+46,F0_REQ_00047,"US:The product shall be easy to use by Adjusters and Collision Estimators. 95% of Adjusters and Collision Estimators shall find the product easy to use.,",NFR,Usability,1
+47,F0_REQ_00048,"US:The product shall increase productivity of Collision Estimators. 80% of the Collision Estimators shall agree their productivity has increase within 1 month of using the product.,",FR,Functional,1
+48,F0_REQ_00049,"US:Users shall feel satisfied using the product. 85% of all users will be satisfied with the product.,",FR,Functional,1
+49,F0_REQ_00050,"US:The product shall be easy to learn by Adjusters and Collision Estimators. The product shall be learned with two days onsite training,",FR,Functional,0.8
+50,F0_REQ_00051,"US:The user shall easily locate instructions while using the product. User help can be found within 90% of the system.,",FR,Functional,1
+51,F0_REQ_00052,"PE:The search for recycled parts shall take no longer than 15 seconds. The search results shall be returned in under 15 seconds.,",NFR,Performance,1
+52,F0_REQ_00053,"PE:The search for the preferred repair facility shall take no longer than 8 seconds. The preferred repair facility is returned within 8 seconds,",NFR,Performance,1
+53,F0_REQ_00054,"PE:The recycled parts audit report shall be returned to the user within 10 seconds. The audit report shall be returned within 10 seconds.,",NFR,Performance,1
+54,F0_REQ_00055,"PE:The preferred repair facility ratings shall be saved within 5 seconds. The save shall occur within 5 seconds.,",NFR,Performance,1
+55,F0_REQ_00056,"A:The product shall adhere to the corporate online availability schedule. The application is brought down only within 98% of the scheduled outages per the availability schedule.,",NFR,Reliability,1
+56,F0_REQ_00057,"A:The product shall achieve a 98% uptime. The product shall not fail more than 2% of the available online time.,",NFR,Reliability,1
+57,F0_REQ_00058,"SC:The product shall be able to handle up to 1500 simultaneous users. The system shall perform with 1500 users as a time.,",FR,Functional,0.8
+58,F0_REQ_00059,"SC: The average number of recycled parts records per day shall be 50 000.,",NFR,Performance,1
+59,F0_REQ_00060,"SC: The product shall be able to handle 10 000 concurrent users within 2 years of the initial launch.,",FR,Functional,0.8
+60,F0_REQ_00061,"O: For estimators the product shall be able to be operated in a repair facility during dirty and noisy conditions.,",FR,Functional,0.8
+61,F0_REQ_00062,"O:The product shall interface with the ChoiceParts system once per day at approximately 1:00 AM.,",FR,Functional,0.8
+62,F0_REQ_00063,"O:The maintenance of the product will fall within the established corporate maintenance windows.,",FR,Functional,0.5
+63,F0_REQ_00064,"O:The product shall be supported using the corporate support center.,",FR,Functional,0.8
+64,F0_REQ_00065,"O:Product installations and upgrades shall be handled by the middleware technology team within established launch time frames.,",FR,Functional,0.8
+65,F0_REQ_00066,"SE:Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.,",FR,Functional,0.8
+66,F0_REQ_00067,"SE:Only adjusters with a supervisor role can update preferred repair facility ratings. Users without the supervisor role cannot access the repair facility ratings.,",FR,Functional,0.5
+67,F0_REQ_00068,"SE:Only collision estimators shall search for recycled parts. Users without the collision estimator role shall not have access to the search for recycled parts.,",FR,Functional,0.8
+68,F0_REQ_00069,"SE:Only valid data shall be entered into the system. No invalid data shall be entered into the system.,",FR,Functional,0.8
+69,F0_REQ_00070,"SE:One insurance company shall not be able to view another insurance companys claim data.,",FR,Functional,0.8
+70,F0_REQ_00071,"SE:The product shall free of computer viruses.,",FR,Functional,0.8
+71,F0_REQ_00072,"SE:The system shall prevent malicious attacks including denial of service.,",FR,Functional,0.8
+72,F0_REQ_00073,"L:The product must comply with Sarbanes-Oxley.,",FR,Functional,0.5
+73,F0_REQ_00074,"L:The product shall comply with the estimatics laws relating to recycled parts usage.,",FR,Functional,0.8
+74,F0_REQ_00075,"L:The product shall comply with insurance regulations regarding claims processing.,",FR,Functional,0.8
+75,F0_REQ_00076,"F: The user shall search for the preferred repair facility using vehicle vehicle location and radius in miles,",FR,Functional,0.8
+76,F0_REQ_00077,"F: The vehicle data shall include vehicle year make and model,",FR,Functional,0.8
+77,F0_REQ_00078,"F: The vehicle location shall include street address city state and zipcode,",FR,Functional,0.8
+78,F0_REQ_00079,"F: The system shall resolve the zipcode for the street address city and state if zipcode is unknown.,",FR,Functional,0.8
+79,F0_REQ_00080,"F:The search radius shall be between 1 and 30 miles,",FR,Functional,0.8
+80,F0_REQ_00081,"F:The system shall locate the preferred repair facility with the highest ratings for the input criteria,",FR,Functional,0.8
+81,F0_REQ_00082,"F:The adjuster shall enter the preferred repair facility on the estimate assignment.,",FR,Functional,0.8
+82,F0_REQ_00083,"F:The adjuster shall be able to override the preferred repair facitlity on the estimate assignment.,",FR,Functional,0.8
+83,F0_REQ_00084,"F:The preferred repair facility shall be returned to the user.,",FR,Functional,0.8
+84,F0_REQ_00085,"F:The system shall return a list of repair facilities within the radius if the preferred repair facility cannot be determined.,",FR,Functional,0.8
+85,F0_REQ_00086,"F:The estimator shall search for available recycled parts using damaged vehicle parts information.,",FR,Functional,0.8
+86,F0_REQ_00087,"F:The estimator shall search for available recycled parts using a list of preferred parts suppliers.,",FR,Functional,0.8
+87,F0_REQ_00088,"F:The system shall search for available recycled parts for the supplied vehicle parts and suppliers.,",FR,Functional,0.8
+88,F0_REQ_00089,"F:The estimator shall search by zipcode with a radius of 30 miles if no parts are found for the preferred parts suppliers,",FR,Functional,0.8
+89,F0_REQ_00090,"F:The system shall retain the available recycled parts and suppliers returned from the search.,",FR,Functional,0.8
+90,F0_REQ_00091,"F:The available recycled parts information and their suppliers shall be returned to the user.,",FR,Functional,0.8
+91,F0_REQ_00092,"F:The estimator shall apply selected recycled parts to the collision estimate.,",FR,Functional,0.8
+92,F0_REQ_00093,"F:The estimator shall not apply recycled parts to the collision estimate if no available parts are returned.,",FR,Functional,0.8
+93,F0_REQ_00094,"F:The adjuster shall review the collision estimate.,",FR,Functional,0.8
+94,F0_REQ_00095,"F:The adjuster shall request a recycled parts audit of the collision estimate.,",FR,Functional,0.8
+95,F0_REQ_00096,"F:The recycled parts search results provided to the estimator shall be retrieved by the system.,",FR,Functional,0.8
+96,F0_REQ_00097,"F:The system shall generate an audit report based on the available recycled parts and the collision estimate.,",FR,Functional,0.8
+97,F0_REQ_00098,"F:The audit report shall include the total number of recycled parts used in the estimate.,",NFR,Performance,1
+98,F0_REQ_00099,"F:The audit report shall include the number of available recycled parts from the original search results.,",NFR,Performance,1
+99,F0_REQ_00100,"F: The audit report shall include the percentage of available recycled parts used in the estimate ,",FR,Functional,0.8
+100,F0_REQ_00101,"F:The audit report shall include the total score of the audit which sums the indivual line items.,",FR,Functional,0.8
+101,F0_REQ_00102,"F:The audit report shall be displayed to the user.,",FR,Functional,0.8
+102,F0_REQ_00103,"F:The audit report shall be available to other adjusters at later points in time.,",FR,Functional,0.8
+103,F0_REQ_00104,"F:The user shall select to view the preferred repair facility ratings.,",FR,Functional,0.8
+104,F0_REQ_00105,"F:The current repair facility ratings shall be displayed to the user.,",FR,Functional,0.8
+105,F0_REQ_00106,"F:The system will display a blank set of ratings if there are not ratings yet defined.,",FR,Functional,0.5
+106,F0_REQ_00107,"F:The user shall enter new ratings based on the audit report,",FR,Functional,0.8
+107,F0_REQ_00108,"F:The ratings shall be from a scale of 1-10,",FR,Functional,0.8
+108,F0_REQ_00109,"F:The ratings shall include categories for attempted use of recycled parts and actual use of recycled parts,",FR,Functional,0.8
+109,F0_REQ_00110,"F:The user shall select to save the preferred repair facility ratings.,",FR,Functional,0.8
+110,F0_REQ_00111,"F:The preferred repair facility ratings shall be saved by the system.,",FR,Functional,0.8
+111,F0_REQ_00112,"O: The product must work with most database management systems (DBMS) on the market whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network.,",FR,Functional,0.5
+112,F0_REQ_00113,"O:The product will function alongside server software on any operating system where the Java runtime can be installed.,",FR,Functional,0.5
+113,F0_REQ_00114,"O:The product will require collaboration with a database management system (DBMS). The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,",FR,Functional,0.5
+114,F0_REQ_00115,"O: The product must make use of web/application server technology. Open source examples include Apache web server Tomcat and the JBoss application server.,",FR,Functional,0.5
+115,F0_REQ_00116,"O: A database management system such as Oracle DB2 MySql or HSQL will need to be integrated with the product.,",FR,Functional,0.5
+116,F0_REQ_00117,"LF: The product s Look and Feel shall be able to incorporate aspects of the customer s organization such as logo branding and identity,",FR,Functional,0.8
+117,F0_REQ_00118,"LF:The product shall have a conservative and professional appearance.,",FR,Functional,0.8
+118,F0_REQ_00119,"US:The product shall make the users want to use it. 80% of the users surveyed report they are regularly using the product after the first 2 weeks post-launch.,",FR,Functional,1
+119,F0_REQ_00120,"US:The product shall be easy to use. 90% of users will be able to successfully reserve a conference room within 5 minutes of product use.,",NFR,Usability,1
+120,F0_REQ_00121,"US:The product shall give users feedback when necessary. 80% of the users surveyed report that the product accurately confirms their actions.,",NFR,Reliability,1
+121,F0_REQ_00122,"US:The product shall allow the user to select a chosen language from one of the target market countries.,",FR,Functional,0.8
+122,F0_REQ_00123,"US:The product shall allow for customization of start page and views preferences.,",FR,Functional,0.8
+123,F0_REQ_00124,"US: An employee will be able to successfully use the product within a few minutes. After informally navigating the product for less than 15 minutes users shall be able to successfully setup meetings and reserve conference rooms.,",FR,Functional,0.8
+124,F0_REQ_00125,"US:The product shall use a standard navigation menu familiar to most web users.,",FR,Functional,0.8
+125,F0_REQ_00126,"US:The product shall allow for intuitive searching of available conference rooms.,",FR,Functional,0.8
+126,F0_REQ_00127,"US:The product shall conform to the Americans with Disabilities Act.,",FR,Functional,0.8
+127,F0_REQ_00128,"PE:The response shall be fast enough to avoid interrupting the user s flow of thought. 90% of tasks shall complete within 5 seconds. 98% of tasks shall complete within 8 seconds.,",NFR,Performance,1
+128,F0_REQ_00129,"A: Aside from server failure the software product shall achieve 99.99% up time.,",NFR,Reliability,1
+129,F0_REQ_00130,"FT:The product shall create an exception log of problems encountered within the product for transmission to our company for analysis and resolution.,",FR,Functional,0.8
+130,F0_REQ_00131,"SC: The product shall be capable of handling up to 1 000 concurrent requests. This number will increase to 2 000 by Release 2. The concurrency capacity must be able to handle peak scheduling times such as early morning and late afternoon hours.,",NFR,Performance,1
+131,F0_REQ_00132,"SC: The product shall be able to process 10 000 transactions per hour within two years of its launch. This number will increase to 20 000 by Release 2.,",NFR,Performance,1
+132,F0_REQ_00133,"SC:The product shall be expected to operate for at least 5 years for each customer installation.,",FR,Functional,0.8
+133,F0_REQ_00134,"O:The product shall be used in office environments.,",FR,Functional,0.8
+134,F0_REQ_00135,"O:The product must be able to interface with any HTML browser. The product shall transmit data between the user and the product without problems. The product shall display HTML properly in 80% of all HTML browsers tested (minimum is to test 8 browsers).,",FR,Functional,1
+135,F0_REQ_00136,"O:The product must be able to interface with various database management systems. The product shall communicate successfully with the database management system on 100% of all transactions.,",FR,Functional,1
+136,F0_REQ_00137,"O:The product must be able to interface with various email servers. The product shall be able to send email.,",FR,Functional,0.8
+137,F0_REQ_00138,"O:The product shall be available for distribution via the Internet as a binary or ZIP file.,",FR,Functional,0.8
+138,F0_REQ_00139,"O:The product shall be available for distribution as a packaged CD.,",FR,Functional,0.8
+139,F0_REQ_00140,"O: The product will be available for licensing as a one-server two-five servers or five-or-more servers license.,",FR,Functional,0.5
+140,F0_REQ_00141,"US:A new user must be able to be added to the system within 10 minutes. 90% of new users are able to log into the system within 10 minutes.,",FR,Functional,0.8
+141,F0_REQ_00142,"MN:The product must be designed using Design Patterns and coding best practices. 90% of maintenance software developers are able to integrate new functionality into the product with 2 working days.,",FR,Functional,0.8
+142,F0_REQ_00143,"MN:The product must be highly configurable for use with various database management systems for the end users. 80% of end users are able to integrate new database management systems with the product without changing the product s software code.,",FR,Functional,0.8
+143,F0_REQ_00144,"MN:Maintenance releases will be offered to customers once a year. The releases shall take no longer than 5 minutes for 80% of the customer base to install.,",FR,Functional,1
+144,F0_REQ_00145,"US:Every registered user will have access to the product s support site via the Internet. 70% of registered users shall find a solution to their problem within 5 minutes of using the support site.,",FR,Functional,1
+145,F0_REQ_00146,"MN:The customer shall be able to easily integrate new building maps with the product throughout the product s lifecycle. Integration of new maps with the product shall be possible with little to no support from product support staff.,",FR,Functional,0.8
+146,F0_REQ_00147,"US: The product shall be translated into foreign languages other than the target market countries languages in future releases. For each emerging target market it shall take no more than 5 days to configure the product for that market s language.,",FR,Functional,0.8
+147,F0_REQ_00148,"O: The product is expected to integrate with multiple database management systems. The product will operate with Oracle SQL Server DB2 MySQL HSQL and MS Access.,",FR,Functional,0.5
+148,F0_REQ_00149,"O:The product shall be able to be installed in any operating environment within 2 days.,",FR,Functional,0.8
+149,F0_REQ_00150,"SE:The product shall ensure that only company employees or external users with company-approved user IDs may have product access. 100% of all logons shall be by either company employees or external users with company-approved user IDs.,",FR,Functional,1
+150,F0_REQ_00151,"SE:Only managers are able to perform search queries for reservations by user. 100% of all search queries for reservations by user shall be from logons of only management logons.,",FR,Functional,1
+151,F0_REQ_00152,"SE:The product shall ensure that the database s data corresponds to the data entered by the user. Each conference room reservation in the system will contain the same information as was entered by the user.,",FR,Functional,0.8
+152,F0_REQ_00153,"SE:The product shall prevent the input of malicious data. The product and/or adjacent hardware/software systems data shall remain 100% uncorrupted each time malicious data is input into the product.,",FR,Functional,1
+153,F0_REQ_00154,"FT:The product and/or dependent databases/filesystems shall remain operational as a result of the input of malicious data. The product and/or dependent databases/filesystems shall not crash 100% of the time that malicious data is input into the product.,",FR,Functional,1
+154,F0_REQ_00155,"SE:The product shall have the ability to receive automatic software updates as new threats emerge. 100% of customers will be able to receive automatic software updates transmitted to the installed product.,",FR,Functional,1
+155,F0_REQ_00156,"SC:The language of the product shall accommodate all of the target market countries. 90% of survey respondents from each target market country will find that the language of the product is acceptable.,",FR,Functional,1
+156,F0_REQ_00157,"US:The product shall be able to display calendar dates and times according to the user s locale. 90% of survey respondents from each target market country will find that the date and time formatting of the product is correct.,",FR,Functional,1
+157,F0_REQ_00158,"O:The product must be developed with the J2SE/J2EE programming language libraries,",FR,Functional,0.5
+158,F0_REQ_00159,"F:The product shall record meeting entries.,",FR,Functional,0.8
+159,F0_REQ_00160,"F:The product will notify employees of meeting invitations.,",FR,Functional,0.5
+160,F0_REQ_00161,"F:The product shall have the ability to send meeting reminders to employees.,",FR,Functional,0.8
+161,F0_REQ_00162,"F:The product shall assign the organizers contact information to each meeting they create.,",FR,Functional,0.8
+162,F0_REQ_00163,"F:The product will record meeting acknowledgements.,",FR,Functional,0.5
+163,F0_REQ_00164,"F:The product shall store new conference rooms.,",FR,Functional,0.8
+164,F0_REQ_00165,"F:The product shall update existing conference rooms.,",FR,Functional,0.8
+165,F0_REQ_00166,"F:The product will be able to delete conference rooms.,",FR,Functional,0.5
+166,F0_REQ_00167,"F:The product shall be able to store new room equipment.,",FR,Functional,0.8
+167,F0_REQ_00168,"F:The product will update existing room equipment.,",FR,Functional,0.5
+168,F0_REQ_00169,"F:The product shall be able to delete room equipment.,",FR,Functional,0.8
+169,F0_REQ_00170,"F:The product shall allow an organizer to invite other employees to meetings.,",FR,Functional,0.8
+170,F0_REQ_00171,"F: Each time a conference room is reserved the conference room schedule shall be updated to reflect the time and date of the reservation.,",FR,Functional,0.8
+171,F0_REQ_00172,"F:The product shall record the transportation status of equipment reserved.,",FR,Functional,0.8
+172,F0_REQ_00173,"F:The product shall display a map of the company building showing conference room locations.,",FR,Functional,0.8
+173,F0_REQ_00174,"F:The product shall record updated meeting agendas.,",FR,Functional,0.8
+174,F0_REQ_00175,"F:The product shall send a meeting confirmation to the meeting organizer.,",FR,Functional,0.8
+175,F0_REQ_00176,"F:The product shall display room equipment according to search parameters.,",FR,Functional,0.8
+176,F0_REQ_00177,"F:The product shall display conference rooms according to search parameters.,",FR,Functional,0.8
+177,F0_REQ_00178,"F:The product shall record different meeting types.,",FR,Functional,0.8
+178,F0_REQ_00179,"F:The product shall record all the equipment that has been reserved.,",FR,Functional,0.8
+179,F0_REQ_00180,"F:The product shall notify building personnel of equipment transport requests.,",FR,Functional,0.8
+180,F0_REQ_00181,"F:The product will allow priviledged users to view meeting schedules in multiple reporting views.,",FR,Functional,0.5
+181,F0_REQ_00182,"F:The product shall be able to send meeting notifications via different kinds of end-user specified methods.,",FR,Functional,0.8
+182,F0_REQ_00183,"F:The product shall have a customizable Look and Feel.,",FR,Functional,0.8
+183,F0_REQ_00184,"F:The product shall have an intuitive user interface.,",FR,Functional,0.8
+184,F0_REQ_00185,"F:The product will display an available status for unreserved conference rooms.,",FR,Functional,0.5
+185,F0_REQ_00186,"PE:Recreation of Inventory Quantity Adjustment for the period of previous 30 days shall take no more than 30min.,",FR,Functional,0.8
+186,F0_REQ_00187,"PE:The System shall allow for a minimum of 6 users to work at the same time.,",FR,Functional,0.8
+187,F0_REQ_00188,"O:The System shall utilize currently owned computer equipment.,",FR,Functional,0.8
+188,F0_REQ_00189,"O:The System shall be able to automatically backup business data and restore them on demand.,",FR,Functional,0.8
+189,F0_REQ_00190,"SE:The System shall maintain consistent security. Any changes in user passwords and/or permissions should take affect in all parts of the System.,",FR,Functional,0.5
+190,F0_REQ_00191,"SE:The System shall granularly control access rights to all major subsystems. It should be possible to assign access rights to all subsystems independently.,",FR,Functional,0.5
+191,F0_REQ_00192,"L:The System shall meet all applicable accounting standards. The final version of the System must successfully pass independent audit performed by a certified auditor.,",FR,Functional,0.8
+192,F0_REQ_00193,"O:The System shall not require additional third party licenses resulting in royalty fees.,",FR,Functional,0.8
+193,F0_REQ_00194,"F:The System shall allow generation of Inventory Quantity Adjustment documents on demand.,",FR,Functional,0.8
+194,F0_REQ_00195,"F:The System shall allow on demand generation of all Inventory Quantity Adjustment documents since certain point of time.,",FR,Functional,0.8
+195,F0_REQ_00196,"F:The IQA subsystem shall take into account current inventory status and adjust inventory of substitutionary ingredients accordingly.,",FR,Functional,0.8
+196,F0_REQ_00197,"F: The System shall allow entering storing and modifying product formulas.,",FR,Functional,0.8
+197,F0_REQ_00198,"F: Product formulas shall allow use of semi-products which have own formulas.,",FR,Functional,0.8
+198,F0_REQ_00199,"F:Product formula ingredients shall allow defining substitutionary ingredients.,",FR,Functional,0.8
+199,F0_REQ_00200,"F:Product formula substitutionary ingredients shall be entered automatically by the PFE subsystem.,",FR,Functional,0.8
+200,F0_REQ_00201,"F:Formula substitutionary ingredients shall be kept in persisted order,",FR,Functional,0.8
+201,F0_REQ_00202,"F: Product shall allow entering storing and modifying product menus used by POS terminals.,",FR,Functional,0.8
+202,F0_REQ_00203,"F:PME Subsystem shall allow building product menus based on the list of products kept in the accounting system.,",FR,Functional,0.8
+203,F0_REQ_00204,"F:PME Subsystem shall allow keeping submenus within menus and products within submenus in a managed and persisted order.,",FR,Functional,0.8
+204,F0_REQ_00205,"F:PME Subsystem shall allow for a product to exist in more than one submenu,",FR,Functional,0.8
+205,F0_REQ_00206,"F:The RMS System shall have Windows XP look and feel and use GUI futures making its use intuitive.,",FR,Functional,0.8
+206,F0_REQ_00207,"F:The System shall generate Inventory Quantity Adjustment document based on product daily sales data and product formulas.,",FR,Functional,0.8
+207,F0_REQ_00208,"F:The System shall generate Inventory Quantity Adjustment document automatically when daily Product Sales data is available.,",FR,Functional,0.8
+208,F0_REQ_00209,"PE:Administrator shall be able to activate a pre-paid card via the Administration section in under 5 seconds.,",NFR,Performance,1
+209,F0_REQ_00210,"PE: Customer shall be able to check the status of their prepaid card by entering in the PIN number in under 5 seconds.,",NFR,Performance,1
+210,F0_REQ_00211,"PE:System shall let customers register on the website as a pay as you go user in under 5 minutes.,",FR,Functional,0.8
+211,F0_REQ_00212,"PE:System shall let customers register on the website as a unlimited movie subscriber user in under 10 minutes.,",FR,Functional,0.8
+212,F0_REQ_00213,"PE:System shall let existing customers log into the website with their email address and password in under 5 seconds.,",NFR,Performance,1
+213,F0_REQ_00214,"PE: System shall let customers cancel their account process shall take no longer than 2 minutes. Database will mark the account as inactive and user will not be able to log into the website.,",FR,Functional,0.8
+214,F0_REQ_00215,"PE:System shall let administrator de-activate a customer account in under 1 minute. Customer will no longer be able to access the website.,",FR,Functional,0.8
+215,F0_REQ_00216,"PE:System shall let administrator add/remove movies on the website in under 5 minutes. Entered movie information will be stored in the database and will now be available on the website.,",FR,Functional,0.8
+216,F0_REQ_00217,"PE:System shall let the administrator add/remove categories on the website in under 5 minutes.,",FR,Functional,0.8
+217,F0_REQ_00218,"PE:System shall let Izogn Manager access sales and usage statistics in under 2 minutes.,",FR,Functional,0.8
+218,F0_REQ_00219,"PE:System shall let administrators generate unique pre-paid pins in under 2 minutes and generate an Excel file with the generated PINs.,",FR,Functional,0.8
+219,F0_REQ_00220,"LF:The website shall be attractive to all audiences. The website shall appear to be fun and the colors should be bright and vibrant.,",FR,Functional,0.5
+220,F0_REQ_00221,"LF: The website should have an African feel but should not alienate non-Africans. The website should use animation on pages which are describing the services to grab the users attention and encourage them to sign up.,",FR,Functional,0.2
+221,F0_REQ_00222,"LF: The website design should be modern clean and concise.,",FR,Functional,0.2
+222,F0_REQ_00223,"US:The product should be able to be used by 90% of novice users on the Internet.,",FR,Functional,0.5
+223,F0_REQ_00224,"US: Users should only have to navigate through a maximum of 4 pages to create an account with the website.,",FR,Functional,0.2
+224,F0_REQ_00225,"US:Users should be able to access their streaming movies in under 2 clicks after logging into the website.,",FR,Functional,0.2
+225,F0_REQ_00226,"US:An anonymous survey will show that 70% of customers are comfortable purchasing streaming movies after 2 weeks using the website.,",FR,Functional,0.8
+226,F0_REQ_00227,"US:An anonymous survey will show that 95% of customers are comfortable using and purchasing pre-paid cards after a month of using the system.,",FR,Functional,0.8
+227,F0_REQ_00228,"US:The product shall retain the customer s buying preferences and information.,",FR,Functional,0.8
+228,F0_REQ_00229,"US:The product shall be easy for customers with novice skills on the Internet to purchase and watch streaming movies. Customers should be able to purchase and watch a pre-determined movie in under 3 minutes.,",FR,Functional,0.5
+229,F0_REQ_00230,"US:The product shall use symbols and words that are naturally understandable by users familiar with websites,",NFR,Performance,1
+230,F0_REQ_00231,"US:The website will use standard Internet conventions when interacting with the user.,",FR,Functional,0.5
+231,F0_REQ_00232,"PE: Any interface between a user and the automated system shall have a maximum response time of 5 seconds unless noted by an exception below.,",NFR,Performance,1
+232,F0_REQ_00233,"PE: When purchasing a streaming movie or pre-paid card via credit card the processing time should have a maximum response time of 15 seconds.,",NFR,Performance,0.5
+233,F0_REQ_00234,"PE: When streaming a movie the buffering time should take no longer than 10 seconds (plus any latency on the user s connection.),",NFR,Performance,0.7
+234,F0_REQ_00235,"PE: While streaming a movie buffering should only occur if there is latency in the user s connection.,",NFR,Performance,0.4
+235,F0_REQ_00236,"SE: All credit card information will be secured on the server and only accessible by authorized Izogn administrators. Information will be encrypted in the database.,",FR,Functional,0.5
+236,F0_REQ_00237,"A: The website shall be available for use 24 hours per day 365 days per year.,",FR,Functional,0.8
+237,F0_REQ_00238,"A:The website shall achieve 99.5% up time.,",FR,Functional,1
+238,F0_REQ_00239,"A: All movies shall be streamed on demand at any time of the day.,",FR,Functional,0.8
+239,F0_REQ_00240,"FT:The website shall continue to operate if the streaming server goes down.,",FR,Functional,0.8
+240,F0_REQ_00241,"FT:The website shall continue to operate if the payment gateway goes down.,",FR,Functional,0.8
+241,F0_REQ_00242,"SC:The streaming server will support 50 simultaneous streaming connections.,",FR,Functional,0.5
+242,F0_REQ_00243,"SC: The server will support a maximum of 1 000 simultaneous users.,",FR,Functional,0.5
+243,F0_REQ_00244,"SC: The website shall be capable of supporting 100 000 customers.,",FR,Functional,0.8
+244,F0_REQ_00245,"MN:The product shall be expected to operate within the maximum maintenance budget for a minimum of 2 years.,",FR,Functional,0.8
+245,F0_REQ_00246,"O:All aspects of the website shall be accessed by a web browser over the Internet.,",FR,Functional,0.8
+246,F0_REQ_00247,"O:The same hardware supporting the current website will be used to support the new system.,",FR,Functional,0.5
+247,F0_REQ_00248,"O: We must be able to interface with the following browsers: IE 5.X 6.0 Netscape 6.x 7.x 8.x and Firefox 1.0.,",FR,Functional,0.5
+248,F0_REQ_00249,"O:Website must interface with the CyberSource API to process credit card transactions.,",FR,Functional,0.5
+249,F0_REQ_00250,"O:Website must be fully operational with MSN TV2.,",FR,Functional,0.5
+250,F0_REQ_00251,"O:Movies shall be encoded and streamed via Windows Media Player 9.0.,",FR,Functional,0.8
+251,F0_REQ_00252,"O:Movies shall be encoded for 56k and 256k streams.,",FR,Functional,0.8
+252,F0_REQ_00253,"MN:Promotional updates to the website should take a day to update.,",FR,Functional,0.2
+253,F0_REQ_00254,"PE:Izogn Administrator must be able to update the category listings on the website within 2 minutes.,",FR,Functional,0.5
+254,F0_REQ_00255,"PE:Izogn Administrator must be able to add new products to the website within 2 minutes.,",FR,Functional,0.5
+255,F0_REQ_00256,"A:The system will provide a 24 hour 800 toll free number for support to its customers.,",NFR,Performance,0.8
+256,F0_REQ_00257,"US:The website will provide a help section with answers and solutions to common problems.,",FR,Functional,0.5
+257,F0_REQ_00258,"A: Velkat staff will be available for phone support between 7am-7pm M-F to provide technical support to the Izogn administrators.,",FR,Functional,0.5
+258,F0_REQ_00259,"O:The product shall be able to be installed in the specified environment within 1 working day.,",FR,Functional,0.8
+259,F0_REQ_00260,"SE:Only registered customers can purchase streaming movies.,",FR,Functional,0.5
+260,F0_REQ_00261,"SE: A customer can only stream a movie if they purchased it and are within the 2 day viewing period.,",FR,Functional,0.5
+261,F0_REQ_00262,"SE:Only authorized personnel can access customer records in the database.,",FR,Functional,0.5
+262,F0_REQ_00263,"SE:Only administrators can activate a pre-paid card.,",FR,Functional,0.5
+263,F0_REQ_00264,"SE:Only authorized personnel can access sales information.,",FR,Functional,0.5
+264,F0_REQ_00265,"SE:The website shall prevent its data from being corrupted when incorrect data is entered in.,",FR,Functional,0.8
+265,F0_REQ_00266,"SE: The website shall protect itself from intentional abuse and notify the administrator at all occurrences.,",FR,Functional,0.8
+266,F0_REQ_00267,"SE:Data integrity scripts will be run on a weekly basis to verify the integrity of the database.,",FR,Functional,0.5
+267,F0_REQ_00268,"SE: The website shall make its user aware of its information practices before collection data from them via a Privacy Policy accessible on all pages of the website.,",FR,Functional,0.8
+268,F0_REQ_00269,"SE:The system shall notify customers of changes to its information policy.,",FR,Functional,0.8
+269,F0_REQ_00270,"SE:The system shall reveal private information only in compliance with the organization s information policy.,",FR,Functional,0.8
+270,F0_REQ_00271,"SE: All customer information will be stored on a secure database accessible only to authorized personnel.,",FR,Functional,0.5
+271,F0_REQ_00272,"SE:All credit card information will be encrypted in the database.,",FR,Functional,0.5
+272,F0_REQ_00273,"SE:The streaming server will have anti-virus software to prevent infection of malicious viruses.,",FR,Functional,0.5
+273,F0_REQ_00274,"LF:The website should cater to all tribes in Nigeria.,",FR,Functional,0.2
+274,F0_REQ_00275,"LF:The website shall not be offensive to religious or ethnic groups.,",FR,Functional,0.8
+275,F0_REQ_00276,"LF: The website should appeal to all Africans not only Nigerians.,",FR,Functional,0.2
+276,F0_REQ_00277,"O:The website should use Flash to provide animation on the home page.,",FR,Functional,0.2
+277,F0_REQ_00278,"L:IzognMovies shall meet the licensing requirements set forth by the appropriate organizations in order to stream African movies.,",FR,Functional,0.8
+278,F0_REQ_00279,"L:The website will comply with W3C standards.,",FR,Functional,0.5
+279,F0_REQ_00280,"L:The PHP code will comply with PEAR standards.,",FR,Functional,0.5
+280,F0_REQ_00281,"F: The website will allow customers to search for movies by title actor or director.,",FR,Functional,0.5
+281,F0_REQ_00282,"F: viewing a movie details the website will display the movies description actor and director entered in by the administrator.,",FR,Functional,0.5
+282,F0_REQ_00283,"F: Website shall request and authorize credit card payment before allowing a user to stream a movie.,",FR,Functional,0.8
+283,F0_REQ_00284,"F: shall be able to stream purchased movie via Windows Media Player for up to 2 days aftere purchase date.,",FR,Functional,0.8
+284,F0_REQ_00285,"F:Website shall allow customers to browse movies by categories entered in by izogn administrator.,",FR,Functional,0.8
+285,F0_REQ_00286,"F:Website shall allow customers to view reviews of selected movies by other customers.,",FR,Functional,0.8
+286,F0_REQ_00287,"F:Website shall allow customers to add their own movie review for a selected movie.,",FR,Functional,0.8
+287,F0_REQ_00288,"F:Website shall allow the Izogn administrator to approve a review posted by a customer.,",FR,Functional,0.8
+288,F0_REQ_00289,"F:System will allow customers to pay for a streaming movie with a pre-paid card.,",FR,Functional,0.5
+289,F0_REQ_00290,"F: Website shall allow customers to purchase pre-paid cards of $5 $10 or $20 value either by credit card or mail-in payment option.,",FR,Functional,0.8
+290,F0_REQ_00291,"F: System shall automatically update the main page of the website every Friday and show the 4 latest movies that have been added to the website.,",FR,Functional,0.8
+291,F0_REQ_00292,"F:System shall allow users to update their billing and contact information via the My Account section of the website.,",FR,Functional,0.8
+292,F0_REQ_00293,"F: Pre-paid cards shall be distributed via email or via a printed paper card.,",FR,Functional,0.8
+293,F0_REQ_00294,"F:Only registered customers can purchase streaming movies.,",FR,Functional,0.5
+294,F0_REQ_00295,"F: Movies can only be streamed if the customer has purchased a movie and is within the 2-day time period to stream the movie.,",FR,Functional,0.5
+295,F0_REQ_00296,"F:Website must be able to support free trial periods with various parameters set by the Izogn Manager.,",FR,Functional,0.5
+296,F0_REQ_00297,"F: All streaming movie sales will be logged in the database and accessible by the administrator.,",FR,Functional,0.5
+297,F0_REQ_00298,"F: All registered customer information shall be stored and maintained in the database even after the customer cancels their account.,",FR,Functional,0.8
+298,F0_REQ_00299,"F: Daily usage statistics should be logged and accessible by the administrator.,",FR,Functional,0.2
+299,F0_REQ_00300,"F:The owner shall have free access to all of the streaming movies.,",FR,Functional,0.8
+300,F0_REQ_00301,"PE:No lead evaluation will complete in a time period longer than 25 seconds for 97% of all leads processed.,",NFR,Performance,0.8
+301,F0_REQ_00302,"PE:For leads that process longer than 25 seconds the system will record the event and duration,",NFR,Performance,0.8
+302,F0_REQ_00303,"PE:The process must fit within the processing time conditions set forth by the Auto Rep Assignment process in which a lead is assigned within 3 minutes of the total life cycle.,",FR,Functional,0.5
+303,F0_REQ_00304,"O:The lead washing process will operate within the established physical web service structure.,",FR,Functional,0.5
+304,F0_REQ_00305,"O: The washing process must use a non binding neutral data format such as xml when receiving and processing lead data.,",FR,Functional,0.5
+305,F0_REQ_00306,"A:Defect reports will be available to technical units on a 24x7 basis.,",FR,Functional,0.5
+306,F0_REQ_00307,"MN:Washing parameters will be updated during scheduled maintenance hours.,",FR,Functional,0.5
+307,F0_REQ_00308,"F:The vendor will verify the invalid lead.,",FR,Functional,0.5
+308,F0_REQ_00309,"F:Vendor will submit a credit validation record to be applied to the enterprise billing system.,",FR,Functional,0.5
+309,F0_REQ_00310,"F:If a lead is scored to the high range the system will supply the lead data and score to the enterprise system.,",FR,Functional,0.5
+310,F0_REQ_00311,"F:The leads washing functionality will validate all leads received by the web service for valid data,",FR,Functional,0.5
+311,F0_REQ_00312,"F:The leads washing functionality will insert all leads captured by the web service.,",FR,Functional,0.5
+312,F0_REQ_00313,"F:If the leads score falls within the high average score then it will be process by the ARA functionality.,",FR,Functional,0.5
+313,F0_REQ_00314,"F:If the leads score falls within the medium average then it will be set for manual verification by an Enrollment Coordinator through the eleads system.,",FR,Functional,0.5
+314,F0_REQ_00315,"F:If the leads score falls within the low average then it will be returned to the supplying vendor,",FR,Functional,0.5
+315,F0_REQ_00316,"F:The leads washing functionality will compile both contact and academic scoring information for a total score.,",FR,Functional,0.5
+316,F0_REQ_00317,"F:The leads washing functionality will use the parameters supplied by corporate and schools to score part of the lead.,",FR,Functional,0.5
+317,F0_REQ_00318,"F:The leads washing functionality will return the lead data supplied to the vendor along with the reason of rejection.,",FR,Functional,0.5
+318,F0_REQ_00319,"F:The leads washing functionality will have an interface in which lead data parameters can be maintained.,",FR,Functional,0.5
+319,F0_REQ_00320,"F:The leads washing functionality will verify the users authentication and rights to make parameter updates.,",FR,Functional,0.5
+320,F0_REQ_00321,"F:The leads washing functionality will store any potential lead duplicates returned by the enterprise system.,",FR,Functional,0.5
+321,F0_REQ_00322,"F:Prior to submitting the lead to the enterprise system the leads washing functionality will assign the lead to an admissions rep.,",FR,Functional,0.5
+322,F0_REQ_00323,"F:The leads washing functionality shall receive a period list of available reps from the enterprise system.,",FR,Functional,0.8
+323,F0_REQ_00324,"LF:The product shall simulate the look of ships at sea.,",FR,Functional,0.8
+324,F0_REQ_00325,"LF:The product shall display the grids within a circle as a view from a periscope.,",FR,Functional,0.8
+325,F0_REQ_00326,"LF:The product shall display each type of ship in a grid using an image of the specific type of ship.,",FR,Functional,0.8
+326,F0_REQ_00327,"LF: When the offensive player takes a shot the product shall simulate the sound of a ship at sea.,",FR,Functional,0.8
+327,F0_REQ_00328,"LF: When a shot is marked as a miss the product shall simulate the sound of a shot missing its target.,",FR,Functional,0.8
+328,F0_REQ_00329,"LF: When a shot is marked as a hit the product shall simulate the sound of a shot hitting its target.,",FR,Functional,0.8
+329,F0_REQ_00330,"LF: When a ship is sunk the product shall simulate the sound of a sinking ship.,",FR,Functional,0.8
+330,F0_REQ_00331,"A: The product shall be available 24 hours per day seven days per week.,",FR,Functional,0.8
+331,F0_REQ_00332,"PE:The product shall able to handle a large number of games simultaneously.,",NFR,Performance,1
+332,F0_REQ_00333,"PE:The response time shall be fast enough to maintain the flow of the game. The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses.,",NFR,Performance,1
+333,F0_REQ_00334,"PE:The product shall protect the identity of the players. The product shall provide players no access to information that might reveal the identity of another player.,",FR,Functional,0.8
+334,F0_REQ_00335,"US:The product shall be intuitive and self-explanatory. Nine out ten users shall be able to successfully complete a game with no training.,",FR,Functional,0.8
+335,F0_REQ_00336,"US: The product shall be available to players who understand English Spanish and French. The product shall allow the user to select the language upon accessing the product.,",FR,Functional,0.8
+336,F0_REQ_00337,"SE:The product shall provide players no access to information that might reveal the identity of another player,",FR,Functional,0.8
+337,F0_REQ_00338,"PE:The response time shall be fast enough to maintain the flow of the game. The response time shall be no more than 2 seconds for 95% of responses and no more than 4% for the remaining responses.,",NFR,Performance,1
+338,F0_REQ_00339,"F:The product shall maintain a list of players.,",FR,Functional,0.8
+339,F0_REQ_00340,"F:The product shall allow a user to identify himself or herself as a player.,",FR,Functional,0.8
+340,F0_REQ_00341,"F: Once a game has been initiated the product shall make the players assigned to the game unavailable for selection from the list of players.,",FR,Functional,0.8
+341,F0_REQ_00342,"F:The product shall allow a user to remove himself or herself from the list of players at any time.,",FR,Functional,0.8
+342,F0_REQ_00343,"F:The product shall make inactive players unavailable for selection from the list of players.,",FR,Functional,0.8
+343,F0_REQ_00344,"F:The product shall remove players who have been inactive for 24 hours from the list of players.,",FR,Functional,0.8
+344,F0_REQ_00345,"F:The product shall allow a player to initiate a game by selecting another available player from the list of players.,",FR,Functional,0.8
+345,F0_REQ_00346,"F: Once a game is initiated the product shall display a defensive grid to each player,",FR,Functional,0.8
+346,F0_REQ_00347,"F: Once a game is initiated the product shall display an offensive grid to each player.,",FR,Functional,0.8
+347,F0_REQ_00348,"F:The product shall prevent a player from viewing the offensive or defensive grids of the other player.,",FR,Functional,0.8
+348,F0_REQ_00349,"F: Once a game is initiated the product shall allow each player to position their 5 ships on their respective defensive grids.,",FR,Functional,0.8
+349,F0_REQ_00350,"F:The product shall allow a player to position ships horizontally on their grid.,",FR,Functional,0.8
+350,F0_REQ_00351,"F:The product shall allow the player to position ships vertically on their grid.,",FR,Functional,0.8
+351,F0_REQ_00352,"F:The product shall allow the player to position ships diagonally on their grid,",FR,Functional,0.8
+352,F0_REQ_00353,"F:The product shall prevent the player from overlapping ships on their grid.,",FR,Functional,0.8
+353,F0_REQ_00354,"F: When both players have positioned their 5 ships on their defensive grids the product shall define the status of each player for the first turn.,",FR,Functional,0.8
+354,F0_REQ_00355,"F: For each turn the product shall identify one player as offensive status and one player as defensive status.,",FR,Functional,0.8
+355,F0_REQ_00356,"F: The product shall maintain the status of each player for a turn either offensive or defensive.,",FR,Functional,0.8
+356,F0_REQ_00357,"F: At the start of each turn the product shall notify each player of his or her status.,",FR,Functional,0.8
+357,F0_REQ_00358,"F: For each turn the product shall allow the offensive player to define a shot.,",FR,Functional,0.8
+358,F0_REQ_00359,"F: For each shot the product shall examine the defensive grid of the defensive player to determine whether the shot was a hit or miss.,",FR,Functional,0.8
+359,F0_REQ_00360,"F: For each shot the product shall notify the players whether the shot was a hit or miss.,",FR,Functional,0.8
+360,F0_REQ_00361,"F: For each shot the product shall mark the shot as a hit or miss on the defensive grid of the defensive player.,",FR,Functional,0.8
+361,F0_REQ_00362,"F: For each shot the product shall mark the shot as a hit or miss on the offensive grid of the offensive player.,",FR,Functional,0.8
+362,F0_REQ_00363,"F:When the hit results in sinking a ship the product shall notify the players that the ship was sunk.,",FR,Functional,0.8
+363,F0_REQ_00364,"F:When the hit results in sinking a ship the product shall mark the ship as sunk on the defensive grid of the defensive player.,",FR,Functional,0.8
+364,F0_REQ_00365,"F:When the hit results in sinking a ship the product shall indicate the type of ship sunk on the defensive grid of the defensive player.,",FR,Functional,0.8
+365,F0_REQ_00366,"F:When the hit results in sinking a ship the product shall mark the ship as sunk on the offensive grid of the offensive player.,",FR,Functional,0.8
+366,F0_REQ_00367,"F:If the shot was marked as a hit the product shall allow the offensive player to define a shot.,",FR,Functional,0.8
+367,F0_REQ_00368,"F:If the shot was marked as a miss the product shall change the status of the offensive player to defensive,",FR,Functional,0.8
+368,F0_REQ_00369,"F:If the shot was marked as a miss the product shall change the status of the defensive player to offensive,",FR,Functional,0.8
+369,F0_REQ_00370,"F:The product shall continue to assign turns until the game is ended.,",FR,Functional,0.8
+370,F0_REQ_00371,"F:The product shall end a game when a hit by the offensive player results in sinking the last of the defensive player s ships which had not been previously marked as sunk.,",FR,Functional,0.8
+371,F0_REQ_00372,"F:The product shall allow a player to end a game at any time during the game.,",FR,Functional,0.8
+372,F0_REQ_00373,"F:When a game is ended the product shall notify the players that the game is ended.,",FR,Functional,0.8
+373,F0_REQ_00374,"F:The notification of the game ending will include the reason the game is ended (i.e. a player has won the game or a player has ended the game).,",FR,Functional,0.5
+374,F0_REQ_00375,"F:When a game is ended the product shall allow each player to identify himself or herself as an available player in the list of players.,",FR,Functional,0.8
+375,F0_REQ_00376,"F:When a game is ended the product shall allow each player to remove himself or herself from the list of players.,",FR,Functional,0.8
+376,F0_REQ_00377,"US:The system shall be easy to use by callers and supervisors. Callers and supervisors must be able to accomplish any system task within 2 minutes.,",FR,Functional,0.8
+377,F0_REQ_00378,"US:The system shall be easy to learn by callers and supervisors. Callers and supervisors shall learn how to use the system within 10 minutes.,",FR,Functional,0.8
+378,F0_REQ_00379,"PE:The system shall be responsive. At the DePaul TeleServices Center when a supervisor uses the system to view a callers schedule the system response time must be no more than 2 seconds 90% of the time and no more than 5 seconds the rest of the time.,",NFR,Performance,1
+379,F0_REQ_00380,"PE:On a 56k connection the system response time for all operations must be no more than 6 seconds 90% of the time.,",NFR,Performance,0.8
+380,F0_REQ_00381,"PE:On a 112k connection or faster the system response time for all operations must be no more than 3 seconds 90% of the time.,",NFR,Performance,0.8
+381,F0_REQ_00382,"A:The system shall have high availability every day of the year.The system must be available for use between 12:00AM and 6:00PM all days of the year.,",FR,Functional,0.8
+382,F0_REQ_00383,"A:The system must be available for use between 7:00AM and 11:59PM all days of the year.,",FR,Functional,0.5
+383,F0_REQ_00384,"MN:The product shall be internet browser independent.The product must run using Internet Explorer and Netscape Navigator.,",FR,Functional,0.8
+384,F0_REQ_00385,"SE:The product shall ensure that only supervisors can advertise empty time slots.The product must ensure that supervisors are allowed to access advertise empty time slots.,",FR,Functional,0.8
+385,F0_REQ_00386,"SE:The product shall ensure that only supervisors can enter a caller s schedule.The product must ensure that supervisors are allowed to access advertise empty time slots.,",FR,Functional,0.8
+386,F0_REQ_00387,"SE:The product shall ensure that only supervisors can view schedule of all callers.The product must ensure that supervisors are allowed to access advertise empty time slots.,",FR,Functional,0.8
+387,F0_REQ_00388,"LF:The interface shall have a simple look. In the interface and usability survey 90% of beta testers must report that the interface is adequately simple.,",FR,Functional,1
+388,F0_REQ_00389,"LF:The interface shall be appealing to callers and supervisors. In the interface and usability survey 80% of beta testers must report that the interface is appealing.,",FR,Functional,1
+389,F0_REQ_00390,"LF:The product shall provide GUI based Monitoring Services.System Administrators shall monitor message exchanges will predict and determine problems and will also provide internal and external support.,",FR,Functional,0.8
+390,F0_REQ_00391,"LF:The product shall comply with City of Chicago Application Development Guide Framework.Application Development Framework will provide structured Graphical User Interface.,",FR,Functional,0.8
+391,F0_REQ_00392,"US:The product shall provide Monitoring Services.The product shall be easy for System Administrators and DBAs to use after two weeks of usage.,",FR,Functional,0.8
+392,F0_REQ_00393,"US:The product shall provide Error Tracking Services.The product shall help the System Administrators and DBAs to resolve transaction errors 99% of the time.,",FR,Functional,1
+393,F0_REQ_00394,"US:The product shall provide Portals.The product shall help System Administrators to analyze the transactions with ad-hoc reporting and KPIs (Key Performance Indicators),",FR,Functional,0.8
+394,F0_REQ_00395,"PE:The product shall provide Asynchronous Messaging.The product shall provide asynchronous messaging to enable parallel processing and reduce the overhead in communications,",FR,Functional,0.8
+395,F0_REQ_00396,"PE:The product shall provide Multi-threading and Load Balancing.The product shall provide multi-threading technology as well as load balancing to overcome data load spikes and traffic.,",FR,Functional,0.8
+396,F0_REQ_00397,"PE:The product shall process messages within 2 seconds.The product shall have a maximum message processing time of 2 seconds,",NFR,Performance,1
+397,F0_REQ_00398,"PE:The product shall poll the system for messages every second.The product shall poll the system for new messages at a maximum of every 1 second.,",FR,Functional,0.8
+398,F0_REQ_00399,"PE:The product shall provide Dynamic Change Support and Transparent resource addition.The product shall support Transparent Resource addition and Dynamic Change support to provide scalability and avoid service interruptions of more than 1 day.,",FR,Functional,0.8
+399,F0_REQ_00400,"A:The product shall be available 99% of the time. Rationale: To avoid service interruption during busiest customer service response periods. The product shall be available 99.99% of the time for regular business days.,",FR,Functional,1
+400,F0_REQ_00401,"FT:The product shall be robust.The product shall have fault avoidance based on standards adoption.,",FR,Functional,0.8
+401,F0_REQ_00402,"FT:The product shall be robust with fault tolerance.The product shall have fault tolerance by using recovery technique compensatory transaction and routing around failures.,",FR,Functional,0.8
+402,F0_REQ_00403,"SC:The product shall be able to process all transactions.The product shall process minimum of 1 million transactions per year.,",FR,Functional,0.8
+403,F0_REQ_00404,"O:The product shall be platform independent.The product shall enable access to any type of development environment and platform.,",FR,Functional,0.8
+404,F0_REQ_00405,"O:The product shall interface CSR and Datastream.The product shall exchange messages between CSR and EAM on a real time basis without any direct interfaces between two systems.,",FR,Functional,0.8
+405,F0_REQ_00406,"MN:The product shall continue to operate during upgrade change or new resource addition.The product shall be able to continue to operate with no interruption in service due to new resource additions.,",FR,Functional,0.8
+406,F0_REQ_00407,"MN:The product shall be updated on a regular basis.The product will have a new major feature introduced every six months and quarterly maintenance releases every six months.,",FR,Functional,0.8
+407,F0_REQ_00408,"MN:The product shall operate with every platform.The product shall accommodate any new technology without any change in its architecture.,",FR,Functional,0.8
+408,F0_REQ_00409,"SE: The product shall have security.The product shall provide authentication and authorization.,",FR,Functional,0.8
+409,F0_REQ_00410,"SE:The product shall information Security. The product shall enable privacy by encryption WS-Security and Integrity Checking.,",FR,Functional,0.8
+410,F0_REQ_00411,"SE:The product shall have audit capabilities.The product shall store messages for a minimum of one year for audit and transaction tracking purposes.,",FR,Functional,0.8
+411,F0_REQ_00412,"LF:The system shall use IBM and CCR branding standards. The interface must have one IBM logo and one CCR logo.,",FR,Functional,0.8
+412,F0_REQ_00413,"LF:The system shall be displayable on any work computer a CCR user may have. The system interface shall be formatted to display at 800 by 600 pixel resolution.,",FR,Functional,0.8
+413,F0_REQ_00414,"LF:The system interface will use CCR nomenclature. The system must use the same nomenclature used in the existing WCS system and reports,",FR,Functional,0.5
+414,F0_REQ_00415,"LF:The interface must summarize the data in a fashion that s appealing to CCR management. Every report type must have at least one high level summary shown in the results dashboard/interface,",FR,Functional,0.5
+415,F0_REQ_00416,"US:The system must use a point and click interface. 100% of all selection and navigation functionality must be able to be activated/selected by either a mouse or a keyboard,",FR,Functional,0.8
+416,F0_REQ_00417,"US:The interface shall be easy to use. 90% of users should be able to successfully use the system to generate a report on their first use. The interface should adhere to IBM usability standards.,",NFR,Usability,0.8
+417,F0_REQ_00418,"US:Rreports must be easy to generate. eports must be generated within one button click and exported within one button click (after selecting the report),",FR,Functional,0.5
+418,F0_REQ_00419,"US:A user shall be able to use the system without instruction after a short amount of time. After one use a user should understand and remember 90% of the system usage and navigation.,",NFR,Performance,0.8
+419,F0_REQ_00420,"US:All CCR users shall receive training before the WCS system is deployed. One training session will be held for 100% of CCR users before system deployment (based on a CCR user being available),",FR,Functional,1
+420,F0_REQ_00421,"US:The WCS system shall use appropriate nomenclature and terminology as defined by the Corporate Community Grants organization. All interfaces and reports will undergo usability tests by CCR users.,",FR,Functional,0.8
+421,F0_REQ_00422,"A:The WCS system shall be available at all times as long as IBM s internal intranet W3 is accessible. The WCS system will be available 95% of the time IBM s internal intranet W3 is available.,",FR,Functional,1
+422,F0_REQ_00423,"SC:The WCS system shall have the ability to connect other designated WCS databases currently not included in the system.,",FR,Functional,0.8
+423,F0_REQ_00424,"SC:The WCS system shall have the ability to include data for regions outside the United States and be accessed by users outside of the United States if approved by CCR management.,",FR,Functional,0.8
+424,F0_REQ_00425,"O:The WCS system shall be run in a Windows environment. The WCS shall be accessed by users through the Internet on an IBM computer running a Windows 2000 or above operating system.,",FR,Functional,0.8
+425,F0_REQ_00426,"O:The Brio portion of the WCS system must be able to export files in spreadsheet form (Microsoft Excel and Lotus 1-2-3 formats). Brio will provide buttons in the user interface that produce/export reports in .xls or .123 file formats.,",FR,Functional,0.5
+426,F0_REQ_00427,"MN:The WCS system must run queries to the WCS databases once again (on a specified day) to update the available data available to CCR users. Queries must be made to external databases for data refresh once a week.,",FR,Functional,0.5
+427,F0_REQ_00428,"MN: All changes updates and additions to the WCS system shall be updated in the WCS Developer and WCS User Guides. Every change must be reflected in WCS system documentation,",FR,Functional,0.8
+428,F0_REQ_00429,"SE:The system shall only be accessed by authorized Corporate Community Grants (CCR) employees. Users must be authenticated using their IBM intranet user name and password.,",FR,Functional,0.8
+429,F0_REQ_00430,"SE:The WCS system shall not allow automatic logins by any user. Cookies containing WCS login information about a user will not be stored on a user s computer.,",FR,Functional,0.8
+430,F0_REQ_00431,"SE:Each team owner will need to use a username and password in order to be authenticated to reach the team owner s page,",FR,Functional,0.5
+431,F0_REQ_00432,"SE:The Commissioner will be the only authorized user per league to adjust league settings.,",FR,Functional,0.5
+432,F0_REQ_00433,"LF:Each page shall contain a navigation menu which shows the index into which the current page is contained.,",FR,Functional,0.8
+433,F0_REQ_00434,"LF:Each page shall contain a similar format with action items in one location and navigation buttons in a different location.,",FR,Functional,0.8
+434,F0_REQ_00435,"LF:The message board shall contain the 5 most recently posted messages on the league page. The messages will contain up to the first 150 characters of the message.,",FR,Functional,0.8
+435,F0_REQ_00436,"US:A new user shall be able to navigate through the league and team pages within 30 seconds of reaching the start-up page.,",NFR,Performance,1
+436,F0_REQ_00437,"US:Users shall be able to reach the add drop and trade player pages with one click from the team owner s page.,",FR,Functional,0.8
+437,F0_REQ_00438,"US:Users shall be able to view at least 25 NFL player statistics and points on each page.,",FR,Functional,0.8
+438,F0_REQ_00439,"US:The application shall ask the user to confirm dropping a player or trading a player before performing the action.,",FR,Functional,0.8
+439,F0_REQ_00440,"PE:The application shall be able to complete every user transaction within one fourth of a second of receiving the request over the network.,",FR,Functional,0.8
+440,F0_REQ_00441,"A:The application shall have a downtime of at most 10 minutes per year.,",FR,Functional,0.8
+441,F0_REQ_00442,"O:The application shall run on a web application server.,",FR,Functional,0.8
+442,F0_REQ_00443,"PE:The maximum wait time for a user navigating from one screen to another within the Disputes application shall be no more than 5 seconds.,",NFR,Performance,1
+443,F0_REQ_00444,"PE:The Disputes application shall support 350 concurrent users without any degradation of performance in the application.,",FR,Functional,0.8
+444,F0_REQ_00445,"O: The Disputes application shall be available 24x7x365 with the exception of the following scheduled maintenance windows. Monday Saturday 3:00am to 4:00am EST Sunday 1:00amd to 5:00am EST,",FR,Functional,0.8
+445,F0_REQ_00446,"O:The Disputes application shall interface with the Statement Database. The Statement Database provides the transaction details to the Disputes System. All transaction details must be obtained from the Statement Database,",FR,Functional,0.8
+446,F0_REQ_00447,"O:A primary database will be used to store cached data for active users.,",FR,Functional,0.5
+447,F0_REQ_00448,"A:The system shall achieve 95% up time.,",FR,Functional,1
+448,F0_REQ_00449,"LF:The system shall have a professional appearance,",FR,Functional,0.8
+449,F0_REQ_00450,"LF:The product shall have a consistent color scheme and fonts.,",FR,Functional,0.8
+450,F0_REQ_00451,"US:The system shall be used by realtors with no training.,",FR,Functional,0.8
+451,F0_REQ_00452,"US:The system shall be intuitive and self explanatory.,",FR,Functional,0.8
+452,F0_REQ_00453,"US:The product shall be easy for a realtor to learn.,",FR,Functional,0.8
+453,F0_REQ_00454,"US:The product shall use symbols and words that are naturally understandable by the realtor community.,",NFR,Performance,1
+454,F0_REQ_00455,"PE:The product shall produce search results in an acceptable time,",FR,Functional,0.8
+455,F0_REQ_00456,"PE:The search results shall be returned no later 30 seconds after the user has entered the search criteria,",NFR,Performance,1
+456,F0_REQ_00457,"PE:The product shall generate a CMA report in an acceptable time.,",FR,Functional,0.8
+457,F0_REQ_00458,"PE:The CMA report shall be returned no later 60 seconds after the user has entered the CMA report criteria.,",NFR,Performance,1
+458,F0_REQ_00459,"PE:The product shall synchronize contacts and appointments in an acceptable time.,",FR,Functional,0.8
+459,F0_REQ_00460,"PE:The product shall synchronize with the office system every hour.,",FR,Functional,0.8
+460,F0_REQ_00461,"A: The product shall be available for use 24 hours per day 365 days per year,",FR,Functional,0.8
+461,F0_REQ_00462,"A: Out of 1000 accesses to the system the system is available 999 times.,",FR,Functional,0.5
+462,F0_REQ_00463,"FT:The product shall operate in offline mode whenever internet connection is unavailable.,",FR,Functional,0.8
+463,F0_REQ_00464,"FT: The product shall allow the user to view previously downloaded search results CMA reports and appointments.,",FR,Functional,0.8
+464,F0_REQ_00465,"FT:The product shall retain user preferences in the event of a failure.,",FR,Functional,0.8
+465,F0_REQ_00466,"FT:100% of saved user preferences shall be restored when system comes back online.,",NFR,Reliability,1
+466,F0_REQ_00467,"SC:The product shall be able to support multiple remote users,",FR,Functional,0.8
+467,F0_REQ_00468,"SC:The product shall be able support 1000 simultaneous users.,",FR,Functional,0.8
+468,F0_REQ_00469,"SC:The product shall be capable of handling the existing 1000 users. This number is expected to grow 5 times within the next year.,",NFR,Performance,1
+469,F0_REQ_00470,"US:The product shall be installed by an untrained realtor without recourse to separately-printed instructions.,",FR,Functional,0.8
+470,F0_REQ_00471,"US:90% of untrained realtors shall be able to install the product on their device without printed instructions,",FR,Functional,1
+471,F0_REQ_00472,"PO:The product is expected to run on Windows CE and Palm operating systems.,",FR,Functional,0.5
+472,F0_REQ_00473,"SE:Only registered realtors shall be able to access the system.,",FR,Functional,0.8
+473,F0_REQ_00474,"SE:Every user of the system shall be authenticated and authorized.,",FR,Functional,0.8
+474,F0_REQ_00475,"SE:The product shall prevent its data from incorrect data being introduced.,",FR,Functional,0.8
+475,F0_REQ_00476,"F:The system shall allow a real estate agent to query MLS information,",FR,Functional,0.8
+476,F0_REQ_00477,"F:The user shall be able to get driving directions to a selected property,",FR,Functional,0.8
+477,F0_REQ_00478,"F:The user shall be able to download appointments and contact information for clients,",FR,Functional,0.8
+478,F0_REQ_00479,"F:The system shall display clear property images in the search results,",FR,Functional,0.8
+479,F0_REQ_00480,"SC:system shall be able to handle all of the user requests/usage during business hours.,",FR,Functional,0.8
+480,F0_REQ_00481,"SC:The system shall cater to 10 simultaneous users from 9am to 5pm.,",FR,Functional,0.8
+481,F0_REQ_00482,"SC:The system shall be capable of processing 100% of nursing students and their classes for the next 10 years.,",FR,Functional,1
+482,F0_REQ_00483,"SC:The system shall be expected to manage the nursing program curriculum and class/clinical scheduling for a minimum of 5 years.,",FR,Functional,0.8
+483,F0_REQ_00484,"O:The system shall able to operate within a business office environment typical of the Nursing Department at DePaul University.,",FR,Functional,0.8
+484,F0_REQ_00485,"O:The system shall be used within the specifications defined by the computers used by the Program Administrators/Nursing Staff Members.,",NFR,Performance,1
+485,F0_REQ_00486,"O:A secondary database will be used to store historical statistics and data.,",FR,Functional,0.5
+486,F0_REQ_00487,"F:The system shall be able to call the seller or buyer to schedule an appointment,",FR,Functional,0.8
+487,F0_REQ_00488,"F:The realtor shall be notified of new client appointments after automatic synchronization with office system,",FR,Functional,0.8
+488,F0_REQ_00489,"F:The realtor shall be able to retrieve a map showing property locations for a specified area,",FR,Functional,0.8
+489,F0_REQ_00490,"F:The system shall notify the realtor when a seller or buyer responds to an appointment request,",FR,Functional,0.8
+490,F0_REQ_00491,"F:The product shall allow the user to save the property search results.,",FR,Functional,0.8
+491,F0_REQ_00492,"US:The system shall be easy to use by the Program Administrators/Nursing Staff Members.,",NFR,Performance,1
+492,F0_REQ_00493,"US:All of the users shall be able to use the system after one day of training.,",FR,Functional,0.8
+493,F0_REQ_00494,"US:The system shall help the user avoid making mistakes while scheduling classes and clinicals for the nursing students.,",FR,Functional,0.8
+494,F0_REQ_00495,"US:The number of mistakes noted by the students shall be decreased by 50% in the first year.,",NFR,Performance,1
+495,F0_REQ_00496,"US:The system shall be intuitive to the Program Administrators/Nursing Staff Members.,",NFR,Performance,1
+496,F0_REQ_00497,"US:2 out of 3 Program Administrators/Nursing Staff Members shall successfully be able to use the system to manage the scheduling of classes and clinicals.,",NFR,Performance,1
+497,F0_REQ_00498,"US:The system shall use symbols and words that are naturally understandable by the user community.,",NFR,Performance,1
+498,F0_REQ_00499,"US:The verbiage used within the system shall be consistent with Standard English and the terminology of the national Nursing Community.,",FR,Functional,0.8
+499,F0_REQ_00500,"PE:Staff members shall be able to complete a set of tasks in a timely manner.,",NFR,Performance,1
+500,F0_REQ_00501,"PE:The response time of general student management tasks shall take no longer than 5 seconds and the response time of schedule generation shall take no longer than 30 seconds.,",NFR,Performance,1
+501,F0_REQ_00502,"A:The system shall be available for use between the hours of 8am and 6pm.,",FR,Functional,0.8
+502,F0_REQ_00503,"O:The system shall operate within the Windows XP Professional operating system.,",FR,Functional,0.8
+503,F0_REQ_00504,"O:The system shall interface with CampusConnect s central server,",FR,Functional,0.8
+504,F0_REQ_00505,"O:The system shall interface with the faculty central server.,",FR,Functional,0.8
+505,F0_REQ_00506,"O:The system shall interface with the student master server.,",FR,Functional,0.8
+506,F0_REQ_00507,"O:We must be able to interface with any HTML browser.,",FR,Functional,0.5
+507,F0_REQ_00508,"SE:Only authorized users shall have access to clinical site information.,",FR,Functional,0.8
+508,F0_REQ_00509,"SE:Program Administrators/Nursing Staff Members are the only people who shall have access to clinical site details.,",NFR,Performance,1
+509,F0_REQ_00510,"SE:Only authorized users shall have access to students personal information.,",FR,Functional,0.8
+510,F0_REQ_00511,"SE:Dr Susan Poslusny and Dr Julie Donalek are the only people who shall have access to students personal information.,",FR,Functional,0.8
+511,F0_REQ_00512,"SE:Only authorized users shall have access to the portion of the system that interfaces with CampusConnect.,",FR,Functional,0.8
+512,F0_REQ_00513,"SE:Fit Criterion: Dr Susan Poslusny and Karen Sysol are the only people who shall have access to the final class section scheduling for the system that interfaces with CampusConnect.,",FR,Functional,0.8
+513,F0_REQ_00514,"SE:The system shall have basic data integrity checking to reduce the possibility of incorrect or invalid data being introduced.,",FR,Functional,0.8
+514,F0_REQ_00515,"SE:The system shall protect private information in accordance with the organization s information policy.,",FR,Functional,0.8
+515,F0_REQ_00516,"SE:The system shall be built such that it is as secure as possible from malicious interference.,",FR,Functional,0.8
+516,F0_REQ_00517,"SE:The system shall use the organization s standard virus protection software to help monitor threats to itself.,",FR,Functional,0.8
+517,F0_REQ_00518,"F:A cohort shall be associated to one Program of Study offered by the department.,",FR,Functional,0.8
+518,F0_REQ_00519,"F:Program Administrators and Nursing Staff Members shall be able to add a listing of students to a cohort.,",NFR,Performance,1
+519,F0_REQ_00520,"F:Program Administrators and Nursing Staff Members shall be able to add a single student to a cohort,",NFR,Performance,1
+520,F0_REQ_00521,"F:Students added to a cohort shall be eligible for the cohort s Program of Study.,",FR,Functional,0.8
+521,F0_REQ_00522,"F:Program Administrators and Nursing Staff Members shall be able to specify the preferred sequence of classes for a given cohort.,",NFR,Performance,1
+522,F0_REQ_00523,"F: For each class within a sequence for a cohort Program Administrators and Nursing Staff Members shall be able to specify which quarter that class will be offered.,",NFR,Performance,1
+523,F0_REQ_00524,"F: For each class within a sequence for a cohort Program Administrators and Nursing Staff Members shall be able to specify which quarter that class will be offered.,",NFR,Performance,1
+524,F0_REQ_00525,"F:Program Administrators and Nursing Staff Members shall be able to add new classes to a sequence of classes,",NFR,Performance,1
+525,F0_REQ_00526,"MN:Application updates shall occur between 3AM and 6 AM CST on Wednesday morning during the middle of the NFL season.,",FR,Functional,0.8
+526,F0_REQ_00527,"MN:New System version releases shall be released at the beginning of each NFL season.,",FR,Functional,0.8
+527,F0_REQ_00528,"F:The system shall display data from the Sync Matrix 1.0 and Exercise Management Tool 1.0 applications,",FR,Functional,0.8
+528,F0_REQ_00529,"F:The system shall link Events back to either the Sync Matrix 1.0 or the Exercise Managment Tool 1.0 applications for modifications.,",FR,Functional,0.8
+529,F0_REQ_00530,"F:The system shall allow modification of the display.,",FR,Functional,0.8
+530,F0_REQ_00531,"F:The system shall offer a display of all the Events in the exercise.,",FR,Functional,0.8
+531,F0_REQ_00532,"F:The system shall filter data by: Venues and Key Events.,",FR,Functional,0.8
+532,F0_REQ_00533,"F:The system shall allow a user to define the time segments,",FR,Functional,0.8
+533,F0_REQ_00534,"F:The system shall display the local and exercise time in separate clocks,",FR,Functional,0.8
+534,F0_REQ_00535,"F:The system shall offer the ability to pause and resume the refresh of data.,",FR,Functional,0.8
+535,F0_REQ_00536,"F:The system shall provide charts for the Activity or Event actual versus assumed time.,",FR,Functional,0.8
+536,F0_REQ_00537,"A:The RFS system should be available 24/7 especially during the budgeting period. The RFS system shall be available 90% of the time all year and 98% during the budgeting period. 2% of the time the system will become available within 1 hour of the time that the situation is reported.,",NFR,Availability,0.8
+537,F0_REQ_00538,"O:98% of the user workstations shall meet the minimum hardware requirements prior to implementation. Minimum Hard Disk Space: 400MB.,",NFR,Performance,1
+538,F0_REQ_00539,"O:98% of the user workstations shall meet the minimum software requirements prior to implementation: Microsoft Internet Explorer 5.0. Microsoft .NET Framework 1.1. Microsoft Internet Explorer Web Controls,",FR,Functional,1
+539,F0_REQ_00540,"O:The RFS system should be able to easily interface with the BDW environment in order to load the data. ,7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process every year. The data will be as of October month-end. ,Test files (7) shall be loaded up to 5 times throughout the year from the BDW.",FR,Functional,0.5
+540,F0_REQ_00541,"MN:Changes to revenue and expense formulae must be applied to the RFS system every year prior to the budgeting process start. Revenue and expense formulae will be updated within one week of their receipt after which 2 weeks will be allotted to testing of the budget calculations to be conducted jointly by the project development team and PCG Finance.,",FR,Functional,0.5
+541,F0_REQ_00542,"MN:New branches/complexes/districts/regions and revenue/expense accounts added to the BDW must be reflected in the RFS system. 100% of the entities (mentioned above) available as of October month-end will be loaded into the RFS system prior to the budget start process.,",FR,Functional,0.8
+542,F0_REQ_00543,"SE:Only authorized user shall access the RFS system. ONLY users that exist in the UAS system with the RFS system assigned to their role(s) shall access the RFS system and use it.,",FR,Functional,0.8
+543,F0_REQ_00544,"SE:User access should be limited to the permissions granted to their role(s) Each level in the PCG hierarchy will be assigned a role and users will be assigned to these roles. Access to functionality within RFS system is dependent on the privileges/permission assigned to the role..,",FR,Functional,0.2
+544,F0_REQ_00545,"LF:The product must comply with the intranet page standards and requirements of ENET Securities. 95% of the product look & feel will be approved by the Architecture group prior to implementation. The remaining 5% will be corrected and approved within one month of product release.,",FR,Functional,0.8
+545,F0_REQ_00546,"LF:The intranet pages should display appropriately in all resolutions from 800x600 and higher. The display of all the pages will be correct in 95% of the resolutions prior to implementation. The remaining 5% will be corrected within a week of notification of the incorrect display.,",FR,Functional,0.5
+546,F0_REQ_00547,"US:The users should be able to easily use the system to successfully complete their budgets within the stipulated time for completion. With a week of training prior to product implementation 98% of the users shall complete their budgets within the stipulated time.,",FR,Functional,0.8
+547,F0_REQ_00548,"PE:The product interface should be fast. The response time of the product interface should not exceed 2 seconds 90% of the time. For 10% of the time the response time should not be more than 10 seconds.not be more than 10 seconds.,",NFR,Performance,0.5
+548,F0_REQ_00549,"F:The system will use the stored e-mail addresses as a primary means of communicating information to affected parties.,",FR,Functional,0.5
+549,F0_REQ_00550,"F: The system will notify affected parties for routine communication purposes including but not limited to informing students of upcoming offered classes (timeline) and what their schedule will be/shall be.,",FR,Functional,0.8
+550,F0_REQ_00551,"F: The system will notify affected parties when changes occur affecting clinicals including but not limited to clinical section capacity changes and clinical section cancellations.,",FR,Functional,0.5
+551,F0_REQ_00552,"F: The system will notify affected parties when changes occur affecting classes including but not limited to class cancellations class section detail changes and changes to class offerings for a given quarter.,",FR,Functional,0.5

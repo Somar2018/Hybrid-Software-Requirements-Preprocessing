@@ -1,0 +1,30 @@
+# Core ML / NLP
+transformers>=4.42.0
+torch>=2.3.0
+sentence-transformers>=3.0.0
+
+# APIs
+openai>=1.35.0
+google-generativeai>=0.7.0
+
+# App
+streamlit>=1.35.0
+
+# PDF
+PyMuPDF>=1.24.0
+
+# Data
+pandas>=2.2.0
+numpy>=1.26.0
+
+# ML utils
+scikit-learn>=1.5.0
+
+# NLP
+nltk>=3.9
+spacy>=3.7.0
+
+# Utils
+tqdm>=4.66.0
+python-dotenv>=1.0.0
+gradio

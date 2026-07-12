@@ -1,0 +1,256 @@
+﻿,id,text,class,subclass,confidence
+13,F0_REQ_00014,The data displayed in both the nodes within the graph and the rows in the table are MSEL Summary data,FR,Functional,0.5
+15,F0_REQ_00016,The top 1/4 of the table will hold events that are to occur sequentially.,FR,Functional,0.5
+16,F0_REQ_00017,The bottom 3/4 of the table will hold events that occur according to its relevance to current time.,FR,Functional,0.5
+43,F0_REQ_00044,Out of 1000 accesses to the system the system is available 999 times.,FR,Functional,0.5
+53,F0_REQ_00054,The product is expected to run on Windows CE and Palm operating systems.,FR,Functional,0.5
+90,F0_REQ_00091,We must be able to interface with any HTML browser.,FR,Functional,0.5
+136,F0_REQ_00137,The system will use the stored e-mail addresses as a primary means of communicating information to affected parties.,FR,Functional,0.5
+138,F0_REQ_00139,The system will notify affected parties when changes occur affecting clinicals including but not limited to clinical section capacity changes and clinical section cancellations.,FR,Functional,0.5
+139,F0_REQ_00140,The system will notify affected parties when changes occur affecting classes including but not limited to class cancellations class section detail changes and changes to class offerings for a given quarter.,FR,Functional,0.5
+140,F0_REQ_00141,The system will notify affected parties when changes occur affecting cohorts including but not limited to changes to the sequence for a cohort\92s program of study and changes to a given week\92s schedule (lab cancelled this week due to instructor illness).,FR,Functional,0.5
+141,F0_REQ_00142,The system will notify affected parties when changes occur affecting specific students including but not limited to changing a student\92s status from full time to part time and moving a student to a different clinical section.,FR,Functional,0.5
+148,F0_REQ_00149,All screens created as part of the Disputes application must comply with corporate standards for interface creation.,FR,Functional,0.5
+149,F0_REQ_00150,The list of dispute cases that are displayed after a search is performed must be color coded for easy identification of dispute cases based upon the dispute case status.,FR,Functional,0.5
+162,F0_REQ_00163,Only users with Update access must be able to initiate dispute requests.,FR,Functional,0.5
+164,F0_REQ_00165,All authorized users once authenticated must be able to logon to the Disputes System,FR,Functional,0.5
+167,F0_REQ_00168,If a user account is revoked it can only be re-instantiated by the System Administrator.,FR,Functional,0.5
+170,F0_REQ_00171,All updates to data files or database must be initiated from the Disputes System.,FR,Functional,0.5
+171,F0_REQ_00172,The Disputes application must conform to the legal requirements as specified by the Merchant Operating Regulations.,FR,Functional,0.5
+173,F0_REQ_00174,The Disputes application must conform to the legal requirements as specified by Regulation E and Regulation Z that govern credit card disputes processing.,FR,Functional,0.5
+175,F0_REQ_00176,The Disputes application must maintain a detailed history of every action that a user takes on a dispute case. This ensures a complete audit trail if questions arise later on with regard to a particular dispute case.,FR,Functional,0.5
+176,F0_REQ_00177,All actions that modify an existing dispute case must be recorded in the case history.,FR,Functional,0.5
+177,F0_REQ_00178,The Disputes System must be accessible by both internal and external users.,FR,Functional,0.5
+178,F0_REQ_00179,The Disputes System must prevent users from accessing any dispute cases that do not belong to their cardholder base.,FR,Functional,0.5
+179,F0_REQ_00180,The Disputes System will facilitate direct data entry of a dispute case via a user interface that supports real time responses to the users.,FR,Functional,0.5
+180,F0_REQ_00181,The Disputes System must provide different levels of access with regard to disputes case initiation and follow-up actions.,FR,Functional,0.5
+183,F0_REQ_00184,The Disputes System must allow the users to select disputable transactions (based on the age of the transaction) from a user interface and initiate a dispute (ticket retrieval request or chargeback notification) on the selected transaction.,FR,Functional,0.5
+184,F0_REQ_00185,The Disputes System must provide the user the ability to initiate a single dispute case on multiple transactions that belong to a single merchant.,FR,Functional,0.5
+185,F0_REQ_00186,The Disputes System will provide the user the ability to create or initiate a ticket retrieval request. As part of ticket retrieval creation process the system must prompt the user to enter all the required information to create the ticket retrieval request. The ticket retrieval request is a document that is sent to merchant inquiring the validity of a transaction.,FR,Functional,0.5
+186,F0_REQ_00187,The Disputes System must allow the user to create three unique types of ticket retrieval requests. The three types of ticket retrieval requests are (1) Request for original receipt (2) Request for a copy of the receipt or (3) Request for a portfolio. A portfolio consists of documentation that would provide proof of a purchase such as the documentation that is received from a car rental agency that is more than a sales receipt.,FR,Functional,0.5
+187,F0_REQ_00188,The Disputes System must prevent external users from requesting original receipts. Requests for original receipts are restricted to internal users.,FR,Functional,0.5
+193,F0_REQ_00194,The Disputes System must provide the ability to view existing dispute cases.,FR,Functional,0.5
+195,F0_REQ_00196,A list of all disputes cases that meet the entered search criteria must be provided to the user. The list of cases must differentiate the type and/or status of the case by color -coding the line item in the list. For example all open cases will be yellow and all closed cases will be gray.,FR,Functional,0.5
+199,F0_REQ_00200,For any systematic (non-user initiated) action that occurs on a case such as the disputes aging process a case activity will be generated. Upon the next logon the user that initiated the dispute case must be notified that a systematic action has occurred on the dispute case.,FR,Functional,0.5
+200,F0_REQ_00201,All letter requests must be formatted according to guidelines specified by the Print Letter Utility system.,FR,Functional,0.5
+201,F0_REQ_00202,Any disputes cases that have been closed for over 6 months must be purged from the online disputes database.,FR,Functional,0.5
+202,F0_REQ_00203,The product must support Internet Explorer 5.5 and above.,FR,Functional,0.5
+203,F0_REQ_00204,The product must support Mozilla Firefox 1.0 and above.,FR,Functional,0.5
+226,F0_REQ_00227,The maintenance of the product will fall within the established corporate maintenance windows.,FR,Functional,0.5
+230,F0_REQ_00231,Only adjusters with a supervisor role can update preferred repair facility ratings. Users without the supervisor role cannot access the repair facility ratings.,FR,Functional,0.5
+236,F0_REQ_00237,The product must comply with Sarbanes-Oxley.,FR,Functional,0.5
+269,F0_REQ_00270,The system will display a blank set of ratings if there are not ratings yet defined.,FR,Functional,0.5
+275,F0_REQ_00276,The product must work with most database management systems (DBMS) on the market whether the DBMS is colocated with the product on the same machine or is located on a different machine on the computer network.,FR,Functional,0.5
+276,F0_REQ_00277,The product will function alongside server software on any operating system where the Java runtime can be installed.,FR,Functional,0.5
+277,F0_REQ_00278,The product will require collaboration with a database management system (DBMS). The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,FR,Functional,0.5
+278,F0_REQ_00279,The product must make use of web/application server technology. Open source examples include Apache web server Tomcat and the JBoss application server.,FR,Functional,0.5
+279,F0_REQ_00280,A database management system such as Oracle DB2 MySql or HSQL will need to be integrated with the product.,FR,Functional,0.5
+303,F0_REQ_00304,The product will be available for licensing as a one-server two-five servers or five-or-more servers license.,FR,Functional,0.5
+311,F0_REQ_00312,The product is expected to integrate with multiple database management systems. The product will operate with Oracle SQL Server DB2 MySQL HSQL and MS Access.,FR,Functional,0.5
+321,F0_REQ_00322,The product must be developed with the J2SE/J2EE programming language libraries,FR,Functional,0.5
+323,F0_REQ_00324,The product will notify employees of meeting invitations.,FR,Functional,0.5
+326,F0_REQ_00327,The product will record meeting acknowledgements.,FR,Functional,0.5
+329,F0_REQ_00330,The product will be able to delete conference rooms.,FR,Functional,0.5
+331,F0_REQ_00332,The product will update existing room equipment.,FR,Functional,0.5
+344,F0_REQ_00345,The product will allow priviledged users to view meeting schedules in multiple reporting views.,FR,Functional,0.5
+348,F0_REQ_00349,The product will display an available status for unreserved conference rooms.,FR,Functional,0.5
+353,F0_REQ_00354,The System shall maintain consistent security. Any changes in user passwords and/or permissions should take affect in all parts of the System.,FR,Functional,0.5
+354,F0_REQ_00355,The System shall granularly control access rights to all major subsystems. It should be possible to assign access rights to all subsystems independently.,FR,Functional,0.5
+383,F0_REQ_00384,The website shall be attractive to all audiences. The website shall appear to be fun and the colors should be bright and vibrant.,FR,Functional,0.5
+386,F0_REQ_00387,The product should be able to be used by 90% of novice users on the Internet.,FR,Functional,0.5
+392,F0_REQ_00393,The product shall be easy for customers with novice skills on the Internet to purchase and watch streaming movies. Customers should be able to purchase and watch a pre-determined movie in under 3 minutes.,FR,Functional,0.5
+394,F0_REQ_00395,The website will use standard Internet conventions when interacting with the user.,FR,Functional,0.5
+396,F0_REQ_00397,When purchasing a streaming movie or pre-paid card via credit card the processing time should have a maximum response time of 15 seconds.,NFR,Performance,0.5
+397,F0_REQ_00398,When streaming a movie the buffering time should take no longer than 10 seconds (plus any latency on the user\92s connection.),NFR,Performance,0.7
+399,F0_REQ_00400,All credit card information will be secured on the server and only accessible by authorized Izogn administrators. Information will be encrypted in the database.,FR,Functional,0.5
+405,F0_REQ_00406,The streaming server will support 50 simultaneous streaming connections.,FR,Functional,0.5
+406,F0_REQ_00407,The streaming server will support a maximum of 700 movies; new servers can be added to support more movies.,FR,Functional,0.5
+407,F0_REQ_00408,The server will support a maximum of 1 000 simultaneous users.,FR,Functional,0.5
+411,F0_REQ_00412,The same hardware supporting the current website will be used to support the new system.,FR,Functional,0.5
+412,F0_REQ_00413,We must be able to interface with the following browsers: IE 5.X 6.0 Netscape 6.x 7.x 8.x and Firefox 1.0.,FR,Functional,0.5
+413,F0_REQ_00414,Website must interface with the CyberSource API to process credit card transactions.,FR,Functional,0.5
+414,F0_REQ_00415,Website must be fully operational with MSN TV2.,FR,Functional,0.5
+418,F0_REQ_00419,Izogn Administrator must be able to update the category listings on the website within 2 minutes.,FR,Functional,0.5
+419,F0_REQ_00420,Izogn Administrator must be able to add new products to the website within 2 minutes.,FR,Functional,0.5
+421,F0_REQ_00422,The website will provide a help section with answers and solutions to common problems.,FR,Functional,0.5
+422,F0_REQ_00423,Velkat staff will be available for phone support between 7am-7pm M-F to provide technical support to the Izogn administrators.,FR,Functional,0.5
+424,F0_REQ_00425,Only registered customers can purchase streaming movies.,FR,Functional,0.5
+425,F0_REQ_00426,A customer can only stream a movie if they purchased it and are within the 2 day viewing period.,FR,Functional,0.5
+426,F0_REQ_00427,Only authorized personnel can access customer records in the database.,FR,Functional,0.5
+427,F0_REQ_00428,Only administrators can activate a pre-paid card.,FR,Functional,0.5
+428,F0_REQ_00429,Only authorized personnel can access sales information.,FR,Functional,0.5
+431,F0_REQ_00432,Data integrity scripts will be run on a weekly basis to verify the integrity of the database.,FR,Functional,0.5
+435,F0_REQ_00436,All customer information will be stored on a secure database accessible only to authorized personnel.,FR,Functional,0.5
+436,F0_REQ_00437,All credit card information will be encrypted in the database.,FR,Functional,0.5
+437,F0_REQ_00438,The streaming server will have anti-virus software to prevent infection of malicious viruses.,FR,Functional,0.5
+443,F0_REQ_00444,The website will comply with W3C standards.,FR,Functional,0.5
+444,F0_REQ_00445,The PHP code will comply with PEAR standards.,FR,Functional,0.5
+445,F0_REQ_00446,The website will allow customers to search for movies by title actor or director.,FR,Functional,0.5
+446,F0_REQ_00447,viewing a movie details the website will display the movies description actor and director entered in by the administrator.,FR,Functional,0.5
+453,F0_REQ_00454,System will allow customers to pay for a streaming movie with a pre-paid card.,FR,Functional,0.5
+458,F0_REQ_00459,Movies can only be streamed if the customer has purchased a movie and is within the 2-day time period to stream the movie.,FR,Functional,0.5
+459,F0_REQ_00460,Website must be able to support free trial periods with various parameters set by the Izogn Manager.,FR,Functional,0.5
+460,F0_REQ_00461,All streaming movie sales will be logged in the database and accessible by the administrator.,FR,Functional,0.5
+467,F0_REQ_00468,The process must fit within the processing time conditions set forth by the Auto Rep Assignment process in which a lead is assigned within 3 minutes of the total life cycle.,FR,Functional,0.5
+468,F0_REQ_00469,The lead washing process will operate within the established physical web service structure.,FR,Functional,0.5
+469,F0_REQ_00470,The washing process must use a non binding neutral data format such as xml when receiving and processing lead data.,FR,Functional,0.5
+470,F0_REQ_00471,Defect reports will be available to technical units on a 24x7 basis.,FR,Functional,0.5
+471,F0_REQ_00472,Washing parameters will be updated during scheduled maintenance hours.,FR,Functional,0.5
+472,F0_REQ_00473,The vendor will verify the invalid lead.,FR,Functional,0.5
+473,F0_REQ_00474,Vendor will submit a credit validation record to be applied to the enterprise billing system.,FR,Functional,0.5
+474,F0_REQ_00475,If a lead is scored to the high range the system will supply the lead data and score to the enterprise system.,FR,Functional,0.5
+475,F0_REQ_00476,The leads washing functionality will validate all leads received by the web service for valid data,FR,Functional,0.5
+476,F0_REQ_00477,The leads washing functionality will insert all leads captured by the web service.,FR,Functional,0.5
+477,F0_REQ_00478,If the leads score falls within the high average score then it will be process by the ARA functionality.,FR,Functional,0.5
+478,F0_REQ_00479,If the leads score falls within the medium average then it will be set for manual verification by an Enrollment Coordinator through the eleads system.,FR,Functional,0.5
+479,F0_REQ_00480,If the leads score falls within the low average then it will be returned to the supplying vendor,FR,Functional,0.5
+480,F0_REQ_00481,The leads washing functionality will compile both contact and academic scoring information for a total score.,FR,Functional,0.5
+481,F0_REQ_00482,The leads washing functionality will use the parameters supplied by corporate and schools to score part of the lead.,FR,Functional,0.5
+482,F0_REQ_00483,The leads washing functionality will return the lead data supplied to the vendor along with the reason of rejection.,FR,Functional,0.5
+483,F0_REQ_00484,The leads washing functionality will have an interface in which lead data parameters can be maintained.,FR,Functional,0.5
+484,F0_REQ_00485,The leads washing functionality will verify the users authentication and rights to make parameter updates.,FR,Functional,0.5
+485,F0_REQ_00486,The leads washing functionality will store any potential lead duplicates returned by the enterprise system.,FR,Functional,0.5
+486,F0_REQ_00487,Prior to submitting the lead to the enterprise system the leads washing functionality will assign the lead to an admissions rep.,FR,Functional,0.5
+538,F0_REQ_00539,The notification of the game ending will include the reason the game is ended (i.e. a player has won the game or a player has ended the game).,FR,Functional,0.5
+547,F0_REQ_00548,The system must be available for use between 7:00AM and 11:59PM all days of the year.,FR,Functional,0.5
+578,F0_REQ_00579,The system interface will use CCR nomenclature. The system must use the same nomenclature used in the existing WCS system and reports,FR,Functional,0.5
+579,F0_REQ_00580,The interface must summarize the data in a fashion that\92s appealing to CCR management. Every report type must have at least one high level summary shown in the results dashboard/interface,FR,Functional,0.5
+582,F0_REQ_00583,Reports must be easy to generate. Reports must be generated within one button click and exported within one button click (after selecting the report),FR,Functional,0.5
+590,F0_REQ_00591,The Brio portion of the WCS system must be able to export files in spreadsheet form (Microsoft Excel and Lotus 1-2-3 formats). Brio will provide buttons in the user interface that produce/export reports in .xls or .123 file formats.,FR,Functional,0.5
+591,F0_REQ_00592,The WCS system must run queries to the WCS databases once again (on a specified day) to update the available data available to CCR users. Queries must be made to external databases for data refresh once a week.,FR,Functional,0.5
+595,F0_REQ_00596,Each team owner will need to use a username and password in order to be authenticated to reach the team owner\92s page,FR,Functional,0.5
+596,F0_REQ_00597,The Commissioner will be the only authorized user per league to adjust league settings.,FR,Functional,0.5
+607,F0_REQ_00608,A primary database will be used to store cached data for active users.,FR,Functional,0.5
+608,F0_REQ_00609,A secondary database will be used to store historical statistics and data.,FR,Functional,0.5
+614,F0_REQ_00615,The RFS system should be able to easily interface with the BDW environment in order to load the data. \95 7 data files shall be received from the BDW and loaded into the RFS system within 3 hours one day prior to the start of budgeting process every year. The data will be as of October month-end. Test files (7) shall be loaded up to 5 times throughout the year from the BDW.,FR,Functional,0.5
+615,F0_REQ_00616,Changes to revenue and expense formulae must be applied to the RFS system every year prior to the budgeting process start. Revenue and expense formulae will be updated within one week of their receipt after which 2 weeks will be allotted to testing of the budget calculations to be conducted jointly by the project development team and PCG Finance.,FR,Functional,0.5
+620,F0_REQ_00621,The intranet pages should display appropriately in all resolutions from 800x600 and higher. The display of all the pages will be correct in 95% of the resolutions prior to implementation. The remaining 5% will be corrected within a week of notification of the incorrect display.,FR,Functional,0.5
+622,F0_REQ_00623,The product interface should be fast. The response time of the product interface should not exceed 2 seconds 90% of the time. For 10% of the time the response time should not be more than 10 seconds.not be more than 10 seconds.,NFR,Performance,0.5
+645,F0_REQ_00646,The meeting scheduler system may (optionally) automatically propose another meeting if current meeting is canceled by an important participant.,FR,Functional,0.5
+646,F0_REQ_00647,The meeting scheduler system may provide the “meeting initiator” a summary of the scan of “potential meeting participants” showing available “time slots” and schedule conflicts as a means of informing the “meeting initiator” of the overall results of the system.,FR,Functional,0.5
+647,F0_REQ_00648,The meeting scheduler system may be able to include an agenda for a meeting proposal.,FR,Functional,0.5
+648,F0_REQ_00649,The meeting scheduler system may suggest a “virtual meeting” for available “time slots” if no location is available or feasible for the meeting.,FR,Functional,0.5
+649,F0_REQ_00650,The meeting scheduler system may be able to include a list of required equipment for a meeting proposal.,FR,Functional,0.5
+650,F0_REQ_00651,A meeting scheduler system will temporarily reserve the “time slots” for the proposed meeting.,FR,Functional,0.5
+651,F0_REQ_00652,A meeting scheduler system will inform the “potential meeting participant” of the meeting.,FR,Functional,0.5
+652,F0_REQ_00653,The system must be easy to use by both managers and chefs such that they do not need to read an extensive amount of manuals.,FR,Functional,0.5
+653,F0_REQ_00654,The system must be quickly accessible by both managers and chefs.,FR,Functional,0.5
+654,F0_REQ_00655,The system must be intuitive and simple in the way it displays all relevant data and relationships.,FR,Functional,0.5
+655,F0_REQ_00656,The menus of the system must be easily navigable by the users with buttons that are easy to understand.,FR,Functional,0.5
+656,F0_REQ_00657,All the functions of the system must be available to the user every time the system is turned on.,FR,Functional,0.5
+666,F0_REQ_00667,Only users who have been authorized for home access to the corporate Intranet may use the COS from non-company locations.,FR,Functional,0.5
+667,F0_REQ_00668,Programmers and application developers will have access to source code to address bugs or system enhancements as deemed necessary. Network Administrator and DBA support is also required to maintain a 24x7 system uptime.,NFR,Usability,0.7
+668,F0_REQ_00669,System security and access levels are provided in the online system. There are varying levels of system access and functional authority. Each student’s access is limited to his/her own registration records. Only authorized system administrator(s) has access to all student registration records.,FR,Functional,0.5
+672,F0_REQ_00673,Changes made to the Manage My ID website can be adopted without altering the iOS application.,FR,Functional,0.5
+687,F0_REQ_00688,The system shall be able to display a menu at all times to facilitate manual order taking should the need arise.,FR,Functional,0.5
+690,F0_REQ_00691,A waiter password used for tablet login must have a bit-strength of at least 64 bits.,FR,Functional,0.5
+691,F0_REQ_00692,A waiter password used for tablet login must be changed every three months.,FR,Functional,0.5
+697,F0_REQ_00698,The system will fully function in major browsers.,FR,Functional,0.5
+698,F0_REQ_00699,The system will support mobile users in some way.,FR,Functional,0.5
+701,F0_REQ_00702,System will use secured database.,FR,Functional,0.5
+702,F0_REQ_00703,Unauthorised users can only read data without modifying anything.,FR,Functional,0.5
+704,F0_REQ_00705,Authenticate and Login user to the web app.,FR,Functional,0.5
+705,F0_REQ_00706,Enable new users to register to the tech support system.,FR,Functional,0.5
+706,F0_REQ_00707,Enable a registered user to change his password if he forgets his password.,NFR,Security,0.5
+707,F0_REQ_00708,Enable a registered user to view his profile. Additional information viz. questions asked by him and answers posted by him are also displayed.,FR,Functional,0.5
+708,F0_REQ_00709,Enable a user to view questions and their corresponding answers.,FR,Functional,0.5
+709,F0_REQ_00710,Enable a logged in user to ask questions.,FR,Functional,0.5
+710,F0_REQ_00711,Enable a logged in user to post answers.,FR,Functional,0.5
+711,F0_REQ_00712,Enable a logged in user to up vote and down vote answers.,FR,Functional,0.5
+712,F0_REQ_00713,Provide an interface for the admin to approve posts so that posts are not visible without admin approval.,FR,Functional,0.5
+713,F0_REQ_00714,Enable the admin to generate reports which contains all the posts and their corresponding replies.,FR,Functional,0.5
+715,F0_REQ_00716,Be intuitive even to first time users,FR,Functional,0.5
+716,F0_REQ_00717,Flea Market system will interface with the web server and RDBMS software using APIs provided by the implementation language,FR,Functional,0.5
+717,F0_REQ_00718,All transactions at the Flea Market require a valid user ID and password.,NFR,Security,0.5
+718,F0_REQ_00719,Secure data transfer over the Internet could be provided using SSL encryption that will be configured by the host system administrator.,FR,Functional,0.5
+719,F0_REQ_00720,The IP addresses where the transaction was made from will be logged.,FR,Functional,0.5
+720,F0_REQ_00721,User passwords will be stored in the database in an encrypted format.,FR,Functional,0.5
+721,F0_REQ_00722,Most of the system functions will be controlled using the administrative interface.,FR,Functional,0.5
+722,F0_REQ_00723,Detailed documentation of the code and SRS will enable easy maintenance of the Flea Market.,FR,Functional,0.5
+723,F0_REQ_00724,Information recorded must include an optional field for context.,FR,Functional,0.5
+725,F0_REQ_00726,It must be able to download the most recent medical record.,FR,Functional,0.5
+726,F0_REQ_00727,It must store the most recent copy of information in its application data folder.,FR,Functional,0.5
+727,F0_REQ_00728,It must only update the parts that have changed when connecting to the server.,FR,Functional,0.5
+728,F0_REQ_00729,It must be able to change and update information on the server.,FR,Functional,0.5
+729,F0_REQ_00730,The application must log the user out when it is exited.,FR,Functional,0.5
+732,F0_REQ_00733,The user must be able to set an option to hide information based on who has tagged it.,FR,Functional,0.5
+733,F0_REQ_00734,The user must be able to add photos from his/her photo library to his/her medical record.,FR,Functional,0.5
+734,F0_REQ_00735,It must allow a user to login.,FR,Functional,0.5
+735,F0_REQ_00736,It must allow a user to logout.,FR,Functional,0.5
+736,F0_REQ_00737,All information must be viewable on the website.,FR,Functional,0.5
+737,F0_REQ_00738,All information must be updatable on the website.,FR,Functional,0.5
+738,F0_REQ_00739,It must allow a user to download a backup of their medical information.,FR,Functional,0.5
+739,F0_REQ_00740,Logout must be automatic after 1 hour of inactivity.,FR,Functional,0.5
+740,F0_REQ_00741,Full data backups must be created daily.,FR,Functional,0.5
+741,F0_REQ_00742,A user must be logged on to be able to view or edit any medical information.,FR,Functional,0.5
+742,F0_REQ_00743,Each account must securely store all of its data.,FR,Functional,0.5
+749,F0_REQ_00750,The system should keep the customer contact number.,NFR,Performance,0.5
+754,F0_REQ_00755,The website is available whenever the users want to use it.,FR,Functional,0.5
+755,F0_REQ_00756,The system use SSL (secured socket layer) in all transactions that include any confidential customer information.,FR,Functional,0.5
+756,F0_REQ_00757,The system must automatically log out all customers after a period of inactivity.,FR,Functional,0.5
+759,F0_REQ_00760,Sensitive data will be encrypted before being sent over insecure connections like the internet.,FR,Functional,0.5
+760,F0_REQ_00761,The system provides storage of all databases on redundant computers with automatic switchover.,FR,Functional,0.5
+761,F0_REQ_00762,The reliability of the overall program depends on the reliability of the separate components. The main pillar of reliability of the system is the backup of the database which is continuously maintained and updated to reflect the most recent changes.,NFR,Reliability,0.5
+762,F0_REQ_00763,An end-user may use this system on any OS; either it is Windows or Linux.,FR,Functional,0.5
+765,F0_REQ_00766,The product is Web based therefore it will be used in any environment that allows Web access.,FR,Functional,0.5
+769,F0_REQ_00770,Everyone (stakeholders and guests) can have access to the system and the catalogue. Every client must have secure and private access to his/her data. The and the service man can have access to every part of the system. All these accesses (except the “guest tour” access) require identification through ID and password.,FR,Functional,0.5
+770,F0_REQ_00771,The system will develop a security system that will reduce to the minimum the possibility of corruption from systems and/or humans.,FR,Functional,0.5
+773,F0_REQ_00774,The software system needs a robust security mechanism in place so that unauthorized users are not allowed access to parts of the system.,FR,Functional,0.5
+777,F0_REQ_00778,Since the software must run on several popular hardware platforms and the goal is to achieve a reasonable level of platform independence.,FR,Functional,0.5
+778,F0_REQ_00779,High level of performance requires high speed network and high level of connectivity.,NFR,Performance,0.5
+780,F0_REQ_00781,Every user of the software is provided a unique login ID and a password which is stored in the database hashed by SHA2 algorithm.,FR,Functional,0.5
+781,F0_REQ_00782,The software is available for use from the supermarket opening time to the closing time.,FR,Functional,0.5
+784,F0_REQ_00785,System will use secured database,FR,Functional,0.5
+785,F0_REQ_00786,Normal users can just read information but they cannot edit or modify anything except their personal and some other information.,FR,Functional,0.5
+786,F0_REQ_00787,System will have different types of users and every user has access constraints.,FR,Functional,0.5
+787,F0_REQ_00788,Control the database and keep track of all records of customers and employee details.,FR,Functional,0.5
+788,F0_REQ_00789,Contact with the vendors and give permission to sell their product under the site after testing the product’s quality.,FR,Functional,0.5
+789,F0_REQ_00790,View the details of all employees and control the whole site.,FR,Functional,0.5
+790,F0_REQ_00791,Customers must have a valid login id to enter into the site.,FR,Functional,0.5
+791,F0_REQ_00792,New users can sign up by creating new ID.,FR,Functional,0.5
+792,F0_REQ_00793,Can view all available products and can compare them and make a choice for purchasing products.,FR,Functional,0.5
+793,F0_REQ_00794,Can purchase any product through valid credit card.,FR,Functional,0.5
+794,F0_REQ_00795,Can give feedback to the 24X7 Customer Care Service center about their impression for the site and services.,FR,Functional,0.5
+795,F0_REQ_00796,Customer must logout of the site after purchasing products.,FR,Functional,0.5
+796,F0_REQ_00797,Can only visit the site without registration.,FR,Functional,0.5
+797,F0_REQ_00798,Vendors must take permission from the Administrator for selling their products under the site. Administrator will test product’s quality according to its market price to permit vendor for selling purpose.,FR,Functional,0.5
+798,F0_REQ_00799,Can consult with the Administrator regarding product’s quality and advertisements.,FR,Functional,0.5
+799,F0_REQ_00800,View the personal details of the customer.,FR,Functional,0.5
+800,F0_REQ_00801,Responsible for properly allocating the selected product according to the customer’s choice and delivering product to the customer.,FR,Functional,0.5
+801,F0_REQ_00802,Keep track of each product item’s stocks for selling purpose.,FR,Functional,0.5
+802,F0_REQ_00803,Responsible for informing administrator when any product item’s stock goes under the minimum level.,FR,Functional,0.5
+803,F0_REQ_00804,Taking permission from the Administrator for the product to be purchased from vendor.,FR,Functional,0.5
+804,F0_REQ_00805,Responsible for managing stocks of each product items.,FR,Functional,0.5
+805,F0_REQ_00806,Keep track of all the payment transactions made by the customers and update the payment information.,FR,Functional,0.5
+807,F0_REQ_00808,Consult with the Administrator about the payment details of the customers for the updating of the database.,FR,Functional,0.5
+808,F0_REQ_00809,Provide feasible solutions to the customers on their complaints and queries.,FR,Functional,0.5
+810,F0_REQ_00811,The system is expected to have reasonable short time response. The voter should be able to login and should be able to get response for his requests in 2-3 seconds.,NFR,Performance,0.5
+811,F0_REQ_00812,The data transaction between client and server must be encrypted using SSL technology.,FR,Functional,0.5
+812,F0_REQ_00813,All the passwords that are generated or accepted must be stored in database in an encrypted form.,FR,Functional,0.5
+816,F0_REQ_00817,The physician/pharmacist must have a valid user login to access the system.,FR,Functional,0.5
+817,F0_REQ_00818,A failed login will alert the physician/pharmacist.,FR,Functional,0.5
+818,F0_REQ_00819,A list of available patients is displayed after login.,FR,Functional,0.5
+819,F0_REQ_00820,An error message alerts when an invalid patient is entered.,FR,Functional,0.5
+820,F0_REQ_00821,Backspace/reset capability is implemented for typing errors.,FR,Functional,0.5
+821,F0_REQ_00822,Selected or specified patient’s information is loaded.,FR,Functional,0.5
+822,F0_REQ_00823,Return to List is available if the patient loaded is not correct.,FR,Functional,0.5
+823,F0_REQ_00824,Navigation to each selected tab.,FR,Functional,0.5
+824,F0_REQ_00825,The font will be larger enough for easy reading.,FR,Functional,0.5
+825,F0_REQ_00826,Icons will clearly illustrate the feature it represents.,FR,Functional,0.5
+826,F0_REQ_00827,Basic Patient information is showed first.,FR,Functional,0.5
+827,F0_REQ_00828,Customized information is displayed.,FR,Functional,0.5
+828,F0_REQ_00829,Each entry is shown in full.,FR,Functional,0.5
+829,F0_REQ_00830,The text and time/date of a note that has been entered is displayed starting with most recent.,FR,Functional,0.5
+830,F0_REQ_00831,New and Delete buttons will allow the physician/pharmacist to add a notation to the patient’s file.,FR,Functional,0.5
+831,F0_REQ_00832,A description and time/date of each prescription that has been ordered or given is displayed starting with most recent.,FR,Functional,0.5
+869,F0_REQ_00870,User authentication and privileges are defined outside the scope of the sytem by the Microsoft Active Directroy Server.,NFR,Security,0.5
+870,F0_REQ_00871,Personal information security is defined outside the scope of the SDMS by the database server.,NFR,Security,0.5
+952,F0_REQ_00953,The system will use a single password per user to login to the E-Store System.,FR,Functional,0.5
+954,F0_REQ_00955,Any page of the application should not take more than 6 seconds to load on a DSL broadband connection.,NFR,Performance,0.5
+955,F0_REQ_00956,The system may be throttled or slowed down on heavy loads to ensure service for everybody. By throttling is meant that certain functionality may be unavailable during heavy server load.,FR,Functional,0.5
+959,F0_REQ_00960,A secure server will be required to ensure confidentiality of customer’s credit card and other details.,FR,Functional,0.5
+961,F0_REQ_00962,It should not take more than 120 seconds for a new user to register for an account.,NFR,Performance,0.5
+962,F0_REQ_00963,It should not take more than 90 seconds for a registered user to place an order.,NFR,Performance,0.5
+965,F0_REQ_00966,Registered User must be able to maintain his/her session information for at least 60 minutes of inactive session before the system prompts him to log out of the system. The registered user must be provided with all the options of the E-store regardless of the time when he/she logs in.,FR,Functional,0.5
+966,F0_REQ_00967,The entire website must be user-friendly and easily navigable. The website must be provided with a site map for quick access to a particular link according to the requirement specification. The user must be able to find what he/she wants from the site without any difficulty. The website must adhere to branding schemes and the layout of the web pages must be uniform throughout,FR,Functional,0.5
+968,F0_REQ_00969,The website must provide highest degree of security to the registered users. All the transactions that are made must be secured. The sensitive information passed to and from the website must be secured. Identity theft and other security related issues must be solved. Unauthorized transmission of sensitive information of the user to third party websites for reference must be avoided. On the basis of user agreement the information must be processed. All the information about the registered user must be securely stored in the central database.,FR,Functional,0.5

@@ -1,0 +1,282 @@
+﻿,id,text,class,subclass,confidence
+1,F0_REQ_00002,"Internally to the CPN, a CNG receiving private or other critical information (i.e. from a CND) should verify that the data was protected from unauthorised disclosure.",FR,Functional,0.2
+6,F0_REQ_00007,The CNG should detect replayed user and/or device credentials.,FR,Functional,0.2
+26,F0_REQ_00027,"The capacity of the authorized entities should depend on the security policies defined by the service providers, managing the CNG.",FR,Functional,0.2
+39,F0_REQ_00040,"The CNG should support redirection of IP Multimedia sessions, as defined by TS 181 005 [1], independently from the type of device used (NGN terminal or other CND).",FR,Functional,0.2
+42,F0_REQ_00043,"The CNG should negotiate session parameters (bandwidth, screen resolution, codecs…) with the NGN transparently to the user.",FR,Functional,0.2
+45,F0_REQ_00046,"Standard NGN authentication, routing and connectivity should be used to establish remote access connectivity.",NFR,Security,0.2
+54,F0_REQ_00055,"The CNG should be able to assist in establishing Rich Communication Suite sessions between CNDs, including joining/splitting voice & media streams.",FR,Functional,0.2
+55,F0_REQ_00056,It should be possible for more than one identity to be associated with a single CPN subscription.,FR,Functional,0.2
+56,F0_REQ_00057,It should be possible for a service profile to be associated with each identity within a CPN subscription.,FR,Functional,0.2
+63,F0_REQ_00064,The customer environment (CNG and/or CNDs) should support a mechanism to allow service roaming,FR,Functional,0.2
+64,F0_REQ_00065,The NGN network should be provided with a CND location information.,FR,Functional,0.2
+71,F0_REQ_00072,In case of multicast streams the CNG should support proxy functionalities to optimize the management of information related to signalling.,FR,Functional,0.2
+73,F0_REQ_00074,STB or media gateways should be equipped with a programmable open API allowing the implementation of specific service logics.,FR,Functional,0.2
+78,F0_REQ_00079,CPN should support user generated content (UGC) using an NGN service.,FR,Functional,0.2
+79,F0_REQ_00080,CPN should support storage of UGC within the CPN.,NFR,Performance,0.2
+81,F0_REQ_00082,"CPN should support bookmarks (e.g. hyperlinks) to stored and streaming user-generated content in order to store and exchange references to uploaded and streaming UGC,.",FR,Functional,0.2
+82,F0_REQ_00083,The user should be able to personalize bookmarks to UGC.,FR,Functional,0.2
+83,F0_REQ_00084,"CPN should support inter-destination content synchronisation of streaming multimedia content. This should achieve that all or a specific group of users consuming specific content get the content presented simultaneously, i.e. without user-noticeable delay difference.",FR,Functional,0.2
+113,F0_REQ_00114,The Network Configuration Server should be able to upload different parameter sets related to service subscription.,FR,Functional,0.2
+114,F0_REQ_00115,The CND should be able to support bootstrap capabilities in order to retrieve network configuration data to connect the NGN.,FR,Functional,0.2
+117,F0_REQ_00118,The CPN should support a capability to ensure QoS and call prioritization for sessions originating or terminating in the H(e)NB.,FR,Functional,0.2
+125,F0_REQ_00126,The CND should support protocols for remote access management.,FR,Functional,0.2
+126,F0_REQ_00127,The CND should support protocol for local authentication in CPN/CNG.,NFR,Security,0.2
+131,F0_REQ_00132,The CND should be able to communicate its services related capabilities to the CNG.,FR,Functional,0.2
+132,F0_REQ_00133,The CND should be able to support one or more codecs for communication services (as defined by TS 181 005 [1]).,FR,Functional,0.2
+138,F0_REQ_00139,"The capacity of the authorized entities should depend on the security policies defined by the service providers, managing the CNG.",FR,Functional,0.2
+151,F0_REQ_00152,"The CNG should support or not prevent redirection of IP Multimedia sessions, as defined by TS 181 005 [1], independently from the type of device used (NGN terminal or other CND).",FR,Functional,0.2
+154,F0_REQ_00155,"The CNG should negotiate session parameters (bandwidth, screen resolution, codecs…) with the NGN transparently to the user.",FR,Functional,0.2
+157,F0_REQ_00158,"Standard NGN authentication, routing and connectivity should be used to establish remote access connectivity.",NFR,Security,0.2
+167,F0_REQ_00168,The customer environment (CNG and/or CNDs) should support a mechanism to allow service roaming,FR,Functional,0.2
+169,F0_REQ_00170,The NGN network should be provided with a CND location information.,FR,Functional,0.2
+176,F0_REQ_00177,In case of multicast streams the CNG should support proxy functionalities to optimize the management of information related to signalling.,FR,Functional,0.2
+178,F0_REQ_00179,STB or media gateways should be equipped with a programmable open API allowing the implementation of specific service logics.,FR,Functional,0.2
+206,F0_REQ_00207,The CND directly or through the CNG must be able to access to Network Configuration Service Function avoiding any user interaction. (and so the Network Configuration Server should be able to upload different parameter related to service subscription).,FR,Functional,0.2
+207,F0_REQ_00208,The CND should be able to support bootstrap capabilities in order to retrieve network configuration data to connect the NGN.,FR,Functional,0.2
+216,F0_REQ_00217,"The card should use a unique diversified secret key,personalized into the card,to generate and authenticate transaction signatures",FR,Functional,0.2
+237,F0_REQ_00238,Transmissions between host systems should be protected by MACs based on unique keys that are shared by the nodes involved,FR,Functional,0.2
+255,F0_REQ_00256,"If a supported scheme provider has a dispute resolution process,participate in that dispute resolution process with connecting processors to resolve any issues related to invalid transactions. These resolution processes should include a mechanism for repayment of funds associated with invalid transactions",FR,Functional,0.2
+328,F0_REQ_00329,Load devices that are available to the general public should support multiple sources of funding and support both linked and unlinked loads,FR,Functional,0.2
+333,F0_REQ_00334,The architecture for the electronic purse should not preclude the eventual deployment of a variety of devices to meet the needs of many card acceptance environments. Unload must not be precluded from being supported on any or all of these devices at the option of the acquirer,FR,Functional,0.2
+391,F0_REQ_00392,Applications should Expose only data and resources that are necessary for proper application functionality,FR,Functional,0.2
+392,F0_REQ_00393,Applications should Perform internal security measures required by the Application Provider,FR,Functional,0.2
+397,F0_REQ_00398,A GlobalPlatform card should support symmetric cryptography such as the Data Encryption Standard (DES) algorithm.,FR,Functional,0.2
+541,F0_REQ_00542,"The application's code structure should be designed for easy extension, facilitating the addition of new features.",FR,Functional,0.2
+543,F0_REQ_00544,The application should be designed for easy porting between iOS and Android platforms.,FR,Functional,0.2
+555,F0_REQ_00556,The search feature should be prominent and easy to find for the user.,FR,Functional,0.2
+556,F0_REQ_00557,"The different search options should be evident, simple and easy to understand.",FR,Functional,0.2
+557,F0_REQ_00558,Users should be able to easily understand and select results from the list with just a single click.,FR,Functional,0.2
+558,F0_REQ_00559,"Map results should be clear and user-friendly, allowing selection of any pin with a single click.",FR,Functional,0.2
+559,F0_REQ_00560,"The information link for each result should be clear, easy to identify, and open with just a single click.",FR,Functional,0.2
+560,F0_REQ_00561,The user interface should be GUI based.,NFR,Usability,0.2
+565,F0_REQ_00566,The application itself will only have minimal logic and so there should be little to no issues with the computation required by the phone itself.,FR,Functional,0.2
+566,F0_REQ_00567,"The only hazard is a user using the device when they should not be, such as while driving.",FR,Functional,0.2
+568,F0_REQ_00569,"The primary attribute of this application will be usability given the large amounts of data and information that will be presented on such a small screen, as well as the user’s ability to input data into the device in a reasonable manner that should not be that much more difficult than if they were at an actual computer.",FR,Functional,0.2
+597,F0_REQ_00598,The FAU class ensures security-relevant events are logged and identifies what information should be included in those logs.,NFR,Security,0.2
+971,F0_REQ_00972,"Ideally, each error message will be accompanied by explanatory text and an indication of the action(s) which the user can take in response to the error.",FR,Functional,0.2
+1073,F0_REQ_01074,Initialization Data,FR,Functional,0.3
+1254,F0_REQ_01255,"The system should be able to handle parameter changes in three ways: single parameter, subset of settings, and pre-defined parameter set switching.",FR,Functional,0.2
+3385,F0_REQ_03386,"User interface should be attractive and easily understandable, requiring no assistance to use the website.",NFR,Usability,0.2
+3386,F0_REQ_03387,"System should be able to operate efficiently on slow connections, ensuring fast and steady data flow.",FR,Functional,0.2
+3387,F0_REQ_03388,Data of the user should be regularly synchronized between their device and the database for auto save functionality.,FR,Functional,0.2
+3389,F0_REQ_03390,"Website should be multi-platform, capable of running on different operating systems.",FR,Functional,0.2
+3390,F0_REQ_03391,"Users are advised to change their password every 30 days, and maximum 3 login attempts should be allowed.",FR,Functional,0.2
+3392,F0_REQ_03393,User details and data should be stored securely in a database provided by the server.,FR,Functional,0.2
+3510,F0_REQ_03511,The system should perform its intended function without failure for a specified period.,NFR,Reliability,0.2
+3591,F0_REQ_03592,The passport management website should provide maximal security.,FR,Functional,0.2
+3594,F0_REQ_03595,Adaptive Maintenance: The software should be compatible with all web-browsing capable browsers.,FR,Functional,0.2
+3928,F0_REQ_03929,The user interface should prioritize simplicity and avoid cluttering with excessive information to enhance usability.,NFR,Usability,0.2
+3929,F0_REQ_03930,"The system should maintain high availability, ensuring uninterrupted operation at all times.",NFR,Reliability,0.2
+3999,F0_REQ_04000,The site should be usable anywhere with internet connectivity and a compatible device.,NFR,Usability,0.2
+5158,F0_REQ_05159,"The application should be available at all working hours, with maintenance or backup operations conducted outside of working hours.",NFR,Reliability,0.2
+5159,F0_REQ_05160,"The application should be installable on Microsoft or Unix platforms and compatible with browsers such as IE, Firefox, Chrome, Opera, or Safari.",FR,Functional,0.2
+5162,F0_REQ_05163,Queries exceeding 1 minute should be terminated.,FR,Functional,0.2
+5163,F0_REQ_05164,Backup operations should be executed periodically to ensure data safety.,NFR,Reliability,0.2
+5164,F0_REQ_05165,The system should be designed to facilitate future evolution and maintenance operations.,FR,Functional,0.2
+5548,F0_REQ_05549,The website must be capable of storing all data formats and should frequently connect to the database or be database sensitive.,FR,Functional,0.2
+5583,F0_REQ_05584,The system should be secure to protect user data and prevent unauthorized access.,FR,Functional,0.2
+5584,F0_REQ_05585,The system should be responsive and handle edits and playback smoothly.,FR,Functional,0.2
+5586,F0_REQ_05587,The system should be easy to learn and use for users with varying levels of musical experience.,FR,Functional,0.2
+5621,F0_REQ_05622,The graphics card should have at least 1 GB of VRAM and support OpenGL version 4.0 for enabling GPU Performance (optional feature for enhanced performance with graphic-intensive tasks).,NFR,Performance,0.2
+5631,F0_REQ_05632,The graphics card should have at least 1 GB of VRAM for optimal performance (optional).,NFR,Performance,0.2
+5632,F0_REQ_05633,The graphics card should ensure smoother and faster operation for graphic rendering and complex vector calculations (benefit).,FR,Functional,0.2
+5999,F0_REQ_06000,The system should be accessible on various devices (mobile app implies mobile accessibility).,FR,Functional,0.2
+6112,F0_REQ_06113,The system should run on a good working PC that meets the hardware interface requirements specified in the system documentation.,FR,Functional,0.2
+6113,F0_REQ_06114,The system should efficiently handle medium-sized information databases without significant performance degradation.,NFR,Performance,0.2
+6114,F0_REQ_06115,The system should avoid becoming overloaded and should maintain optimal performance even under peak load conditions.,NFR,Performance,0.2
+6130,F0_REQ_06131,"The system is not designed for emergency medical use; in case of an emergency, users should contact emergency services such as 108 or their primary doctor.",FR,Functional,0.2
+7012,F0_REQ_07013,The website should have an African feel but should not alienate non-Africans. The website should use animation on pages which are describing the services to grab the users attention and encourage them to sign up.,FR,Functional,0.2
+7013,F0_REQ_07014,The website design should be modern clean and concise.,FR,Functional,0.2
+7015,F0_REQ_07016,Users should only have to navigate through a maximum of 4 pages to create an account with the website.,FR,Functional,0.2
+7016,F0_REQ_07017,Users should be able to access their streaming movies in under 2 clicks after logging into the website.,FR,Functional,0.2
+7026,F0_REQ_07027,While streaming a movie buffering should only occur if there is latency in the user\92s connection.,NFR,Performance,0.4
+7045,F0_REQ_07046,Promotional updates to the website should take a day to update.,FR,Functional,0.2
+7066,F0_REQ_07067,The website should cater to all tribes in Nigeria.,FR,Functional,0.2
+7068,F0_REQ_07069,The website should appeal to all Africans not only Nigerians.,FR,Functional,0.2
+7069,F0_REQ_07070,The website should use Flash to provide animation on the home page.,FR,Functional,0.2
+7090,F0_REQ_07091,Daily usage statistics should be logged and accessible by the administrator.,FR,Functional,0.2
+7246,F0_REQ_07247,User access should be limited to the permissions granted to their role(s) Each level in the PCG hierarchy will be assigned a role and users will be assigned to these roles. Access to functionality within RFS system is dependent on the privileges/permission assigned to the role..,FR,Functional,0.2
+7261,F0_REQ_07262,The system search feature should support the use of regular expressions in search.,FR,Functional,0.2
+7285,F0_REQ_07286,The calculations performed by the system must comply according to the norms set by the user and should not vary unless explicitly changed by the user.,FR,Functional,0.2
+7286,F0_REQ_07287,The client should agree to EULA before using our software.,FR,Functional,0.2
+7298,F0_REQ_07299,All data entry forms for the application should match their Microsoft Excel hardcopy counterparts as closely as possible. Hardcopies of these forms were provided to the design team during the second requirements interview.,FR,Functional,0.2
+7301,F0_REQ_07302,The application should be connected to the Internet.,FR,Functional,0.2
+7302,F0_REQ_07303,The application should be connected to the GPS device.,FR,Functional,0.2
+7303,F0_REQ_07304,The application should be easy to extend. The code should be written in a way that it favors implementation of new functions.,FR,Functional,0.2
+7304,F0_REQ_07305,Test environments should be built for the application to allow testing of the applications different functions.,FR,Functional,0.2
+7305,F0_REQ_07306,The application should be portable with iOS and Android.,FR,Functional,0.2
+7311,F0_REQ_07312,It should generate a report about registered complaint to the admin and response report to the user who has submitted his queries.,FR,Functional,0.2
+7312,F0_REQ_07313,The system should maintain correct schedules of labs and the documentation of all the lab equipment.,FR,Functional,0.2
+7313,F0_REQ_07314,The system should use the company colors and logos.,FR,Functional,0.2
+7342,F0_REQ_07343,Information transmission should be securely transmitted to server without any changes in information.,FR,Functional,0.2
+7352,F0_REQ_07353,Information should be tagged according to who is entering the data.,FR,Functional,0.2
+7359,F0_REQ_07360,It should give a drill-down view of all data in the medical record after logging in.,FR,Functional,0.2
+7376,F0_REQ_07377,The system should take the customer name.,FR,Functional,0.2
+7378,F0_REQ_07379,The system should keep the customer email.,FR,Functional,0.2
+7379,F0_REQ_07380,The system should ask the user to key in the pickup date.,FR,Functional,0.2
+7380,F0_REQ_07381,The system should require the user to state time when should the doughnut be delivered.,FR,Functional,0.2
+7381,F0_REQ_07382,The system should have to keep the location where the doughnut will be send.,FR,Functional,0.2
+7385,F0_REQ_07386,The system should not leave any cookies on the customer’s computer containing the user’s password.,NFR,Security,0.2
+7391,F0_REQ_07392,The logo and the current basic design of registration system should be displayed. The system should be attractive according to the clients. The design and the color should make users feel comfortable when using the system instead of flashing useless colors on the screen. The design should also reflect the seriousness of the environment.,FR,Functional,0.2
+7392,F0_REQ_07393,The system should be able to manage all the information incoming from the database and the catalogue.,FR,Functional,0.2
+7394,F0_REQ_07395,For the system to successfully operate the registration system should be integrated with other IT services and the portal.,FR,Functional,0.2
+7395,F0_REQ_07396,The system should need to be entirely self-supporting since the users would be using it only to register courses.,FR,Functional,0.2
+7396,F0_REQ_07397,The Web interface should be compatible with standards in order to be usable via all major Web browsers in a wide variety of environments.,NFR,Usability,0.2
+7407,F0_REQ_07408,The available server must be reliable and the network connectivity in the supermarket should be proper for smooth flow of all operations and data.,FR,Functional,0.2
+7437,F0_REQ_07438,The system should require the user to state time when should the doughnut be delivered,FR,Functional,0.2
+7441,F0_REQ_07442,To prevent attacks the system should generate random word and ask the user to enter it correctly for multiple tryings.,FR,Functional,0.2
+7442,F0_REQ_07443,The system should warn ECA users about the malfunction of the system.,FR,Functional,0.2
+7443,F0_REQ_07444,The system should be simple to use,FR,Functional,0.2
+7584,F0_REQ_07585,The application should be able to support 100 concurrent users without any performance degradation.,NFR,Performance,0.2
+7585,F0_REQ_07586,The system should be able to scale up to 500 concurrent users (if there is a need in the future) by installing additional hardware components.,NFR,Performance,0.2
+7586,F0_REQ_07587,The MTBF (if any) should not be less than 2 months.,FR,Functional,0.2
+7588,F0_REQ_07589,The user interface of the system should be very user friendly.,NFR,Usability,0.2
+7591,F0_REQ_07592,The system should be easy enough to maintain that someone else could do it with a manual and a few hours training.,FR,Functional,0.2
+7592,F0_REQ_07593,The system should be portable to various operating environments.,FR,Functional,0.2
+7817,F0_REQ_07818,"LF: The website should have an African feel but should not alienate non-Africans. The website should use animation on pages which are describing the services to grab the users attention and encourage them to sign up.,",FR,Functional,0.2
+7818,F0_REQ_07819,"LF: The website design should be modern clean and concise.,",FR,Functional,0.2
+7820,F0_REQ_07821,"US: Users should only have to navigate through a maximum of 4 pages to create an account with the website.,",FR,Functional,0.2
+7821,F0_REQ_07822,"US:Users should be able to access their streaming movies in under 2 clicks after logging into the website.,",FR,Functional,0.2
+7831,F0_REQ_07832,"PE: While streaming a movie buffering should only occur if there is latency in the user s connection.,",NFR,Performance,0.4
+7849,F0_REQ_07850,"MN:Promotional updates to the website should take a day to update.,",FR,Functional,0.2
+7870,F0_REQ_07871,"LF:The website should cater to all tribes in Nigeria.,",FR,Functional,0.2
+7872,F0_REQ_07873,"LF: The website should appeal to all Africans not only Nigerians.,",FR,Functional,0.2
+7873,F0_REQ_07874,"O:The website should use Flash to provide animation on the home page.,",FR,Functional,0.2
+7895,F0_REQ_07896,"F: Daily usage statistics should be logged and accessible by the administrator.,",FR,Functional,0.2
+8140,F0_REQ_08141,"SE:User access should be limited to the permissions granted to their role(s) Each level in the PCG hierarchy will be assigned a role and users will be assigned to these roles. Access to functionality within RFS system is dependent on the privileges/permission assigned to the role..,",FR,Functional,0.2
+8158,F0_REQ_08159,The system should display grade information to the appropriate actor.,FR,Functional,0.2
+8159,F0_REQ_08160,The system should maintain a grade history.,FR,Functional,0.2
+8163,F0_REQ_08164,"As far as possible, the system should provide a simple, responsive interface.",FR,Functional,0.2
+8166,F0_REQ_08167,"The system should be available 24 hours a day, 7 days a week.",FR,Functional,0.2
+8168,F0_REQ_08169,The system should support at least 1000 concurrent users.,NFR,Performance,0.2
+8170,F0_REQ_08171,"Relevant, online documentation for users should be available on each page.",FR,Functional,0.2
+8173,F0_REQ_08174,Modifications should be reported via the main page to inform actors of unexpected changes.,FR,Functional,0.2
+8174,F0_REQ_08175,This electronic documentation should be supplemented with phone and on-site support provided by the Office of Information Services.,FR,Functional,0.2
+8176,F0_REQ_08177,A comprehensive database of maintenance tasks and help files should be compiled to make the courseware system easier to maintain from an IT staff point-of-view.,FR,Functional,0.2
+8177,F0_REQ_08178,Search results should be displayed based on relevance.,FR,Functional,0.2
+8220,F0_REQ_08221,The EIRENE network should support text messages.,FR,Functional,0.2
+8221,F0_REQ_08222,The network should support the receipt of mobile-originated text messages by the ground.,FR,Functional,0.2
+8225,F0_REQ_08226,The network should support fax transmissions between the ground and mobile users.,FR,Functional,0.2
+8229,F0_REQ_08230,The EIRENE network should support restriction of display of called/calling user.,FR,Functional,0.2
+8235,F0_REQ_08236,The EIRENE network should support charging information.,FR,Functional,0.2
+8239,F0_REQ_08240,"It should be possible for the network to prevent the identity of certain users from being displayed on the mobile, either when being called, calling or both.",FR,Functional,0.2
+8249,F0_REQ_08250,The network should support automatically forwarding the incoming call if there is no reply from the intended recipient (no reply).,FR,Functional,0.2
+8250,F0_REQ_08251,The network should support automatically forwarding the incoming call if the intended recipient cannot be contacted via the network (not reachable).,FR,Functional,0.2
+8254,F0_REQ_08255,"Where network services are chargeable, it should be possible for the network to provide information about call rates and on-going call charges.",FR,Functional,0.2
+8271,F0_REQ_08272,All operational mobile-to-fixed calls not covered by the above call set-up time should be <5s.,FR,Functional,0.2
+8272,F0_REQ_08273,All operational fixed-to-mobile calls not covered by the above call set-up time should be <7s.,FR,Functional,0.2
+8273,F0_REQ_08274,All operational mobile-to-mobile calls not covered by the above call set-up time should be <10s.,FR,Functional,0.2
+8274,F0_REQ_08275,All low priority calls call set-up time should be <10s.,FR,Functional,0.2
+8280,F0_REQ_08281,The definition of each broadcast or group call area should take into account factors such as the speed of trains on the line (stopping distance) and the operational control areas.,FR,Functional,0.2
+8286,F0_REQ_08287,General purpose radio should support multi-party voice calls.,FR,Functional,0.2
+8287,F0_REQ_08288,Operational radio should support multi-party voice calls.,FR,Functional,0.2
+8289,F0_REQ_08290,General purpose radio should support general data applications.,FR,Functional,0.2
+8290,F0_REQ_08291,Operational radio should support general data applications.,FR,Functional,0.2
+8291,F0_REQ_08292,Cab radio should support automatic fax.,FR,Functional,0.2
+8292,F0_REQ_08293,General purpose radio should support automatic fax.,FR,Functional,0.2
+8293,F0_REQ_08294,Operational radio should support automatic fax.,FR,Functional,0.2
+8294,F0_REQ_08295,Cab radio should support train control applications.,FR,Functional,0.2
+8295,F0_REQ_08296,General purpose radio should support train control applications.,FR,Functional,0.2
+8296,F0_REQ_08297,Operational radio should support train control applications.,FR,Functional,0.2
+8298,F0_REQ_08299,General purpose radio should support EIRENE closed user group.,FR,Functional,0.2
+8301,F0_REQ_08302,General purpose radio should support unconditional call forwarding.,FR,Functional,0.2
+8302,F0_REQ_08303,Operational radio should support unconditional call forwarding.,FR,Functional,0.2
+8303,F0_REQ_08304,Cab radio should support if user busy call forwarding.,FR,Functional,0.2
+8304,F0_REQ_08305,General purpose radio should support if user busy call forwarding.,FR,Functional,0.2
+8305,F0_REQ_08306,Operational radio should support if user busy call forwarding.,FR,Functional,0.2
+8306,F0_REQ_08307,Cab radio should support if no reply call forwarding.,FR,Functional,0.2
+8307,F0_REQ_08308,General purpose radio should support if no reply call forwarding.,FR,Functional,0.2
+8308,F0_REQ_08309,Operational radio should support if no reply call forwarding.,FR,Functional,0.2
+8309,F0_REQ_08310,Cab radio should support if not reachable call forwarding.,FR,Functional,0.2
+8310,F0_REQ_08311,General purpose radio should support if not reachable call forwarding.,FR,Functional,0.2
+8311,F0_REQ_08312,Operational radio should support if not reachable call forwarding.,FR,Functional,0.2
+8313,F0_REQ_08314,General purpose radio should support call hold.,FR,Functional,0.2
+8314,F0_REQ_08315,Operational radio should support call hold.,FR,Functional,0.2
+8315,F0_REQ_08316,Cab radio should support display of call charging information.,FR,Functional,0.2
+8316,F0_REQ_08317,General purpose radio should support display of call charging information.,FR,Functional,0.2
+8317,F0_REQ_08318,Operational radio should support display of call charging information.,FR,Functional,0.2
+8319,F0_REQ_08320,General purpose radio should support call barring.,FR,Functional,0.2
+8322,F0_REQ_08323,General purpose radio should support auto answer service.,FR,Functional,0.2
+8325,F0_REQ_08326,General purpose radio should support call supervisory information.,FR,Functional,0.2
+8326,F0_REQ_08327,Operational radio should support call supervisory information.,FR,Functional,0.2
+8328,F0_REQ_08329,General purpose radio should support location dependent addressing (section 11).,FR,Functional,0.2
+8329,F0_REQ_08330,Operational radio should support location dependent addressing (section 11).,FR,Functional,0.2
+8330,F0_REQ_08331,Cab radio should support direct mode (section 15).,FR,Functional,0.2
+8331,F0_REQ_08332,Operational radio should support direct mode (section 15).,FR,Functional,0.2
+8333,F0_REQ_08334,Operational radio should support shunting mode (section 14).,FR,Functional,0.2
+8424,F0_REQ_08425,"It should be possible for the Cab radio to be used without the network service (if it should fail or if there is no authorised network coverage), such that local open channel communications are still possible (direct mode).",FR,Functional,0.2
+8439,F0_REQ_08440,All failures of self-tests should be recorded in the train-borne recorder.,NFR,Reliability,0.2
+8450,F0_REQ_08451,"The time 't' should be able to be varied between 0 and 240 minutes, as a maintenance function, allowing the radio to power up in a consistent state following minor operational procedures or power interruptions.",FR,Functional,0.2
+8455,F0_REQ_08456,"As far as possible, the soft switch off procedure should also apply on power failure.",NFR,Reliability,0.2
+8470,F0_REQ_08471,The Cab radio should be capable of selecting the mobile radio network as directed by input from an external device (e.g. a balise).,FR,Functional,0.2
+8473,F0_REQ_08474,The Cab radio should be capable of selecting the mobile radio network automatically from a list of suitable networks (see section 10.5).,FR,Functional,0.2
+8511,F0_REQ_08512,"Upon the request of the driver, the Cab radio should be able to perform a suite of run-time diagnostic tests on all physical interfaces.",FR,Functional,0.2
+8513,F0_REQ_08514,"If run-time diagnostics are implemented, all failures should be available to be recorded in a train-borne recorder.",NFR,Reliability,0.2
+8535,F0_REQ_08536,A driver safety device (DSD) interface should be provided in traction units that are equipped with a DSD in order to support the transmission of a DSD alarm.,FR,Functional,0.2
+8540,F0_REQ_08541,The DSD alarm call/message should provide location information.,FR,Functional,0.2
+8546,F0_REQ_08547,The Cab radio should be able to provide details of radio faults to a train-borne recorder or other equipment via a standardised interface.,FR,Functional,0.2
+8590,F0_REQ_08591,A standard data interface should be provided to allow a computer to be connected to the General purpose radio.,FR,Functional,0.2
+8591,F0_REQ_08592,It should be possible for a General purpose user to change the battery without the use of tools.,FR,Functional,0.2
+8592,F0_REQ_08593,The weight of the General purpose radio including battery should not exceed 250g.,FR,Functional,0.2
+8594,F0_REQ_08595,Changing the battery should not result in losing data stored in the General purpose radio.,FR,Functional,0.2
+8595,F0_REQ_08596,The General purpose radio should be suitable for use with a car adapter kit.,FR,Functional,0.2
+8596,F0_REQ_08597,The General purpose radio MMI should comprise a display.,FR,Functional,0.2
+8597,F0_REQ_08598,The General purpose radio MMI should comprise a control panel.,FR,Functional,0.2
+8598,F0_REQ_08599,The General purpose radio MMI should comprise a loudspeaker.,FR,Functional,0.2
+8599,F0_REQ_08600,The General purpose radio MMI should comprise a microphone.,FR,Functional,0.2
+8600,F0_REQ_08601,The General purpose radio MMI should be suitable for use both by day and night.,FR,Functional,0.2
+8601,F0_REQ_08602,The on/off control should be designed to prevent accidental activation/deactivation (General purpose radio).,FR,Functional,0.2
+8602,F0_REQ_08603,Facilities should be provided to adjust the loudspeaker volume (General purpose radio).,FR,Functional,0.2
+8611,F0_REQ_08612,An audible indication should be provided to the user if the network service is no longer available (General purpose radio).,FR,Functional,0.2
+8627,F0_REQ_08628,"It should be possible, as a maintenance function, to enable/disable the emergency call function (Operational radio).",FR,Functional,0.2
+8642,F0_REQ_08643,The Operational radio should provide facilities to support shunting mode as described in section 14.,FR,Functional,0.2
+8646,F0_REQ_08647,A means to enter/leave the direct mode of operation should be provided (Operational radio).,FR,Functional,0.2
+8670,F0_REQ_08671,A standard data interface should be provided to allow a computer to be connected to the Operational radio.,FR,Functional,0.2
+8671,F0_REQ_08672,The Operational radio should be capable of withstanding exposure to salt mist spray.,FR,Functional,0.2
+8672,F0_REQ_08673,The Operational radio should be capable of withstanding exposure to torrential rain at up to 2mm/min.,FR,Functional,0.2
+8673,F0_REQ_08674,The Operational radio should be capable of withstanding exposure to heavy hail.,FR,Functional,0.2
+8674,F0_REQ_08675,The Operational radio should be capable of withstanding exposure to snow and sand storms.,FR,Functional,0.2
+8675,F0_REQ_08676,The Operational radio should be capable of withstanding exposure to accretion of ice.,FR,Functional,0.2
+8676,F0_REQ_08677,"The Operational radio should be capable of withstanding exposure to corrosive atmospheres (including sulphur dioxide, hydrogen sulphide, nitrogen oxides, ozone, organic hydrocarbons).",FR,Functional,0.2
+8678,F0_REQ_08679,The Operational radio should have a carry feature that allows the operator to instantly have both hands free without dropping the radio.,FR,Functional,0.2
+8679,F0_REQ_08680,It should be possible to release the carry feature instantly in the event that the radio is caught on a projecting part of a moving vehicle.,FR,Functional,0.2
+8682,F0_REQ_08683,It should be possible for an Operational radio user to change the battery without the use of tools.,FR,Functional,0.2
+8683,F0_REQ_08684,The weight of the Operational radio including battery should not exceed 800g.,FR,Functional,0.2
+8686,F0_REQ_08687,The Operational radio should be suitable for use with a car adapter kit.,FR,Functional,0.2
+8699,F0_REQ_08700,An audible indication should be provided to the user if the network service is no longer available (Operational radio).,FR,Functional,0.2
+8700,F0_REQ_08701,The primary controller's MMI should queue all incoming calls or call requests.,FR,Functional,0.2
+8701,F0_REQ_08702,"The primary controller's MMI should display the queue to the controller, showing the functional identity and priority of callers.",FR,Functional,0.2
+8702,F0_REQ_08703,High priority calls should be identified and presented at the top of the queue on the primary controller's MMI.,FR,Functional,0.2
+8703,F0_REQ_08704,The primary controller's MMI should allow the controller to select any of the incoming calls currently queued by the system.,FR,Functional,0.2
+8704,F0_REQ_08705,"The primary controller's MMI should allow the controller to establish a call of Railway emergency, public emergency or railway operation priority to any mobile by selection from the display.",FR,Functional,0.2
+8705,F0_REQ_08706,"The primary controller's MMI should allow the controller to establish, close, enter and leave group calls (at Railway emergency, public emergency or railway operation priority).",FR,Functional,0.2
+8706,F0_REQ_08707,The primary controller's MMI should allow sending and receiving of text messages.,FR,Functional,0.2
+8707,F0_REQ_08708,"For post incident analysis, the controller equipment should provide the possibility to record all operational speech and data calls.",FR,Functional,0.2
+8708,F0_REQ_08709,It should be possible for calls to be answered automatically according to incoming call priority as defined in section 10.2.,FR,Functional,0.2
+8739,F0_REQ_08740,Automatic answering for Railway operation (e.g. calls from or for drivers and controllers) and Control-command information calls should be optional for other user equipment.,FR,Functional,0.2
+8758,F0_REQ_08759,The network should allow a call from a Primary Controller to an Other Driver.,FR,Functional,0.2
+8759,F0_REQ_08760,The network should allow a call from a Primary Controller to a Chief Conductor.,FR,Functional,0.2
+8760,F0_REQ_08761,The network should allow a call from a Primary Controller to Public Address.,FR,Functional,0.2
+8762,F0_REQ_08763,The network should allow a call from a Secondary Controller to an Other Driver.,FR,Functional,0.2
+8763,F0_REQ_08764,The network should allow a call from a Secondary Controller to a Chief Conductor.,FR,Functional,0.2
+8764,F0_REQ_08765,The network should allow a call from a Secondary Controller to Public Address.,FR,Functional,0.2
+8766,F0_REQ_08767,The network should allow a call from a Power Controller to an Other Driver.,FR,Functional,0.2
+8767,F0_REQ_08768,The network should allow a call from a Power Controller to a Chief Conductor.,FR,Functional,0.2
+8768,F0_REQ_08769,The network should allow a call from a Power Controller to Public Address.,FR,Functional,0.2
+8781,F0_REQ_08782,The network should allow a call from a Chief Conductor to a Primary Controller.,FR,Functional,0.2
+8782,F0_REQ_08783,The network should allow a call from a Chief Conductor to a Secondary Controller.,FR,Functional,0.2
+8783,F0_REQ_08784,The network should allow a call from a Chief Conductor to a Power Controller.,FR,Functional,0.2
+8795,F0_REQ_08796,The functional addressing scheme should permit calls to be routed from a controller to an international train within the control area without reference to any EIRENE system other than that providing service to the international train.,FR,Functional,0.2
+8837,F0_REQ_08838,It should be possible to transfer text messages between ground and mobile(s) through the EIRENE system.,FR,Functional,0.2
+8850,F0_REQ_08851,The appropriate ERTMS/ETCS RBC should be informed when a Train emergency call is initiated.,FR,Functional,0.2
+8863,F0_REQ_08864,Speech should be possible to allow a controller receiving the warning tone to give information.,FR,Functional,0.2
+8864,F0_REQ_08865,"Additionally, speech should be possible to allow other mobile users receiving the warning tone to give information.",FR,Functional,0.2
+8907,F0_REQ_08908,It should be possible for the system to record shunting group composition at a given instant.,FR,Functional,0.2
+8908,F0_REQ_08909,It should be possible for the system to record the source and time a shunting emergency call was transmitted.,FR,Functional,0.2
+8909,F0_REQ_08910,It should be possible for the system to record the recipients of a shunting emergency call.,FR,Functional,0.2
+8917,F0_REQ_08918,A shunting manager or other person capable of taking part in a shunting communication should be able to be temporarily associated with the shunting group.,FR,Functional,0.2
+8919,F0_REQ_08920,"If an external user initiates a call to the shunting leader, the shunting leader should be informed by a visual and audible indication to avoid disturbing a shunting movement.",FR,Functional,0.2
+8924,F0_REQ_08925,It should be possible to provide an alternative means of link assurance indication.,FR,Functional,0.2
+9021,F0_REQ_09022,"System logs data changes (such as record deletions) and provides undo functionality. Ideally, system provides revision control.",FR,Functional,0.2
+9033,F0_REQ_09034,Staff and group accounts are independent from workstations; client install should not be tied to a specific location.,FR,Functional,0.2
